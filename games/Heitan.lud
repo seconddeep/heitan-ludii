@@ -2,9 +2,10 @@
     (players 2)
     (equipment {
         (board (square 4))
+        (piece "Disc" Each)
     })
     (rules
-        (play (move Pass))
-        (end (if (all Passed) (result Mover Draw)))
+        (play (move Add (to (sites Empty))))
+        (end (if (is Full) (result Mover Draw)))
     )
 )
