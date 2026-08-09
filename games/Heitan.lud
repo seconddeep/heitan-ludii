@@ -1,0 +1,10 @@
+(game "Heitan"
+    (players 2)
+    (equipment {
+        (board (square 4))
+    })
+    (rules
+        (play (move Pass))
+        (end (if (all Passed) (result Mover Draw)))
+    )
+)
