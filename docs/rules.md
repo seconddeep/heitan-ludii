@@ -77,7 +77,8 @@ Examples:
 
 Pieces can also be added to sites that already contain pieces.
 
-A site can contain a maximum of three pieces.
+Each player can place a maximum of three pieces on a single site.
+The total number of pieces from both players on a site is not limited.
 
 ---
 
