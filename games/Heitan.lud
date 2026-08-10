@@ -1,3 +1,59 @@
+(define "PiecesAt"
+    (count Stack Vertex at:#1
+        if:(= #2 (who Vertex at:#1 level:(level)))
+    )
+)
+
+(define "PointState"
+    (if (is Empty #1)
+        0
+        (state Vertex at:#1 level:(topLevel Vertex at:#1))
+    )
+)
+
+(define "SupplyPointStateAfterTurn"
+    // 0 = Neutral, 1/2 = Controlled by P1/P2, 3/4 = Secured by P1/P2.
+    (if (= 3 ("PiecesAt" #1 1))
+        3
+        (if (= 3 ("PiecesAt" #1 2))
+            4
+            (if (> ("PiecesAt" #1 1) ("PiecesAt" #1 2))
+                1
+                (if (> ("PiecesAt" #1 2) ("PiecesAt" #1 1))
+                    2
+                    0
+                )
+            )
+        )
+    )
+)
+
+(define "PlacementSite"
+    (arrayValue
+        (values Remembered "PlacementsThisTurn")
+        index:#1
+    )
+)
+
+(define "UpdatePlacedPoint"
+    (set State Vertex at:#1
+        (if (is In #1 (sites "SupplyPoints"))
+            ("SupplyPointStateAfterTurn" #1)
+            ("PointState" #1)
+        )
+    )
+)
+
+(define "UpdateSupplyPointControl"
+    (and {
+        // Explicitly combine all three updates into the same completed turn.
+        ("UpdatePlacedPoint" ("PlacementSite" 0))
+        ("UpdatePlacedPoint" ("PlacementSite" 1))
+        ("UpdatePlacedPoint" ("PlacementSite" 2))
+        (forget Value "PlacementsThisTurn" All)
+    })
+)
+
 (define "WithinPlacementLimit"
     (and
         (<
@@ -8,11 +64,15 @@
         )
         (or
             (is In (to) (sites "Objectives"))
-            (<
-                (count Value (to)
-                    in:(values Remembered "PlacementsThisTurn")
+            (and
+                // Secured Supply Points (states 3 and 4) are closed permanently.
+                (< ("PointState" (to)) 3)
+                (<
+                    (count Value (to)
+                        in:(values Remembered "PlacementsThisTurn")
+                    )
+                    2
                 )
-                2
             )
         )
     )
@@ -23,7 +83,7 @@
         (then
             (if (< (count MovesThisTurn) 2)
                 (moveAgain)
-                (forget Value "PlacementsThisTurn" All)
+                ("UpdateSupplyPointControl")
             )
         )
     )
@@ -69,7 +129,7 @@
             )
             use:Vertex
         )
-        (piece "Disc" Each)
+        (piece "Disc" Each maxState:4)
         (regions "SupplyPoints" {0..24})
         (regions "Objectives" {25..40})
 
@@ -93,6 +153,7 @@
     (rules
         (play
             (move Add
+                (piece (id "Disc" Mover) state:("PointState" (to)))
                 (to
                     (union
                         (sites "SupplyPoints")
