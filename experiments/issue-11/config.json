@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "ludii_version": "1.3.14",
+  "base_seed": 110000,
+  "experiments": [
+    {
+      "id": "seeded-random-self-play",
+      "black_agent": "SeededRandom",
+      "white_agent": "SeededRandom",
+      "games": 100,
+      "iteration_limit": -1,
+      "max_seconds_per_move": -1.0
+    },
+    {
+      "id": "uct-self-play",
+      "black_agent": "UCT",
+      "white_agent": "UCT",
+      "games": 20,
+      "iteration_limit": 50,
+      "max_seconds_per_move": -1.0
+    },
+    {
+      "id": "uct-black-vs-seeded-random-white",
+      "black_agent": "UCT",
+      "white_agent": "SeededRandom",
+      "games": 10,
+      "iteration_limit": 50,
+      "max_seconds_per_move": -1.0
+    },
+    {
+      "id": "seeded-random-black-vs-uct-white",
+      "black_agent": "SeededRandom",
+      "white_agent": "UCT",
+      "games": 10,
+      "iteration_limit": 50,
+      "max_seconds_per_move": -1.0
+    }
+  ]
+}
