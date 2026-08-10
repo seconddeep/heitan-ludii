@@ -1,0 +1,12 @@
+﻿{
+    "generated_at_utc":  "2026-08-10T09:58:29.0337156Z",
+    "games":  140,
+    "validation":  {
+                       "completed":  140,
+                       "natural_end":  140,
+                       "moves_72":  140,
+                       "piece_totals_36_each":  140,
+                       "scores_verified":  140,
+                       "winners_verified":  140
+                   }
+}
