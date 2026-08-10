@@ -11,8 +11,9 @@
     )
 )
 
-(define "SupplyPointStateAfterTurn"
-    // 0 = Neutral, 1/2 = Controlled by P1/P2, 3/4 = Secured by P1/P2.
+(define "PointStateAfterTurn"
+    // 0 = Neutral, 1/2 = Controlled or Advantage for P1/P2,
+    // 3/4 = Secured by P1/P2.
     (if (= 3 ("PiecesAt" #1 1))
         3
         (if (= 3 ("PiecesAt" #1 2))
@@ -37,16 +38,13 @@
 
 (define "UpdatePlacedPoint"
     (set State Vertex at:#1
-        (if (is In #1 (sites "SupplyPoints"))
-            ("SupplyPointStateAfterTurn" #1)
-            ("PointState" #1)
-        )
+        ("PointStateAfterTurn" #1)
     )
 )
 
-(define "UpdateSupplyPointControl"
+(define "UpdatePointStates"
     (and {
-        // Explicitly combine all three updates into the same completed turn.
+        // Update all three placed points after the completed turn.
         ("UpdatePlacedPoint" ("PlacementSite" 0))
         ("UpdatePlacedPoint" ("PlacementSite" 1))
         ("UpdatePlacedPoint" ("PlacementSite" 2))
@@ -99,7 +97,7 @@
         (then
             (if (< (count MovesThisTurn) 2)
                 (moveAgain)
-                ("UpdateSupplyPointControl")
+                ("UpdatePointStates")
             )
         )
     )
@@ -124,7 +122,11 @@
     (move Select
         (from
             (sites "Objectives")
-            if:("WithinPointLimit" (from))
+            if:(and
+                ("WithinPointLimit" (from))
+                // Secured Objectives (states 3 and 4) are closed permanently.
+                (< ("PointState" (from)) 3)
+            )
         )
         (to
             (intersection
