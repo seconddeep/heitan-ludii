@@ -1,3 +1,34 @@
+(define "WithinPlacementLimit"
+    (and
+        (<
+            (count Stack Vertex at:(to)
+                if:(= (mover) (who Vertex at:(to) level:(level)))
+            )
+            3
+        )
+        (or
+            (is In (to) (sites "Objectives"))
+            (<
+                (count Value (to)
+                    in:(values Remembered "PlacementsThisTurn")
+                )
+                2
+            )
+        )
+    )
+)
+
+(define "RecordPlacement"
+    (remember Value "PlacementsThisTurn" (last To)
+        (then
+            (if (< (count MovesThisTurn) 2)
+                (moveAgain)
+                (forget Value "PlacementsThisTurn" All)
+            )
+        )
+    )
+)
+
 (game "Heitan"
     (players 2)
     (equipment {
@@ -62,11 +93,16 @@
     (rules
         (play
             (move Add
-                (to (sites Empty))
-                (then
-                    (if (< (count MovesThisTurn) 2)
-                        (moveAgain)
+                (to
+                    (union
+                        (sites "SupplyPoints")
+                        (sites "Objectives")
                     )
+                    if:("WithinPlacementLimit")
+                )
+                stack:True
+                (then
+                    ("RecordPlacement")
                 )
             )
         )
