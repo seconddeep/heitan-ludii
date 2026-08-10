@@ -51,40 +51,98 @@
         ("UpdatePlacedPoint" ("PlacementSite" 1))
         ("UpdatePlacedPoint" ("PlacementSite" 2))
         (forget Value "PlacementsThisTurn" All)
+        (forget Value "UsedSupplyPoints" All)
     })
 )
 
-(define "WithinPlacementLimit"
-    (and
-        (<
-            (count Stack Vertex at:(to)
-                if:(= (mover) (who Vertex at:(to) level:(level)))
-            )
-            3
+(define "WithinPointLimit"
+    (<
+        (count Stack Vertex at:#1
+            if:(= (mover) (who Vertex at:#1 level:(level)))
         )
+        3
+    )
+)
+
+(define "AvailableControlledSupplyPoint"
+    (and
         (or
-            (is In (to) (sites "Objectives"))
-            (and
-                // Secured Supply Points (states 3 and 4) are closed permanently.
-                (< ("PointState" (to)) 3)
-                (<
-                    (count Value (to)
-                        in:(values Remembered "PlacementsThisTurn")
-                    )
-                    2
-                )
+            (= ("PointState" #1) (mover))
+            (= ("PointState" #1) (+ (mover) 2))
+        )
+        (=
+            0
+            (count Value #1
+                in:(values Remembered "UsedSupplyPoints")
             )
         )
     )
 )
 
+(define "SupplyPointPlacementAllowed"
+    (and {
+        (is In (to) (sites "SupplyPoints"))
+        ("WithinPointLimit" (to))
+        // Secured Supply Points (states 3 and 4) are closed permanently.
+        (< ("PointState" (to)) 3)
+        (<
+            (count Value (to)
+                in:(values Remembered "PlacementsThisTurn")
+            )
+            2
+        )
+    })
+)
+
 (define "RecordPlacement"
-    (remember Value "PlacementsThisTurn" (last To)
+    (remember Value "PlacementsThisTurn" #1
         (then
             (if (< (count MovesThisTurn) 2)
                 (moveAgain)
                 ("UpdateSupplyPointControl")
             )
+        )
+    )
+)
+
+(define "SupplyPointPlacement"
+    (move Add
+        (piece (id "Disc" Mover) state:("PointState" (to)))
+        (to
+            (sites Board)
+            if:("SupplyPointPlacementAllowed")
+        )
+        stack:True
+        (then
+            ("RecordPlacement" (last To))
+        )
+    )
+)
+
+(define "ObjectivePlacement"
+    // Select the Objective first, then the Supply Point used for this placement.
+    (move Select
+        (from
+            (sites "Objectives")
+            if:("WithinPointLimit" (from))
+        )
+        (to
+            (intersection
+                (sites Around (from))
+                (sites "SupplyPoints")
+            )
+            if:("AvailableControlledSupplyPoint" (to))
+        )
+        (then
+            (and {
+                (add
+                    (piece (id "Disc" Mover) state:("PointState" (last From)))
+                    (to (last From))
+                    stack:True
+                )
+                (remember Value "UsedSupplyPoints" (last To))
+                ("RecordPlacement" (last From))
+            })
         )
     )
 )
@@ -152,19 +210,9 @@
     })
     (rules
         (play
-            (move Add
-                (piece (id "Disc" Mover) state:("PointState" (to)))
-                (to
-                    (union
-                        (sites "SupplyPoints")
-                        (sites "Objectives")
-                    )
-                    if:("WithinPlacementLimit")
-                )
-                stack:True
-                (then
-                    ("RecordPlacement")
-                )
+            (or
+                ("SupplyPointPlacement")
+                ("ObjectivePlacement")
             )
         )
         (end (if (is Full) (result Mover Draw)))
