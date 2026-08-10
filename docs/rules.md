@@ -82,12 +82,9 @@ Each player may have a maximum of 3 Pieces on a single point.
 
 ## 6. Point State Updates
 
-Point states are not updated until the end of the turn.
+Point states are not updated during a turn.
 
-After the turn ends, states are updated in the following order:
-
-1. Update Supply Point states
-2. Update Objective states
+After the turn ends, the states of all points are updated.
 
 ---
 
