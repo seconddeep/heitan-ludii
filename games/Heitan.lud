@@ -5,7 +5,16 @@
         (piece "Disc" Each)
     })
     (rules
-        (play (move Add (to (sites Empty))))
+        (play
+            (move Add
+                (to (sites Empty))
+                (then
+                    (if (< (count MovesThisTurn) 2)
+                        (moveAgain)
+                    )
+                )
+            )
+        )
         (end (if (is Full) (result Mover Draw)))
     )
 )
