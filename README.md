@@ -2,14 +2,14 @@
 
 Heitan is an abstract strategy game implemented for Ludii.
 
-Players build supply networks and compete for control of scoring sites.
-The game focuses on strategic decisions involving supply management, site control, and the balance between concentrated and distributed placement.
+Players build supply networks and compete over Objectives.
+The game focuses on strategic decisions involving supply management and the balance between concentrated and distributed placement.
 
 ## About
 
 Heitan is a two-player abstract strategy game.
 
-Each turn, players place three pieces and use supply sites to expand their influence over scoring sites.
+Each turn, players place three Pieces and use Supply Points to expand their influence over Objectives.
 
 The game is designed around simple rules that create complex strategic choices.
 
@@ -30,7 +30,7 @@ This repository contains the Ludii implementation of Heitan.
 
 The game definition is located at:
 
-```
+```text
 games/Heitan.lud
 ```
 
@@ -40,13 +40,13 @@ The project is developed incrementally using GitHub Issues.
 
 Development guidelines and AI agent context are defined in:
 
-```
+```text
 AGENTS.md
 ```
 
 ## Project Structure
 
-```
+```text
 .
 ├── games/
 │   └── Heitan.lud
