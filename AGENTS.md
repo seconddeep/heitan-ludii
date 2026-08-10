@@ -4,7 +4,7 @@
 
 This repository contains the Ludii implementation of **Heitan**, an abstract strategy game.
 
-Heitan is a two-player abstract strategy game where players build supply networks and compete for control of scoring sites.
+Heitan is a two-player abstract strategy game where players build supply networks and compete for Objectives.
 
 The goal of this project is to implement the game faithfully according to the defined rules and enable analysis using Ludii.
 
@@ -12,15 +12,17 @@ The goal of this project is to implement the game faithfully according to the de
 
 ## Source of Truth
 
-The game rules are defined in the following documents.
+The project specifications are defined in the following documents.
 
-- `docs/rules.md` - Official English specification
-- `docs/rules-ja.md` - Japanese development specification
+- `docs/rules.md` - English rule specification
+- `docs/rules-ja.md` - Japanese rule specification
 - `docs/board.md` - Board structure and connection definitions
 
-These documents are the source of truth for game behavior.
+`docs/rules-ja.md` is the primary rule specification. `docs/rules.md` must remain consistent with the Japanese specification.
 
-Do not modify game rules in code without updating the specification documents.
+`docs/board.md` is authoritative for board structure, coordinates, and connections.
+
+Do not change game behavior in code without updating the rule specifications.
 
 ---
 
@@ -44,10 +46,10 @@ Do not introduce additional mechanics or simplify existing mechanics.
 
 Important core concepts:
 
-- Exactly three piece placements per turn
-- Supply Sites and Scoring Sites are different types of sites
-- Supply control determines available scoring placements
-- Site states transition from contested to confirmed
+- Exactly three Pieces are placed per turn
+- Supply Points and Objectives are different types of points
+- Controlled Supply Points determine available placements on Objectives
+- Unsecured points may become Secured at the end of a turn
 - State updates occur after all three placements of a turn
 
 ---
@@ -81,14 +83,14 @@ Player 1: Black (first player)
 Player 2: White (second player)
 ```
 
-Site naming:
+Point naming:
 
 ```
-Supply Sites:
+Supply Points:
 S00 - S44
 
-Scoring Sites:
-C00 - C33
+Objectives:
+O00 - O33
 ```
 
 ---
@@ -101,7 +103,9 @@ When changing game behavior:
 2. Update `docs/rules.md`
 3. Update implementation
 
-Documentation and implementation must remain consistent.
+When changing board structure, coordinates, or connections, update `docs/board.md` and verify that the rule specifications and implementation remain consistent.
+
+Documentation and implementation must remain consistent at all times.
 
 ---
 
