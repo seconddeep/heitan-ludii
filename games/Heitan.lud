@@ -29,6 +29,35 @@
     )
 )
 
+(define "ObjectivesInState"
+    (count Sites in:(forEach
+        (sites "Objectives")
+        if:(= ("PointState" (site)) #1)
+    ))
+)
+
+(define "PiecesOnObjectives"
+    (count Stack Vertex to:(sites "Objectives")
+        if:(= #1 (who Vertex at:(to) level:(level)))
+    )
+)
+
+(define "ObjectiveScore"
+    // This encodes the tiebreak order lexicographically. A player has at
+    // most 36 Pieces, so the 37-point weight for one Advantage Objective
+    // cannot be offset by criterion 3. 629 is greater than 16 * 37 + 36,
+    // so one Secured Objective cannot be offset by criteria 2 and 3 together.
+    (+ {
+        (* 629 ("ObjectivesInState" (+ #1 2)))
+        (* 37 ("ObjectivesInState" #1))
+        ("PiecesOnObjectives" #1)
+    })
+)
+
+(define "AllPiecesPlaced"
+    (= 72 (count Stack Vertex to:(sites Board)))
+)
+
 (define "PlacementSite"
     (arrayValue
         (values Remembered "PlacementsThisTurn")
@@ -217,7 +246,14 @@
                 ("ObjectivePlacement")
             )
         )
-        (end (if (is Full) (result Mover Draw)))
+        (end
+            (if ("AllPiecesPlaced")
+                (byScore {
+                    (score P1 ("ObjectiveScore" 1))
+                    (score P2 ("ObjectiveScore" 2))
+                })
+            )
+        )
     )
 )
 
