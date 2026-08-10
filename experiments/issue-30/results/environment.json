@@ -1,0 +1,19 @@
+﻿{
+    "generated_at_utc":  "2026-08-10T12:37:05.9211474Z",
+    "run_started_at_utc":  "2026-08-10T10:27:32.8606762Z",
+    "elapsed_seconds":  7773.06,
+    "timing_source":  "evidence_file_timestamps",
+    "config":  "experiments/issue-30/config.json",
+    "config_sha256":  "390dc73f1b161805fac48c4e149f50aff9373f0f0b31ed003425f01d41f96897",
+    "runner":  "experiments/issue-11/scripts/HeitanExperiment.java",
+    "runner_sha256":  "dd250e3e5db1ec7abd47b96155f8e8f438e8b7b36ed8b07c6bfe82a3986bdb76",
+    "run_script_sha256":  "e620312eac6949becbe704f9ddf7a2336ee72963e7fa042b99d4acee80881f4d",
+    "analysis_script_sha256":  "48d15b0d7ec96bbf5944f110b7938b0d5a9c9639cd6ed2f4c563d469a737d801",
+    "game":  "games/Heitan.lud",
+    "game_sha256":  "a833a7a0bb4edf3fe4f428876dfb07b6ff0cb143a68c105232800e5d7743644c",
+    "git_commit":  "99d8a0d24429ac18889a3584ad6ce41781bd2acc",
+    "ludii_version":  "1.3.14",
+    "ludii_jar_sha256":  "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+    "java":  "openjdk 21.0.11 2026-04-21 LTS",
+    "os":  "Microsoft Windows NT 10.0.26200.0"
+}

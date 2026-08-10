@@ -1,0 +1,3 @@
+﻿"lower_iteration_limit","higher_iteration_limit","p1_win_rate_delta_pct_points","average_secured_objectives_per_player_delta","average_objective_pieces_per_player_delta","objective_usage_profile_correlation","objective_usage_mean_absolute_change","supply_usage_profile_correlation","supply_usage_mean_absolute_change"
+"100","500","4","1.2","2.81","0.297","0.3513","0.8384","0.3256"
+"500","1000","13","0.365","0.375","0.7154","0.1481","0.9623","0.1964"

@@ -47,12 +47,12 @@ public final class HeitanExperiment
 
     public static void main(final String[] args) throws Exception
     {
-        if (args.length != 10)
+        if (args.length != 10 && args.length != 11)
         {
             System.err.println(
                 "Usage: HeitanExperiment <game.lud> <experiment-id> <black-agent> "
                 + "<white-agent> <games> <base-seed> <iteration-limit> "
-                + "<max-seconds> <raw.csv> <trials-dir>"
+                + "<max-seconds> <raw.csv> <trials-dir> [game-index-offset]"
             );
             System.exit(2);
         }
@@ -67,6 +67,7 @@ public final class HeitanExperiment
         final double maxSeconds = Double.parseDouble(args[7]);
         final Path rawOutput = Path.of(args[8]);
         final Path trialsDirectory = Path.of(args[9]);
+        final int gameIndexOffset = args.length == 11 ? Integer.parseInt(args[10]) : 0;
 
         if (!gameFile.isFile())
             throw new IllegalArgumentException("Game file not found: " + gameFile);
@@ -95,6 +96,7 @@ public final class HeitanExperiment
 
             for (int gameIndex = 0; gameIndex < numGames; ++gameIndex)
             {
+                final int gameNumber = gameIndexOffset + gameIndex + 1;
                 final long seed = baseSeed + gameIndex;
                 final Trial trial = new Trial(game);
                 final Context context = new Context(game, trial);
@@ -133,7 +135,7 @@ public final class HeitanExperiment
                 }
 
                 final Path trialPath = trialsDirectory.resolve(
-                    String.format(Locale.ROOT, "%s-%04d.trl", experimentId, gameIndex + 1)
+                    String.format(Locale.ROOT, "%s-%04d.trl", experimentId, gameNumber)
                 );
                 trial.saveTrialToTextFile(
                     trialPath.toFile(),
@@ -144,7 +146,7 @@ public final class HeitanExperiment
 
                 output.write(resultRow(
                     experimentId,
-                    gameIndex + 1,
+                    gameNumber,
                     seed,
                     blackAgentName,
                     whiteAgentName,
@@ -165,8 +167,8 @@ public final class HeitanExperiment
                     Locale.ROOT,
                     "%s: %d/%d winner=P%d moves=%d%n",
                     experimentId,
-                    gameIndex + 1,
-                    numGames,
+                    gameNumber,
+                    gameIndexOffset + numGames,
                     trial.status().winner(),
                     trial.numMoves()
                 );
