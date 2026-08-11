@@ -1,0 +1,1776 @@
+{
+  "schema_version": 1,
+  "selection_method": "deterministic feature ranking over all Issue #32 10000-iteration trials",
+  "source_trial_count": 100,
+  "positions": [
+    {
+      "source_trl_path": "experiments/issue-32/results/trials/uct-10000-self-play/uct-10000-self-play-0100.trl",
+      "prefix_placement_count": 3,
+      "heitan_turn_number": 2,
+      "mover": 2,
+      "complete_starting_board_state": {
+        "S00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S04": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S12": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S13": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S14": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S21": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S22": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S24": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S34": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S40": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S41": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S42": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S43": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S44": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O21": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O22": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        }
+      },
+      "source_trial_hash": "f265eef3c6b28324fa84b6670e03e836a261a235538b41f5c2969c14c45928a2",
+      "prefix_hash": "e3a961f10469b75602b81a5a43092dcc696f1f01a037cb72ff0ad4ef07636382",
+      "features": {
+        "p1_supply_pieces": 3,
+        "p2_supply_pieces": 0,
+        "p1_objective_pieces": 0,
+        "p2_objective_pieces": 0,
+        "unresolved_supply_points": [
+          "S00:0:0:0",
+          "S01:0:0:0",
+          "S02:0:0:0",
+          "S03:0:0:0",
+          "S04:0:0:0",
+          "S10:0:0:0",
+          "S11:0:0:0",
+          "S12:1:1:0",
+          "S13:1:1:0",
+          "S14:0:0:0",
+          "S20:0:0:0",
+          "S21:0:0:0",
+          "S22:1:1:0",
+          "S23:0:0:0",
+          "S24:0:0:0",
+          "S30:0:0:0",
+          "S31:0:0:0",
+          "S32:0:0:0",
+          "S33:0:0:0",
+          "S34:0:0:0",
+          "S40:0:0:0",
+          "S41:0:0:0",
+          "S42:0:0:0",
+          "S43:0:0:0",
+          "S44:0:0:0"
+        ],
+        "securable_supply_points": [],
+        "legal_supply_targets": [
+          "S00",
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S40",
+          "S41",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "available_objectives": [],
+        "legal_target_spatial_counts": {
+          "central": 9,
+          "edge": 12,
+          "corner": 4
+        }
+      },
+      "position_id": "turn-2-supply-expansion",
+      "classification": "supply-expansion",
+      "selection_reason": "Deterministic maximum for supply-expansion among Issue #32 10,000-iteration positions after completed turn 1."
+    },
+    {
+      "source_trl_path": "experiments/issue-32/results/trials/uct-10000-self-play/uct-10000-self-play-0100.trl",
+      "prefix_placement_count": 6,
+      "heitan_turn_number": 3,
+      "mover": 1,
+      "complete_starting_board_state": {
+        "S00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S04": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S12": {
+          "state": 0,
+          "p1_pieces": 1,
+          "p2_pieces": 1,
+          "stack": [
+            1,
+            2
+          ]
+        },
+        "S13": {
+          "state": 0,
+          "p1_pieces": 1,
+          "p2_pieces": 1,
+          "stack": [
+            1,
+            2
+          ]
+        },
+        "S14": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S21": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S22": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S23": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S24": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S34": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S40": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S41": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S42": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S43": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S44": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O21": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O22": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        }
+      },
+      "source_trial_hash": "f265eef3c6b28324fa84b6670e03e836a261a235538b41f5c2969c14c45928a2",
+      "prefix_hash": "adb2cf20a16aa3d4efad4e0e2a038c501c88a307dfef638df571eea9561f6eef",
+      "features": {
+        "p1_supply_pieces": 3,
+        "p2_supply_pieces": 3,
+        "p1_objective_pieces": 0,
+        "p2_objective_pieces": 0,
+        "unresolved_supply_points": [
+          "S00:0:0:0",
+          "S01:0:0:0",
+          "S02:0:0:0",
+          "S03:0:0:0",
+          "S04:0:0:0",
+          "S10:0:0:0",
+          "S11:0:0:0",
+          "S12:0:1:1",
+          "S13:0:1:1",
+          "S14:0:0:0",
+          "S20:0:0:0",
+          "S21:0:0:0",
+          "S22:1:1:0",
+          "S23:2:0:1",
+          "S24:0:0:0",
+          "S30:0:0:0",
+          "S31:0:0:0",
+          "S32:0:0:0",
+          "S33:0:0:0",
+          "S34:0:0:0",
+          "S40:0:0:0",
+          "S41:0:0:0",
+          "S42:0:0:0",
+          "S43:0:0:0",
+          "S44:0:0:0"
+        ],
+        "securable_supply_points": [
+          "S12",
+          "S13",
+          "S22"
+        ],
+        "legal_supply_targets": [
+          "S00",
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S40",
+          "S41",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "available_objectives": [
+          "O11",
+          "O12",
+          "O21",
+          "O22"
+        ],
+        "legal_target_spatial_counts": {
+          "central": 13,
+          "edge": 12,
+          "corner": 4
+        }
+      },
+      "position_id": "turn-3-supply-securing-choice",
+      "classification": "supply-securing-choice",
+      "selection_reason": "Deterministic maximum for supply-securing-choice among Issue #32 10,000-iteration positions after completed turn 2."
+    },
+    {
+      "source_trl_path": "experiments/issue-32/results/trials/uct-10000-self-play/uct-10000-self-play-0078.trl",
+      "prefix_placement_count": 9,
+      "heitan_turn_number": 4,
+      "mover": 2,
+      "complete_starting_board_state": {
+        "S00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S04": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S14": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S21": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S22": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S23": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S24": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S31": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S32": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S33": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S34": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S40": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S41": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S42": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S43": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S44": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O21": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O22": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O31": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "O32": {
+          "state": 1,
+          "p1_pieces": 2,
+          "p2_pieces": 0,
+          "stack": [
+            1,
+            1
+          ]
+        },
+        "O33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        }
+      },
+      "source_trial_hash": "69a400d64e2fe2f20eed3ce8b69c033e357daaabcc6a41986e52bc1a4007aad8",
+      "prefix_hash": "efcdef6525712b53fa0f797b6d877d483ae4433ecd5e766f3a55bf5fafd71a9d",
+      "features": {
+        "p1_supply_pieces": 3,
+        "p2_supply_pieces": 3,
+        "p1_objective_pieces": 3,
+        "p2_objective_pieces": 0,
+        "unresolved_supply_points": [
+          "S00:0:0:0",
+          "S01:0:0:0",
+          "S02:0:0:0",
+          "S03:0:0:0",
+          "S04:0:0:0",
+          "S10:0:0:0",
+          "S11:0:0:0",
+          "S12:0:0:0",
+          "S13:0:0:0",
+          "S14:0:0:0",
+          "S20:0:0:0",
+          "S21:2:0:1",
+          "S22:2:0:1",
+          "S23:2:0:1",
+          "S24:0:0:0",
+          "S30:0:0:0",
+          "S31:1:1:0",
+          "S32:1:1:0",
+          "S33:1:1:0",
+          "S34:0:0:0",
+          "S40:0:0:0",
+          "S41:0:0:0",
+          "S42:0:0:0",
+          "S43:0:0:0",
+          "S44:0:0:0"
+        ],
+        "securable_supply_points": [
+          "S21",
+          "S22",
+          "S23"
+        ],
+        "legal_supply_targets": [
+          "S00",
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S40",
+          "S41",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "available_objectives": [
+          "O10",
+          "O11",
+          "O12",
+          "O13",
+          "O20",
+          "O21",
+          "O22",
+          "O23"
+        ],
+        "legal_target_spatial_counts": {
+          "central": 13,
+          "edge": 16,
+          "corner": 4
+        }
+      },
+      "position_id": "turn-4-central-peripheral-competition",
+      "classification": "central-peripheral-competition",
+      "selection_reason": "Deterministic maximum for central-peripheral-competition among Issue #32 10,000-iteration positions after completed turn 3."
+    },
+    {
+      "source_trl_path": "experiments/issue-32/results/trials/uct-10000-self-play/uct-10000-self-play-0017.trl",
+      "prefix_placement_count": 12,
+      "heitan_turn_number": 5,
+      "mover": 1,
+      "complete_starting_board_state": {
+        "S00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S04": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S11": {
+          "state": 0,
+          "p1_pieces": 1,
+          "p2_pieces": 1,
+          "stack": [
+            1,
+            2
+          ]
+        },
+        "S12": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S13": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S14": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S21": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S22": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S23": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S24": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S31": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S32": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S33": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S34": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S40": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S41": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S42": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S43": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S44": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O21": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "O22": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 2,
+          "stack": [
+            2,
+            2
+          ]
+        },
+        "O23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        }
+      },
+      "source_trial_hash": "955c430a2b1fc3077a6e0250525a464b4d6546bac55ab57c00e6c7d47ad481a9",
+      "prefix_hash": "99229567a828b243059a7643f88e09a656232a21f1545ae15d2809013042cef7",
+      "features": {
+        "p1_supply_pieces": 5,
+        "p2_supply_pieces": 4,
+        "p1_objective_pieces": 1,
+        "p2_objective_pieces": 2,
+        "unresolved_supply_points": [
+          "S00:0:0:0",
+          "S01:0:0:0",
+          "S02:0:0:0",
+          "S03:0:0:0",
+          "S04:0:0:0",
+          "S10:0:0:0",
+          "S11:0:1:1",
+          "S12:2:0:1",
+          "S13:1:1:0",
+          "S14:0:0:0",
+          "S20:0:0:0",
+          "S21:1:1:0",
+          "S22:0:0:0",
+          "S23:2:0:1",
+          "S24:0:0:0",
+          "S30:0:0:0",
+          "S31:1:1:0",
+          "S32:2:0:1",
+          "S33:1:1:0",
+          "S34:0:0:0",
+          "S40:0:0:0",
+          "S41:0:0:0",
+          "S42:0:0:0",
+          "S43:0:0:0",
+          "S44:0:0:0"
+        ],
+        "securable_supply_points": [
+          "S11",
+          "S13",
+          "S21",
+          "S31",
+          "S33"
+        ],
+        "legal_supply_targets": [
+          "S00",
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S40",
+          "S41",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "available_objectives": [
+          "O02",
+          "O03",
+          "O10",
+          "O11",
+          "O12",
+          "O13",
+          "O20",
+          "O21",
+          "O22",
+          "O23",
+          "O30",
+          "O31",
+          "O32",
+          "O33"
+        ],
+        "legal_target_spatial_counts": {
+          "central": 13,
+          "edge": 19,
+          "corner": 7
+        }
+      },
+      "position_id": "turn-5-objective-supply-tradeoff",
+      "classification": "objective-supply-tradeoff",
+      "selection_reason": "Deterministic maximum for objective-supply-tradeoff among Issue #32 10,000-iteration positions after completed turn 4."
+    },
+    {
+      "source_trl_path": "experiments/issue-32/results/trials/uct-10000-self-play/uct-10000-self-play-0040.trl",
+      "prefix_placement_count": 15,
+      "heitan_turn_number": 6,
+      "mover": 2,
+      "complete_starting_board_state": {
+        "S00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S01": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S04": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S10": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S11": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S12": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S13": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S14": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S21": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S22": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S23": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "S24": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S32": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "S33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S34": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S40": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S41": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S42": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S43": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "S44": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O00": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O01": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 1,
+          "stack": [
+            2
+          ]
+        },
+        "O02": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O03": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O10": {
+          "state": 1,
+          "p1_pieces": 1,
+          "p2_pieces": 0,
+          "stack": [
+            1
+          ]
+        },
+        "O11": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O12": {
+          "state": 2,
+          "p1_pieces": 0,
+          "p2_pieces": 2,
+          "stack": [
+            2,
+            2
+          ]
+        },
+        "O13": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O20": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O21": {
+          "state": 3,
+          "p1_pieces": 3,
+          "p2_pieces": 0,
+          "stack": [
+            1,
+            1,
+            1
+          ]
+        },
+        "O22": {
+          "state": 1,
+          "p1_pieces": 2,
+          "p2_pieces": 0,
+          "stack": [
+            1,
+            1
+          ]
+        },
+        "O23": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O30": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O31": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O32": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        },
+        "O33": {
+          "state": 0,
+          "p1_pieces": 0,
+          "p2_pieces": 0,
+          "stack": []
+        }
+      },
+      "source_trial_hash": "9f41077eac828a18edf5f773345df1bf770e7bf55284bbea7d2d92847861eee6",
+      "prefix_hash": "62c18bf902ad1453a4dbbe982b17ad55773ed138632d2775c2fe0432a600c7fe",
+      "features": {
+        "p1_supply_pieces": 3,
+        "p2_supply_pieces": 3,
+        "p1_objective_pieces": 6,
+        "p2_objective_pieces": 3,
+        "unresolved_supply_points": [
+          "S00:0:0:0",
+          "S01:0:0:0",
+          "S02:0:0:0",
+          "S03:0:0:0",
+          "S04:0:0:0",
+          "S10:0:0:0",
+          "S11:2:0:1",
+          "S12:0:0:0",
+          "S13:2:0:1",
+          "S14:0:0:0",
+          "S20:0:0:0",
+          "S21:1:1:0",
+          "S22:1:1:0",
+          "S23:2:0:1",
+          "S24:0:0:0",
+          "S30:0:0:0",
+          "S31:0:0:0",
+          "S32:1:1:0",
+          "S33:0:0:0",
+          "S34:0:0:0",
+          "S40:0:0:0",
+          "S41:0:0:0",
+          "S42:0:0:0",
+          "S43:0:0:0",
+          "S44:0:0:0"
+        ],
+        "securable_supply_points": [
+          "S11",
+          "S13",
+          "S23"
+        ],
+        "legal_supply_targets": [
+          "S00",
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S40",
+          "S41",
+          "S42",
+          "S43",
+          "S44"
+        ],
+        "available_objectives": [
+          "O00",
+          "O01",
+          "O02",
+          "O03",
+          "O10",
+          "O11",
+          "O12",
+          "O13",
+          "O22",
+          "O23"
+        ],
+        "legal_target_spatial_counts": {
+          "central": 12,
+          "edge": 17,
+          "corner": 6
+        }
+      },
+      "position_id": "turn-6-early-midgame-allocation",
+      "classification": "early-midgame-allocation",
+      "selection_reason": "Deterministic maximum for early-midgame-allocation among Issue #32 10,000-iteration positions after completed turn 5."
+    }
+  ]
+}

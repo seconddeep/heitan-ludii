@@ -1,0 +1,16 @@
+position_id,iteration_budget,repetitions,worker_seconds,average_worker_seconds_per_turn,batches
+turn-2-supply-expansion,10000,2,74.765,37.382,2
+turn-2-supply-expansion,30000,2,374.882,187.441,2
+turn-2-supply-expansion,100000,2,2064.33,1032.165,2
+turn-3-supply-securing-choice,10000,2,93.518,46.759,2
+turn-3-supply-securing-choice,30000,2,515.33,257.665,2
+turn-3-supply-securing-choice,100000,2,2240.433,1120.216,2
+turn-4-central-peripheral-competition,10000,2,171.035,85.518,2
+turn-4-central-peripheral-competition,30000,2,629.018,314.509,2
+turn-4-central-peripheral-competition,100000,2,2206.06,1103.03,2
+turn-5-objective-supply-tradeoff,10000,2,114.292,57.146,2
+turn-5-objective-supply-tradeoff,30000,2,567.839,283.92,2
+turn-5-objective-supply-tradeoff,100000,2,1961.02,980.51,2
+turn-6-early-midgame-allocation,10000,2,113.331,56.666,2
+turn-6-early-midgame-allocation,30000,2,551.264,275.632,2
+turn-6-early-midgame-allocation,100000,2,1465.741,732.871,2
