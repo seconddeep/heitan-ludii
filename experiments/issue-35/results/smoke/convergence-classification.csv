@@ -1,0 +1,6 @@
+position_id,lower_budget,higher_budget,plan_total_variation,higher_budget_top_plan_rate,higher_budget_effective_number_of_plans,classification
+turn-2-supply-expansion,30000,100000,1.0,0.5,2.0,search_instability
+turn-3-supply-securing-choice,30000,100000,0.5,0.5,2.0,search_instability
+turn-4-central-peripheral-competition,30000,100000,1.0,0.5,2.0,search_instability
+turn-5-objective-supply-tradeoff,30000,100000,1.0,0.5,2.0,search_instability
+turn-6-early-midgame-allocation,30000,100000,0.5,0.5,2.0,search_instability

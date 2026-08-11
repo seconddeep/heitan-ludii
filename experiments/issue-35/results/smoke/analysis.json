@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "plan_signature_version": 1,
+  "positions_analyzed": 5,
+  "position_budget_groups": 15,
+  "raw_rows": 30,
+  "validation": {
+    "raw_rows": 30,
+    "source_trials_hash_verified": 4,
+    "legal_turn_prefixes_replayed_by_runner": 30,
+    "turn_boundaries_verified": 30,
+    "three_piece_increments_verified": 30,
+    "same_player_three_placements_verified": 30,
+    "opponent_turn_transitions_verified": 30,
+    "third_placement_state_updates_verified": 30,
+    "objective_supply_sources_verified": 30,
+    "unique_repetition_ids": 30,
+    "unique_trial_paths": 30,
+    "plan_signatures_regenerated": 30
+  },
+  "aggregate_outputs_regenerated_from_raw": true
+}

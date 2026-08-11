@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "ludii_version": "1.3.14",
+  "source_trials": "experiments/issue-32/results/trials/uct-10000-self-play",
+  "base_seed": 350000,
+  "repetitions": 30,
+  "required_iteration_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "optional_iteration_budget": 300000,
+  "optional_budget_selection": {
+    "comparison_lower_budget": 30000,
+    "comparison_higher_budget": 100000,
+    "plan_total_variation_threshold": 0.25
+  },
+  "max_seconds_per_move": -1.0,
+  "plan_signature": {
+    "version": 1,
+    "encoding": "compact_sorted_key_json",
+    "ignore_placement_order": true,
+    "include_supply_sites": true,
+    "include_supply_sources": true,
+    "include_objective_sites": true,
+    "include_secured_supply_transition": true,
+    "include_unresolved_supply_transition": true,
+    "include_spatial_category": true,
+    "include_resulting_state_summary": false
+  },
+  "convergence_classification": {
+    "stable_plan_total_variation_max": 0.20,
+    "unstable_plan_total_variation_min": 0.30,
+    "dominant_plan_rate_min": 0.70,
+    "diverse_effective_plan_count_min": 2.0,
+    "top_k": 3,
+    "bootstrap_samples": 1000,
+    "bootstrap_seed": 350035
+  }
+}

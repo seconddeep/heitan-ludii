@@ -1,0 +1,16 @@
+position_id,iteration_budget,repetitions,average_supply_placements,average_objective_placements,turns_securing_supply,supply_securing_turn_rate,average_newly_secured_supply_points,average_unresolved_supply_transitions,central_target_rate,edge_target_rate,corner_target_rate,unique_ordered_sequences,unique_plan_signatures,unique_resulting_turn_states,top_ordered_sequence_rate,top_plan_signature_rate,top_resulting_turn_state_rate,plan_shannon_entropy,effective_number_of_plans
+turn-2-supply-expansion,10000,30,3,0,0,0.0,0,2.833333,0.988889,0.011111,0.0,30,25,25,0.033333,0.066667,0.066667,3.170148,23.811016
+turn-2-supply-expansion,30000,30,3,0,0,0.0,0,2.666667,1.0,0.0,0.0,25,19,19,0.066667,0.166667,0.166667,2.774606,16.032306
+turn-2-supply-expansion,100000,30,3,0,0,0.0,0,2.666667,1.0,0.0,0.0,25,18,18,0.066667,0.133333,0.133333,2.748145,15.613642
+turn-3-supply-securing-choice,10000,30,2.133333,0.866667,0,0.0,0,2.133333,1.0,0.0,0.0,30,29,29,0.033333,0.066667,0.066667,3.354988,28.645248
+turn-3-supply-securing-choice,30000,30,2,1,0,0.0,0,1.966667,1.0,0.0,0.0,25,17,17,0.1,0.2,0.2,2.620842,13.747296
+turn-3-supply-securing-choice,100000,30,2.033333,0.966667,0,0.0,0,2,1.0,0.0,0.0,23,15,15,0.1,0.133333,0.133333,2.580747,13.207005
+turn-4-central-peripheral-competition,10000,30,0.733333,2.266667,0,0.0,0,0.7,0.977778,0.022222,0.0,27,21,21,0.066667,0.1,0.1,2.950426,19.114092
+turn-4-central-peripheral-competition,30000,30,0.866667,2.133333,0,0.0,0,0.866667,0.988889,0.011111,0.0,19,10,10,0.166667,0.266667,0.266667,1.914061,6.780569
+turn-4-central-peripheral-competition,100000,30,0.866667,2.133333,0,0.0,0,0.866667,0.988889,0.011111,0.0,14,9,9,0.233333,0.333333,0.333333,1.801892,6.061107
+turn-5-objective-supply-tradeoff,10000,30,0.566667,2.433333,0,0.0,0,0.566667,0.844444,0.066667,0.088889,16,11,11,0.2,0.4,0.4,1.892812,6.638007
+turn-5-objective-supply-tradeoff,30000,30,0.833333,2.166667,0,0.0,0,0.833333,0.944444,0.033333,0.022222,8,5,5,0.466667,0.733333,0.733333,0.932152,2.539969
+turn-5-objective-supply-tradeoff,100000,30,0.5,2.5,0,0.0,0,0.5,0.833333,0.055556,0.111111,11,7,7,0.233333,0.266667,0.266667,1.718866,5.578198
+turn-6-early-midgame-allocation,10000,30,0.333333,2.666667,0,0.0,0,0.333333,0.366667,0.6,0.033333,22,11,10,0.1,0.433333,0.433333,1.902599,6.703295
+turn-6-early-midgame-allocation,30000,30,0,3,0,0.0,0,0,0.311111,0.688889,0.0,7,3,3,0.366667,0.9,0.9,0.388734,1.475113
+turn-6-early-midgame-allocation,100000,30,0.033333,2.966667,0,0.0,0,0.033333,0.277778,0.711111,0.011111,7,5,5,0.5,0.7,0.7,0.91168,2.488499

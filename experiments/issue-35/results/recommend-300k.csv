@@ -1,0 +1,6 @@
+position_id,comparison,plan_total_variation,threshold,recommend_300000,reason
+turn-2-supply-expansion,30000-100000,0.366667,0.25,true,plan distribution still changes materially
+turn-3-supply-securing-choice,30000-100000,0.366667,0.25,true,plan distribution still changes materially
+turn-4-central-peripheral-competition,30000-100000,0.466667,0.25,true,plan distribution still changes materially
+turn-5-objective-supply-tradeoff,30000-100000,0.5,0.25,true,plan distribution still changes materially
+turn-6-early-midgame-allocation,30000-100000,0.2,0.25,false,required budgets do not meet the optional-depth threshold
