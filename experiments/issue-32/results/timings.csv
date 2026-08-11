@@ -1,0 +1,3 @@
+experiment_id,games,iteration_limit,worker_seconds,average_worker_seconds_per_game,batches
+uct-3000-self-play,100,3000,24325.212,243.252,10
+uct-10000-self-play,100,10000,80384.729,803.847,10

@@ -1,0 +1,6 @@
+experiment_id,iteration_limit,games,mean_absolute_score_difference,median_absolute_score_difference,secured_objectives_tied_games,secured_objectives_tied_rate_pct,top_two_criteria_tied_games,top_two_criteria_tied_rate_pct,draw_games,draw_rate_pct
+uct-0100-self-play,100,100,293.63,95.0,59,59.0,18,18.0,0,0.0
+uct-0500-self-play,500,100,304.84,77.0,56,56.0,21,21.0,2,2.0
+uct-1000-self-play,1000,100,330.09,516.0,48,48.0,19,19.0,8,8.0
+uct-3000-self-play,3000,100,328.59,294.5,50,50.0,16,16.0,4,4.0
+uct-10000-self-play,10000,100,353.74,517.0,48,48.0,17,17.0,10,10.0
