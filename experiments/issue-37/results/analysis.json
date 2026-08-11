@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "primary_experiment": "uct-10000-self-play",
+  "games": 200,
+  "securing_events": 612,
+  "primary_securing_events": 367,
+  "primary_phase_counts": {
+    "late": 98,
+    "midgame": 157,
+    "early": 112
+  },
+  "pre_securing_pattern_counts": {
+    "0-1": 2,
+    "0-2": 2,
+    "1-1": 3,
+    "1-2": 69,
+    "2-1": 57,
+    "2-2": 479
+  },
+  "definitions": {
+    "securable_opportunity": {
+      "version": 1,
+      "unit": "player_supply_point_turn",
+      "evaluation_point": "start_of_turn",
+      "definition": "A Supply Point is securable when it is not Secured, the mover has fewer than the securing Piece count, and placements_needed_to_secure is no greater than the maximum number of additional placements that Ludii permits on that Supply Point during the current turn.",
+      "secure_piece_count": 3,
+      "legal_capacity_source": "ludii_context_clone_repeated_legal_supply_placement",
+      "required_raw_fields": [
+        "securable",
+        "own_piece_count_at_turn_start",
+        "opponent_piece_count_at_turn_start",
+        "placements_needed_to_secure",
+        "legal_max_additional_placements_this_turn"
+      ],
+      "current_rule_expectation": "Under the current 4x4 rules, own_count 1 or 2 is normally securable; this observation is not the analyzer predicate."
+    },
+    "supply_spatial_categories": {
+      "version": 1,
+      "internal_ids": [
+        "corner",
+        "edge",
+        "interior"
+      ],
+      "report_labels": {
+        "corner": "corner",
+        "edge": "edge",
+        "interior": "central (interior 3x3)"
+      },
+      "definitions": {
+        "corner": "the four corner Supply Points",
+        "edge": "non-corner Supply Points on the outer boundary",
+        "interior": "the 3x3 non-edge interior Supply Points"
+      },
+      "expected_counts": {
+        "corner": 4,
+        "edge": 12,
+        "interior": 9
+      },
+      "applies_to": [
+        "securing_rate",
+        "securing_timing",
+        "future_usage",
+        "securable_opportunity_rate",
+        "winner_loser_comparison"
+      ]
+    }
+  },
+  "integrity": {
+    "source_trials_hashed": 200,
+    "trials_legally_replayed_to_natural_end": 200,
+    "moves_72_turns_24": 200,
+    "final_boards_and_winners_match_issue_32": 200,
+    "supply_turn_rows": 120000,
+    "objective_turn_rows": 76800,
+    "placement_rows": 14400,
+    "point_turn_states_match_piece_counts": 196800,
+    "point_turn_state_chains_verified": 8200,
+    "objective_supply_sources_verified": 7302,
+    "current_rule_securable_expectation_verified": 120000,
+    "spatial_category_counts_verified": {
+      "corner": 4,
+      "edge": 12,
+      "interior": 9
+    }
+  }
+}
