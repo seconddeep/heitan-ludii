@@ -1,0 +1,5 @@
+lower_iteration_limit,higher_iteration_limit,objective_usage_profile_correlation,objective_usage_mean_absolute_change,supply_usage_profile_correlation,supply_usage_mean_absolute_change
+100,500,0.297,0.3513,0.8384,0.3256
+500,1000,0.7154,0.1481,0.9623,0.1964
+1000,3000,0.9037,0.1969,0.9797,0.3156
+3000,10000,0.9483,0.2125,0.9798,0.3312

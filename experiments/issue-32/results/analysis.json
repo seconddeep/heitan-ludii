@@ -1,0 +1,16 @@
+{
+  "games_issue_32": 200,
+  "games_with_issue_30_baseline": 500,
+  "experiment_groups": 5,
+  "validation": {
+    "completed_natural_end": 200,
+    "moves_72_turns_24": 200,
+    "piece_totals_36_each": 200,
+    "scores_verified": 200,
+    "winners_verified": 200,
+    "final_boards_41_sites": 200,
+    "unique_seeds": 200,
+    "unique_experiment_game_indices": 200,
+    "trial_files_verified": 200
+  }
+}
