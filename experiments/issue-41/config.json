@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "source": {
+    "issues": [32, 37, 39],
+    "replay_summary": "experiments/issue-37/results/raw/replay-summary.csv",
+    "placements": "experiments/issue-37/results/raw/placements.csv",
+    "supply_turn_states": "experiments/issue-37/results/raw/supply-turn-states.csv",
+    "objective_turn_states": "experiments/issue-37/results/raw/objective-turn-states.csv",
+    "source_trials": "experiments/issue-37/results/source-trials.csv",
+    "issue_39_site_values": "experiments/issue-39/results/site-value-summary.csv",
+    "experiments": [
+      {"id": "uct-10000-self-play", "iteration_limit": 10000, "games": 100, "role": "primary"},
+      {"id": "uct-3000-self-play", "iteration_limit": 3000, "games": 100, "role": "strength_comparison"}
+    ]
+  },
+  "turns": {"first": 1, "last": 24, "placements_per_turn": 3},
+  "comparison_layers": [
+    {"id": "secured", "components": ["secured_objective_difference"]},
+    {"id": "secured_advantage", "components": ["secured_objective_difference", "advantage_objective_difference"]},
+    {"id": "full_lexicographic", "components": ["secured_objective_difference", "advantage_objective_difference", "objective_piece_difference"]}
+  ],
+  "persistence": {
+    "strict_persistent_lead_turn": "The earliest turn after which the eventual winner has a strictly positive lead at every remaining boundary; later equality and opponent leads are both forbidden.",
+    "nonlosing_persistence_turn": "The earliest turn after which the eventual winner is never behind at any remaining boundary; later equality is allowed but an opponent lead is forbidden.",
+    "last_lead_change_turn": "The last turn on which the non-zero leader differs from the most recent prior non-zero leader; equality does not itself name a leader.",
+    "draw_handling": "Winner-based persistence is null for draws. Lead changes, equality periods, and final return to equality remain defined."
+  },
+  "reversal": {
+    "definition": "current leader at Turn N eventually loses",
+    "denominator": "games with a non-tied current leader at Turn N",
+    "draws": "Reported separately and retained in the non-tied-leader denominator.",
+    "ties": "Turn-N tied games are reported separately and excluded from leader outcome rates."
+  },
+  "important_supply_sites": {
+    "primary": {
+      "source_issue": 39,
+      "source_experiment": "uct-10000-self-play",
+      "selection_metric": "objective_placements_supplied_per_player_game",
+      "description": "top 5 by actual Objective supply usage in Issue #39",
+      "is_composite_value_ranking": false,
+      "sites": ["S23", "S21", "S12", "S13", "S22"]
+    },
+    "sensitivity": [
+      {"id": "placement_frequency_top5", "metric": "placement_player_game_frequency", "sites": ["S31", "S13", "S21", "S23", "S11"]},
+      {"id": "unsecured_control_top5", "metric": "unsecured_controlled_turn_share", "sites": ["S22", "S12", "S23", "S21", "S32"]},
+      {"id": "secured_frequency_top5", "metric": "secured_frequency", "sites": ["S23", "S31", "S13", "S21", "S22"]},
+      {"id": "combined_ownership_control_top5", "metric": "controlled_or_secured_turn_share", "sites": ["S22", "S23", "S21", "S12", "S32"]}
+    ]
+  },
+  "turning_point_window": {"relative_turns": [-2, -1, 0, 1, 2]},
+  "targeted_continuation": {"enabled": false, "new_full_game_self_play": false}
+}
