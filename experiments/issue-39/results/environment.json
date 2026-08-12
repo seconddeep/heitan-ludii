@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-12T00:13:51Z",
+  "elapsed_seconds": 3.541,
+  "git_commit": "a20a54034453b4174628021331dc83a79324087b",
+  "python": "3.9.6",
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "config": "experiments/issue-39/config.json",
+  "config_sha256": "76ce74df3321cb249c3db0e348004a789fe971a96033b19b20297e13c5be7c62",
+  "readme_sha256": "67a04739b50f6cdefec0ecb32ac21ccd127ada960a4e78698dabc4a41f0053b7",
+  "analyzer_sha256": "c8586489fdfc1f32d235d3ba4ee4995d0bad723c60b4197ee8861ab309be9f27",
+  "run_script_sha256": "15f7a9e9a16176fcebf347496b1670aa2229d5257b05529220cdee73963b1e0f",
+  "test_script_sha256": "66d6e4112b40a2c7b3280965943c0fffe71aa9efa942d8952bd3d3b9cffdbf51",
+  "source_files": [
+    {
+      "source_role": "source_trials",
+      "path": "experiments/issue-37/results/source-trials.csv",
+      "sha256": "3199ec02ce8e91419dab54d722f0d625a5d9bfb96ade8792682c19dd00f9295a"
+    },
+    {
+      "source_role": "replay_summary",
+      "path": "experiments/issue-37/results/raw/replay-summary.csv",
+      "sha256": "503cdb056bb2ae54307cdc721e13c36db1c0845596d066699d136aa4dcec1471"
+    },
+    {
+      "source_role": "placements",
+      "path": "experiments/issue-37/results/raw/placements.csv",
+      "sha256": "6eb9440fb31735b46e4ec671eec3cdbcec87664ee8d547424f25654901c2bf7f"
+    },
+    {
+      "source_role": "supply_turn_states",
+      "path": "experiments/issue-37/results/raw/supply-turn-states.csv",
+      "sha256": "f58c10db158a036db3f8911f11c35f4a3cc2f6aea3fe073d736b09e779b28f71"
+    },
+    {
+      "source_role": "objective_turn_states",
+      "path": "experiments/issue-37/results/raw/objective-turn-states.csv",
+      "sha256": "b2102cff666eb7e5610288f391fdccde368261e5c6bc2823cc9e147154bdac08"
+    },
+    {
+      "source_role": "securable_opportunities",
+      "path": "experiments/issue-37/results/raw/securable-opportunities.csv",
+      "sha256": "4b27b7fb566eeb2b497e10754ff9d514820fef7f9b7b635005c908de1878042a"
+    }
+  ],
+  "new_uct_self_play_games": 0
+}

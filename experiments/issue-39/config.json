@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "source": {
+    "issue": 37,
+    "source_trials": "experiments/issue-37/results/source-trials.csv",
+    "replay_summary": "experiments/issue-37/results/raw/replay-summary.csv",
+    "placements": "experiments/issue-37/results/raw/placements.csv",
+    "supply_turn_states": "experiments/issue-37/results/raw/supply-turn-states.csv",
+    "objective_turn_states": "experiments/issue-37/results/raw/objective-turn-states.csv",
+    "securable_opportunities": "experiments/issue-37/results/raw/securable-opportunities.csv",
+    "experiments": [
+      {"id": "uct-10000-self-play", "iteration_limit": 10000, "games": 100, "role": "primary"},
+      {"id": "uct-3000-self-play", "iteration_limit": 3000, "games": 100, "role": "strength_comparison"}
+    ]
+  },
+  "turn_phases": [
+    {"id": "early", "first_turn": 1, "last_turn": 8},
+    {"id": "midgame", "first_turn": 9, "last_turn": 16},
+    {"id": "late", "first_turn": 17, "last_turn": 24}
+  ],
+  "control_aggregation": {
+    "version": 1,
+    "evaluation_point": "end_of_turn",
+    "game_rule_relationship": "A Secured Supply Point is Controlled by its owner.",
+    "analysis_policy": "Separate reversible unsecured Control from permanent Secured state, while also retaining their combined ownership/control measure.",
+    "is_unsecured_controlled": "state_at_turn_end equals player",
+    "is_secured": "state_at_turn_end equals player plus 2",
+    "is_controlled_or_secured": "is_unsecured_controlled or is_secured",
+    "required_identity": "controlled_or_secured_turns = unsecured_controlled_turns + secured_turns",
+    "share_denominator": "all 24 game turns for lifecycle/site summaries and all 8 phase turns for phase summaries"
+  },
+  "neutral_and_contest": {
+    "is_neutral": "state_at_turn_end equals 0, including an empty point",
+    "is_contested": "both players have at least one Piece at turn end, regardless of which player Controls the unresolved point"
+  },
+  "objective_coverage": {
+    "definition": "distinct adjacent Objectives actually supplied divided by the Supply Point's number of adjacent Objectives",
+    "normalization": "site_adjacency_degree"
+  },
+  "securable_opportunity": {
+    "repeated_unit": "player_supply_point_own_turn",
+    "ever_securable_unit": "game_player_supply_point",
+    "same_turn_take_rate": "securing events divided by repeated legal opportunities",
+    "eventual_conversion_rate": "ever-securable player-sites eventually Secured divided by ever-securable player-sites"
+  },
+  "spatial_categories": {
+    "corner": "four Supply Points with row and column both on the boundary",
+    "edge": "twelve non-corner Supply Points on the boundary",
+    "interior": "nine non-boundary Supply Points",
+    "s22_comparison": "S22 versus the other eight interior Supply Points"
+  }
+}
