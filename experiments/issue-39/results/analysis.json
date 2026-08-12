@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "primary_experiment": "uct-10000-self-play",
+  "games": 200,
+  "new_self_play_games": 0,
+  "definitions": {
+    "control_aggregation": {
+      "version": 1,
+      "evaluation_point": "end_of_turn",
+      "game_rule_relationship": "A Secured Supply Point is Controlled by its owner.",
+      "analysis_policy": "Separate reversible unsecured Control from permanent Secured state, while also retaining their combined ownership/control measure.",
+      "is_unsecured_controlled": "state_at_turn_end equals player",
+      "is_secured": "state_at_turn_end equals player plus 2",
+      "is_controlled_or_secured": "is_unsecured_controlled or is_secured",
+      "required_identity": "controlled_or_secured_turns = unsecured_controlled_turns + secured_turns",
+      "share_denominator": "all 24 game turns for lifecycle/site summaries and all 8 phase turns for phase summaries"
+    },
+    "neutral_and_contest": {
+      "is_neutral": "state_at_turn_end equals 0, including an empty point",
+      "is_contested": "both players have at least one Piece at turn end, regardless of which player Controls the unresolved point"
+    },
+    "objective_coverage": {
+      "definition": "distinct adjacent Objectives actually supplied divided by the Supply Point's number of adjacent Objectives",
+      "normalization": "site_adjacency_degree"
+    },
+    "securable_opportunity": {
+      "repeated_unit": "player_supply_point_own_turn",
+      "ever_securable_unit": "game_player_supply_point",
+      "same_turn_take_rate": "securing events divided by repeated legal opportunities",
+      "eventual_conversion_rate": "ever-securable player-sites eventually Secured divided by ever-securable player-sites"
+    }
+  },
+  "placement_usage_correlation": {
+    "uct-10000-self-play": {
+      "placement_usage_pearson": 0.991562,
+      "placement_usage_spearman": 0.909704
+    },
+    "uct-3000-self-play": {
+      "placement_usage_pearson": 0.982858,
+      "placement_usage_spearman": 0.920516
+    }
+  },
+  "usage_concentration": {
+    "uct-10000-self-play": {
+      "usage_top_3_share": 0.325171,
+      "usage_top_5_share": 0.526197,
+      "usage_hhi": 0.09256
+    },
+    "uct-3000-self-play": {
+      "usage_top_3_share": 0.293404,
+      "usage_top_5_share": 0.464908,
+      "usage_hhi": 0.072705
+    }
+  },
+  "s22_vs_other_interior_8": {
+    "uct-10000-self-play": {
+      "pieces_placed_per_player_game": {
+        "s22": 1.545,
+        "other_interior_8_mean": 1.6275,
+        "difference": -0.0825
+      },
+      "unsecured_controlled_turn_share": {
+        "s22": 0.170833,
+        "other_interior_8_mean": 0.149036,
+        "difference": 0.021797
+      },
+      "secured_turn_share": {
+        "s22": 0.120417,
+        "other_interior_8_mean": 0.103568,
+        "difference": 0.016849
+      },
+      "controlled_or_secured_turn_share": {
+        "s22": 0.29125,
+        "other_interior_8_mean": 0.252604,
+        "difference": 0.038646
+      },
+      "objective_placements_supplied_per_player_game": {
+        "s22": 1.765,
+        "other_interior_8_mean": 1.77125,
+        "difference": -0.00625
+      },
+      "mean_objective_coverage": {
+        "s22": 0.2575,
+        "other_interior_8_mean": 0.252812,
+        "difference": 0.004688
+      }
+    },
+    "uct-3000-self-play": {
+      "pieces_placed_per_player_game": {
+        "s22": 1.32,
+        "other_interior_8_mean": 1.324375,
+        "difference": -0.004375
+      },
+      "unsecured_controlled_turn_share": {
+        "s22": 0.236458,
+        "other_interior_8_mean": 0.218047,
+        "difference": 0.018411
+      },
+      "secured_turn_share": {
+        "s22": 0.060625,
+        "other_interior_8_mean": 0.046641,
+        "difference": 0.013984
+      },
+      "controlled_or_secured_turn_share": {
+        "s22": 0.297083,
+        "other_interior_8_mean": 0.264688,
+        "difference": 0.032395
+      },
+      "objective_placements_supplied_per_player_game": {
+        "s22": 1.655,
+        "other_interior_8_mean": 1.6475,
+        "difference": 0.0075
+      },
+      "mean_objective_coverage": {
+        "s22": 0.2475,
+        "other_interior_8_mean": 0.247031,
+        "difference": 0.000469
+      }
+    }
+  },
+  "integrity": {
+    "source_trials_hashed_and_verified": 200,
+    "issue_37_natural_end_replays_reused": 200,
+    "placement_rows": 14400,
+    "supply_turn_rows": 120000,
+    "objective_turn_rows": 76800,
+    "opportunity_rows": 120000,
+    "site_turn_lifecycle_rows": 240000,
+    "site_lifecycle_rows": 10000,
+    "control_identity_verified_lifecycle_rows": 10000,
+    "control_identity_verified_phase_rows": 150,
+    "objective_supply_sources_verified": 7302
+  }
+}
