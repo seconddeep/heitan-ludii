@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-12T00:37:17Z",
+  "elapsed_seconds": 0.862,
+  "git_commit": "b638ce924760e94bda0c96a5ce9f3363556732e7",
+  "python": "3.9.6",
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "config": "experiments/issue-41/config.json",
+  "config_sha256": "d269e8643542953f473f2f6b763dd1b9b53860832d57671b622f87838bb40430",
+  "readme_sha256": "c37f4ad1d6de5b385b41d9e3f1ed61e69ca3e3b98f8e206ff9776a56f96f6f6a",
+  "analyzer_sha256": "763d9b9c017b8e23bc4cc49df4bd794cee81b7322fdb49f6c9839747cc175449",
+  "run_script_sha256": "679ffb792415b95473b306a8f6e3ca1fcec559cded5e87afcb3d9f4b184a1951",
+  "test_script_sha256": "fc0bd69f039626bcd09d8c22f75792b8627b57fcd5ac2273cd77f63f50c6157c",
+  "report_sha256": "d34234752904ad78ab560c441ddab1f670061bd86230040f6682d7a1050b663d",
+  "source_files": [
+    {
+      "path": "experiments/issue-37/results/raw/replay-summary.csv",
+      "sha256": "503cdb056bb2ae54307cdc721e13c36db1c0845596d066699d136aa4dcec1471"
+    },
+    {
+      "path": "experiments/issue-37/results/raw/placements.csv",
+      "sha256": "6eb9440fb31735b46e4ec671eec3cdbcec87664ee8d547424f25654901c2bf7f"
+    },
+    {
+      "path": "experiments/issue-37/results/raw/supply-turn-states.csv",
+      "sha256": "f58c10db158a036db3f8911f11c35f4a3cc2f6aea3fe073d736b09e779b28f71"
+    },
+    {
+      "path": "experiments/issue-37/results/raw/objective-turn-states.csv",
+      "sha256": "b2102cff666eb7e5610288f391fdccde368261e5c6bc2823cc9e147154bdac08"
+    },
+    {
+      "path": "experiments/issue-37/results/source-trials.csv",
+      "sha256": "3199ec02ce8e91419dab54d722f0d625a5d9bfb96ade8792682c19dd00f9295a"
+    },
+    {
+      "path": "experiments/issue-39/results/site-value-summary.csv",
+      "sha256": "5edfd12437e9503c8bb950964feadbd3ab2a001228ecbe40b63e702313a10d82"
+    }
+  ],
+  "new_uct_self_play_games": 0,
+  "targeted_continuation_runs": 0
+}
