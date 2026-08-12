@@ -1,0 +1,9 @@
+experiment_id,checkpoint_turn,reversal_games,mean_eventual_winner_supply_placements_pre_takeover,mean_eventual_winner_objective_placements_pre_takeover,mean_important_supply_source_uses_pre_takeover
+uct-10000-self-play,8,38,0.519737,0.980263,0.506579
+uct-10000-self-play,12,37,0.560811,0.939189,0.445946
+uct-10000-self-play,16,39,0.589744,0.910256,0.391026
+uct-10000-self-play,20,36,0.611111,0.888889,0.340278
+uct-3000-self-play,8,48,0.635417,0.864583,0.390625
+uct-3000-self-play,12,40,0.64375,0.85625,0.34375
+uct-3000-self-play,16,41,0.652439,0.847561,0.384146
+uct-3000-self-play,20,42,0.660714,0.839286,0.345238

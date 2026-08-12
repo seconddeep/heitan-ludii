@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "primary_experiment": "uct-10000-self-play",
+  "sensitivity_experiment": "uct-3000-self-play",
+  "new_self_play_games": 0,
+  "definitions": {
+    "checkpoints": {
+      "primary": [
+        16,
+        20
+      ],
+      "reference": [
+        8,
+        12
+      ]
+    },
+    "timing": {
+      "global_strict_persistence_turn": "Issue #41 whole-game strict persistence",
+      "post_checkpoint_takeover_turn": "first strict permanent eventual-winner lead strictly after a reversal checkpoint"
+    },
+    "usable_supply_support_edges": {
+      "unit": "one player-controlled-or-secured Supply Point x adjacent live Objective pair",
+      "supply_is_usable_when_state_is": "player unsecured Control or player Secured",
+      "objective_is_live_when_state_is": "unresolved state 0, 1, or 2 at the turn boundary",
+      "count_each_adjacency_pair": true,
+      "deduplicate_by_supply_point": false,
+      "deduplicate_by_objective": false
+    },
+    "supply_mechanisms": {
+      "lookback_turns": 4,
+      "baseline_turns": 4,
+      "minimum_indicators": 2,
+      "usage_mean_change_threshold": 0.5,
+      "placement_mean_change_threshold": 0.5,
+      "support_edge_change_threshold": 1,
+      "window_value_definition": "arithmetic mean across all turn boundaries in the configured window",
+      "player_action_mean_definition": "arithmetic mean across only that player's own turns in the configured window"
+    },
+    "important_supply_sites": [
+      "S23",
+      "S21",
+      "S12",
+      "S13",
+      "S22"
+    ]
+  },
+  "counts": {
+    "games": 200,
+    "game_turns": 4800,
+    "checkpoint_rows": 800,
+    "reversal_rows": 321,
+    "primary_reversals": 150
+  },
+  "takeover_vs_final_decisive_layer": {
+    "primary_agreement_games": 137,
+    "primary_reversal_games": 150,
+    "primary_agreement_rate": 0.913333
+  },
+  "checkpoint_findings": {
+    "uct-10000-self-play": {
+      "8": {
+        "reversals": 38,
+        "lead_preserved": 36,
+        "eventual_draws": 10,
+        "tied_at_checkpoint": 16,
+        "mean_turns_to_takeover": 13.184211,
+        "one_turn_takeover_share": 0.026316,
+        "supply_degradation_share": 0.473684,
+        "supply_reinvestment_share": 0.473684,
+        "important_site_involvement_share": 0.5,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 27,
+          "advantage_objectives": 6,
+          "objective_pieces": 5
+        }
+      },
+      "12": {
+        "reversals": 37,
+        "lead_preserved": 35,
+        "eventual_draws": 10,
+        "tied_at_checkpoint": 18,
+        "mean_turns_to_takeover": 9.891892,
+        "one_turn_takeover_share": 0.0,
+        "supply_degradation_share": 0.513514,
+        "supply_reinvestment_share": 0.27027,
+        "important_site_involvement_share": 0.486486,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 21,
+          "advantage_objectives": 12,
+          "objective_pieces": 4
+        }
+      },
+      "16": {
+        "reversals": 39,
+        "lead_preserved": 41,
+        "eventual_draws": 8,
+        "tied_at_checkpoint": 12,
+        "mean_turns_to_takeover": 5.820513,
+        "one_turn_takeover_share": 0.128205,
+        "supply_degradation_share": 0.564103,
+        "supply_reinvestment_share": 0.333333,
+        "important_site_involvement_share": 0.487179,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 23,
+          "advantage_objectives": 11,
+          "objective_pieces": 5
+        }
+      },
+      "20": {
+        "reversals": 36,
+        "lead_preserved": 45,
+        "eventual_draws": 10,
+        "tied_at_checkpoint": 9,
+        "mean_turns_to_takeover": 2.694444,
+        "one_turn_takeover_share": 0.25,
+        "supply_degradation_share": 0.527778,
+        "supply_reinvestment_share": 0.444444,
+        "important_site_involvement_share": 0.388889,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 22,
+          "advantage_objectives": 11,
+          "objective_pieces": 3
+        }
+      }
+    },
+    "uct-3000-self-play": {
+      "8": {
+        "reversals": 48,
+        "lead_preserved": 39,
+        "eventual_draws": 4,
+        "tied_at_checkpoint": 9,
+        "mean_turns_to_takeover": 13.895833,
+        "one_turn_takeover_share": 0.0,
+        "supply_degradation_share": 0.479167,
+        "supply_reinvestment_share": 0.4375,
+        "important_site_involvement_share": 0.4375,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 28,
+          "advantage_objectives": 16,
+          "objective_pieces": 4
+        }
+      },
+      "12": {
+        "reversals": 40,
+        "lead_preserved": 43,
+        "eventual_draws": 4,
+        "tied_at_checkpoint": 13,
+        "mean_turns_to_takeover": 10.25,
+        "one_turn_takeover_share": 0.025,
+        "supply_degradation_share": 0.575,
+        "supply_reinvestment_share": 0.425,
+        "important_site_involvement_share": 0.375,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 18,
+          "advantage_objectives": 15,
+          "objective_pieces": 7
+        }
+      },
+      "16": {
+        "reversals": 41,
+        "lead_preserved": 48,
+        "eventual_draws": 3,
+        "tied_at_checkpoint": 8,
+        "mean_turns_to_takeover": 6.829268,
+        "one_turn_takeover_share": 0.04878,
+        "supply_degradation_share": 0.512195,
+        "supply_reinvestment_share": 0.512195,
+        "important_site_involvement_share": 0.536585,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 18,
+          "advantage_objectives": 17,
+          "objective_pieces": 6
+        }
+      },
+      "20": {
+        "reversals": 42,
+        "lead_preserved": 50,
+        "eventual_draws": 4,
+        "tied_at_checkpoint": 4,
+        "mean_turns_to_takeover": 2.952381,
+        "one_turn_takeover_share": 0.142857,
+        "supply_degradation_share": 0.595238,
+        "supply_reinvestment_share": 0.642857,
+        "important_site_involvement_share": 0.571429,
+        "takeover_decisive_layer_counts": {
+          "secured_objectives": 20,
+          "advantage_objectives": 16,
+          "objective_pieces": 6
+        }
+      }
+    }
+  },
+  "integrity": {
+    "usable_support_edge_player_turns_verified": 9600,
+    "point_turn_states_verified": 196800,
+    "point_state_chains_verified": 8200,
+    "supply_sources_verified": 7302,
+    "supply_source_adjacencies_verified": 7302,
+    "supply_source_ownerships_verified": 7302,
+    "issue_41_checkpoint_cells_reconciled": 8,
+    "source_files_hashed": 8,
+    "raw_perspectives_retained": true,
+    "deterministic_sorting": true
+  }
+}

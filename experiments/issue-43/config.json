@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "source": {
+    "issues": [37, 39, 41],
+    "turn_progression": "experiments/issue-41/results/raw/turn-progression.csv",
+    "lead_change_summary": "experiments/issue-41/results/lead-change-summary.csv",
+    "reversal_by_turn": "experiments/issue-41/results/reversal-by-turn.csv",
+    "placements": "experiments/issue-37/results/raw/placements.csv",
+    "supply_turn_states": "experiments/issue-37/results/raw/supply-turn-states.csv",
+    "objective_turn_states": "experiments/issue-37/results/raw/objective-turn-states.csv",
+    "source_trials": "experiments/issue-37/results/source-trials.csv",
+    "site_values": "experiments/issue-39/results/site-value-summary.csv",
+    "experiments": [
+      {"id": "uct-10000-self-play", "games": 100, "role": "primary"},
+      {"id": "uct-3000-self-play", "games": 100, "role": "sensitivity"}
+    ]
+  },
+  "checkpoints": {
+    "primary": [16, 20],
+    "reference": [8, 12]
+  },
+  "comparison_components": [
+    "secured_objective_difference",
+    "advantage_objective_difference",
+    "objective_piece_difference"
+  ],
+  "aligned_window_relative_turns": [-3, -2, -1, 0, 1, 2, 3],
+  "important_supply_sites": ["S23", "S21", "S12", "S13", "S22"],
+  "usable_supply_support_edges": {
+    "unit": "one player-controlled-or-secured Supply Point x adjacent live Objective pair",
+    "supply_is_usable_when_state_is": "player unsecured Control or player Secured",
+    "objective_is_live_when_state_is": "unresolved state 0, 1, or 2 at the turn boundary",
+    "count_each_adjacency_pair": true,
+    "deduplicate_by_supply_point": false,
+    "deduplicate_by_objective": false
+  },
+  "supply_mechanisms": {
+    "lookback_turns": 4,
+    "baseline_turns": 4,
+    "minimum_indicators": 2,
+    "usage_mean_change_threshold": 0.5,
+    "placement_mean_change_threshold": 0.5,
+    "support_edge_change_threshold": 1,
+    "window_value_definition": "arithmetic mean across all turn boundaries in the configured window",
+    "player_action_mean_definition": "arithmetic mean across only that player's own turns in the configured window"
+  },
+  "constraints": {
+    "new_self_play_games": 0,
+    "causal_claims": false
+  }
+}

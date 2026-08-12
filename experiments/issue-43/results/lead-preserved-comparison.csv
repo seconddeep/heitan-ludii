@@ -1,0 +1,17 @@
+experiment_id,checkpoint_turn,cohort,games,mean_checkpoint_secured_objectives_checkpoint_leader_relative,mean_checkpoint_advantage_objectives_checkpoint_leader_relative,mean_checkpoint_objective_pieces_checkpoint_leader_relative,mean_checkpoint_secured_supply_checkpoint_leader_relative,mean_checkpoint_unsecured_controlled_supply_checkpoint_leader_relative,mean_checkpoint_usable_supply_support_edges_checkpoint_leader_relative,mean_checkpoint_live_objectives
+uct-10000-self-play,8,lead_preserved,36,0.527778,-0.583333,0.472222,0.25,-0.722222,-2.472222,14.916667
+uct-10000-self-play,8,reversal,38,0.657895,-0.605263,0.657895,-0.368421,-0.289474,-3.026316,14.868421
+uct-10000-self-play,12,lead_preserved,35,0.8,-0.628571,0.4,0.2,-0.6,-2.228571,13.028571
+uct-10000-self-play,12,reversal,37,0.648649,-0.540541,0.351351,-0.189189,-0.162162,-2.135135,12.378378
+uct-10000-self-play,16,lead_preserved,41,0.804878,-0.707317,0.146341,0.170732,-0.341463,-0.707317,10.609756
+uct-10000-self-play,16,reversal,39,0.717949,-0.615385,0.153846,-0.153846,0.0,-1.410256,10.307692
+uct-10000-self-play,20,lead_preserved,45,0.644444,-0.044444,0.355556,0.133333,-0.511111,-0.688889,8.288889
+uct-10000-self-play,20,reversal,36,0.583333,-0.638889,0.222222,-0.111111,-0.111111,-1.027778,8.027778
+uct-3000-self-play,8,lead_preserved,39,0.589744,-0.25641,0.794872,0.051282,-0.74359,-2.923077,14.538462
+uct-3000-self-play,8,reversal,48,0.645833,-0.5625,0.729167,-0.083333,-0.625,-2.979167,14.645833
+uct-3000-self-play,12,lead_preserved,43,0.697674,-0.627907,0.627907,0.093023,-0.651163,-1.767442,12.0
+uct-3000-self-play,12,reversal,40,0.75,-0.575,0.675,-0.15,-0.575,-2.8,11.7
+uct-3000-self-play,16,lead_preserved,48,0.5625,-0.458333,0.354167,0.041667,-0.291667,0.208333,9.229167
+uct-3000-self-play,16,reversal,41,0.780488,-0.536585,0.268293,-0.365854,0.097561,-1.902439,9.365854
+uct-3000-self-play,20,lead_preserved,50,0.42,0.12,0.42,0.32,-0.64,0.24,6.98
+uct-3000-self-play,20,reversal,42,0.5,-0.142857,0.428571,-0.428571,0.0,-1.595238,7.642857
