@@ -1,0 +1,9 @@
+experiment_id,checkpoint_turn,games,reversals,lead_preserved,eventual_draws,tied_at_checkpoint,predictive_denominator
+uct-10000-self-play,8,100,38,36,10,16,74
+uct-10000-self-play,12,100,37,35,10,18,72
+uct-10000-self-play,16,100,39,41,8,12,80
+uct-10000-self-play,20,100,36,45,10,9,81
+uct-3000-self-play,8,100,48,39,4,9,87
+uct-3000-self-play,12,100,40,43,4,13,83
+uct-3000-self-play,16,100,41,48,3,8,89
+uct-3000-self-play,20,100,42,50,4,4,92
