@@ -80,15 +80,7 @@ Each player may have a maximum of 3 Pieces on a single point.
 
 ---
 
-## 6. Point State Updates
-
-Point states are not updated during a turn.
-
-After the turn ends, the states of all points are updated.
-
----
-
-## 7. Supply Points
+## 6. Supply Points
 
 ### Placement Conditions
 
@@ -120,11 +112,13 @@ A Secured Supply Point:
 
 ---
 
-## 8. Objectives
+## 7. Objectives
 
 ### Placement Conditions
 
-To place a Piece on an Objective, a player must use an adjacent Supply Point that they Control.
+To place a Piece on an Objective, a player must use an adjacent Supply Point.
+
+Only Supply Points Controlled by that player at the start of the turn may be used.
 
 Using one Supply Point allows the player to place one Piece on the Objective.
 
@@ -158,13 +152,13 @@ A Secured Objective:
 
 ---
 
-## 9. Game End
+## 8. Game End
 
-The game ends after both players have placed all of their Pieces and the state update for the final turn has been completed.
+The game ends when both players have placed all of their Pieces and the final turn has ended.
 
 ---
 
-## 10. Victory Conditions
+## 9. Victory Conditions
 
 Only Objectives are used to determine the winner.
 
@@ -188,7 +182,7 @@ If all of the above are equal, the game is a draw.
 
 ---
 
-## 11. Game Characteristics
+## 10. Game Characteristics
 
 Heitan is an abstract strategy game in which players build supply networks while competing for Objectives.
 
