@@ -1,0 +1,14 @@
+﻿{
+    "schema_version":  1,
+    "generated_at_utc":  "2026-08-13T15:06:35.0763373Z",
+    "elapsed_seconds":  48.89,
+    "ludii_version":  "1.3.14",
+    "ludii_jar_sha256":  "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+    "config_sha256":  "a94c21a240990164ca6bbb154c028985fa5b3f6f7f00118cf6e6076826dfd926",
+    "game_sha256":  "b04196e4b4def99ae485c820e1e5a1ff1651f11287c80ecd3fd81522a6c17cf6",
+    "replay_sha256":  "eb2a1035a7fa95be06603dd23a54c2ad365941026d73a9baf3dd3a01beed72d2",
+    "analysis_sha256":  "dde294bf0db08a90b09cc9f6d076550fd88485b4caaa20eb4438a42d9dd91532",
+    "git_commit":  "cfc1b4707f836ed34f1f5a39f23c15ebfb9c8042",
+    "java":  "openjdk 21.0.11 2026-04-21 LTS",
+    "node":  "v24.18.0"
+}
