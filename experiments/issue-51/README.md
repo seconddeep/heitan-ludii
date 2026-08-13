@@ -65,6 +65,8 @@ The resulting Ludii score is:
 - degree 4 for every Objective;
 - for every `O(r,c)`, exact adjacency to `S(r,c)`, `S(r,c+1)`,
   `S(r+1,c)`, and `S(r+1,c+1)`, with no missing or extra edge;
+- exactly 84 Supply-grid graphics lines, matching all and only the 42
+  horizontal and 42 vertical adjacent pairs in the 7x7 grid;
 - three placements per Heitan turn and state updates only after placement three;
 - Objective access only through Supply controlled at the start of the turn;
 - one use per Supply per turn and reset on the following turn;
@@ -90,4 +92,43 @@ to run only the structural, scoring, and deterministic mechanics checks.
 
 ## Validation results
 
-Results will be recorded after the full validation step.
+Automated validation was run on 2026-08-13 with Ludii Player 1.3.14.
+
+- The complete 6x6 validation passed for 20 seeded uniform-random games.
+- Every random game ended naturally after 144 placements and 48 Heitan turns.
+- Final Piece totals, independently calculated scores, and lexicographic
+  winners matched in all 20 games.
+- The deterministic mechanics scenario passed.
+- All 85 vertices, all named regions, and the exact set of 144 expected
+  Objective-to-Supply edges passed structural validation.
+- All 84 expected Supply-grid graphics lines passed metadata validation.
+- The current default 4x4 option was compared with the definition at commit
+  `6148688`, immediately before the 6x6 option was added. Across 202 existing
+  complete trials and 14,746 positions, legal decisions, board states, natural
+  endings, scores, and winners matched.
+
+Commands used:
+
+```powershell
+java -cp C:\path\to\Ludii-1.3.14.jar `
+    experiments\issue-51\Heitan6x6Validation.java `
+    games\Heitan.lud `
+    20
+
+java -cp C:\path\to\Ludii-1.3.14.jar `
+    experiments\issue-50\HeitanRegression.java `
+    C:\path\to\pre-6x6\Heitan.lud `
+    games\Heitan.lud `
+    experiments\issue-32\results\trials\uct-10000-self-play `
+    experiments\issue-32\results\trials\uct-3000-self-play `
+    experiments\trials
+```
+
+GUI verification was completed on 2026-08-13 with Ludii Player 1.3.14:
+
+- the `Board/6x6` option was selectable;
+- the 7x7 Supply grid and 6x6 Objective layout displayed correctly;
+- no missing, duplicate, or extra grid line was visible;
+- no Point, Piece, or line was misaligned or clipped;
+- Piece placement worked and the mover changed after three placements; and
+- returning to the default 4x4 option displayed the existing board correctly.

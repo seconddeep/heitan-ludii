@@ -14,6 +14,7 @@ import game.Game;
 import game.equipment.other.Regions;
 import game.util.graph.Edge;
 import main.collections.FastArrayList;
+import metadata.graphics.util.MetadataImageInfo;
 import other.GameLoader;
 import other.context.Context;
 import other.move.Move;
@@ -59,7 +60,8 @@ public final class Heitan6x6Validation
 
         System.out.printf(
             "6x6 validation passed: 85 sites, 144 exact Objective edges, "
-            + "shared-mechanics scenario, scoring weights, and %d random games.%n",
+            + "84 exact Supply-grid lines, shared-mechanics scenario, "
+            + "scoring weights, and %d random games.%n",
             randomGames
         );
     }
@@ -158,6 +160,51 @@ public final class Heitan6x6Validation
                     new int[] {objective(row, column)}
                 );
             }
+        }
+        validateSupplyGridLines(game, context);
+    }
+
+    private static void validateSupplyGridLines(
+        final Game game, final Context context
+    )
+    {
+        final Set<String> expectedLines = new TreeSet<>();
+        for (int row = 0; row < 7; ++row)
+        {
+            for (int column = 0; column < 6; ++column)
+            {
+                expectedLines.add(edgeKey(
+                    supply(row, column), supply(row, column + 1)
+                ));
+            }
+        }
+        for (int column = 0; column < 7; ++column)
+        {
+            for (int row = 0; row < 6; ++row)
+            {
+                expectedLines.add(edgeKey(
+                    supply(row, column), supply(row + 1, column)
+                ));
+            }
+        }
+
+        final Set<String> actualLines = new TreeSet<>();
+        final List<MetadataImageInfo> lineItems =
+            game.metadata().graphics().drawLines(context);
+        for (final MetadataImageInfo item : lineItems)
+        {
+            final Integer[] line = item.line();
+            if (line == null || line.length != 2)
+                fail("A Supply grid graphic is not a two-site line.");
+            if (!actualLines.add(edgeKey(line[0].intValue(), line[1].intValue())))
+                fail("A Supply grid graphic line is duplicated.");
+        }
+        if (lineItems.size() != 84 || !actualLines.equals(expectedLines))
+        {
+            fail(
+                "Supply grid graphics differ: expected 84 exact adjacent lines, got "
+                + lineItems.size() + "."
+            );
         }
     }
 
