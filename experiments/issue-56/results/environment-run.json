@@ -1,0 +1,13 @@
+﻿{
+    "schema_version":  1,
+    "smoke":  false,
+    "generated_at_utc":  "2026-08-13T14:50:19.6119262Z",
+    "elapsed_seconds":  4419.072,
+    "games":  170,
+    "parallelism":  6,
+    "batch_size":  5,
+    "ludii_version":  "1.3.14",
+    "ludii_jar_sha256":  "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+    "game_sha256":  "b04196e4b4def99ae485c820e1e5a1ff1651f11287c80ecd3fd81522a6c17cf6",
+    "runner_sha256":  "f86359cee48a8827351b0b4060b00cf56a2ee05a2428791d34b4847bbff073e7"
+}
