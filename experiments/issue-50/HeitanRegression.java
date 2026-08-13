@@ -4,13 +4,18 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Stream;
 
 import game.Game;
+import game.equipment.other.Regions;
+import game.util.graph.Edge;
 import manager.utils.game_logs.MatchRecord;
 import other.GameLoader;
 import other.context.Context;
@@ -40,6 +45,8 @@ public final class HeitanRegression
 
         final Game baseline = load(args[0]);
         final Game candidate = load(args[1]);
+        validate4x4Structure(baseline);
+        validate4x4Structure(candidate);
         final List<Path> trials = new ArrayList<>();
         for (int index = 2; index < args.length; ++index)
         {
@@ -70,6 +77,73 @@ public final class HeitanRegression
         if (game == null)
             throw new IllegalStateException("Ludii could not compile " + file);
         return game;
+    }
+
+    private static void validate4x4Structure(final Game game)
+    {
+        if (game.board().graph().vertices().size() != 41)
+            throw new IllegalStateException("Expected 41 vertices in " + game.name());
+        if (game.board().graph().edges().size() != 64)
+            throw new IllegalStateException("Expected 64 edges in " + game.name());
+
+        final Set<String> actualEdges = new TreeSet<>();
+        for (final Edge edge : game.board().graph().edges())
+            actualEdges.add(edgeKey(edge.vertexA().id(), edge.vertexB().id()));
+        final Set<String> expectedEdges = new TreeSet<>();
+        for (int row = 0; row < 4; ++row)
+        {
+            for (int column = 0; column < 4; ++column)
+            {
+                final int objective = 25 + row * 4 + column;
+                final int topLeftSupply = row * 5 + column;
+                expectedEdges.add(edgeKey(objective, topLeftSupply));
+                expectedEdges.add(edgeKey(objective, topLeftSupply + 1));
+                expectedEdges.add(edgeKey(objective, topLeftSupply + 5));
+                expectedEdges.add(edgeKey(objective, topLeftSupply + 6));
+            }
+        }
+        if (!actualEdges.equals(expectedEdges))
+            throw new IllegalStateException("4x4 Objective adjacency differs in " + game.name());
+
+        final Context context = new Context(game, new Trial(game));
+        game.start(context);
+        final Map<String, int[]> regions = new HashMap<>();
+        for (final Regions region : game.equipment().regions())
+            regions.put(region.name(), region.eval(context));
+        assertRegion(regions, "SupplyPoints", range(0, 25));
+        assertRegion(regions, "Objectives", range(25, 41));
+        for (int row = 0; row < 5; ++row)
+            for (int column = 0; column < 5; ++column)
+                assertRegion(regions, "S" + row + column, new int[] {row * 5 + column});
+        for (int row = 0; row < 4; ++row)
+            for (int column = 0; column < 4; ++column)
+                assertRegion(regions, "O" + row + column, new int[] {25 + row * 4 + column});
+    }
+
+    private static String edgeKey(final int first, final int second)
+    {
+        return Math.min(first, second) + ":" + Math.max(first, second);
+    }
+
+    private static int[] range(final int first, final int limit)
+    {
+        final int[] result = new int[limit - first];
+        for (int index = 0; index < result.length; ++index)
+            result[index] = first + index;
+        return result;
+    }
+
+    private static void assertRegion(
+        final Map<String, int[]> regions,
+        final String name,
+        final int[] expected
+    )
+    {
+        final int[] actual = regions.get(name);
+        if (actual == null || !Arrays.equals(actual, expected))
+            throw new IllegalStateException(
+                "Region " + name + " differs: " + Arrays.toString(actual)
+            );
     }
 
     private static long compareTrial(

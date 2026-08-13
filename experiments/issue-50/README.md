@@ -1,7 +1,13 @@
 # Issue 50 regression check
 
 `HeitanRegression.java` compares a baseline and candidate Heitan definition
-while replaying existing complete 4x4 trials. At every position it checks:
+while replaying existing complete 4x4 trials. It first checks:
+
+- 41 graph vertices and the exact set of 64 Objective-to-Supply edges;
+- the 25-site `SupplyPoints` and 16-site `Objectives` regions;
+- every named region from `S00` through `S44` and `O00` through `O33`.
+
+At every replayed position it then checks:
 
 - mover identity;
 - the complete legal decision set (`mover`, `from`, and `to`);
