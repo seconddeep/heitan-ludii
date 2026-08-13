@@ -1,0 +1,35 @@
+{
+  "name": "heitan-ludii-syntax",
+  "displayName": "Ludii Syntax Highlighting",
+  "description": "Basic syntax highlighting for Ludii .lud files.",
+  "version": "0.1.0",
+  "publisher": "vertijet",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ludii",
+        "aliases": [
+          "Ludii",
+          "ludii"
+        ],
+        "extensions": [
+          ".lud"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ludii",
+        "scopeName": "source.ludii",
+        "path": "./syntaxes/ludii.tmLanguage.json"
+      }
+    ]
+  }
+}

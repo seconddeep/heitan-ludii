@@ -1,0 +1,155 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ludii",
+  "scopeName": "source.ludii",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#placeholders"
+    },
+    {
+      "include": "#parameters"
+    },
+    {
+      "include": "#named-arguments"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#core-forms"
+    },
+    {
+      "include": "#control-forms"
+    },
+    {
+      "include": "#common-ludemes"
+    },
+    {
+      "include": "#ludeme-calls"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#delimiters"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.double-slash.ludii",
+      "begin": "//",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.ludii"
+        }
+      },
+      "end": "$"
+    },
+    "strings": {
+      "name": "string.quoted.double.ludii",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.ludii"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.ludii"
+        }
+      },
+      "patterns": [
+        {
+          "name": "constant.character.escape.ludii",
+          "match": "\\\\(?:[\\\\\"nrt]|u[0-9A-Fa-f]{4})"
+        }
+      ]
+    },
+    "placeholders": {
+      "patterns": [
+        {
+          "name": "variable.other.placeholder.ludii",
+          "match": "<[A-Za-z][A-Za-z0-9]*(?::[A-Za-z][A-Za-z0-9]*)?>"
+        },
+        {
+          "name": "variable.parameter.positional.ludii",
+          "match": "#[1-9][0-9]*"
+        }
+      ]
+    },
+    "parameters": {
+      "name": "variable.parameter.option.ludii",
+      "match": "(?<![A-Za-z0-9_])[A-Z][A-Za-z0-9]*(?=:)"
+    },
+    "named-arguments": {
+      "name": "variable.parameter.named.ludii",
+      "match": "(?<![A-Za-z0-9_])[a-z][A-Za-z0-9]*(?=:)"
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.ludii",
+          "match": "\\b(?:True|False)\\b"
+        },
+        {
+          "name": "constant.language.player.ludii",
+          "match": "\\b(?:P[1-9][0-9]*|Mover|Each|All)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.ludii",
+      "match": "(?<![A-Za-z0-9_])[-+]?(?:[0-9]+\\.[0-9]+|[0-9]+)(?![A-Za-z0-9_])"
+    },
+    "core-forms": {
+      "name": "keyword.declaration.ludii",
+      "match": "\\b(?:option|item|define|game|players|equipment|board|graph|piece|regions|rules|play|end|metadata|graphics)\\b"
+    },
+    "control-forms": {
+      "name": "keyword.control.ludii",
+      "match": "\\b(?:if|and|or|then|forEach|byScore|moveAgain)\\b"
+    },
+    "common-ludemes": {
+      "name": "support.function.ludii",
+      "match": "\\b(?:move|add|select|from|to|sites|count|set|remember|forget|values|is|intersection|score|show|player|colour|state|states|who|level|topLevel|last|mover|site|id|arrayValue|indices)\\b"
+    },
+    "ludeme-calls": {
+      "name": "entity.name.function.ludii",
+      "match": "(?<=\\()[A-Za-z][A-Za-z0-9]*"
+    },
+    "operators": {
+      "name": "keyword.operator.ludii",
+      "match": "(?<!\\S)(?:=|!=|<=|>=|<|>|\\+|-|\\*|/)(?!\\S)"
+    },
+    "delimiters": {
+      "patterns": [
+        {
+          "name": "punctuation.section.parens.ludii",
+          "match": "[()]"
+        },
+        {
+          "name": "punctuation.section.braces.ludii",
+          "match": "[{}]"
+        },
+        {
+          "name": "punctuation.section.brackets.ludii",
+          "match": "[\\[\\]]"
+        },
+        {
+          "name": "punctuation.definition.placeholder.ludii",
+          "match": "[<>]"
+        }
+      ]
+    }
+  }
+}
