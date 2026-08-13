@@ -1,3 +1,104 @@
+//------------------------------------------------------------------------------
+// Board-specific configuration
+
+(option "Board" <Board> args:{
+    <graph>
+    <supplyPoints>
+    <objectives>
+    <namedPointRegions>
+    <supplyGridLines>
+    <piecesPerPlayer>
+    <totalPlacements>
+    <advantageScoreWeight>
+    <securedScoreWeight>
+}
+    {
+    (item "4x4"
+        <
+        (graph
+            vertices:{
+                // Supply Points S00-S44 (indices 0-24, row-major).
+                {0 8} {2 8} {4 8} {6 8} {8 8}
+                {0 6} {2 6} {4 6} {6 6} {8 6}
+                {0 4} {2 4} {4 4} {6 4} {8 4}
+                {0 2} {2 2} {4 2} {6 2} {8 2}
+                {0 0} {2 0} {4 0} {6 0} {8 0}
+
+                // Objectives O00-O33 (indices 25-40, row-major).
+                {1 7} {3 7} {5 7} {7 7}
+                {1 5} {3 5} {5 5} {7 5}
+                {1 3} {3 3} {5 3} {7 3}
+                {1 1} {3 1} {5 1} {7 1}
+            }
+            edges:{
+                {25 0} {25 1} {25 5} {25 6}
+                {26 1} {26 2} {26 6} {26 7}
+                {27 2} {27 3} {27 7} {27 8}
+                {28 3} {28 4} {28 8} {28 9}
+                {29 5} {29 6} {29 10} {29 11}
+                {30 6} {30 7} {30 11} {30 12}
+                {31 7} {31 8} {31 12} {31 13}
+                {32 8} {32 9} {32 13} {32 14}
+                {33 10} {33 11} {33 15} {33 16}
+                {34 11} {34 12} {34 16} {34 17}
+                {35 12} {35 13} {35 17} {35 18}
+                {36 13} {36 14} {36 18} {36 19}
+                {37 15} {37 16} {37 20} {37 21}
+                {38 16} {38 17} {38 21} {38 22}
+                {39 17} {39 18} {39 22} {39 23}
+                {40 18} {40 19} {40 23} {40 24}
+            }
+        )
+        >
+        <{0..24}>
+        <{25..40}>
+        <
+        (regions "S00" {0}) (regions "S01" {1}) (regions "S02" {2})
+        (regions "S03" {3}) (regions "S04" {4}) (regions "S10" {5})
+        (regions "S11" {6}) (regions "S12" {7}) (regions "S13" {8})
+        (regions "S14" {9}) (regions "S20" {10}) (regions "S21" {11})
+        (regions "S22" {12}) (regions "S23" {13}) (regions "S24" {14})
+        (regions "S30" {15}) (regions "S31" {16}) (regions "S32" {17})
+        (regions "S33" {18}) (regions "S34" {19}) (regions "S40" {20})
+        (regions "S41" {21}) (regions "S42" {22}) (regions "S43" {23})
+        (regions "S44" {24})
+
+        (regions "O00" {25}) (regions "O01" {26}) (regions "O02" {27})
+        (regions "O03" {28}) (regions "O10" {29}) (regions "O11" {30})
+        (regions "O12" {31}) (regions "O13" {32}) (regions "O20" {33})
+        (regions "O21" {34}) (regions "O22" {35}) (regions "O23" {36})
+        (regions "O30" {37}) (regions "O31" {38}) (regions "O32" {39})
+        (regions "O33" {40})
+        >
+        <
+        {
+            // Horizontal Supply grid lines.
+            {0 1} {1 2} {2 3} {3 4}
+            {5 6} {6 7} {7 8} {8 9}
+            {10 11} {11 12} {12 13} {13 14}
+            {15 16} {16 17} {17 18} {18 19}
+            {20 21} {21 22} {22 23} {23 24}
+
+            // Vertical Supply grid lines.
+            {0 5} {5 10} {10 15} {15 20}
+            {1 6} {6 11} {11 16} {16 21}
+            {2 7} {7 12} {12 17} {17 22}
+            {3 8} {8 13} {13 18} {18 23}
+            {4 9} {9 14} {14 19} {19 24}
+        }
+        >
+        <36>
+        <72>
+        <37>
+        <629>
+        "The original 4x4 Heitan board."
+    )*
+    }
+)
+
+//------------------------------------------------------------------------------
+// Shared Heitan mechanics
+
 (define "PiecesAt"
     (count Stack Vertex at:#1
         if:(= #2 (who Vertex at:#1 level:(level)))
@@ -182,62 +283,13 @@
     (players 2)
     (equipment {
         (board
-            (graph
-                vertices:{
-                    // Supply Points S00-S44 (indices 0-24, row-major).
-                    {0 8} {2 8} {4 8} {6 8} {8 8}
-                    {0 6} {2 6} {4 6} {6 6} {8 6}
-                    {0 4} {2 4} {4 4} {6 4} {8 4}
-                    {0 2} {2 2} {4 2} {6 2} {8 2}
-                    {0 0} {2 0} {4 0} {6 0} {8 0}
-
-                    // Objectives O00-O33 (indices 25-40, row-major).
-                    {1 7} {3 7} {5 7} {7 7}
-                    {1 5} {3 5} {5 5} {7 5}
-                    {1 3} {3 3} {5 3} {7 3}
-                    {1 1} {3 1} {5 1} {7 1}
-                }
-                edges:{
-                    {25 0} {25 1} {25 5} {25 6}
-                    {26 1} {26 2} {26 6} {26 7}
-                    {27 2} {27 3} {27 7} {27 8}
-                    {28 3} {28 4} {28 8} {28 9}
-                    {29 5} {29 6} {29 10} {29 11}
-                    {30 6} {30 7} {30 11} {30 12}
-                    {31 7} {31 8} {31 12} {31 13}
-                    {32 8} {32 9} {32 13} {32 14}
-                    {33 10} {33 11} {33 15} {33 16}
-                    {34 11} {34 12} {34 16} {34 17}
-                    {35 12} {35 13} {35 17} {35 18}
-                    {36 13} {36 14} {36 18} {36 19}
-                    {37 15} {37 16} {37 20} {37 21}
-                    {38 16} {38 17} {38 21} {38 22}
-                    {39 17} {39 18} {39 22} {39 23}
-                    {40 18} {40 19} {40 23} {40 24}
-                }
-            )
+            <Board:graph>
             use:Vertex
         )
         (piece "Disc" Each maxState:4)
-        (regions "SupplyPoints" {0..24})
-        (regions "Objectives" {25..40})
-
-        (regions "S00" {0}) (regions "S01" {1}) (regions "S02" {2})
-        (regions "S03" {3}) (regions "S04" {4}) (regions "S10" {5})
-        (regions "S11" {6}) (regions "S12" {7}) (regions "S13" {8})
-        (regions "S14" {9}) (regions "S20" {10}) (regions "S21" {11})
-        (regions "S22" {12}) (regions "S23" {13}) (regions "S24" {14})
-        (regions "S30" {15}) (regions "S31" {16}) (regions "S32" {17})
-        (regions "S33" {18}) (regions "S34" {19}) (regions "S40" {20})
-        (regions "S41" {21}) (regions "S42" {22}) (regions "S43" {23})
-        (regions "S44" {24})
-
-        (regions "O00" {25}) (regions "O01" {26}) (regions "O02" {27})
-        (regions "O03" {28}) (regions "O10" {29}) (regions "O11" {30})
-        (regions "O12" {31}) (regions "O13" {32}) (regions "O20" {33})
-        (regions "O21" {34}) (regions "O22" {35}) (regions "O23" {36})
-        (regions "O30" {37}) (regions "O31" {38}) (regions "O32" {39})
-        (regions "O33" {40})
+        (regions "SupplyPoints" <Board:supplyPoints>)
+        (regions "Objectives" <Board:objectives>)
+        <Board:namedPointRegions>
     })
     (rules
         (play
@@ -265,21 +317,7 @@
         (board Colour InnerVertices (colour Hidden))
         (board Colour OuterVertices (colour Hidden))
         (show Line
-            {
-                // Horizontal Supply grid lines.
-                {0 1} {1 2} {2 3} {3 4}
-                {5 6} {6 7} {7 8} {8 9}
-                {10 11} {11 12} {12 13} {13 14}
-                {15 16} {16 17} {17 18} {18 19}
-                {20 21} {21 22} {22 23} {23 24}
-
-                // Vertical Supply grid lines.
-                {0 5} {5 10} {10 15} {15 20}
-                {1 6} {6 11} {11 16} {16 21}
-                {2 7} {7 12} {12 17} {17 22}
-                {3 8} {8 13} {13 18} {18 23}
-                {4 9} {9 14} {14 19} {19 24}
-            }
+            <Board:supplyGridLines>
             (colour 128 128 128)
         )
     })
