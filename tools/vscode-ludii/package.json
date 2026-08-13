@@ -1,0 +1,48 @@
+{
+  "name": "ludii-syntax-highlighting",
+  "displayName": "Ludii Syntax Highlighting",
+  "description": "Basic syntax highlighting for Ludii .lud files.",
+  "version": "0.1.0",
+  "publisher": "vertijet",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vertijet/heitan-ludii.git",
+    "directory": "tools/vscode-ludii"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "scripts": {
+    "package": "vsce package --out ludii-syntax-highlighting.vsix",
+    "install-local": "npm run package && code --install-extension ludii-syntax-highlighting.vsix --force"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ludii",
+        "aliases": [
+          "Ludii",
+          "ludii"
+        ],
+        "extensions": [
+          ".lud"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ludii",
+        "scopeName": "source.ludii",
+        "path": "./syntaxes/ludii.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
+  }
+}
