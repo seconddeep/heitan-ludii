@@ -1,0 +1,5 @@
+"board","experiment_id","secured_player_supplies","used_later","conversion_rate","objective_placements_after_securing"
+"6x6","6x6-uct-0500","127","71","0.559055","149"
+"4x4","uct-0500-self-play","107","69","0.644860","159"
+"6x6","6x6-uct-1000","38","22","0.578947","47"
+"4x4","uct-1000-self-play","126","91","0.722222","215"

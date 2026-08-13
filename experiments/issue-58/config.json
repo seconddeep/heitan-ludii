@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "ludii_version": "1.3.14",
+  "board_option": "Board/6x6",
+  "frozen_analysis_source": "experiments/issue-56",
+  "experiments": [
+    {
+      "id": "6x6-uct-0500",
+      "agent": "UCT",
+      "games": 30,
+      "iteration_limit": 500,
+      "base_seed": 560170,
+      "index_offset": 20
+    },
+    {
+      "id": "6x6-uct-1000",
+      "agent": "UCT",
+      "games": 20,
+      "iteration_limit": 1000,
+      "base_seed": 581000,
+      "index_offset": 0
+    }
+  ],
+  "analysis_sources": [
+    {
+      "board": "6x6",
+      "id": "6x6-uct-0500",
+      "iteration_limit": 500,
+      "games": 20,
+      "trial_root": "experiments/issue-56/results/trials/6x6-uct-0500"
+    },
+    {
+      "board": "6x6",
+      "id": "6x6-uct-0500",
+      "iteration_limit": 500,
+      "games": 30,
+      "trial_root": "experiments/issue-58/results/trials/6x6-uct-0500"
+    },
+    {
+      "board": "4x4",
+      "id": "uct-0500-self-play",
+      "iteration_limit": 500,
+      "games": 100,
+      "trial_root": "experiments/issue-30/results/trials/uct-0500-self-play"
+    },
+    {
+      "board": "6x6",
+      "id": "6x6-uct-1000",
+      "iteration_limit": 1000,
+      "games": 20,
+      "trial_root": "experiments/issue-58/results/trials/6x6-uct-1000"
+    },
+    {
+      "board": "4x4",
+      "id": "uct-1000-self-play",
+      "iteration_limit": 1000,
+      "games": 100,
+      "trial_root": "experiments/issue-30/results/trials/uct-1000-self-play"
+    }
+  ],
+  "progress_checkpoints": [0.25, 0.5, 0.75, 0.9],
+  "fixed_window_turns": 4,
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 560056,
+  "subsampling": {
+    "enabled": false,
+    "role": "optional sensitivity analysis only"
+  }
+}
