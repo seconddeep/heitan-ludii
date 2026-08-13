@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 270,
+    "placements": 24480,
+    "turns": 8160,
+    "all_turns_have_three_placements": true,
+    "subsampling_run": false
+  },
+  "interpretation": {
+    "primary": "per-turn 3 / 2+1 / 1+1+1 allocation",
+    "secondary": "normalized fixed-window spatial metrics",
+    "cumulative_absolute_region_metrics": "descriptive only; sample-size sensitive",
+    "leader_reversibility_denominator": "games with a non-tied leader at the checkpoint and comparison layer",
+    "subsampling": "not run; optional if evidence is ambiguous"
+  }
+}
