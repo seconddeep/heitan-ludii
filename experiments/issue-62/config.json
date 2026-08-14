@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "game": "games/Heitan.lud",
+  "ludii_version": "1.3.14",
+  "board_option": "Board/3x3",
+  "experiments": [
+    {"id":"3x3-seeded-random","agent":"SeededRandom","games":100,"iteration_limit":-1,"seed_first":620000},
+    {"id":"3x3-uct-0100","agent":"UCT","games":100,"iteration_limit":100,"seed_first":620100},
+    {"id":"3x3-uct-0500","agent":"UCT","games":100,"iteration_limit":500,"seed_first":620200},
+    {"id":"3x3-uct-1000","agent":"UCT","games":100,"iteration_limit":1000,"seed_first":620300}
+  ],
+  "progress_checkpoints": [0.25, 0.5, 0.75, 0.9],
+  "fixed_window_turns": 4,
+  "fixed_window_placements": 12,
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 560056,
+  "leader_definition": {
+    "primary_layer": "full_lexicographic",
+    "layers": ["secured", "secured_advantage", "full_lexicographic"],
+    "ties_excluded_from_reversal_denominator": true,
+    "reversal": "checkpoint leader differs from the natural-end winner",
+    "eventual_draws_excluded_from_reversal_denominator": true
+  },
+  "analysis_sources": [
+    {"source_issue":62,"board":"3x3","id":"3x3-seeded-random","iteration_limit":-1,"games":100,"index_first":1,"index_last":100,"seed_first":620000,"seed_last":620099,"trial_root":"experiments/issue-62/results/trials/3x3-seeded-random","runner_csv_glob":"experiments/issue-62/results/raw/3x3-seeded-random-*.csv"},
+    {"source_issue":62,"board":"3x3","id":"3x3-uct-0100","iteration_limit":100,"games":100,"index_first":1,"index_last":100,"seed_first":620100,"seed_last":620199,"trial_root":"experiments/issue-62/results/trials/3x3-uct-0100","runner_csv_glob":"experiments/issue-62/results/raw/3x3-uct-0100-*.csv"},
+    {"source_issue":62,"board":"3x3","id":"3x3-uct-0500","iteration_limit":500,"games":100,"index_first":1,"index_last":100,"seed_first":620200,"seed_last":620299,"trial_root":"experiments/issue-62/results/trials/3x3-uct-0500","runner_csv_glob":"experiments/issue-62/results/raw/3x3-uct-0500-*.csv"},
+    {"source_issue":62,"board":"3x3","id":"3x3-uct-1000","iteration_limit":1000,"games":100,"index_first":1,"index_last":100,"seed_first":620300,"seed_last":620399,"trial_root":"experiments/issue-62/results/trials/3x3-uct-1000","runner_csv_glob":"experiments/issue-62/results/raw/3x3-uct-1000-*.csv"},
+    {"source_issue":11,"board":"4x4","id":"seeded-random-self-play","iteration_limit":-1,"games":100,"index_first":1,"index_last":100,"seed_first":110000,"seed_last":110099,"trial_root":"experiments/issue-11/results/trials/seeded-random-self-play","runner_csv_glob":"experiments/issue-11/results/raw/seeded-random-self-play*.csv"},
+    {"source_issue":30,"board":"4x4","id":"uct-0100-self-play","iteration_limit":100,"games":100,"index_first":1,"index_last":100,"seed_first":300000,"seed_last":300099,"trial_root":"experiments/issue-30/results/trials/uct-0100-self-play","runner_csv_glob":"experiments/issue-30/results/raw/uct-0100-self-play*.csv"},
+    {"source_issue":30,"board":"4x4","id":"uct-0500-self-play","iteration_limit":500,"games":100,"index_first":1,"index_last":100,"seed_first":300100,"seed_last":300199,"trial_root":"experiments/issue-30/results/trials/uct-0500-self-play","runner_csv_glob":"experiments/issue-30/results/raw/uct-0500-self-play*.csv"},
+    {"source_issue":30,"board":"4x4","id":"uct-1000-self-play","iteration_limit":1000,"games":100,"index_first":1,"index_last":100,"seed_first":300200,"seed_last":300299,"trial_root":"experiments/issue-30/results/trials/uct-1000-self-play","runner_csv_glob":"experiments/issue-30/results/raw/uct-1000-self-play*.csv"},
+    {"source_issue":56,"board":"6x6","id":"6x6-seeded-random","iteration_limit":-1,"games":100,"index_first":1,"index_last":100,"seed_first":560000,"seed_last":560099,"trial_root":"experiments/issue-56/results/trials/6x6-seeded-random","runner_csv_glob":"experiments/issue-56/results/raw/6x6-seeded-random-*.csv"},
+    {"source_issue":56,"board":"6x6","id":"6x6-uct-0100","iteration_limit":100,"games":50,"index_first":1,"index_last":50,"seed_first":560100,"seed_last":560149,"trial_root":"experiments/issue-56/results/trials/6x6-uct-0100","runner_csv_glob":"experiments/issue-56/results/raw/6x6-uct-0100-*.csv"},
+    {"source_issue":56,"board":"6x6","id":"6x6-uct-0500","iteration_limit":500,"games":20,"index_first":1,"index_last":20,"seed_first":560150,"seed_last":560169,"trial_root":"experiments/issue-56/results/trials/6x6-uct-0500","runner_csv_glob":"experiments/issue-56/results/raw/6x6-uct-0500-*.csv"},
+    {"source_issue":58,"board":"6x6","id":"6x6-uct-0500","iteration_limit":500,"games":30,"index_first":21,"index_last":50,"seed_first":560170,"seed_last":560199,"trial_root":"experiments/issue-58/results/trials/6x6-uct-0500","runner_csv_glob":"experiments/issue-58/results/raw/6x6-uct-0500-*.csv"},
+    {"source_issue":58,"board":"6x6","id":"6x6-uct-1000","iteration_limit":1000,"games":20,"index_first":1,"index_last":20,"seed_first":581000,"seed_last":581019,"trial_root":"experiments/issue-58/results/trials/6x6-uct-1000","runner_csv_glob":"experiments/issue-58/results/raw/6x6-uct-1000-*.csv"},
+    {"source_issue":60,"board":"6x6","id":"6x6-uct-1000","iteration_limit":1000,"games":30,"index_first":21,"index_last":50,"seed_first":581020,"seed_last":581049,"trial_root":"experiments/issue-60/results/trials/6x6-uct-1000","runner_csv_glob":"experiments/issue-60/results/raw/6x6-uct-1000-*.csv"}
+  ]
+}

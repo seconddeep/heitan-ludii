@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 1050,
+    "placements": 86400,
+    "turns": 28800,
+    "all_turns_have_three_placements": true,
+    "all_games_natural_and_board_totals_match": true
+  },
+  "frozen_interpretation": {
+    "fixed_window": "12 placements; not fixed progress width",
+    "primary_spatial": "per-turn allocation and mean regions used",
+    "secondary_spatial": "four-turn normalized entropy, largest share, HHI, coverage",
+    "primary_leader_layer": "full_lexicographic",
+    "reversal": "non-tied checkpoint leader differs from non-draw final winner",
+    "rankings": "within-board exploratory; bootstrap top-rank rate"
+  }
+}
