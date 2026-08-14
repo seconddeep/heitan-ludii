@@ -1,0 +1,18 @@
+﻿{
+    "schema_version":  1,
+    "generated_at_utc":  "2026-08-14T13:44:27.8332710Z",
+    "elapsed_seconds":  91.626,
+    "games":  1050,
+    "ludii_version":  "1.3.14",
+    "ludii_jar_sha256":  "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+    "config_sha256":  "af9843d785b067e6eb71c6353514eb3a56f9fa0903675151af08af936d5b0b5c",
+    "preregistration_sha256":  "7cd77ee5a55c970db905bc0c117aec2300595dfc1338aefd473ce5a2ff1f7253",
+    "game_sha256":  "434f7d351907d3eb7a51e25e10d15750c767c1dea9cdb2f82b1c96fcbe64acd8",
+    "replay_sha256":  "ce64e31eac21fb6e1e3412de7c6b35eebaddecec582ffeb80987c3058224eb32",
+    "analysis_sha256":  "eaa421e009ed0372655644e56cd91146a62b13006b5f2920b8e7c84d506ff253",
+    "tests_sha256":  "fda3659bf979537d530d97b24244fc0498445693b5989f501879ea96d9e6ba4b",
+    "trial_sources_sha256":  "2a30b9823fc84215b0cef06d436455d509583021e18b4779825043070fb84936",
+    "git_commit":  "e8066aab86347c0732f5c72d47877e49b52235f0",
+    "java":  "openjdk 21.0.11 2026-04-21 LTS",
+    "node":  "v24.18.0"
+}

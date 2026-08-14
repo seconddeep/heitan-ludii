@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 1050,
+    "primary_games": 250,
+    "placements": 86400,
+    "turns": 28800,
+    "regional_turn_rows": 259200,
+    "opportunity_rows": 259200,
+    "all_turns_have_three_placements": true,
+    "all_games_natural_and_board_totals_match": true,
+    "regional_leads_match_frozen_definition": true,
+    "regional_placement_totals_match": true,
+    "regional_legal_targets_match_board_totals": true,
+    "opportunity_shares_sum_to_one": true
+  },
+  "frozen_definitions": {
+    "regions": [
+      "LL",
+      "LM",
+      "LH",
+      "ML",
+      "MM",
+      "MH",
+      "HL",
+      "HM",
+      "HH"
+    ],
+    "recent_window_turns": 4,
+    "sensitivity_window_turns": [
+      2,
+      6
+    ],
+    "local_lead": "P1 +1, tie 0, P2 -1; lexicographic Secured Objectives, Advantage Objectives, Objective Pieces",
+    "dependence_null": "all non-zero circular shifts of the second series in each unordered region pair",
+    "focus_denominator": "adjacent turns with a unique dominant region at both endpoints",
+    "opportunity_adjustment": "active turn rate divided by mean regional opportunity share"
+  }
+}
