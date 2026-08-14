@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 1050,
+    "placements": 86400,
+    "turns": 28800,
+    "regional_turn_rows": 259200,
+    "unique_trial_hashes": 1050,
+    "unique_target_region_assignments": 151,
+    "all_input_hashes_match": true,
+    "all_trial_hashes_match": true,
+    "all_games_natural_and_board_totals_match": true,
+    "all_placements_have_unique_region": true,
+    "all_turns_have_three_unique_placements": true,
+    "regional_placement_totals_match": true
+  },
+  "primary_games": 250,
+  "frozen_definitions": {
+    "regions": [
+      "LL",
+      "LM",
+      "LH",
+      "ML",
+      "MM",
+      "MH",
+      "HL",
+      "HM",
+      "HH"
+    ],
+    "active_window_turns": 4,
+    "primary_dormancy_threshold": 2,
+    "sensitivity_dormancy_thresholds": [
+      1,
+      3
+    ],
+    "persistent_boundary": "active at every turn through the turn immediately before return; return placement may refresh activity",
+    "reactivation_boundary": "at least one inactive turn while opposing unsecured presence persists; first return ends active",
+    "terminal_outcomes": [
+      "persistent_revisit",
+      "reactivation_revisit",
+      "never_revisited_resolved",
+      "never_revisited_nonfront_return",
+      "right_censored"
+    ],
+    "focus_denominator": "adjacent turns with a unique dominant region at both endpoints"
+  },
+  "outputs": {
+    "departure_cycles": 69096,
+    "focus_switches": 3124,
+    "front_turn_rows": 28800
+  }
+}
