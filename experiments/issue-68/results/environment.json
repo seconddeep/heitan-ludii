@@ -1,0 +1,49 @@
+﻿{
+    "schema_version":  1,
+    "generated_at_utc":  "2026-08-14T14:15:50.4842468Z",
+    "elapsed_seconds":  11.711,
+    "games":  1050,
+    "primary_games":  250,
+    "source_issue":  65,
+    "replay_refreshed":  false,
+    "ludii_version":  "1.3.14",
+    "config_sha256":  "0e9687b8a09a19492de5b6ce9f9d7726cf9c431047dc1b1cb90758b1d812c09f",
+    "preregistration_sha256":  "b9fb3781524a3634dbe40477eae91a704c11061c195436250a7609612e41f9ff",
+    "analysis_sha256":  "12530486bbb99b35a25a8765bc3f211f672f92f03ebd20a530e08174e86e2740",
+    "tests_sha256":  "0b65a8c761908973c3a6aa986b0d4fc44d379a9d55b222b9b11df225ce2873f0",
+    "source_artifacts":  [
+                             {
+                                 "path":  "experiments/issue-65/config.json",
+                                 "sha256":  "7cea7f706cb2848958a1cc5388b76a0abd43086f5c632e5e8de9eef37dacce42",
+                                 "bytes":  5069
+                             },
+                             {
+                                 "path":  "experiments/issue-65/README.md",
+                                 "sha256":  "b251cb8ebf4569e955ad20a5f0f91df4ebd2fd65dacbd89039ba84da38f4eca5",
+                                 "bytes":  5663
+                             },
+                             {
+                                 "path":  "experiments/issue-65/results/trial-sources.csv",
+                                 "sha256":  "2a30b9823fc84215b0cef06d436455d509583021e18b4779825043070fb84936",
+                                 "bytes":  214807
+                             },
+                             {
+                                 "path":  "experiments/issue-65/results/raw/games.csv",
+                                 "sha256":  "05a49a8934a436ab31691fdfb6197c996311c00be7de96808c717434b1699494",
+                                 "bytes":  156354
+                             },
+                             {
+                                 "path":  "experiments/issue-65/results/raw/placements.csv",
+                                 "sha256":  "d16bbb9768bbcc0951da1685c0559c309ff70f13d399ac19f9f5b9a2de3fca63",
+                                 "bytes":  7411560
+                             },
+                             {
+                                 "path":  "experiments/issue-65/results/raw/regional-turn-states.csv",
+                                 "sha256":  "fb8527a2fb32b9be5c98027451d86c06f4b8fc0b94af3e93177f0e2ca13d2bd7",
+                                 "bytes":  39565965
+                             }
+                         ],
+    "git_commit":  "ebc1919ac7e637e9416357ebb257aae80ef4f0a4",
+    "node":  "v24.18.0",
+    "java":  null
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "source_issue": 65,
+  "artifacts": [
+    {
+      "path": "experiments/issue-65/config.json",
+      "sha256": "7cea7f706cb2848958a1cc5388b76a0abd43086f5c632e5e8de9eef37dacce42",
+      "bytes": 5069
+    },
+    {
+      "path": "experiments/issue-65/README.md",
+      "sha256": "b251cb8ebf4569e955ad20a5f0f91df4ebd2fd65dacbd89039ba84da38f4eca5",
+      "bytes": 5663
+    },
+    {
+      "path": "experiments/issue-65/results/trial-sources.csv",
+      "sha256": "2a30b9823fc84215b0cef06d436455d509583021e18b4779825043070fb84936",
+      "bytes": 214807
+    },
+    {
+      "path": "experiments/issue-65/results/raw/games.csv",
+      "sha256": "05a49a8934a436ab31691fdfb6197c996311c00be7de96808c717434b1699494",
+      "bytes": 156354
+    },
+    {
+      "path": "experiments/issue-65/results/raw/placements.csv",
+      "sha256": "d16bbb9768bbcc0951da1685c0559c309ff70f13d399ac19f9f5b9a2de3fca63",
+      "bytes": 7411560
+    },
+    {
+      "path": "experiments/issue-65/results/raw/regional-turn-states.csv",
+      "sha256": "fb8527a2fb32b9be5c98027451d86c06f4b8fc0b94af3e93177f0e2ca13d2bd7",
+      "bytes": 39565965
+    }
+  ]
+}
