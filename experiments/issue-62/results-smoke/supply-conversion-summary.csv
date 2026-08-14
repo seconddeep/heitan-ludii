@@ -1,0 +1,5 @@
+"board","experiment_id","games","games_with_secured_supply","mean_first_securing_turn","secured_player_supplies","used_later","conversion_rate"
+"3x3","3x3-seeded-random","2","2","7.500000","10","4","0.400000"
+"3x3","3x3-uct-0100","2","2","6.500000","3","2","0.666667"
+"3x3","3x3-uct-0500","2","2","8.500000","5","3","0.600000"
+"3x3","3x3-uct-1000","2","1","15.000000","1","0","0.000000"

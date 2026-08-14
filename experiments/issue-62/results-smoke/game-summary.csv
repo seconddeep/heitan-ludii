@@ -1,0 +1,5 @@
+"board","experiment_id","games","p1_wins","p2_wins","draws","supply_share","objective_share","average_secured_supply","average_secured_objectives","decided_by_secured","decided_by_advantage","decided_by_pieces","draw_criterion"
+"3x3","3x3-seeded-random","2","1","0","1","0.777778","0.222222","5.000000","1.000000","1","0","0","1"
+"3x3","3x3-uct-0100","2","1","1","0","0.509259","0.490741","1.500000","5.500000","1","1","0","0"
+"3x3","3x3-uct-0500","2","1","1","0","0.564815","0.435185","2.500000","6.500000","1","0","1","0"
+"3x3","3x3-uct-1000","2","2","0","0","0.518519","0.481481","0.500000","6.500000","1","0","1","0"

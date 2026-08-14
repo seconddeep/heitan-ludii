@@ -1,0 +1,5 @@
+"board","experiment_id","games","supply_placements","mean_game_supply_hhi","most_used_supply","most_used_share"
+"3x3","3x3-seeded-random","2","84","0.079230","S33","0.095238"
+"3x3","3x3-uct-0100","2","55","0.102600","S11","0.145455"
+"3x3","3x3-uct-0500","2","61","0.100609","S21","0.163934"
+"3x3","3x3-uct-1000","2","56","0.111026","S22","0.142857"
