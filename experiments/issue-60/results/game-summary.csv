@@ -1,0 +1,3 @@
+"board","experiment_id","games","p1_wins","p2_wins","draws","supply_placement_share","objective_placement_share","average_secured_supply","average_secured_objectives","average_advantage_objectives","decided_by_secured_objectives","decided_by_advantage_objectives","decided_by_objective_pieces","draw_criterion"
+"6x6","6x6-uct-1000","50","9","41","0","0.408611","0.591389","1.740000","23.440000","6.980000","20","17","13","0"
+"4x4","uct-1000-self-play","100","39","53","8","0.455972","0.544028","1.260000","10.660000","3.240000","52","29","11","8"

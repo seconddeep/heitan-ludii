@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "experiment": "6x6-uct-1000",
+  "source_issue": 60,
+  "segments": [
+    {
+      "parallelism": 6,
+      "batch_size": 5,
+      "resume": false,
+      "elapsed_seconds": 3600.3,
+      "cumulative_completed_games": 12,
+      "end": "command_time_limit"
+    },
+    {
+      "parallelism": 12,
+      "batch_size": 1,
+      "resume": true,
+      "elapsed_seconds": 3600.5,
+      "cumulative_completed_games": 19,
+      "end": "command_time_limit"
+    },
+    {
+      "parallelism": 6,
+      "batch_size": 1,
+      "resume": true,
+      "elapsed_seconds": 2728.287,
+      "cumulative_completed_games": 30,
+      "end": "completed"
+    }
+  ],
+  "total_elapsed_seconds": 9929.087,
+  "final_validation": {
+    "games": 30,
+    "index_first": 21,
+    "index_last": 50,
+    "seed_first": 581020,
+    "seed_last": 581049,
+    "all_natural_end": true,
+    "moves_per_game": 144,
+    "turns_per_game": 48
+  }
+}
