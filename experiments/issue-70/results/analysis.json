@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 1050,
+    "placements": 86400,
+    "turns": 28800,
+    "objective_placements": 39371,
+    "all_input_hashes_match": true,
+    "all_trials_hash_match": true,
+    "remaining_piece_formula": "board_piece_count_per_player - placements_by_player_so_far"
+  },
+  "frozen_definitions": {
+    "classification_order": [
+      "mechanically_closed",
+      "resolved_or_settled",
+      "end_censored",
+      "selectively_abandoned"
+    ],
+    "primary_end_censor": "remaining_turns < 4",
+    "sensitivity_end_censor": [
+      0.1,
+      0.2
+    ],
+    "upper_bound": "integer knapsack over unsecured Objectives; per-player site cap 3; Supply access ignored"
+  },
+  "outputs": {
+    "front_band_rows": 4200,
+    "front_turn_rows": 28800,
+    "abandonment_events": 21279,
+    "late_objective_placements": 11895
+  }
+}
