@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 250,
+    "placements": 36000,
+    "turns": 12000,
+    "all_games_natural_144_placements_48_turns": true,
+    "each_player_72_placements": true,
+    "all_turns_three_placements": true,
+    "all_targets_one_region": true,
+    "region_point_counts": {
+      "LL": 13,
+      "LM": 12,
+      "LH": 13,
+      "ML": 12,
+      "MM": 13,
+      "MH": 12,
+      "HL": 13,
+      "HM": 12,
+      "HH": 13
+    },
+    "regional_leads_match_issue_65": true,
+    "opportunity_totals_match": true,
+    "pinned_artifact_hashes_match": true,
+    "primary_6x6_games": 50,
+    "primary_7x7_games": 50
+  },
+  "frozen_reuse": {
+    "issue_65": "direct imported active, focus, local-lead functions; no semantic change",
+    "issue_68": "direct imported timeline, departure-cycle, focus-carryover functions; no semantic change",
+    "issue_70": "direct imported progress, concentration, outcome-bound, and classification functions; 7x7 constants only"
+  },
+  "primary_contrast": {
+    "definition": "7x7 UCT 1000 - 6x6 UCT 1000",
+    "rows": 83,
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 730073
+  },
+  "artifacts": [
+    {
+      "path": "experiments/issue-62/config.json",
+      "sha256": "3d214b3cb8f89b1cb04ea855a13ef43bff9c0ffc690e7df15e147b22e61c7c69",
+      "bytes": 5419
+    },
+    {
+      "path": "experiments/issue-62/README.md",
+      "sha256": "46567b2f14afa128ac5407cf2d5782aa1534904b0fda908b4a290308adddf645",
+      "bytes": 4957
+    },
+    {
+      "path": "experiments/issue-62/results/game-summary.csv",
+      "sha256": "6b435427be3992fc9ed2781cd39808d965149f593fd304c3787f4bb2e1cc2487",
+      "bytes": 1520
+    },
+    {
+      "path": "experiments/issue-62/results/raw/games.csv",
+      "sha256": "bda588c9e81a241a47cf00aa08de7b48ee18288358b01d558b61c252f8ed28fd",
+      "bytes": 151554
+    },
+    {
+      "path": "experiments/issue-62/results/raw/turn-states.csv",
+      "sha256": "4bf66b02195f03176ce9fd676bafbc2bc5f7fc461a7b3b54ec05c051f3422980",
+      "bytes": 160827695
+    },
+    {
+      "path": "experiments/issue-62/results/turn-allocations.csv",
+      "sha256": "e60abd9e5fc5a0f4c6c022ade8b42f99c0840c1fcd7eff670cb4f55d1e3d43cf",
+      "bytes": 2209999
+    },
+    {
+      "path": "experiments/issue-62/results/fixed-window-spatial.csv",
+      "sha256": "dd3df17221bdb92b48b0cd92b6b80d89feb99b4fdbe9e50ebe24961600469839",
+      "bytes": 2381096
+    },
+    {
+      "path": "experiments/issue-62/results/progress-comparison.csv",
+      "sha256": "f81617f18fcd2306c81c05f0cb628a56a35356f54763ddd09e33107a5746bc89",
+      "bytes": 462383
+    },
+    {
+      "path": "experiments/issue-62/results/supply-conversions.csv",
+      "sha256": "c9d6111a876ce398d2fb399b3cd9fd373aa53d648a797745b523fd7a4b67e90b",
+      "bytes": 177591
+    },
+    {
+      "path": "experiments/issue-65/config.json",
+      "sha256": "7cea7f706cb2848958a1cc5388b76a0abd43086f5c632e5e8de9eef37dacce42",
+      "bytes": 5069
+    },
+    {
+      "path": "experiments/issue-65/README.md",
+      "sha256": "b251cb8ebf4569e955ad20a5f0f91df4ebd2fd65dacbd89039ba84da38f4eca5",
+      "bytes": 5663
+    },
+    {
+      "path": "experiments/issue-65/results/game-regional-metrics.csv",
+      "sha256": "7431b4530ea51ded1580579410b667f53276baa7bd5fa092bea05ddf14070f04",
+      "bytes": 961744
+    },
+    {
+      "path": "experiments/issue-65/results/regional-activity.csv",
+      "sha256": "e323b9c96fc1bdef78d7234c1ff68e6f8ff9e2141e643b42eaf664a4eea6bb3f",
+      "bytes": 3627037
+    },
+    {
+      "path": "experiments/issue-68/config.json",
+      "sha256": "dc5bbd0e2c441a6f2f6563e9fe195d7a3f0b013c086b0647cf8b5dc87334f29e",
+      "bytes": 1459
+    },
+    {
+      "path": "experiments/issue-68/README.md",
+      "sha256": "ff4028b344fb32dde53f069043ed970c91e0adb1e896024e948dbac02331fce4",
+      "bytes": 6699
+    },
+    {
+      "path": "experiments/issue-68/results/game-front-metrics.csv",
+      "sha256": "f93eb94a32553875e076ec0a91a42ff4c5a0d5074e8d01780c09d56138ae334a",
+      "bytes": 915295
+    },
+    {
+      "path": "experiments/issue-68/results/game-focus-metrics.csv",
+      "sha256": "82b8a0ac93b921884af6411f81e41fa663545b0a6e5b9675d2fe33dc16bd95e1",
+      "bytes": 88074
+    },
+    {
+      "path": "experiments/issue-70/config.json",
+      "sha256": "da59835f2355806e8682c74756ebef300a9504f0c92878fc4c4ca1ed25305de9",
+      "bytes": 1972
+    },
+    {
+      "path": "experiments/issue-70/README.md",
+      "sha256": "b7494bce7c925333abf6ba31eff2529209be8ebfc62580bb94bb280c03654cdf",
+      "bytes": 5383
+    },
+    {
+      "path": "experiments/issue-70/results/front-contraction.csv",
+      "sha256": "f76afe98566adbaf6dc0d071bb3982cbc833728dd7a47908750747e9be153026",
+      "bytes": 1067912
+    },
+    {
+      "path": "experiments/issue-70/results/game-abandonment-metrics.csv",
+      "sha256": "ca243e781736e9d42d292ec409e5af2edac094cdd2e589231a7402024923482d",
+      "bytes": 343717
+    },
+    {
+      "path": "experiments/issue-70/results/game-objective-metrics.csv",
+      "sha256": "28832a8594492daa43f7417a55fa015dc1abe7037de223ed40977ac5ac637149",
+      "bytes": 119487
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+"board","experiment_id","iteration_limit","game_index","winner","moves","turns","end_type","final_p1_score","final_p2_score","p1_placements","p2_placements","trial_file"
+"7x7","7x7-seeded-random","-1","1","1","144","48","NaturalEnd","11710","8131","72","72","experiments/issue-73/results-smoke/trials/7x7-seeded-random/7x7-seeded-random-0001.trl"
+"7x7","7x7-uct-0100","100","1","2","144","48","NaturalEnd","18938","22440","72","72","experiments/issue-73/results-smoke/trials/7x7-uct-0100/7x7-uct-0100-0001.trl"
+"7x7","7x7-uct-0500","500","1","2","144","48","NaturalEnd","33026","33471","72","72","experiments/issue-73/results-smoke/trials/7x7-uct-0500/7x7-uct-0500-0001.trl"
+"7x7","7x7-uct-1000","1000","1","2","144","48","NaturalEnd","40706","44061","72","72","experiments/issue-73/results-smoke/trials/7x7-uct-1000/7x7-uct-1000-0001.trl"
