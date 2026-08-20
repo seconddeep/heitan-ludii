@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "validation": {
+    "games": 750,
+    "placements": 126000,
+    "turns": 42000,
+    "all_games_natural_expected_length": true,
+    "each_player_expected_budget": true,
+    "all_turns_three_placements": true,
+    "all_targets_one_region": true,
+    "region_point_counts": {
+      "LL": 13,
+      "LM": 12,
+      "LH": 13,
+      "ML": 12,
+      "MM": 13,
+      "MH": 12,
+      "HL": 13,
+      "HM": 12,
+      "HH": 13
+    },
+    "regional_leads_match_issue_65": true,
+    "opportunity_totals_match": true,
+    "pinned_artifact_hashes_match": true,
+    "canonical_trial_hashes_match": true,
+    "issue_73_source_manifest_hash_mismatches": 250,
+    "issue_73_replayed_games_match_pinned_raw": 250,
+    "issue_73_replayed_placements_match_pinned_raw": 36000,
+    "games_by_budget": {
+      "72": 250,
+      "84": 250,
+      "96": 250
+    }
+  },
+  "frozen_reuse": {
+    "issue_73": "all available 72-piece conditions reused; the documented 250-hash provenance exception is accounted for and legal replay matches pinned raw games and placements exactly",
+    "issue_65": "active, focus, and local-lead functions unchanged",
+    "issue_68": "timeline, departure-cycle, and focus-carryover functions unchanged",
+    "issue_70": "progress, concentration, outcome-bound, and classification functions unchanged"
+  },
+  "primary_contrasts": {
+    "definitions": [
+      {
+        "id": "84-minus-72",
+        "minuend": 84,
+        "subtrahend": 72
+      },
+      {
+        "id": "96-minus-72",
+        "minuend": 96,
+        "subtrahend": 72
+      },
+      {
+        "id": "96-minus-84",
+        "minuend": 96,
+        "subtrahend": 84
+      }
+    ],
+    "rows": 261,
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 770077
+  },
+  "artifacts": [
+    {
+      "path": "experiments/issue-73/config.json",
+      "sha256": "a33c3b9130c65f5be28ea3aeeffa050617c75cc20760e9a663c9a7ae1d18f614",
+      "bytes": 5466
+    },
+    {
+      "path": "experiments/issue-73/README.md",
+      "sha256": "a49427a8ca192a4065e34de33a9f1c746ce5b71a267255880484ba9f0cc3d453",
+      "bytes": 8051
+    },
+    {
+      "path": "experiments/issue-73/results/trial-sources.csv",
+      "sha256": "134efbb6c0c7fe90ad988916315c1add557065a0666011543fbd87835dc52e94",
+      "bytes": 51539
+    },
+    {
+      "path": "experiments/issue-73/results/analysis.json",
+      "sha256": "c766ee1cc89755a68fd56a7597acf5702df2ea0e43b9312596078ca9d0320802",
+      "bytes": 5272
+    },
+    {
+      "path": "experiments/issue-73/results/raw/games.csv",
+      "sha256": "5518dc15a15f8e65e5bb7d82d479e50bcb8b50ad58262bbfffa3451b44e82909",
+      "bytes": 36174
+    },
+    {
+      "path": "experiments/issue-73/results/raw/placements.csv",
+      "sha256": "be07dea78a94021892eb5e38bf1157d117db5b41df3c2137c9eecd228f8b8fcd",
+      "bytes": 3031614
+    },
+    {
+      "path": "experiments/issue-65/config.json",
+      "sha256": "7cea7f706cb2848958a1cc5388b76a0abd43086f5c632e5e8de9eef37dacce42",
+      "bytes": 5069
+    },
+    {
+      "path": "experiments/issue-65/README.md",
+      "sha256": "b251cb8ebf4569e955ad20a5f0f91df4ebd2fd65dacbd89039ba84da38f4eca5",
+      "bytes": 5663
+    },
+    {
+      "path": "experiments/issue-68/config.json",
+      "sha256": "dc5bbd0e2c441a6f2f6563e9fe195d7a3f0b013c086b0647cf8b5dc87334f29e",
+      "bytes": 1459
+    },
+    {
+      "path": "experiments/issue-68/README.md",
+      "sha256": "ff4028b344fb32dde53f069043ed970c91e0adb1e896024e948dbac02331fce4",
+      "bytes": 6699
+    },
+    {
+      "path": "experiments/issue-70/config.json",
+      "sha256": "da59835f2355806e8682c74756ebef300a9504f0c92878fc4c4ca1ed25305de9",
+      "bytes": 1972
+    },
+    {
+      "path": "experiments/issue-70/README.md",
+      "sha256": "b7494bce7c925333abf6ba31eff2529209be8ebfc62580bb94bb280c03654cdf",
+      "bytes": 5383
+    }
+  ]
+}
