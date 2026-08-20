@@ -1,0 +1,89 @@
+﻿{
+    "schema_version":  1,
+    "source_issue":  77,
+    "smoke":  false,
+    "information_policy":  "production",
+    "generated_at_utc":  "2026-08-16T09:19:07.1796147Z",
+    "wall_elapsed_seconds":  68921.496,
+    "games":  500,
+    "parallelism":  6,
+    "batch_size":  5,
+    "ludii_version":  "1.3.14",
+    "ludii_jar_sha256":  "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+    "game_sha256":  "fa0c51149a348372b3b25474eaac016eacc7a8ead4e14b32637d9d44946a3570",
+    "runner_sha256":  "c435bebaf1ad858d787af7839fbb334b13656ba9ae7401c315806afeac958a3b",
+    "condition_runtime":  [
+                              {
+                                  "elapsed_seconds":  38.931,
+                                  "experiment_id":  "7x7-p84-seeded-random",
+                                  "games":  100,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  0.389,
+                                  "file_count":  20,
+                                  "trial_count":  100
+                              },
+                              {
+                                  "elapsed_seconds":  12095.129,
+                                  "experiment_id":  "7x7-p84-uct-0100",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  241.903,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              },
+                              {
+                                  "elapsed_seconds":  54684.988,
+                                  "experiment_id":  "7x7-p84-uct-0500",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  1093.7,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              },
+                              {
+                                  "elapsed_seconds":  101284.65,
+                                  "experiment_id":  "7x7-p84-uct-1000",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  2025.693,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              },
+                              {
+                                  "elapsed_seconds":  18.755,
+                                  "experiment_id":  "7x7-p96-seeded-random",
+                                  "games":  100,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  0.188,
+                                  "file_count":  20,
+                                  "trial_count":  100
+                              },
+                              {
+                                  "elapsed_seconds":  13662.905,
+                                  "experiment_id":  "7x7-p96-uct-0100",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  273.258,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              },
+                              {
+                                  "elapsed_seconds":  77049.621,
+                                  "experiment_id":  "7x7-p96-uct-0500",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  1540.992,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              },
+                              {
+                                  "elapsed_seconds":  131289.953,
+                                  "experiment_id":  "7x7-p96-uct-1000",
+                                  "games":  50,
+                                  "exit_status":  "success",
+                                  "mean_seconds":  2625.799,
+                                  "file_count":  10,
+                                  "trial_count":  50
+                              }
+                          ]
+}
