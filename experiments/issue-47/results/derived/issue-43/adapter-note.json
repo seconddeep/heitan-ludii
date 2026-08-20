@@ -1,0 +1,7 @@
+{
+  "behavior_preserved": true,
+  "frozen_issue": 43,
+  "reason": "Issue #47 has no 3k cohort; all configured reversal mechanism and checkpoint cohort tables were written before the empty legacy mean.",
+  "schema_version": 1,
+  "skipped_legacy_report_section": "uct-10000-self-play vs uct-3000-self-play headline"
+}

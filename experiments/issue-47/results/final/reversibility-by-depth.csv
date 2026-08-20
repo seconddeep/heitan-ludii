@@ -1,0 +1,13 @@
+experiment_id,comparison_layer,turn_number,games,games_with_current_leader,current_leader_eventually_wins,current_leader_eventually_loses,eventual_draws_from_current_lead,games_tied_at_turn,current_leader_win_rate,reversal_rate_current_leader_eventually_loses,eventual_draw_rate_from_current_lead
+uct-10000-self-play,full_lexicographic,8,100,84,36,38,10,16,0.428571,0.452381,0.119048
+uct-10000-self-play,full_lexicographic,12,100,82,35,37,10,18,0.426829,0.45122,0.121951
+uct-10000-self-play,full_lexicographic,16,100,88,41,39,8,12,0.465909,0.443182,0.090909
+uct-10000-self-play,full_lexicographic,20,100,91,45,36,10,9,0.494505,0.395604,0.10989
+uct-100000-self-play,full_lexicographic,8,97,83,40,40,3,14,0.481928,0.481928,0.036145
+uct-100000-self-play,full_lexicographic,12,97,81,47,31,3,16,0.580247,0.382716,0.037037
+uct-100000-self-play,full_lexicographic,16,97,82,49,29,4,15,0.597561,0.353659,0.04878
+uct-100000-self-play,full_lexicographic,20,97,88,54,32,2,9,0.613636,0.363636,0.022727
+uct-30000-self-play,full_lexicographic,8,100,85,51,29,5,15,0.6,0.341176,0.058824
+uct-30000-self-play,full_lexicographic,12,100,79,44,32,3,21,0.556962,0.405063,0.037975
+uct-30000-self-play,full_lexicographic,16,100,87,45,36,6,13,0.517241,0.413793,0.068966
+uct-30000-self-play,full_lexicographic,20,100,94,58,31,5,6,0.617021,0.329787,0.053191

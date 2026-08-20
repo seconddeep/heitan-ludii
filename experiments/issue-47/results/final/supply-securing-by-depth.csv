@@ -1,0 +1,4 @@
+experiment_id,iteration_limit,games,games_with_any_securing,games_with_any_securing_rate,first_securing_turn_mean,first_securing_turn_median,total_securing_events,mean_securing_turn,early_events,midgame_events,late_events,legal_securable_opportunities,immediate_take_rate,ever_securable_player_sites,eventual_securing_rate,later_objective_uses_after_securing
+uct-10000-self-play,10000,100,100,1.0,7.28,7.0,367,12.438692,112,157,98,10079,0.036412,1925,0.190649,1382
+uct-30000-self-play,30000,100,100,1.0,5.7,5.0,443,11.778781,177,153,113,8694,0.050955,1838,0.241023,1783
+uct-100000-self-play,100000,97,97,1.0,4.597938,4,462,11.484848,192,150,120,7688,0.060094,1724,0.267981,1874

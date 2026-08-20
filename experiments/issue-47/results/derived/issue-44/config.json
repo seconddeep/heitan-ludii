@@ -1,0 +1,361 @@
+{
+  "checkpoints": {
+    "pool_primary_rows": false,
+    "primary": [
+      16,
+      20
+    ],
+    "reference": [
+      8,
+      12
+    ]
+  },
+  "constraints": {
+    "causal_claims": false,
+    "modify_game_or_rules": false,
+    "new_self_play_games": 0,
+    "post_hoc_feature_selection": false,
+    "post_hoc_regularization_tuning": false,
+    "standard_library_only": true
+  },
+  "cross_validation": {
+    "assignment": "Within each experiment, checkpoint, and outcome class, sort eligible games by SHA-256 of seed|experiment|checkpoint|game_index and assign folds cyclically from 1 to 5.",
+    "folds": 5,
+    "group_key_for_optional_pooled_analysis": [
+      "experiment_id",
+      "game_index"
+    ],
+    "primary_rows_pooled": false,
+    "seed": "issue-44-frozen-v1",
+    "stratified_by": "outcome_class",
+    "threshold": 0.5
+  },
+  "descriptive_features": [
+    "leader_secured_objective_margin",
+    "leader_advantage_objective_margin",
+    "leader_objective_piece_margin",
+    "live_objectives",
+    "leader_secured_objectives",
+    "opponent_secured_objectives",
+    "leader_advantage_objectives",
+    "opponent_advantage_objectives",
+    "leader_objective_pieces",
+    "opponent_objective_pieces",
+    "decisive_margin",
+    "decisive_layer_secured_objectives",
+    "decisive_layer_advantage_objectives",
+    "decisive_layer_objective_pieces",
+    "leader_secured_supply",
+    "opponent_secured_supply",
+    "leader_secured_supply_margin",
+    "leader_unsecured_controlled_supply",
+    "opponent_unsecured_controlled_supply",
+    "leader_unsecured_controlled_supply_margin",
+    "contested_supply_count",
+    "leader_usable_supply_support_edges",
+    "opponent_usable_supply_support_edges",
+    "leader_usable_supply_support_edge_margin",
+    "leader_primary_important_sites_controlled",
+    "opponent_primary_important_sites_controlled",
+    "leader_primary_important_control_margin",
+    "leader_cumulative_supply_source_usage",
+    "opponent_cumulative_supply_source_usage",
+    "leader_cumulative_supply_source_usage_margin",
+    "leader_cumulative_objective_share",
+    "opponent_cumulative_objective_share",
+    "leader_cumulative_objective_share_margin",
+    "leader_cumulative_supply_placements",
+    "opponent_cumulative_supply_placements",
+    "leader_cumulative_objective_placements",
+    "opponent_cumulative_objective_placements",
+    "leader_recent_2_supply_placements",
+    "opponent_recent_2_supply_placements",
+    "leader_recent_2_objective_placements",
+    "opponent_recent_2_objective_placements",
+    "leader_recent_2_supply_source_usage_margin",
+    "leader_recent_2_important_site_usage",
+    "opponent_recent_2_important_site_usage",
+    "leader_recent_2_important_site_usage_margin",
+    "leader_recent_2_objective_share_margin",
+    "leader_recent_2_all_supply_turn_margin",
+    "leader_recent_2_mixed_turn_margin",
+    "leader_recent_2_all_objective_turn_margin",
+    "leader_recent_4_supply_placements",
+    "opponent_recent_4_supply_placements",
+    "leader_recent_4_objective_placements",
+    "opponent_recent_4_objective_placements",
+    "leader_recent_4_objective_placement_margin",
+    "leader_recent_4_supply_source_usage_margin",
+    "leader_recent_4_important_site_usage",
+    "opponent_recent_4_important_site_usage",
+    "leader_recent_4_important_site_usage_margin",
+    "leader_recent_4_objective_share_margin",
+    "leader_recent_4_all_supply_turn_margin",
+    "leader_recent_4_mixed_turn_margin",
+    "leader_recent_4_all_objective_turn_margin",
+    "leader_recent_4_objective_allocation_change_margin",
+    "leader_recent_4_supply_allocation_change",
+    "opponent_recent_4_supply_allocation_change",
+    "leader_recent_4_supply_allocation_change_margin",
+    "leader_trend_2_secured_objective_margin",
+    "leader_trend_2_advantage_objective_margin",
+    "leader_trend_2_objective_piece_margin",
+    "leader_trend_2_secured_supply_margin",
+    "leader_trend_2_unsecured_control_margin",
+    "leader_trend_2_support_edge_margin",
+    "leader_trend_2_usable_support_edges",
+    "opponent_trend_2_usable_support_edges",
+    "leader_trend_2_important_control_margin",
+    "leader_trend_4_secured_objective_margin",
+    "leader_trend_4_advantage_objective_margin",
+    "leader_trend_4_objective_piece_margin",
+    "leader_trend_4_secured_supply_margin",
+    "leader_trend_4_unsecured_control_margin",
+    "leader_trend_4_support_edge_margin",
+    "leader_trend_4_usable_support_edges",
+    "opponent_trend_4_usable_support_edges",
+    "leader_trend_4_important_control_margin",
+    "S23_leader_relative_state",
+    "S21_leader_relative_state",
+    "S12_leader_relative_state",
+    "S13_leader_relative_state",
+    "S22_leader_relative_state"
+  ],
+  "evaluation_metrics": [
+    "roc_auc",
+    "balanced_accuracy",
+    "average_precision"
+  ],
+  "game": "games/Heitan.lud",
+  "important_supply_sites": [
+    "S23",
+    "S21",
+    "S12",
+    "S13",
+    "S22"
+  ],
+  "logistic_regression": {
+    "coefficient_tuning": false,
+    "convergence_tolerance": 1e-10,
+    "implementation": "standard_library_newton_raphson",
+    "maximum_iterations": 100,
+    "nested_cross_validation": false,
+    "shared_l2_coefficient": 0.1
+  },
+  "models": [
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "baseline",
+      "included_feature_columns": [],
+      "l2_regularization_coefficient": 0.0,
+      "model_type": "majority",
+      "name": "majority_class",
+      "standardization_policy": "none",
+      "zero_variance_handling": "not_applicable"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "baseline",
+      "included_feature_columns": [
+        "decisive_margin"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "decisive_margin_only",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "baseline",
+      "included_feature_columns": [
+        "leader_secured_objective_margin",
+        "leader_advantage_objective_margin",
+        "leader_objective_piece_margin"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "current_objective_state",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "objective",
+      "included_feature_columns": [
+        "leader_secured_objective_margin",
+        "leader_advantage_objective_margin",
+        "leader_objective_piece_margin",
+        "live_objectives"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "objective_only",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "supply",
+      "included_feature_columns": [
+        "leader_secured_supply_margin",
+        "leader_unsecured_controlled_supply_margin",
+        "leader_usable_supply_support_edge_margin",
+        "leader_primary_important_control_margin",
+        "leader_recent_4_supply_source_usage_margin"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "supply_only",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "allocation_recent_trend",
+      "included_feature_columns": [
+        "leader_cumulative_objective_share_margin",
+        "leader_recent_4_objective_placement_margin",
+        "leader_trend_4_secured_objective_margin",
+        "leader_trend_4_advantage_objective_margin",
+        "leader_trend_4_support_edge_margin",
+        "leader_recent_4_objective_allocation_change_margin"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "allocation_recent_trend",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    },
+    {
+      "checkpoint_applicability": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "feature_group": "combined",
+      "included_feature_columns": [
+        "leader_secured_objective_margin",
+        "leader_advantage_objective_margin",
+        "leader_objective_piece_margin",
+        "live_objectives",
+        "leader_secured_supply_margin",
+        "leader_unsecured_controlled_supply_margin",
+        "leader_usable_supply_support_edge_margin",
+        "leader_primary_important_control_margin",
+        "leader_recent_4_supply_source_usage_margin",
+        "leader_cumulative_objective_share_margin",
+        "leader_recent_4_objective_placement_margin",
+        "leader_trend_4_secured_objective_margin",
+        "leader_trend_4_advantage_objective_margin",
+        "leader_trend_4_support_edge_margin",
+        "leader_recent_4_objective_allocation_change_margin"
+      ],
+      "l2_regularization_coefficient": 0.1,
+      "model_type": "logistic",
+      "name": "combined",
+      "standardization_policy": "training_fold_population_mean_and_standard_deviation",
+      "zero_variance_handling": "exclude_from_training_fold"
+    }
+  ],
+  "prediction_target": {
+    "excluded_classes": [
+      "eventual_draw",
+      "tied_at_checkpoint"
+    ],
+    "negative_class": "lead_preserved",
+    "positive_class": "reversal"
+  },
+  "preprocessing": {
+    "intercept_penalized": false,
+    "intercept_standardized": false,
+    "numeric_standardization": "training_fold_population_mean_and_standard_deviation",
+    "validation_statistics_used": false,
+    "zero_variance_policy": "exclude_feature_when_training_fold_standard_deviation_is_zero"
+  },
+  "recent_windows": [
+    2,
+    4
+  ],
+  "schema_version": 1,
+  "source": {
+    "experiments": [
+      {
+        "games": 100,
+        "id": "uct-10000-self-play",
+        "role": "baseline"
+      },
+      {
+        "games": 100,
+        "id": "uct-30000-self-play",
+        "role": "deeper_evaluation"
+      },
+      {
+        "games": 97,
+        "id": "uct-100000-self-play",
+        "role": "deeper_evaluation"
+      }
+    ],
+    "issue_43_checkpoint_cohorts": "experiments/issue-47/results/derived/issue-43/results/raw/checkpoint-cohorts.csv",
+    "issue_43_config": "experiments/issue-47/results/derived/issue-43/config.json",
+    "issues": [
+      37,
+      39,
+      41,
+      43
+    ],
+    "objective_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/objective-turn-states.csv",
+    "placements": "experiments/issue-47/results/derived/issue-37/results/raw/placements.csv",
+    "replay_summary": "experiments/issue-47/results/derived/issue-37/results/raw/replay-summary.csv",
+    "reversal_by_turn": "experiments/issue-47/results/derived/issue-41/results/reversal-by-turn.csv",
+    "site_values": "experiments/issue-47/results/derived/issue-39/results/site-value-summary.csv",
+    "source_trials": "experiments/issue-47/results/derived/issue-37/results/source-trials.csv",
+    "supply_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/supply-turn-states.csv",
+    "turn_progression": "experiments/issue-47/results/derived/issue-41/results/raw/turn-progression.csv"
+  },
+  "usable_supply_support_edges": {
+    "count_each_adjacency_pair": true,
+    "deduplicate_by_objective": false,
+    "deduplicate_by_supply_point": false,
+    "objective_is_live_when_state_is": "unresolved state 0, 1, or 2 at the turn boundary",
+    "supply_is_usable_when_state_is": "player unsecured Control or player Secured",
+    "unit": "one player-controlled-or-secured Supply Point x adjacent live Objective pair"
+  },
+  "window_definitions": {
+    "allocation_change": "Objective-placement share on a player's latest own turn in the four-turn window minus that player's preceding own turn share.",
+    "empty_share": "A placement share with a zero denominator is zero.",
+    "recent_game_turns": "Inclusive game turns checkpoint-window+1 through checkpoint.",
+    "state_trend": "Checkpoint boundary value minus the boundary value at checkpoint-window, using the checkpoint leader perspective at both boundaries."
+  }
+}

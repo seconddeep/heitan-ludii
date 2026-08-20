@@ -1,0 +1,81 @@
+{
+  "control_aggregation": {
+    "analysis_policy": "Separate reversible unsecured Control from permanent Secured state, while also retaining their combined ownership/control measure.",
+    "evaluation_point": "end_of_turn",
+    "game_rule_relationship": "A Secured Supply Point is Controlled by its owner.",
+    "is_controlled_or_secured": "is_unsecured_controlled or is_secured",
+    "is_secured": "state_at_turn_end equals player plus 2",
+    "is_unsecured_controlled": "state_at_turn_end equals player",
+    "required_identity": "controlled_or_secured_turns = unsecured_controlled_turns + secured_turns",
+    "share_denominator": "all 24 game turns for lifecycle/site summaries and all 8 phase turns for phase summaries",
+    "version": 1
+  },
+  "game": "games/Heitan.lud",
+  "neutral_and_contest": {
+    "is_contested": "both players have at least one Piece at turn end, regardless of which player Controls the unresolved point",
+    "is_neutral": "state_at_turn_end equals 0, including an empty point"
+  },
+  "objective_coverage": {
+    "definition": "distinct adjacent Objectives actually supplied divided by the Supply Point's number of adjacent Objectives",
+    "normalization": "site_adjacency_degree"
+  },
+  "schema_version": 1,
+  "securable_opportunity": {
+    "eventual_conversion_rate": "ever-securable player-sites eventually Secured divided by ever-securable player-sites",
+    "ever_securable_unit": "game_player_supply_point",
+    "repeated_unit": "player_supply_point_own_turn",
+    "same_turn_take_rate": "securing events divided by repeated legal opportunities"
+  },
+  "source": {
+    "experiments": [
+      {
+        "games": 100,
+        "id": "uct-10000-self-play",
+        "iteration_limit": 10000,
+        "role": "baseline"
+      },
+      {
+        "games": 100,
+        "id": "uct-30000-self-play",
+        "iteration_limit": 30000,
+        "role": "deeper_evaluation"
+      },
+      {
+        "games": 97,
+        "id": "uct-100000-self-play",
+        "iteration_limit": 100000,
+        "role": "deeper_evaluation"
+      }
+    ],
+    "issue": 37,
+    "objective_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/objective-turn-states.csv",
+    "placements": "experiments/issue-47/results/derived/issue-37/results/raw/placements.csv",
+    "replay_summary": "experiments/issue-47/results/derived/issue-37/results/raw/replay-summary.csv",
+    "securable_opportunities": "experiments/issue-47/results/derived/issue-37/results/raw/securable-opportunities.csv",
+    "source_trials": "experiments/issue-47/results/derived/issue-37/results/source-trials.csv",
+    "supply_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/supply-turn-states.csv"
+  },
+  "spatial_categories": {
+    "corner": "four Supply Points with row and column both on the boundary",
+    "edge": "twelve non-corner Supply Points on the boundary",
+    "interior": "nine non-boundary Supply Points",
+    "s22_comparison": "S22 versus the other eight interior Supply Points"
+  },
+  "turn_phases": [
+    {
+      "first_turn": 1,
+      "id": "early",
+      "last_turn": 8
+    },
+    {
+      "first_turn": 9,
+      "id": "midgame",
+      "last_turn": 16
+    },
+    {
+      "first_turn": 17,
+      "id": "late",
+      "last_turn": 24
+    }
+  ]
+}

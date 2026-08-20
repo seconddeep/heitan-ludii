@@ -1,0 +1,4 @@
+# Issue #47 runtime-only validation and locking artifacts.
+experiments/issue-47/results/**/.tmp/
+experiments/issue-47/results/**/manifest.lock
+experiments/issue-47/results/**/replay-input/

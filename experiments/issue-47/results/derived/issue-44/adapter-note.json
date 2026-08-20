@@ -1,0 +1,8 @@
+{
+  "behavior_preserved": true,
+  "frozen_issue": 44,
+  "reason": "Issue #47 has no 3k cohort; configured feature comparisons, effects, folds, and model evaluations are unchanged.",
+  "replacement_path_adapter": "The unchanged standardized-effect and direction-agreement calculation is applied to configured 30k vs 100k cohorts.",
+  "schema_version": 1,
+  "skipped_legacy_report_section": "uct-10000-self-play vs uct-3000-self-play narrative"
+}

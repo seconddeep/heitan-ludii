@@ -1,0 +1,25 @@
+{
+  "config_sha256": "bf20b063fc3185d103de2107d75bec625a2f8891ecd91239d59e3c30dd0aff5a",
+  "deterministic_regeneration_verified": true,
+  "finalization_sha256": "f3fad6df6d229ccd7f79e18343ff11c56feebdfe694227193156f4897ac59f51",
+  "game_sha256": "d81468535f9beb331040fd0bc736e93dfcb9bfe7da36042ce4aabf54f96b2f6c",
+  "generated_at_utc": "2026-08-17T05:38:54Z",
+  "machine": "arm64",
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "output_hashes": {
+    "experiments/issue-47/results/final/analysis.json": "5728ffaee727c54de6b0ffc9c200b0f95db8cac4354f71748bfa27760648a073",
+    "experiments/issue-47/results/final/balance-by-depth.csv": "c74cf8987cd2513e92b6d6e3f83fc6edee3254d30f8c3be03935f7389eb6402f",
+    "experiments/issue-47/results/final/environment.json": "f35001094e54e0ab780272ab812b3f7bd36074b550232185289ab23ec87e182a",
+    "experiments/issue-47/results/final/reversal-mechanisms-by-depth.csv": "2d35eb5e8bb5f34f9be2e30ee9b0455803393788d3aced4b462517d980f1eae9",
+    "experiments/issue-47/results/final/reversal-precursors-by-depth.csv": "b2561411e57595d2c0fdb30043d66e8d78a6a023ab9dc18d45a004de3e7a2856",
+    "experiments/issue-47/results/final/reversibility-by-depth.csv": "d0d336c4ab1a19f1de8a12381dac5593733ca88aeda5c269d95fe050cb128563",
+    "experiments/issue-47/results/final/site-rank-convergence.csv": "2c75cfcdf00362053e1db34ebaeae4f00ff132c1eeedc83aacbf3f01bcd1da50",
+    "experiments/issue-47/results/final/site-value-by-depth.csv": "f63e0273417ae7d66ac8d089d3adf2208a25999a6144f1a358c6d264d8d7f763",
+    "experiments/issue-47/results/final/strategic-convergence-summary.csv": "d6a42114e7cebd6f2d305509048b9e25ef40410017c825e9cdf3188359f748a9",
+    "experiments/issue-47/results/final/supply-securing-by-depth.csv": "268131dd68c8ccb4221996e31853051b08bbc3f3857ab6745457edf518a8a969"
+  },
+  "pilot_paths_in_outputs": 0,
+  "protocol_lock_sha256": "46c94928747e1eeb1fd92fa504c229f9c69b02800eac1cd11f57d0587c4ea9b8",
+  "python": "3.9.6",
+  "schema_version": 1
+}

@@ -1,0 +1,4 @@
+metric,normalization,value_10k,value_30k,value_100k,delta_10k_30k,delta_30k_100k,classification,manual_override
+p1_win_rate,proportion,0.49,0.56,0.597938,0.07000000000000006,0.037937999999999916,directionally stabilizing,false
+games_with_any_securing_rate,proportion,1.0,1.0,1.0,0.0,0.0,stable / converged-looking,false
+turn20_reversal_rate,proportion,0.395604,0.329787,0.363636,-0.06581700000000001,0.03384900000000002,non-monotonic,false

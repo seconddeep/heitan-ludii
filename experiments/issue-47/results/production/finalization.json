@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "decision": "finalize_validated_completed_sample",
+  "finalized_at_utc": "2026-08-17T05:29:34Z",
+  "planned_games_by_budget": {
+    "30000": 100,
+    "100000": 100
+  },
+  "analyzed_games_by_budget": {
+    "30000": 100,
+    "100000": 97
+  },
+  "additional_production_execution_forbidden": true,
+  "reason": "Three planned UCT 100000 games could not complete within the frozen 8g JVM heap because their MCTS search trees exhausted the Java heap. The validated 97-game sample is finalized as the UCT 100000 result.",
+  "excluded_tasks": [
+    {
+      "task_id": "issue-47-v1-production-uct-100000-g0061",
+      "game_index": 61,
+      "seed": 571000060,
+      "attempts": 2,
+      "final_state": "failed",
+      "reason": "MCTS Java heap exhaustion"
+    },
+    {
+      "task_id": "issue-47-v1-production-uct-100000-g0078",
+      "game_index": 78,
+      "seed": 571000077,
+      "attempts": 2,
+      "final_state": "failed",
+      "reason": "Late-run JDK source-launcher exception masking the underlying memory failure"
+    },
+    {
+      "task_id": "issue-47-v1-production-uct-100000-g0093",
+      "game_index": 93,
+      "seed": 571000092,
+      "attempts": 2,
+      "final_state": "failed",
+      "reason": "MCTS Java heap exhaustion"
+    }
+  ],
+  "completed_100k_manifest_projection_sha256": "11c118e4d384b0291e650af6220645cf6ff1f938ddedc959bc94133faefa6c17",
+  "memory_diagnostic_10g": {
+    "production_data": false,
+    "task_id": "issue-47-v1-production-uct-100000-g0061",
+    "seed": 571000060,
+    "outcome": "failed",
+    "elapsed_seconds": 3460.659,
+    "elapsed_description": "approximately 57 minutes",
+    "full_gc_live_heap_mib": 10234,
+    "jvm_max_heap": "10g",
+    "heap_dump_created": true,
+    "heap_dump_size_bytes": 16176186575,
+    "heap_dump_path_at_diagnosis": "/private/tmp/issue47-g0061-10g.rGsdud/heapdump.hprof",
+    "gc_log_path_at_diagnosis": "/private/tmp/issue47-g0061-10g.rGsdud/gc.log",
+    "gc_log_sha256": "f88914e4051b62200b41f1911df63ad50b99c497fc95ffa6885354257ce65a49",
+    "conclusion": "Full GC retained approximately 10234 MiB, so the limit was reached by the live MCTS search tree rather than reclaimable temporary objects."
+  },
+  "excluded_nonproduction_diagnostics": [
+    {
+      "description": "A 12g game 61 diagnostic completed before finalization, but its output is excluded and was not copied into production."
+    },
+    {
+      "description": "A 12g game 60 parity diagnostic completed before finalization, but its output is excluded and was not copied into production."
+    }
+  ],
+  "recovery_actions_declined": [
+    "change MCTS search-tree retention",
+    "increase production JVM heap further",
+    "rerun on a larger-memory machine",
+    "replace failed identities with new seeds"
+  ]
+}

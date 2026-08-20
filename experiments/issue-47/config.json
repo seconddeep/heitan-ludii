@@ -1,0 +1,171 @@
+{
+  "constraints": {
+    "modify_game": false,
+    "modify_rules": false,
+    "pilot_may_inform_strategy": false,
+    "production_requires_protocol_lock": true
+  },
+  "convergence_classification": {
+    "labels": [
+      "stable / converged-looking",
+      "directionally stabilizing",
+      "search-sensitive",
+      "non-monotonic",
+      "insufficient evidence"
+    ],
+    "manual_override_allowed": false,
+    "normalization": {
+      "board_count_metrics": "frozen_theoretical_range_per_metric",
+      "proportions_and_shares": 1.0,
+      "site_rank_metrics": 24.0,
+      "turn_metrics": 24.0
+    },
+    "retain_numeric_evidence": true,
+    "rules_in_precedence_order": [
+      "insufficient evidence: either higher-depth sample has fewer than 25 games, or a required estimate/interval is unavailable",
+      "non-monotonic: normalized 10k-to-30k and 30k-to-100k deltas have opposite signs and both absolute deltas exceed 0.03",
+      "stable / converged-looking: both adjacent normalized absolute deltas are at most 0.03, and any required rank direction or signal direction is preserved",
+      "directionally stabilizing: adjacent deltas have the same sign, the 30k-to-100k absolute delta is smaller than the 10k-to-30k delta, and it is at most 0.07",
+      "search-sensitive: all remaining cases"
+    ],
+    "version": 1
+  },
+  "experiment_version": "issue-47-v1",
+  "frozen_analysis_sources": {
+    "issue_37_analyzer": "experiments/issue-37/scripts/analyze_results.py",
+    "issue_37_config": "experiments/issue-37/config.json",
+    "issue_39_analyzer": "experiments/issue-39/scripts/analyze_site_value.py",
+    "issue_39_config": "experiments/issue-39/config.json",
+    "issue_41_analyzer": "experiments/issue-41/scripts/analyze_progression.py",
+    "issue_41_config": "experiments/issue-41/config.json",
+    "issue_43_analyzer": "experiments/issue-43/scripts/analyze_reversals.py",
+    "issue_43_config": "experiments/issue-43/config.json",
+    "issue_44_analyzer": "experiments/issue-44/scripts/analyze_prediction.py",
+    "issue_44_config": "experiments/issue-44/config.json"
+  },
+  "game": "games/Heitan.lud",
+  "immutable_after_initial_definition": {
+    "analysis_definitions": [
+      37,
+      39,
+      41,
+      43,
+      44
+    ],
+    "convergence_label_rules": true,
+    "convergence_metrics": true,
+    "downstream_output_schemas": true,
+    "interpretation_categories": true,
+    "search_budgets": [
+      30000,
+      100000
+    ],
+    "seed_and_index_rules": true
+  },
+  "important_supply_sites": [
+    "S23",
+    "S21",
+    "S12",
+    "S13",
+    "S22"
+  ],
+  "ludii_version": "1.3.14",
+  "manifest": {
+    "atomic_write": true,
+    "completed_requires_validation": true,
+    "resume_skip_states": [
+      "completed"
+    ],
+    "stale_running_recovery_state": "failed",
+    "states": [
+      "pending",
+      "running",
+      "generated",
+      "validating",
+      "completed",
+      "failed",
+      "corrupt"
+    ]
+  },
+  "operational_parameters": {
+    "jvm_max_heap_by_budget": {
+      "100000": "8g",
+      "30000": "4g"
+    },
+    "max_attempts": 3,
+    "retry_states": [
+      "pending",
+      "failed",
+      "corrupt"
+    ],
+    "scheduling": "one_atomic_task_directory_per_game",
+    "status": "frozen",
+    "timeout_seconds_per_game": 0,
+    "worker_count_by_budget": {
+      "100000": 1,
+      "30000": 2
+    }
+  },
+  "pilot": {
+    "base_seed": 470000000,
+    "excluded_from_analysis": true,
+    "namespace": "pilot",
+    "tasks": [
+      {
+        "games": 1,
+        "id": "pilot-uct-30000",
+        "iteration_limit": 30000
+      },
+      {
+        "games": 1,
+        "id": "pilot-uct-100000",
+        "iteration_limit": 100000
+      }
+    ]
+  },
+  "pilot_adjustable_before_protocol_lock": [
+    "production.tasks[uct-100000-self-play].target_games",
+    "operational_parameters.worker_count_by_budget",
+    "operational_parameters.jvm_max_heap_by_budget",
+    "operational_parameters.timeout_seconds_per_game",
+    "operational_parameters.max_attempts",
+    "operational_parameters.scheduling"
+  ],
+  "production": {
+    "base_seed": 471000000,
+    "game_index_generation_rule": "one_based consecutive integers from 1 through target_games within each budget",
+    "namespace": "production",
+    "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index",
+    "tasks": [
+      {
+        "budget_seed_offset": 30000000,
+        "count_status": "frozen_before_pilot",
+        "id": "uct-30000-self-play",
+        "iteration_limit": 30000,
+        "target_games": 100
+      },
+      {
+        "budget_seed_offset": 100000000,
+        "count_status": "frozen_after_excluded_pilot",
+        "id": "uct-100000-self-play",
+        "iteration_limit": 100000,
+        "target_games": 100
+      }
+    ]
+  },
+  "protocol_frozen_at_utc": "2026-08-12T07:07:32Z",
+  "protocol_status": "locked",
+  "required_outputs": [
+    "balance-by-depth.csv",
+    "supply-securing-by-depth.csv",
+    "site-value-by-depth.csv",
+    "site-rank-convergence.csv",
+    "reversibility-by-depth.csv",
+    "reversal-mechanisms-by-depth.csv",
+    "reversal-precursors-by-depth.csv",
+    "strategic-convergence-summary.csv",
+    "analysis.json",
+    "environment.json"
+  ],
+  "schema_version": 1
+}
