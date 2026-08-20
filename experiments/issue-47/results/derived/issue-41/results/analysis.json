@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "primary_experiment": "uct-10000-self-play",
+  "games": 297,
+  "new_self_play_games": 0,
+  "targeted_continuation_runs": 0,
+  "definitions": {
+    "comparison_layers": [
+      {
+        "components": [
+          "secured_objective_difference"
+        ],
+        "id": "secured"
+      },
+      {
+        "components": [
+          "secured_objective_difference",
+          "advantage_objective_difference"
+        ],
+        "id": "secured_advantage"
+      },
+      {
+        "components": [
+          "secured_objective_difference",
+          "advantage_objective_difference",
+          "objective_piece_difference"
+        ],
+        "id": "full_lexicographic"
+      }
+    ],
+    "persistence": {
+      "draw_handling": "Winner-based persistence is null for draws. Lead changes, equality periods, and final return to equality remain defined.",
+      "last_lead_change_turn": "The last turn on which the non-zero leader differs from the most recent prior non-zero leader; equality does not itself name a leader.",
+      "nonlosing_persistence_turn": "The earliest turn after which the eventual winner is never behind at any remaining boundary; later equality is allowed but an opponent lead is forbidden.",
+      "strict_persistent_lead_turn": "The earliest turn after which the eventual winner has a strictly positive lead at every remaining boundary; later equality and opponent leads are both forbidden."
+    },
+    "reversal": {
+      "definition": "current leader at Turn N eventually loses",
+      "denominator": "games with a non-tied current leader at Turn N",
+      "draws": "Reported separately and retained in the non-tied-leader denominator.",
+      "ties": "Turn-N tied games are reported separately and excluded from leader outcome rates."
+    },
+    "important_supply_sites": {
+      "primary": {
+        "description": "top 5 by actual Objective supply usage in Issue #39",
+        "is_composite_value_ranking": false,
+        "selection_metric": "objective_placements_supplied_per_player_game",
+        "sites": [
+          "S23",
+          "S21",
+          "S12",
+          "S13",
+          "S22"
+        ],
+        "source_experiment": "uct-10000-self-play",
+        "source_issue": 39
+      },
+      "sensitivity": [
+        {
+          "id": "placement_frequency_top5",
+          "metric": "placement_player_game_frequency",
+          "sites": [
+            "S31",
+            "S13",
+            "S21",
+            "S23",
+            "S11"
+          ]
+        },
+        {
+          "id": "unsecured_control_top5",
+          "metric": "unsecured_controlled_turn_share",
+          "sites": [
+            "S22",
+            "S12",
+            "S23",
+            "S21",
+            "S32"
+          ]
+        },
+        {
+          "id": "secured_frequency_top5",
+          "metric": "secured_frequency",
+          "sites": [
+            "S23",
+            "S31",
+            "S13",
+            "S21",
+            "S22"
+          ]
+        },
+        {
+          "id": "combined_ownership_control_top5",
+          "metric": "controlled_or_secured_turn_share",
+          "sites": [
+            "S22",
+            "S23",
+            "S21",
+            "S12",
+            "S32"
+          ]
+        }
+      ]
+    },
+    "turning_point_window": {
+      "relative_turns": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "persistence_summary": {
+    "uct-10000-self-play": {
+      "secured": {
+        "decisive_games": 90,
+        "draw_games": 10,
+        "median_strict_persistent_lead_turn": 23.0,
+        "strict_defined_games": 52,
+        "median_nonlosing_persistence_turn": 18.0,
+        "nonlosing_defined_games": 90,
+        "median_last_lead_change_turn": 20.0
+      },
+      "secured_advantage": {
+        "decisive_games": 90,
+        "draw_games": 10,
+        "median_strict_persistent_lead_turn": 22.0,
+        "strict_defined_games": 83,
+        "median_nonlosing_persistence_turn": 20.5,
+        "nonlosing_defined_games": 90,
+        "median_last_lead_change_turn": 21.0
+      },
+      "full_lexicographic": {
+        "decisive_games": 90,
+        "draw_games": 10,
+        "median_strict_persistent_lead_turn": 22.0,
+        "strict_defined_games": 90,
+        "median_nonlosing_persistence_turn": 21.0,
+        "nonlosing_defined_games": 90,
+        "median_last_lead_change_turn": 22.0
+      }
+    },
+    "uct-30000-self-play": {
+      "secured": {
+        "decisive_games": 94,
+        "draw_games": 6,
+        "median_strict_persistent_lead_turn": 23.0,
+        "strict_defined_games": 59,
+        "median_nonlosing_persistence_turn": 19.0,
+        "nonlosing_defined_games": 94,
+        "median_last_lead_change_turn": 21.0
+      },
+      "secured_advantage": {
+        "decisive_games": 94,
+        "draw_games": 6,
+        "median_strict_persistent_lead_turn": 22.0,
+        "strict_defined_games": 92,
+        "median_nonlosing_persistence_turn": 20.0,
+        "nonlosing_defined_games": 94,
+        "median_last_lead_change_turn": 21.0
+      },
+      "full_lexicographic": {
+        "decisive_games": 94,
+        "draw_games": 6,
+        "median_strict_persistent_lead_turn": 21.5,
+        "strict_defined_games": 94,
+        "median_nonlosing_persistence_turn": 21.0,
+        "nonlosing_defined_games": 94,
+        "median_last_lead_change_turn": 22.0
+      }
+    },
+    "uct-100000-self-play": {
+      "secured": {
+        "decisive_games": 93,
+        "draw_games": 4,
+        "median_strict_persistent_lead_turn": 22.0,
+        "strict_defined_games": 57,
+        "median_nonlosing_persistence_turn": 20.0,
+        "nonlosing_defined_games": 93,
+        "median_last_lead_change_turn": 21.0
+      },
+      "secured_advantage": {
+        "decisive_games": 93,
+        "draw_games": 4,
+        "median_strict_persistent_lead_turn": 22.0,
+        "strict_defined_games": 86,
+        "median_nonlosing_persistence_turn": 21.0,
+        "nonlosing_defined_games": 93,
+        "median_last_lead_change_turn": 21.5
+      },
+      "full_lexicographic": {
+        "decisive_games": 93,
+        "draw_games": 4,
+        "median_strict_persistent_lead_turn": 21.0,
+        "strict_defined_games": 93,
+        "median_nonlosing_persistence_turn": 21.0,
+        "nonlosing_defined_games": 93,
+        "median_last_lead_change_turn": 21.0
+      }
+    }
+  },
+  "reversal_checkpoints_full_lexicographic": {
+    "uct-10000-self-play": {
+      "8": {
+        "games_with_current_leader": 84,
+        "current_leader_win_rate": 0.428571,
+        "reversal_rate": 0.452381,
+        "eventual_draw_rate": 0.119048,
+        "tied_games": 16
+      },
+      "12": {
+        "games_with_current_leader": 82,
+        "current_leader_win_rate": 0.426829,
+        "reversal_rate": 0.45122,
+        "eventual_draw_rate": 0.121951,
+        "tied_games": 18
+      },
+      "16": {
+        "games_with_current_leader": 88,
+        "current_leader_win_rate": 0.465909,
+        "reversal_rate": 0.443182,
+        "eventual_draw_rate": 0.090909,
+        "tied_games": 12
+      },
+      "20": {
+        "games_with_current_leader": 91,
+        "current_leader_win_rate": 0.494505,
+        "reversal_rate": 0.395604,
+        "eventual_draw_rate": 0.10989,
+        "tied_games": 9
+      }
+    },
+    "uct-30000-self-play": {
+      "8": {
+        "games_with_current_leader": 85,
+        "current_leader_win_rate": 0.6,
+        "reversal_rate": 0.341176,
+        "eventual_draw_rate": 0.058824,
+        "tied_games": 15
+      },
+      "12": {
+        "games_with_current_leader": 79,
+        "current_leader_win_rate": 0.556962,
+        "reversal_rate": 0.405063,
+        "eventual_draw_rate": 0.037975,
+        "tied_games": 21
+      },
+      "16": {
+        "games_with_current_leader": 87,
+        "current_leader_win_rate": 0.517241,
+        "reversal_rate": 0.413793,
+        "eventual_draw_rate": 0.068966,
+        "tied_games": 13
+      },
+      "20": {
+        "games_with_current_leader": 94,
+        "current_leader_win_rate": 0.617021,
+        "reversal_rate": 0.329787,
+        "eventual_draw_rate": 0.053191,
+        "tied_games": 6
+      }
+    },
+    "uct-100000-self-play": {
+      "8": {
+        "games_with_current_leader": 83,
+        "current_leader_win_rate": 0.481928,
+        "reversal_rate": 0.481928,
+        "eventual_draw_rate": 0.036145,
+        "tied_games": 14
+      },
+      "12": {
+        "games_with_current_leader": 81,
+        "current_leader_win_rate": 0.580247,
+        "reversal_rate": 0.382716,
+        "eventual_draw_rate": 0.037037,
+        "tied_games": 16
+      },
+      "16": {
+        "games_with_current_leader": 82,
+        "current_leader_win_rate": 0.597561,
+        "reversal_rate": 0.353659,
+        "eventual_draw_rate": 0.04878,
+        "tied_games": 15
+      },
+      "20": {
+        "games_with_current_leader": 88,
+        "current_leader_win_rate": 0.613636,
+        "reversal_rate": 0.363636,
+        "eventual_draw_rate": 0.022727,
+        "tied_games": 9
+      }
+    }
+  },
+  "turning_point_event_summary_full_lexicographic": {
+    "uct-10000-self-play": {
+      "strict": {
+        "-2": {
+          "games": 90,
+          "mean_winner_new_secured_objectives": 0.233333,
+          "mean_winner_new_secured_supply": 0.244444,
+          "mean_winner_important_control_gains": 0.333333,
+          "mean_all_new_secured_objectives": 0.233333,
+          "mean_all_new_secured_supply": 0.244444,
+          "mean_all_important_control_gains": 0.333333,
+          "mean_primary_important_supply_source_uses": 0.822222,
+          "mean_objective_placements": 1.688889
+        },
+        "-1": {
+          "games": 90,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.433333,
+          "mean_all_new_secured_supply": 0.022222,
+          "mean_all_important_control_gains": 0.233333,
+          "mean_primary_important_supply_source_uses": 0.822222,
+          "mean_objective_placements": 1.677778
+        },
+        "0": {
+          "games": 90,
+          "mean_winner_new_secured_objectives": 1.155556,
+          "mean_winner_new_secured_supply": 0.022222,
+          "mean_winner_important_control_gains": 0.033333,
+          "mean_all_new_secured_objectives": 1.155556,
+          "mean_all_new_secured_supply": 0.022222,
+          "mean_all_important_control_gains": 0.033333,
+          "mean_primary_important_supply_source_uses": 0.855556,
+          "mean_objective_placements": 1.944444
+        },
+        "1": {
+          "games": 64,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.171875,
+          "mean_all_new_secured_supply": 0.15625,
+          "mean_all_important_control_gains": 0.46875,
+          "mean_primary_important_supply_source_uses": 0.578125,
+          "mean_objective_placements": 1.078125
+        },
+        "2": {
+          "games": 48,
+          "mean_winner_new_secured_objectives": 0.25,
+          "mean_winner_new_secured_supply": 0.083333,
+          "mean_winner_important_control_gains": 0.125,
+          "mean_all_new_secured_objectives": 0.25,
+          "mean_all_new_secured_supply": 0.083333,
+          "mean_all_important_control_gains": 0.125,
+          "mean_primary_important_supply_source_uses": 0.5625,
+          "mean_objective_placements": 1.270833
+        }
+      },
+      "nonlosing": {
+        "-2": {
+          "games": 80,
+          "mean_winner_new_secured_objectives": 0.2125,
+          "mean_winner_new_secured_supply": 0.275,
+          "mean_winner_important_control_gains": 0.2875,
+          "mean_all_new_secured_objectives": 0.2125,
+          "mean_all_new_secured_supply": 0.275,
+          "mean_all_important_control_gains": 0.2875,
+          "mean_primary_important_supply_source_uses": 0.8,
+          "mean_objective_placements": 1.6375
+        },
+        "-1": {
+          "games": 80,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.5125,
+          "mean_all_new_secured_supply": 0.0125,
+          "mean_all_important_control_gains": 0.1625,
+          "mean_primary_important_supply_source_uses": 0.875,
+          "mean_objective_placements": 1.725
+        },
+        "0": {
+          "games": 90,
+          "mean_winner_new_secured_objectives": 1.111111,
+          "mean_winner_new_secured_supply": 0.022222,
+          "mean_winner_important_control_gains": 0.266667,
+          "mean_all_new_secured_objectives": 1.111111,
+          "mean_all_new_secured_supply": 0.022222,
+          "mean_all_important_control_gains": 0.266667,
+          "mean_primary_important_supply_source_uses": 0.766667,
+          "mean_objective_placements": 1.744444
+        },
+        "1": {
+          "games": 64,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.15625,
+          "mean_all_new_secured_supply": 0.125,
+          "mean_all_important_control_gains": 0.46875,
+          "mean_primary_important_supply_source_uses": 0.46875,
+          "mean_objective_placements": 0.96875
+        },
+        "2": {
+          "games": 54,
+          "mean_winner_new_secured_objectives": 0.222222,
+          "mean_winner_new_secured_supply": 0.037037,
+          "mean_winner_important_control_gains": 0.222222,
+          "mean_all_new_secured_objectives": 0.222222,
+          "mean_all_new_secured_supply": 0.037037,
+          "mean_all_important_control_gains": 0.222222,
+          "mean_primary_important_supply_source_uses": 0.592593,
+          "mean_objective_placements": 1.388889
+        }
+      }
+    },
+    "uct-30000-self-play": {
+      "strict": {
+        "-2": {
+          "games": 94,
+          "mean_winner_new_secured_objectives": 0.457447,
+          "mean_winner_new_secured_supply": 0.308511,
+          "mean_winner_important_control_gains": 0.223404,
+          "mean_all_new_secured_objectives": 0.457447,
+          "mean_all_new_secured_supply": 0.308511,
+          "mean_all_important_control_gains": 0.223404,
+          "mean_primary_important_supply_source_uses": 1.053191,
+          "mean_objective_placements": 1.957447
+        },
+        "-1": {
+          "games": 94,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.723404,
+          "mean_all_new_secured_supply": 0.031915,
+          "mean_all_important_control_gains": 0.12766,
+          "mean_primary_important_supply_source_uses": 0.968085,
+          "mean_objective_placements": 1.87234
+        },
+        "0": {
+          "games": 94,
+          "mean_winner_new_secured_objectives": 1.202128,
+          "mean_winner_new_secured_supply": 0.074468,
+          "mean_winner_important_control_gains": 0.074468,
+          "mean_all_new_secured_objectives": 1.202128,
+          "mean_all_new_secured_supply": 0.074468,
+          "mean_all_important_control_gains": 0.074468,
+          "mean_primary_important_supply_source_uses": 0.978723,
+          "mean_objective_placements": 2.074468
+        },
+        "1": {
+          "games": 77,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.207792,
+          "mean_all_new_secured_supply": 0.155844,
+          "mean_all_important_control_gains": 0.285714,
+          "mean_primary_important_supply_source_uses": 0.415584,
+          "mean_objective_placements": 1.168831
+        },
+        "2": {
+          "games": 62,
+          "mean_winner_new_secured_objectives": 0.322581,
+          "mean_winner_new_secured_supply": 0.064516,
+          "mean_winner_important_control_gains": 0.129032,
+          "mean_all_new_secured_objectives": 0.322581,
+          "mean_all_new_secured_supply": 0.064516,
+          "mean_all_important_control_gains": 0.129032,
+          "mean_primary_important_supply_source_uses": 0.516129,
+          "mean_objective_placements": 1.33871
+        }
+      },
+      "nonlosing": {
+        "-2": {
+          "games": 83,
+          "mean_winner_new_secured_objectives": 0.325301,
+          "mean_winner_new_secured_supply": 0.385542,
+          "mean_winner_important_control_gains": 0.253012,
+          "mean_all_new_secured_objectives": 0.325301,
+          "mean_all_new_secured_supply": 0.385542,
+          "mean_all_important_control_gains": 0.253012,
+          "mean_primary_important_supply_source_uses": 0.987952,
+          "mean_objective_placements": 1.819277
+        },
+        "-1": {
+          "games": 83,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.650602,
+          "mean_all_new_secured_supply": 0.036145,
+          "mean_all_important_control_gains": 0.168675,
+          "mean_primary_important_supply_source_uses": 0.915663,
+          "mean_objective_placements": 1.759036
+        },
+        "0": {
+          "games": 94,
+          "mean_winner_new_secured_objectives": 1.212766,
+          "mean_winner_new_secured_supply": 0.042553,
+          "mean_winner_important_control_gains": 0.265957,
+          "mean_all_new_secured_objectives": 1.212766,
+          "mean_all_new_secured_supply": 0.042553,
+          "mean_all_important_control_gains": 0.265957,
+          "mean_primary_important_supply_source_uses": 0.925532,
+          "mean_objective_placements": 1.882979
+        },
+        "1": {
+          "games": 77,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.194805,
+          "mean_all_new_secured_supply": 0.077922,
+          "mean_all_important_control_gains": 0.272727,
+          "mean_primary_important_supply_source_uses": 0.493506,
+          "mean_objective_placements": 1.142857
+        },
+        "2": {
+          "games": 65,
+          "mean_winner_new_secured_objectives": 0.246154,
+          "mean_winner_new_secured_supply": 0.123077,
+          "mean_winner_important_control_gains": 0.123077,
+          "mean_all_new_secured_objectives": 0.246154,
+          "mean_all_new_secured_supply": 0.123077,
+          "mean_all_important_control_gains": 0.123077,
+          "mean_primary_important_supply_source_uses": 0.630769,
+          "mean_objective_placements": 1.369231
+        }
+      }
+    },
+    "uct-100000-self-play": {
+      "strict": {
+        "-2": {
+          "games": 93,
+          "mean_winner_new_secured_objectives": 0.365591,
+          "mean_winner_new_secured_supply": 0.376344,
+          "mean_winner_important_control_gains": 0.333333,
+          "mean_all_new_secured_objectives": 0.365591,
+          "mean_all_new_secured_supply": 0.376344,
+          "mean_all_important_control_gains": 0.333333,
+          "mean_primary_important_supply_source_uses": 0.903226,
+          "mean_objective_placements": 1.784946
+        },
+        "-1": {
+          "games": 93,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.634409,
+          "mean_all_new_secured_supply": 0.021505,
+          "mean_all_important_control_gains": 0.193548,
+          "mean_primary_important_supply_source_uses": 0.763441,
+          "mean_objective_placements": 1.784946
+        },
+        "0": {
+          "games": 93,
+          "mean_winner_new_secured_objectives": 1.129032,
+          "mean_winner_new_secured_supply": 0.043011,
+          "mean_winner_important_control_gains": 0.021505,
+          "mean_all_new_secured_objectives": 1.129032,
+          "mean_all_new_secured_supply": 0.043011,
+          "mean_all_important_control_gains": 0.021505,
+          "mean_primary_important_supply_source_uses": 0.935484,
+          "mean_objective_placements": 1.956989
+        },
+        "1": {
+          "games": 70,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.214286,
+          "mean_all_new_secured_supply": 0.128571,
+          "mean_all_important_control_gains": 0.371429,
+          "mean_primary_important_supply_source_uses": 0.457143,
+          "mean_objective_placements": 1.071429
+        },
+        "2": {
+          "games": 56,
+          "mean_winner_new_secured_objectives": 0.285714,
+          "mean_winner_new_secured_supply": 0.196429,
+          "mean_winner_important_control_gains": 0.196429,
+          "mean_all_new_secured_objectives": 0.285714,
+          "mean_all_new_secured_supply": 0.196429,
+          "mean_all_important_control_gains": 0.196429,
+          "mean_primary_important_supply_source_uses": 0.714286,
+          "mean_objective_placements": 1.25
+        }
+      },
+      "nonlosing": {
+        "-2": {
+          "games": 83,
+          "mean_winner_new_secured_objectives": 0.325301,
+          "mean_winner_new_secured_supply": 0.409639,
+          "mean_winner_important_control_gains": 0.337349,
+          "mean_all_new_secured_objectives": 0.325301,
+          "mean_all_new_secured_supply": 0.409639,
+          "mean_all_important_control_gains": 0.337349,
+          "mean_primary_important_supply_source_uses": 0.86747,
+          "mean_objective_placements": 1.746988
+        },
+        "-1": {
+          "games": 83,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.626506,
+          "mean_all_new_secured_supply": 0.048193,
+          "mean_all_important_control_gains": 0.204819,
+          "mean_primary_important_supply_source_uses": 0.771084,
+          "mean_objective_placements": 1.771084
+        },
+        "0": {
+          "games": 93,
+          "mean_winner_new_secured_objectives": 1.11828,
+          "mean_winner_new_secured_supply": 0.064516,
+          "mean_winner_important_control_gains": 0.247312,
+          "mean_all_new_secured_objectives": 1.11828,
+          "mean_all_new_secured_supply": 0.064516,
+          "mean_all_important_control_gains": 0.247312,
+          "mean_primary_important_supply_source_uses": 0.870968,
+          "mean_objective_placements": 1.784946
+        },
+        "1": {
+          "games": 71,
+          "mean_winner_new_secured_objectives": 0,
+          "mean_winner_new_secured_supply": 0,
+          "mean_winner_important_control_gains": 0,
+          "mean_all_new_secured_objectives": 0.211268,
+          "mean_all_new_secured_supply": 0.098592,
+          "mean_all_important_control_gains": 0.450704,
+          "mean_primary_important_supply_source_uses": 0.478873,
+          "mean_objective_placements": 1.084507
+        },
+        "2": {
+          "games": 60,
+          "mean_winner_new_secured_objectives": 0.266667,
+          "mean_winner_new_secured_supply": 0.183333,
+          "mean_winner_important_control_gains": 0.2,
+          "mean_all_new_secured_objectives": 0.266667,
+          "mean_all_new_secured_supply": 0.183333,
+          "mean_all_important_control_gains": 0.2,
+          "mean_primary_important_supply_source_uses": 0.783333,
+          "mean_objective_placements": 1.366667
+        }
+      }
+    }
+  },
+  "supply_objective_transition_summary": {
+    "uct-10000-self-play": {
+      "first_turn_with_objective_placement_majority": 10,
+      "peak_objective_placement_share_turn": 13,
+      "peak_objective_placement_share": 0.673333,
+      "first_turn_with_cumulative_objective_majority": 21,
+      "final_cumulative_objective_placement_share": 0.487778
+    },
+    "uct-30000-self-play": {
+      "first_turn_with_objective_placement_majority": 9,
+      "peak_objective_placement_share_turn": 14,
+      "peak_objective_placement_share": 0.703333,
+      "first_turn_with_cumulative_objective_majority": null,
+      "final_cumulative_objective_placement_share": 0.4775
+    },
+    "uct-100000-self-play": {
+      "first_turn_with_objective_placement_majority": 9,
+      "peak_objective_placement_share_turn": 14,
+      "peak_objective_placement_share": 0.749141,
+      "first_turn_with_cumulative_objective_majority": null,
+      "final_cumulative_objective_placement_share": 0.468643
+    }
+  },
+  "integrity": {
+    "state_rows_verified": 292248,
+    "state_chains_verified": 12177,
+    "objective_supply_sources_verified": 10223,
+    "final_boards_verified": 297,
+    "final_winners_verified": 297,
+    "source_files_hashed": 6,
+    "legally_replayed_complete_games_reused": 297,
+    "turn_progression_rows": 7128,
+    "lead_summary_rows": 891,
+    "draw_games": 20,
+    "draw_winner_based_persistence_null": true
+  }
+}

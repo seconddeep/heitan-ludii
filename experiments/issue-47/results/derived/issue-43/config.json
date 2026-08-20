@@ -1,0 +1,89 @@
+{
+  "aligned_window_relative_turns": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "checkpoints": {
+    "primary": [
+      16,
+      20
+    ],
+    "reference": [
+      8,
+      12
+    ]
+  },
+  "comparison_components": [
+    "secured_objective_difference",
+    "advantage_objective_difference",
+    "objective_piece_difference"
+  ],
+  "constraints": {
+    "causal_claims": false,
+    "new_self_play_games": 0
+  },
+  "game": "games/Heitan.lud",
+  "important_supply_sites": [
+    "S23",
+    "S21",
+    "S12",
+    "S13",
+    "S22"
+  ],
+  "schema_version": 1,
+  "source": {
+    "experiments": [
+      {
+        "games": 100,
+        "id": "uct-10000-self-play",
+        "role": "baseline"
+      },
+      {
+        "games": 100,
+        "id": "uct-30000-self-play",
+        "role": "deeper_evaluation"
+      },
+      {
+        "games": 97,
+        "id": "uct-100000-self-play",
+        "role": "deeper_evaluation"
+      }
+    ],
+    "issues": [
+      37,
+      39,
+      41
+    ],
+    "lead_change_summary": "experiments/issue-47/results/derived/issue-41/results/lead-change-summary.csv",
+    "objective_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/objective-turn-states.csv",
+    "placements": "experiments/issue-47/results/derived/issue-37/results/raw/placements.csv",
+    "reversal_by_turn": "experiments/issue-47/results/derived/issue-41/results/reversal-by-turn.csv",
+    "site_values": "experiments/issue-47/results/derived/issue-39/results/site-value-summary.csv",
+    "source_trials": "experiments/issue-47/results/derived/issue-37/results/source-trials.csv",
+    "supply_turn_states": "experiments/issue-47/results/derived/issue-37/results/raw/supply-turn-states.csv",
+    "turn_progression": "experiments/issue-47/results/derived/issue-41/results/raw/turn-progression.csv"
+  },
+  "supply_mechanisms": {
+    "baseline_turns": 4,
+    "lookback_turns": 4,
+    "minimum_indicators": 2,
+    "placement_mean_change_threshold": 0.5,
+    "player_action_mean_definition": "arithmetic mean across only that player's own turns in the configured window",
+    "support_edge_change_threshold": 1,
+    "usage_mean_change_threshold": 0.5,
+    "window_value_definition": "arithmetic mean across all turn boundaries in the configured window"
+  },
+  "usable_supply_support_edges": {
+    "count_each_adjacency_pair": true,
+    "deduplicate_by_objective": false,
+    "deduplicate_by_supply_point": false,
+    "objective_is_live_when_state_is": "unresolved state 0, 1, or 2 at the turn boundary",
+    "supply_is_usable_when_state_is": "player unsecured Control or player Secured",
+    "unit": "one player-controlled-or-secured Supply Point x adjacent live Objective pair"
+  }
+}

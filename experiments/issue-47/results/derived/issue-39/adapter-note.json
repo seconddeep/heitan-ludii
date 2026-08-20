@@ -1,0 +1,7 @@
+{
+  "behavior_preserved": true,
+  "frozen_issue": 39,
+  "reason": "Issue #47 config contains only 10k, 30k, and 100k cohorts; all configured site-value metric tables were written before the legacy lookup.",
+  "schema_version": 1,
+  "skipped_legacy_report_section": "uct-3000-self-play vs uct-10000-self-play"
+}

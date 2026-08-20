@@ -1,0 +1,9 @@
+path,sha256
+experiments/issue-47/results/derived/issue-41/results/raw/turn-progression.csv,adc37e3935adb827e7ad385f8886a4d6552a3fb37d684c5534d27d7cb2b1ef89
+experiments/issue-47/results/derived/issue-41/results/lead-change-summary.csv,af40b9f6debb2de4189586ac531256a56969dff43a073a4898a9a33ec95d5a20
+experiments/issue-47/results/derived/issue-41/results/reversal-by-turn.csv,05bd0a565b3b8f0876bda8bb1e727c3a9dd08a29a6d32136e89c995b4f1fd11a
+experiments/issue-47/results/derived/issue-37/results/raw/placements.csv,c58b650017718f53954240765bf6bc1d6dc9e7ac75b6c7764f01d33359873842
+experiments/issue-47/results/derived/issue-37/results/raw/supply-turn-states.csv,2843961570a23b1a03a9ddc714e090c0d9e07281b804a0ce0606be23c15954a9
+experiments/issue-47/results/derived/issue-37/results/raw/objective-turn-states.csv,7e21ef358b533fb8822392ac3f5724b6726320e8344ab0bd9aff1c2a6c5691d1
+experiments/issue-47/results/derived/issue-37/results/source-trials.csv,e3d782e9a1f10902e9233e58b6021c03449736e384468dbb4fb8c2c8fe476e9c
+experiments/issue-47/results/derived/issue-39/results/site-value-summary.csv,f63e0273417ae7d66ac8d089d3adf2208a25999a6144f1a358c6d264d8d7f763

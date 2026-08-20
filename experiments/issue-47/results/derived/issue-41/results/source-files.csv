@@ -1,0 +1,7 @@
+source_role,path,sha256
+replay_summary,experiments/issue-47/results/derived/issue-37/results/raw/replay-summary.csv,cf7646746e39de42872519c25a331d773eec876ef064cec65f3df18973965af9
+placements,experiments/issue-47/results/derived/issue-37/results/raw/placements.csv,c58b650017718f53954240765bf6bc1d6dc9e7ac75b6c7764f01d33359873842
+supply_turn_states,experiments/issue-47/results/derived/issue-37/results/raw/supply-turn-states.csv,2843961570a23b1a03a9ddc714e090c0d9e07281b804a0ce0606be23c15954a9
+objective_turn_states,experiments/issue-47/results/derived/issue-37/results/raw/objective-turn-states.csv,7e21ef358b533fb8822392ac3f5724b6726320e8344ab0bd9aff1c2a6c5691d1
+source_trials,experiments/issue-47/results/derived/issue-37/results/source-trials.csv,e3d782e9a1f10902e9233e58b6021c03449736e384468dbb4fb8c2c8fe476e9c
+issue_39_site_values,experiments/issue-47/results/derived/issue-39/results/site-value-summary.csv,f63e0273417ae7d66ac8d089d3adf2208a25999a6144f1a358c6d264d8d7f763

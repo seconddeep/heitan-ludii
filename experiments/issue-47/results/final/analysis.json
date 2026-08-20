@@ -1,0 +1,81 @@
+{
+  "convergence_summary": [
+    {
+      "classification": "directionally stabilizing",
+      "delta_10k_30k": 0.07000000000000006,
+      "delta_30k_100k": 0.037937999999999916,
+      "manual_override": "false",
+      "metric": "p1_win_rate",
+      "normalization": "proportion",
+      "value_100k": 0.597938,
+      "value_10k": 0.49,
+      "value_30k": 0.56
+    },
+    {
+      "classification": "stable / converged-looking",
+      "delta_10k_30k": 0.0,
+      "delta_30k_100k": 0.0,
+      "manual_override": "false",
+      "metric": "games_with_any_securing_rate",
+      "normalization": "proportion",
+      "value_100k": 1.0,
+      "value_10k": 1.0,
+      "value_30k": 1.0
+    },
+    {
+      "classification": "non-monotonic",
+      "delta_10k_30k": -0.06581700000000001,
+      "delta_30k_100k": 0.03384900000000002,
+      "manual_override": "false",
+      "metric": "turn20_reversal_rate",
+      "normalization": "proportion",
+      "value_100k": 0.363636,
+      "value_10k": 0.395604,
+      "value_30k": 0.329787
+    }
+  ],
+  "excluded_production_tasks": [
+    {
+      "attempts": 2,
+      "final_state": "failed",
+      "game_index": 61,
+      "reason": "MCTS Java heap exhaustion",
+      "seed": 571000060,
+      "task_id": "issue-47-v1-production-uct-100000-g0061"
+    },
+    {
+      "attempts": 2,
+      "final_state": "failed",
+      "game_index": 78,
+      "reason": "Late-run JDK source-launcher exception masking the underlying memory failure",
+      "seed": 571000077,
+      "task_id": "issue-47-v1-production-uct-100000-g0078"
+    },
+    {
+      "attempts": 2,
+      "final_state": "failed",
+      "game_index": 93,
+      "reason": "MCTS Java heap exhaustion",
+      "seed": 571000092,
+      "task_id": "issue-47-v1-production-uct-100000-g0093"
+    }
+  ],
+  "finalization_sha256": "f3fad6df6d229ccd7f79e18343ff11c56feebdfe694227193156f4897ac59f51",
+  "integrity": {
+    "baseline_games": 100,
+    "metadata_games": 297,
+    "production_games": 197
+  },
+  "pilot_excluded": true,
+  "planned_production_samples": {
+    "100000": 100,
+    "30000": 100
+  },
+  "protocol_lock_sha256": "46c94928747e1eeb1fd92fa504c229f9c69b02800eac1cd11f57d0587c4ea9b8",
+  "samples": {
+    "uct-10000-self-play": 100,
+    "uct-100000-self-play": 97,
+    "uct-30000-self-play": 100
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,3 @@
+metric,from_experiment,to_experiment,spearman_rank_correlation,top_3_usage_share,top_5_usage_share,usage_hhi,frozen_important_sites,frozen_important_sites_in_top5
+objective_placements_supplied_per_player_game,uct-10000-self-play,uct-30000-self-play,0.853846,0.357766,0.576207,0.101744,S23;S21;S12;S13;S22,3
+objective_placements_supplied_per_player_game,uct-30000-self-play,uct-100000-self-play,0.916154,0.373358,0.586007,0.102587,S23;S21;S12;S13;S22,3

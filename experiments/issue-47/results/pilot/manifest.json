@@ -1,0 +1,106 @@
+{
+  "config_sha256_at_creation": "a0bcbce42a7a26e7531895f0f7ce12aedc0356316a49192154a6dd5da2a27729",
+  "created_at_utc": "2026-08-12T02:03:58Z",
+  "namespace": "pilot",
+  "schema_version": 1,
+  "tasks": {
+    "issue-47-v1-pilot-uct-030000-g0001": {
+      "artifacts": {
+        "result": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-030000-g0001/result.csv",
+        "trial": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-030000-g0001/pilot-uct-30000-0001.trl",
+        "trial_sha256": "ac864e5104794ab6304104d3f0d51b2b61cb1a147f4508bad9cb1ff5a0ed9cdf",
+        "validation": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-030000-g0001/validation.json"
+      },
+      "attempts": 1,
+      "error": null,
+      "experiment_id": "pilot-uct-30000",
+      "experiment_version": "issue-47-v1",
+      "game_index": 1,
+      "iteration_limit": 30000,
+      "namespace": "pilot",
+      "seed": 470030000,
+      "state": "completed",
+      "task_id": "issue-47-v1-pilot-uct-030000-g0001",
+      "updated_at_utc": "2026-08-12T02:17:22Z",
+      "validation": {
+        "final_board_sites": 41,
+        "final_metrics": {
+          "p1_advantage_objectives": 2,
+          "p1_objective_pieces": 18,
+          "p1_secured_objectives": 5,
+          "p2_advantage_objectives": 0,
+          "p2_objective_pieces": 18,
+          "p2_secured_objectives": 6
+        },
+        "legal_move_replay": true,
+        "moves": 72,
+        "natural_end": true,
+        "no_duplicate_supply_source_per_turn": true,
+        "objective_supply_sources_legal": true,
+        "p1_placements": 36,
+        "p2_placements": 36,
+        "result_sha256": "26a37ec68c4c9c1d049f2c10488a277f0f804dce8100dfc953f2b41d1a771dc0",
+        "schema_version": 1,
+        "supply_source_adjacency_verified": true,
+        "supply_source_control_verified_by_legal_replay": true,
+        "trial_parsed": true,
+        "trial_sha256": "ac864e5104794ab6304104d3f0d51b2b61cb1a147f4508bad9cb1ff5a0ed9cdf",
+        "turns": 24,
+        "validated": true,
+        "winner": 2,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-47-v1-pilot-uct-100000-g0001": {
+      "artifacts": {
+        "result": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-100000-g0001/result.csv",
+        "trial": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-100000-g0001/pilot-uct-100000-0001.trl",
+        "trial_sha256": "da1273f15679f7ce57488e6329ff1e23dc07cc1ab52c56bc3555ab9dc58253b1",
+        "validation": "experiments/issue-47/results/pilot/tasks/issue-47-v1-pilot-uct-100000-g0001/validation.json"
+      },
+      "attempts": 2,
+      "completed_at_utc": "2026-08-12T06:55:44Z",
+      "elapsed_seconds": 2471.038,
+      "error": null,
+      "experiment_id": "pilot-uct-100000",
+      "experiment_version": "issue-47-v1",
+      "game_index": 1,
+      "iteration_limit": 100000,
+      "namespace": "pilot",
+      "seed": 470100000,
+      "started_at_utc": "2026-08-12T06:14:33Z",
+      "state": "completed",
+      "task_id": "issue-47-v1-pilot-uct-100000-g0001",
+      "updated_at_utc": "2026-08-12T06:55:44Z",
+      "validation": {
+        "final_board_sites": 41,
+        "final_metrics": {
+          "p1_advantage_objectives": 1,
+          "p1_objective_pieces": 18,
+          "p1_secured_objectives": 5,
+          "p2_advantage_objectives": 1,
+          "p2_objective_pieces": 19,
+          "p2_secured_objectives": 6
+        },
+        "legal_move_replay": true,
+        "moves": 72,
+        "natural_end": true,
+        "no_duplicate_supply_source_per_turn": true,
+        "objective_supply_sources_legal": true,
+        "p1_placements": 36,
+        "p2_placements": 36,
+        "result_sha256": "c588a5e1009425fb21f86006132625ea55d2e8f766e37fa8032f5164ad36ddde",
+        "schema_version": 1,
+        "supply_source_adjacency_verified": true,
+        "supply_source_control_verified_by_legal_replay": true,
+        "trial_parsed": true,
+        "trial_sha256": "da1273f15679f7ce57488e6329ff1e23dc07cc1ab52c56bc3555ab9dc58253b1",
+        "turns": 24,
+        "validated": true,
+        "winner": 2,
+        "winner_reconstructed": true
+      }
+    }
+  },
+  "updated_at_utc": "2026-08-12T07:03:08Z"
+}

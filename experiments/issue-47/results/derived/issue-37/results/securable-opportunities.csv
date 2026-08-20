@@ -1,0 +1,10 @@
+experiment_id,iteration_limit,spatial_category,securable_opportunities,secured_same_turn,left_unsecured,left_unsecured_rate,eventually_secured,never_secured,never_secured_rate
+uct-10000-self-play,10000,corner,70,1,69,0.985714,2,68,0.971429
+uct-10000-self-play,10000,edge,1329,12,1317,0.990971,49,1280,0.96313
+uct-10000-self-play,10000,interior,8680,354,8326,0.959217,1444,7236,0.833641
+uct-100000-self-play,100000,corner,54,1,53,0.981481,5,49,0.907407
+uct-100000-self-play,100000,edge,697,15,682,0.978479,50,647,0.928264
+uct-100000-self-play,100000,interior,6937,446,6491,0.935707,1550,5387,0.77656
+uct-30000-self-play,30000,corner,39,0,39,1.0,0,39,1.0
+uct-30000-self-play,30000,edge,898,10,888,0.988864,23,875,0.974388
+uct-30000-self-play,30000,interior,7757,433,7324,0.944179,1663,6094,0.785613

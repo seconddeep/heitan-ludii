@@ -1,0 +1,28 @@
+{
+  "final_board_sites": 41,
+  "final_metrics": {
+    "p1_advantage_objectives": 4,
+    "p1_objective_pieces": 20,
+    "p1_secured_objectives": 5,
+    "p2_advantage_objectives": 1,
+    "p2_objective_pieces": 15,
+    "p2_secured_objectives": 4
+  },
+  "legal_move_replay": true,
+  "moves": 72,
+  "natural_end": true,
+  "no_duplicate_supply_source_per_turn": true,
+  "objective_supply_sources_legal": true,
+  "p1_placements": 36,
+  "p2_placements": 36,
+  "result_sha256": "020e46e75a36dfe4c853cf711d1aa89675c7fe84ba7077c54664f1c598c18c9c",
+  "schema_version": 1,
+  "supply_source_adjacency_verified": true,
+  "supply_source_control_verified_by_legal_replay": true,
+  "trial_parsed": true,
+  "trial_sha256": "243ed4cd89ba4647aef9d1df5029db3bc7d08b3e0012ad33da3615290caf5bd3",
+  "turns": 24,
+  "validated": true,
+  "winner": 1,
+  "winner_reconstructed": true
+}

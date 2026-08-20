@@ -1,0 +1,10 @@
+experiment_id,iteration_limit,spatial_category,report_label,points_per_board,securing_events,mean_securing_turn,median_securing_turn,securable_opportunities,opportunities_taken,securing_rate_per_opportunity,mean_future_objective_placements_supported,events_with_future_usage_rate
+uct-10000-self-play,10000,corner,corner,4,1,21,21,70,1,0.014286,1,1.0
+uct-10000-self-play,10000,edge,edge,12,12,20.75,21.0,1329,12,0.009029,0.667,0.5
+uct-10000-self-play,10000,interior,central (interior 3x3),9,354,12.133,10.0,8680,354,0.040783,3.879,0.929379
+uct-100000-self-play,100000,corner,corner,4,1,22,22,54,1,0.018519,0,0.0
+uct-100000-self-play,100000,edge,edge,12,15,20.8,21,697,15,0.021521,0.867,0.6
+uct-100000-self-play,100000,interior,central (interior 3x3),9,446,11.148,10.0,6937,446,0.064293,4.173,0.932735
+uct-30000-self-play,30000,corner,corner,4,0,0.0,0.0,39,0,0.0,0.0,0.0
+uct-30000-self-play,30000,edge,edge,12,10,20.6,22.0,898,10,0.011136,0.6,0.5
+uct-30000-self-play,30000,interior,central (interior 3x3),9,433,11.575,10,7757,433,0.055821,4.104,0.933025

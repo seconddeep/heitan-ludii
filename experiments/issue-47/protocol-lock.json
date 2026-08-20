@@ -1,0 +1,123 @@
+{
+  "config": "experiments/issue-47/config.json",
+  "config_sha256": "bf20b063fc3185d103de2107d75bec625a2f8891ecd91239d59e3c30dd0aff5a",
+  "environment": {
+    "java": "openjdk 21.0.12 2026-07-21 LTS",
+    "machine": "arm64",
+    "os": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6"
+  },
+  "experiment_version": "issue-47-v1",
+  "game": "games/Heitan.lud",
+  "game_index_generation_rule": "one_based consecutive integers from 1 through target_games within each budget",
+  "game_sha256": "d81468535f9beb331040fd0bc736e93dfcb9bfe7da36042ce4aabf54f96b2f6c",
+  "hashed_protocol_and_analysis_sources": [
+    {
+      "path": "experiments/issue-11/scripts/HeitanExperiment.java",
+      "sha256": "6aaa7b8737cd61c8bbfa1db3ce7065f8ac75b1d8363a5e9af147c9dcd86058fd"
+    },
+    {
+      "path": "experiments/issue-37/config.json",
+      "sha256": "394a0654f8682727841ac6c25460004ae130c76dd8840c87932a2ba72623f1ca"
+    },
+    {
+      "path": "experiments/issue-37/scripts/HeitanSupplyReplay.java",
+      "sha256": "e7a4ca631756081c1f2fbe87e88f57af505d4abcedd78b66a6693cdb34ba5019"
+    },
+    {
+      "path": "experiments/issue-37/scripts/analyze_results.py",
+      "sha256": "6135d9b8aa77fe39695d527977d8860d1d88862285a5ee83b5612d1b22f635b5"
+    },
+    {
+      "path": "experiments/issue-39/config.json",
+      "sha256": "76ce74df3321cb249c3db0e348004a789fe971a96033b19b20297e13c5be7c62"
+    },
+    {
+      "path": "experiments/issue-39/scripts/analyze_site_value.py",
+      "sha256": "c8586489fdfc1f32d235d3ba4ee4995d0bad723c60b4197ee8861ab309be9f27"
+    },
+    {
+      "path": "experiments/issue-41/config.json",
+      "sha256": "d269e8643542953f473f2f6b763dd1b9b53860832d57671b622f87838bb40430"
+    },
+    {
+      "path": "experiments/issue-41/scripts/analyze_progression.py",
+      "sha256": "763d9b9c017b8e23bc4cc49df4bd794cee81b7322fdb49f6c9839747cc175449"
+    },
+    {
+      "path": "experiments/issue-43/config.json",
+      "sha256": "109032b3e3664a1e6c78ddb48cf9a91691abc3d5e933684578a7d1be9dfc3b55"
+    },
+    {
+      "path": "experiments/issue-43/scripts/analyze_reversals.py",
+      "sha256": "81c2fc651748c684c7943063b5e195f024a406946dab5b34b2d852761d87701c"
+    },
+    {
+      "path": "experiments/issue-44/config.json",
+      "sha256": "f469bbc56f3371bcf689955e2b8ce319f819eaa6e6dcb664fae08916187fb08c"
+    },
+    {
+      "path": "experiments/issue-44/scripts/analyze_prediction.py",
+      "sha256": "1a1b935a694267b1881c0942888156fab1e8283d769e752d020a1666b212cd0d"
+    },
+    {
+      "path": "experiments/issue-47/README.md",
+      "sha256": "68af0265681790223b301c4d81cd14bb3fa8bc2ae7064df2c30331e42345e4c7"
+    },
+    {
+      "path": "experiments/issue-47/scripts/freeze_protocol.py",
+      "sha256": "d4de29e1e65e9cc02aa4faca9735dd7ac7a4d894cb974efdd44a82c6912b08eb"
+    },
+    {
+      "path": "experiments/issue-47/scripts/protocol.py",
+      "sha256": "8f8bb763f431823ba6d75ce4bdf53d559f0cfd09e8adab0139c7677878bd7195"
+    },
+    {
+      "path": "experiments/issue-47/scripts/run_analysis.py",
+      "sha256": "899e14b36801ebe55bbf9b22575b4f09c50218ae64c842722b15a9db9fff86a7"
+    },
+    {
+      "path": "experiments/issue-47/scripts/run_experiments.py",
+      "sha256": "72af13070f181cafb006c77fdfe264c55b348f8a3267b8dd1abec8ec69631711"
+    },
+    {
+      "path": "experiments/issue-47/scripts/test_protocol.py",
+      "sha256": "dfa21494624e0d4b1c3830c82cdeb3604faabf3f65b5788659da5180bee57e9d"
+    },
+    {
+      "path": "experiments/issue-47/scripts/validate_trials.py",
+      "sha256": "2ed247ea77677b96aa67d2d6f1383fa562dc25e0e508668a17cf3bc5aed268ef"
+    }
+  ],
+  "jvm_max_heap_by_budget": {
+    "100000": "8g",
+    "30000": "4g"
+  },
+  "ludii_jar_sha256": "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+  "ludii_version": "1.3.14",
+  "max_attempts": 3,
+  "pilot_excluded_from_analysis": true,
+  "pilot_manifest": "experiments/issue-47/results/pilot/manifest.json",
+  "pilot_manifest_sha256": "69f7295ce0379939ee9bcb92cc7be37cf1f0ba29966a28fde843f9f1679f554f",
+  "production_game_counts": {
+    "100000": 100,
+    "30000": 100
+  },
+  "protocol_frozen_at_utc": "2026-08-12T07:07:32Z",
+  "retry_states": [
+    "pending",
+    "failed",
+    "corrupt"
+  ],
+  "schema_version": 1,
+  "search_budgets": [
+    30000,
+    100000
+  ],
+  "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index",
+  "timeout_seconds_per_game": 0,
+  "worker_count_by_budget": {
+    "100000": 1,
+    "30000": 2
+  }
+}
