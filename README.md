@@ -1,17 +1,10 @@
 # Heitan
 
-Heitan is an abstract strategy game implemented for Ludii.
+Heitan is a two-player abstract strategy game about building supply networks and competing over Objectives.
 
-Players build supply networks and compete over Objectives.
-The game focuses on strategic decisions involving supply management and the balance between concentrated and distributed placement.
+Each turn, players place three Pieces, deciding whether to concentrate them or spread them across the board.
 
-## About
-
-Heitan is a two-player abstract strategy game.
-
-Each turn, players place three Pieces and use Supply Points to expand their influence over Objectives.
-
-The game is designed around simple rules that create complex strategic choices.
+This repository contains the Ludii implementation of Heitan, along with its rules and analysis materials.
 
 ## Documentation
 
@@ -25,8 +18,6 @@ The game is designed around simple rules that create complex strategic choices.
 - [Board Definition](docs/board.md)
 
 ## Implementation
-
-This repository contains the Ludii implementation of Heitan.
 
 The game definition is located at:
 
@@ -74,4 +65,6 @@ Commercial use, including selling or productizing Heitan or commercial derivativ
 
 ## Status
 
-Heitan is currently under development.
+Heitan is currently under development and analysis.
+
+The 4x4 version has undergone Ludii UCT self-play analysis at search budgets up to 100,000 iterations.
