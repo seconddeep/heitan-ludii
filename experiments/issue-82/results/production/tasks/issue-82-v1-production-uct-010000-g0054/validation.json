@@ -1,0 +1,31 @@
+{
+  "all_turns_have_three_placements": true,
+  "legal_move_replay": true,
+  "metrics": {
+    "p1_advantage_objectives": 1,
+    "p1_objective_pieces": 13,
+    "p1_score": 1161,
+    "p1_secured_objectives": 4,
+    "p1_total_pieces": 27,
+    "p2_advantage_objectives": 1,
+    "p2_objective_pieces": 11,
+    "p2_score": 879,
+    "p2_secured_objectives": 3,
+    "p2_total_pieces": 27
+  },
+  "moves": 54,
+  "natural_end": true,
+  "objective_sites": 9,
+  "p1_placements": 27,
+  "p2_placements": 27,
+  "result_sha256": "cdd8103548e5773ed09cf5c9ae37e2492fd2fd89f36c4af7eb81badc25649741",
+  "schema_version": 1,
+  "score_reconstructed": true,
+  "supply_sites": 16,
+  "total_sites": 25,
+  "trial_sha256": "bf110aeec5b897143cf0bb843b5334f3d43118ca093b3c32e7f1d13a7efeec15",
+  "turns": 18,
+  "validated": true,
+  "winner": 1,
+  "winner_reconstructed": true
+}

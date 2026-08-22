@@ -1,0 +1,21 @@
+{
+  "additional_production_execution_forbidden": true,
+  "completed_games_by_budget": {
+    "10000": 100,
+    "30000": 100,
+    "100000": 100
+  },
+  "failed_tasks": [],
+  "finalized_at_utc": "2026-08-22T23:26:54Z",
+  "manifest": "experiments/issue-82/results/production/manifest.json",
+  "manifest_sha256": "e18e10cf4d91d0faf819e0bfa64f322b75cc9a6961476004e8d8a147e062a7d0",
+  "missing_may_be_non_random": false,
+  "planned_games_by_budget": {
+    "10000": 100,
+    "30000": 100,
+    "100000": 100
+  },
+  "protocol_lock_sha256": "63c6a222a339b7075fb2c898edcb1d0afc95f5cb45777d49391aff32c8d95859",
+  "replacement_seeds_used": false,
+  "schema_version": 1
+}

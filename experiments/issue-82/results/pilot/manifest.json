@@ -1,0 +1,381 @@
+{
+  "config_sha256_at_creation": "895e480f3978eb6af4392871adc1a90e8d24f730682bfe198f7da4240e7775a6",
+  "created_at_utc": "2026-08-20T15:41:54Z",
+  "namespace": "pilot",
+  "schema_version": 1,
+  "tasks": {
+    "issue-82-v1-pilot-uct-010000-g0001": {
+      "artifacts": {
+        "result": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-010000-g0001/result.csv",
+        "result_sha256": "20d3f8e3e2f745ed12347cbc90fb867be3a7cebe95211c37d9074a8909f72f19",
+        "trial": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-010000-g0001/pilot-3x3-uct-10000-0001.trl",
+        "trial_sha256": "c010c9d4eebc625ccf2b0242930fc1173dfdaad22769a590f6b98ed85cdec7b4",
+        "validation": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-010000-g0001/validation.json",
+        "validation_sha256": "f9459d330dddeedb3d4b61e5c79e9c0b8a9c7477ed2572a601fd778560c39579"
+      },
+      "attempts": 3,
+      "completed_at_utc": "2026-08-20T15:46:25Z",
+      "elapsed_seconds": 91.963,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "attempt": 1,
+          "run_owner": {
+            "command_marker": "experiments/issue-82/scripts/run_experiments.py",
+            "host": "manonoMac-mini.local",
+            "pid": 27848,
+            "started_at_utc": "2026-08-20T15:41:54Z"
+          },
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:43:26Z",
+          "error": "Java exit 1: 91.72 real       120.54 user         0.93 sys\ntime: sysctl kern.clockrate: Operation not permitted",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-20T15:44:31Z",
+          "attempt": 2,
+          "run_owner": {
+            "command_marker": "experiments/issue-82/scripts/run_experiments.py",
+            "host": "manonoMac-mini.local",
+            "pid": 27949,
+            "started_at_utc": "2026-08-20T15:44:31Z"
+          },
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:44:31Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:44:31Z",
+          "error": "[Errno 1] Operation not permitted: 'ps'",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-20T15:44:53Z",
+          "attempt": 3,
+          "run_owner": {
+            "command_marker": "experiments/issue-82/scripts/run_experiments.py",
+            "host": "manonoMac-mini.local",
+            "pid": 27985,
+            "started_at_utc": "2026-08-20T15:44:53Z"
+          },
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:44:53Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:46:24Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-20T15:46:24Z",
+          "error": null,
+          "state": "validating"
+        },
+        {
+          "at_utc": "2026-08-20T15:46:25Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-uct-10000",
+      "experiment_version": "issue-82-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 10000,
+      "namespace": "pilot",
+      "optional_budget": false,
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 820010000,
+      "state": "completed",
+      "task_id": "issue-82-v1-pilot-uct-010000-g0001",
+      "updated_at_utc": "2026-08-20T15:46:25Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "p1_advantage_objectives": 1,
+          "p1_objective_pieces": 14,
+          "p1_score": 1162,
+          "p1_secured_objectives": 4,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 1,
+          "p2_objective_pieces": 12,
+          "p2_score": 880,
+          "p2_secured_objectives": 3,
+          "p2_total_pieces": 27
+        },
+        "moves": 54,
+        "natural_end": true,
+        "objective_sites": 9,
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "result_sha256": "20d3f8e3e2f745ed12347cbc90fb867be3a7cebe95211c37d9074a8909f72f19",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "supply_sites": 16,
+        "total_sites": 25,
+        "trial_sha256": "c010c9d4eebc625ccf2b0242930fc1173dfdaad22769a590f6b98ed85cdec7b4",
+        "turns": 18,
+        "validated": true,
+        "winner": 1,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-82-v1-pilot-uct-030000-g0001": {
+      "artifacts": {
+        "result": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-030000-g0001/result.csv",
+        "result_sha256": "daf87c970525c2256e8c3dde15c9766ad3367cc59e2156c253fcad7e6466b9f0",
+        "trial": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-030000-g0001/pilot-3x3-uct-30000-0001.trl",
+        "trial_sha256": "4ba0b7a4d364e80007c29db60b9b3eac39f9c32c971606d8d8545e3f9ea5d31a",
+        "validation": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-030000-g0001/validation.json",
+        "validation_sha256": "5c386ec704b78b268a70282a82d1a956c1ff5be669e35dd6e6925abdd1f08abe"
+      },
+      "attempts": 1,
+      "completed_at_utc": "2026-08-20T15:52:54Z",
+      "elapsed_seconds": 273.372,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-20T15:48:21Z",
+          "attempt": 1,
+          "run_owner": {
+            "command_marker": "experiments/issue-82/scripts/run_experiments.py",
+            "host": "manonoMac-mini.local",
+            "pid": 28320,
+            "started_at_utc": "2026-08-20T15:48:21Z"
+          },
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:48:21Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:52:53Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-20T15:52:53Z",
+          "error": null,
+          "state": "validating"
+        },
+        {
+          "at_utc": "2026-08-20T15:52:54Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-uct-30000",
+      "experiment_version": "issue-82-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 30000,
+      "namespace": "pilot",
+      "optional_budget": false,
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 820030000,
+      "state": "completed",
+      "task_id": "issue-82-v1-pilot-uct-030000-g0001",
+      "updated_at_utc": "2026-08-20T15:52:54Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "p1_advantage_objectives": 1,
+          "p1_objective_pieces": 14,
+          "p1_score": 1162,
+          "p1_secured_objectives": 4,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 1,
+          "p2_objective_pieces": 12,
+          "p2_score": 880,
+          "p2_secured_objectives": 3,
+          "p2_total_pieces": 27
+        },
+        "moves": 54,
+        "natural_end": true,
+        "objective_sites": 9,
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "result_sha256": "daf87c970525c2256e8c3dde15c9766ad3367cc59e2156c253fcad7e6466b9f0",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "supply_sites": 16,
+        "total_sites": 25,
+        "trial_sha256": "4ba0b7a4d364e80007c29db60b9b3eac39f9c32c971606d8d8545e3f9ea5d31a",
+        "turns": 18,
+        "validated": true,
+        "winner": 1,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-82-v1-pilot-uct-100000-g0001": {
+      "artifacts": {
+        "result": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-100000-g0001/result.csv",
+        "result_sha256": "fae3265a1a1ca18829f48ef590a9a8873a0b406b87d2b3c37156890ad3ca14aa",
+        "trial": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-100000-g0001/pilot-3x3-uct-100000-0001.trl",
+        "trial_sha256": "2b9ae80a856f3bcbd380a15fe92040c67d9c209c923586d45feb9d350bad9e7d",
+        "validation": "experiments/issue-82/results/pilot/tasks/issue-82-v1-pilot-uct-100000-g0001/validation.json",
+        "validation_sha256": "7942a5cfc1450e0222e9531eeecadd9ba8b935cefe174b6f22d5e18eb230eaa2"
+      },
+      "attempts": 1,
+      "completed_at_utc": "2026-08-20T16:12:16Z",
+      "elapsed_seconds": 1148.222,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-20T15:53:05Z",
+          "attempt": 1,
+          "run_owner": {
+            "command_marker": "experiments/issue-82/scripts/run_experiments.py",
+            "host": "manonoMac-mini.local",
+            "pid": 28937,
+            "started_at_utc": "2026-08-20T15:53:05Z"
+          },
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T15:53:05Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-20T16:12:15Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-20T16:12:15Z",
+          "error": null,
+          "state": "validating"
+        },
+        {
+          "at_utc": "2026-08-20T16:12:16Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-uct-100000",
+      "experiment_version": "issue-82-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 100000,
+      "namespace": "pilot",
+      "optional_budget": false,
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 820100000,
+      "state": "completed",
+      "task_id": "issue-82-v1-pilot-uct-100000-g0001",
+      "updated_at_utc": "2026-08-20T16:12:16Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "p1_advantage_objectives": 2,
+          "p1_objective_pieces": 12,
+          "p1_score": 908,
+          "p1_secured_objectives": 3,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 0,
+          "p2_objective_pieces": 12,
+          "p2_score": 1132,
+          "p2_secured_objectives": 4,
+          "p2_total_pieces": 27
+        },
+        "moves": 54,
+        "natural_end": true,
+        "objective_sites": 9,
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "result_sha256": "fae3265a1a1ca18829f48ef590a9a8873a0b406b87d2b3c37156890ad3ca14aa",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "supply_sites": 16,
+        "total_sites": 25,
+        "trial_sha256": "2b9ae80a856f3bcbd380a15fe92040c67d9c209c923586d45feb9d350bad9e7d",
+        "turns": 18,
+        "validated": true,
+        "winner": 2,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-82-v1-pilot-uct-300000-g0001": {
+      "artifacts": {},
+      "attempts": 0,
+      "elapsed_seconds": null,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "state": "pending"
+        }
+      ],
+      "experiment_id": "pilot-3x3-uct-300000",
+      "experiment_version": "issue-82-v1",
+      "game_index": 1,
+      "iteration_limit": 300000,
+      "namespace": "pilot",
+      "optional_budget": true,
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 820300000,
+      "state": "pending",
+      "task_id": "issue-82-v1-pilot-uct-300000-g0001",
+      "updated_at_utc": "2026-08-20T15:41:54Z",
+      "validation": null
+    },
+    "issue-82-v1-pilot-uct-300000-g0002": {
+      "artifacts": {},
+      "attempts": 0,
+      "elapsed_seconds": null,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-20T15:41:54Z",
+          "state": "pending"
+        }
+      ],
+      "experiment_id": "pilot-3x3-uct-300000",
+      "experiment_version": "issue-82-v1",
+      "game_index": 2,
+      "iteration_limit": 300000,
+      "namespace": "pilot",
+      "optional_budget": true,
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 820300001,
+      "state": "pending",
+      "task_id": "issue-82-v1-pilot-uct-300000-g0002",
+      "updated_at_utc": "2026-08-20T15:41:54Z",
+      "validation": null
+    }
+  },
+  "updated_at_utc": "2026-08-20T16:12:16Z"
+}

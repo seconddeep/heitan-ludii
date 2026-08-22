@@ -1,0 +1,129 @@
+{
+  "balance": [
+    {
+      "decisive_games": 97,
+      "decisive_p1_share": 0.731959,
+      "decisive_p1_wilson_95_high": 0.810024,
+      "decisive_p1_wilson_95_low": 0.636221,
+      "draws": 3,
+      "iteration_limit": 10000,
+      "p1_bootstrap_95_high": 0.8,
+      "p1_bootstrap_95_low": 0.62,
+      "p1_wilson_95_high": 0.789852,
+      "p1_wilson_95_low": 0.614611,
+      "p1_win_rate": 0.71,
+      "p1_wins": 71,
+      "p2_wins": 26,
+      "validated_games": 100
+    },
+    {
+      "decisive_games": 98,
+      "decisive_p1_share": 0.714286,
+      "decisive_p1_wilson_95_high": 0.794312,
+      "decisive_p1_wilson_95_low": 0.618093,
+      "draws": 2,
+      "iteration_limit": 30000,
+      "p1_bootstrap_95_high": 0.79,
+      "p1_bootstrap_95_low": 0.61,
+      "p1_wilson_95_high": 0.781051,
+      "p1_wilson_95_low": 0.604151,
+      "p1_win_rate": 0.7,
+      "p1_wins": 70,
+      "p2_wins": 28,
+      "validated_games": 100
+    },
+    {
+      "decisive_games": 91,
+      "decisive_p1_share": 0.472527,
+      "decisive_p1_wilson_95_high": 0.574122,
+      "decisive_p1_wilson_95_low": 0.373158,
+      "draws": 9,
+      "iteration_limit": 100000,
+      "p1_bootstrap_95_high": 0.53,
+      "p1_bootstrap_95_low": 0.33,
+      "p1_wilson_95_high": 0.527846,
+      "p1_wilson_95_low": 0.337333,
+      "p1_win_rate": 0.43,
+      "p1_wins": 43,
+      "p2_wins": 48,
+      "validated_games": 100
+    }
+  ],
+  "classification": {
+    "classification": "unresolved",
+    "delta_100k_minus_30k": -0.26999999999999996,
+    "delta_30k_minus_10k": -0.010000000000000009,
+    "manual_override": false,
+    "threshold_source": "unchanged thresholds from Issue #47"
+  },
+  "completed_games_by_budget": {
+    "10000": 100,
+    "100000": 100,
+    "30000": 100
+  },
+  "contrasts": [
+    {
+      "contrast": "30k - 10k",
+      "draw_bootstrap_95_high": 0.03,
+      "draw_bootstrap_95_low": -0.05,
+      "draw_newcombe_95_high": 0.043769,
+      "draw_newcombe_95_low": -0.066414,
+      "draw_rate_difference": -0.01,
+      "higher_budget": 30000,
+      "lower_budget": 10000,
+      "p1_bootstrap_95_high": 0.12,
+      "p1_bootstrap_95_low": -0.13,
+      "p1_newcombe_95_high": 0.115173,
+      "p1_newcombe_95_low": -0.134753,
+      "p1_win_rate_difference": -0.01
+    },
+    {
+      "contrast": "100k - 30k",
+      "draw_bootstrap_95_high": 0.14,
+      "draw_bootstrap_95_low": 0.01,
+      "draw_newcombe_95_high": 0.143702,
+      "draw_newcombe_95_low": 0.004738,
+      "draw_rate_difference": 0.07,
+      "higher_budget": 100000,
+      "lower_budget": 30000,
+      "p1_bootstrap_95_high": -0.13,
+      "p1_bootstrap_95_low": -0.4,
+      "p1_newcombe_95_high": -0.13303,
+      "p1_newcombe_95_low": -0.393112,
+      "p1_win_rate_difference": -0.27
+    },
+    {
+      "contrast": "100k - 10k",
+      "draw_bootstrap_95_high": 0.13,
+      "draw_bootstrap_95_low": 0.0,
+      "draw_newcombe_95_high": 0.134911,
+      "draw_newcombe_95_low": -0.008777,
+      "draw_rate_difference": 0.06,
+      "higher_budget": 100000,
+      "lower_budget": 10000,
+      "p1_bootstrap_95_high": -0.15,
+      "p1_bootstrap_95_low": -0.41,
+      "p1_newcombe_95_high": -0.143351,
+      "p1_newcombe_95_low": -0.402325,
+      "p1_win_rate_difference": -0.28
+    }
+  ],
+  "failures": [],
+  "optional_budget_status": "excluded",
+  "pilot_excluded": true,
+  "planned_games_by_budget": {
+    "10000": 100,
+    "100000": 100,
+    "30000": 100
+  },
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "schema_version": 1,
+  "secondary": {
+    "game_diagnostics": 300,
+    "late_reversal_rows": 600
+  }
+}
