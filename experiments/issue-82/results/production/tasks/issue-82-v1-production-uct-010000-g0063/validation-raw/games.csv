@@ -1,0 +1,2 @@
+"board","experiment_id","iteration_limit","game_index","winner","moves","turns","end_type","final_p1_score","final_p2_score","trial_file"
+"3x3","3x3-uct-10000","10000","63","1","54","18","NaturalEnd","907","878","experiments/issue-82/results/production/tasks/issue-82-v1-production-uct-010000-g0063/3x3-uct-10000-0063.trl"

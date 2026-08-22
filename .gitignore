@@ -2,3 +2,8 @@
 experiments/issue-47/results/**/.tmp/
 experiments/issue-47/results/**/manifest.lock
 experiments/issue-47/results/**/replay-input/
+
+# Issue #82 runtime-only manifests, temporary tasks, and validation staging.
+experiments/issue-82/results/**/.tmp/
+experiments/issue-82/results/**/manifest.lock
+experiments/issue-82/results/**/replay-input/

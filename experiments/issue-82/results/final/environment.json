@@ -1,0 +1,29 @@
+{
+  "config_sha256": "8002e2657cb6220cccf33111bec4b0fc4e849f37c1cc1bea95a7725751e24151",
+  "deterministic_regeneration_verified": true,
+  "finalization_sha256": "2ed85e716ec680b6f6d3624c1f9924411f0e4c110e18285ceef3e8603451b447",
+  "game_sha256": "1d67b32c6c3753af09e23265053da91b617c924696070d367dd5a43d8018ce83",
+  "generated_at_utc": "2026-08-22T23:27:04Z",
+  "machine": "arm64",
+  "manifest_sha256": "e18e10cf4d91d0faf819e0bfa64f322b75cc9a6961476004e8d8a147e062a7d0",
+  "os": "macOS-26.5.2-arm64-arm-64bit",
+  "output_hashes": {
+    "experiments/issue-82/results/final/analysis.json": "ba5f76ea0634a886bd81cbeab85842627cc96446b08e1d06674dc92e0cb39464",
+    "experiments/issue-82/results/final/balance-by-depth.csv": "4b627b66a0743eba7ea87229ddc749376cc578684fa0520407e2f64208d5637a",
+    "experiments/issue-82/results/final/balance-contrasts.csv": "e4c9a6df8afbb340f5630198905af44b55a6883d46bac031cc541aef2b103ed7",
+    "experiments/issue-82/results/final/failures.csv": "7019e0407283c38502c011045b78306a7f360ff318165c0a2bb852b2f691eedc",
+    "experiments/issue-82/results/final/game-diagnostics.csv": "65f1ef6cccff458bde65a3cf514b0172b3ce5f650c90243e13204d1e660a52bf",
+    "experiments/issue-82/results/final/late-reversal-summary.csv": "f51d425835fddd6d297f1ce6782ecfc45c111c98f1c6b633ec00fc28fc9d3146",
+    "experiments/issue-82/results/final/late-reversals.csv": "4f7aaf9f8a886ec28bb86ba96b19873b9d0d1a51e076038611162a081c885639",
+    "experiments/issue-82/results/final/stability-classification.csv": "50cf5aa5c41f18dbe1c49defd2f6f5db058d860bbfd6f08fcfec7df27eb74f0b"
+  },
+  "protocol_lock_sha256": "63c6a222a339b7075fb2c898edcb1d0afc95f5cb45777d49391aff32c8d95859",
+  "python": "3.9.6",
+  "replayer_sha256": "d98a9c21decaf1da6bd34d0507e6a75b787ca880cd7dc6f5ec105474f277b111",
+  "rerun_commands": [
+    "python3 experiments/issue-82/scripts/finalize_production.py",
+    "python3 experiments/issue-82/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "runner_sha256": "4a1662b3258e27dbf7f63cea3b1f4ed341461a37dc739fb4b7bccade9462b74c",
+  "schema_version": 1
+}
