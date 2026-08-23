@@ -1,0 +1,9 @@
+{
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 830083,
+  "config_sha256": "478d1025b1e021aeec866f7eb0711565a2d91a6910b6e3f1ba20823685cc537d",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "protocol_lock_sha256": "a1c437141f21a5a9d6f55a50f520d84ea07ddfc190297c21a8d058a144b53b6c",
+  "python": "3.9.6",
+  "source_lock_sha256": "c536f7eab3846020bfb57a0946686b522dd24471b61089c4929af7a34953fd31"
+}

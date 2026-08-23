@@ -1,0 +1,2 @@
+classification_internal,classification_report,classification_reason,rule_number,subclassification,practical_equivalence_margin,d10k,d30k,d100k
+non-monotonic,非単調,material positive and negative contrasts both occur,2,,0.05,-0.22,-0.14,0.167938
