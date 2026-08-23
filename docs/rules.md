@@ -4,9 +4,9 @@
 
 ### Objective
 
-The winner is determined by the state of the Objectives at the end of the game.
+The winner is determined by the state of Objectives at the end of the game.
 
-Only Objectives are used to determine the winner. The number of Supply Points a player controls does not affect the result.
+Only Objectives are used to determine victory. Supply Points are not used for victory determination.
 
 ---
 
@@ -50,7 +50,7 @@ Detailed coordinates and connections are defined in `board.md`.
 
 ### Initial State
 
-At the start of the game, no Pieces are placed on any point, and all points are Unsecured.
+At the start of the game, no Pieces are placed on any point.
 
 ---
 
@@ -88,27 +88,10 @@ A maximum of 2 Pieces may be placed on each Supply Point in a single turn.
 
 ### State
 
-Supply Points can have the following states.
-
-#### Unsecured
-
-The state of an Unsecured Supply Point is determined by the number of Pieces placed on it.
+The state of a Supply Point is determined by the number of Pieces placed on it.
 
 - More of your Pieces than your opponent's → Controlled
 - Equal number of Pieces → Neutral
-
-#### Secured
-
-If either player has 3 Pieces on a Supply Point at the end of a turn, it becomes a Secured Supply Point belonging to that player.
-
-A Secured Supply Point is considered Controlled by that player.
-
-### After Being Secured
-
-A Secured Supply Point:
-
-- Has its state fixed
-- Cannot receive any additional Pieces
 
 ---
 
@@ -130,37 +113,30 @@ The usage state of all Supply Points is reset at the start of each turn.
 
 ### State
 
-Objectives can have the following states.
-
-#### Unsecured
-
-The state of an Unsecured Objective is determined by the number of Pieces placed on it.
+The state of an Objective is determined by the number of Pieces placed on it.
 
 - More of your Pieces than your opponent's → Advantage
 - Equal number of Pieces → Neutral
 
-#### Secured
+---
 
-If either player has 3 Pieces on an Objective at the end of a turn, it becomes a Secured Objective belonging to that player.
+## 8. Securing Points
 
-### After Being Secured
+At the end of a turn, if either player has 3 Pieces placed on a point, that point becomes Secured.
 
-A Secured Objective:
-
-- Has its state fixed
-- Cannot receive any additional Pieces
+A Secured point has its state fixed and cannot receive any additional Pieces.
 
 ---
 
-## 8. Game End
+## 9. Game End
 
 The game ends when both players have placed all of their Pieces and the final turn has ended.
 
 ---
 
-## 9. Victory Conditions
+## 10. Victory Conditions
 
-Only Objectives are used to determine the winner.
+Only Objectives are used to determine victory.
 
 The following criteria are compared in order.
 
@@ -182,12 +158,12 @@ If all of the above are equal, the game is a draw.
 
 ---
 
-## 10. Game Characteristics
+## 11. Game Characteristics
 
 Heitan is an abstract strategy game in which players build supply networks while competing for Objectives.
 
 Key characteristics:
 
-- Securing Supply Points and choosing where to use them are important
+- Controlling Supply Points and choosing where to use them are important
 - Players must decide whether to pursue Secured Objectives or gain Advantage across a wider area
 - Balancing concentrated and distributed placement is central to the strategy
