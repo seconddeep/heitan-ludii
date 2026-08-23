@@ -1,0 +1,16 @@
+{
+  "artifacts": {
+    "experiments/issue-83.md": "9ab7f564f314be38bd8c1d2afbf778ad521a77a748f357e991e42983540cb06e",
+    "experiments/issue-83/results/final/analysis.json": "606a455f8e06eac6fe9900385e63a2e5b2ffa65e550cbdc9bbcca180cdb676f6",
+    "experiments/issue-83/results/final/balance-by-board-depth.csv": "975a96da77c63a66347f640ca4a8bd20c69e792238d56e0a26eee6790d45a241",
+    "experiments/issue-83/results/final/classification.csv": "18960077b48a8acb38553d550684c883fb541c894e9ffdd642264532af192805",
+    "experiments/issue-83/results/final/cross-board-contrasts.csv": "a5c187ba347ad533c38a4755fabddf6d00637eb44bf2079d126bac102412133c",
+    "experiments/issue-83/results/final/depth-trends.csv": "06be98b14163336e92e62a44eb03985211a5ef74fe46eea127017a0207162518",
+    "experiments/issue-83/results/final/difference-in-differences.csv": "826d8a264ea0d9262f3240f146f31417be4fbc4cdb96401aa60dc32352d5aac2",
+    "experiments/issue-83/results/final/environment.json": "4bb8683ee85d1c040462f13dc89361976176f348ec34481c7d7edf691bceedc7",
+    "experiments/issue-83/results/final/progress-checkpoints.csv": "eb4b0a5440548fe0869465d1750a8302025932ec938fea789dfcf9d6b0527a97",
+    "experiments/issue-83/results/final/secondary-scoring.csv": "f244f7b7f8759c2fefa88b6f8fa5fadd3c66b62dfe45a39f3af0af4647d3437f",
+    "experiments/issue-83/results/final/turn-diagnostics.csv": "f4295304dd8e5cf44dab0dbfae1874b1d05b4525f44072d827133847c6f37807"
+  },
+  "schema_version": 1
+}

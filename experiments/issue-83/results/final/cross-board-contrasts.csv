@@ -1,0 +1,4 @@
+iteration_limit,contrast_direction,games_4x4,games_3x3,p1_rate_4x4,p1_rate_3x3,p1_rate_difference,p1_bootstrap_95_low,p1_bootstrap_95_high,draw_rate_difference,draw_bootstrap_95_low,draw_bootstrap_95_high
+10000,4x4 - 3x3,100,100,0.49,0.71,-0.22,-0.35,-0.09,0.07,0.01,0.14
+30000,4x4 - 3x3,100,100,0.56,0.7,-0.14,-0.27,0.0,0.04,-0.01,0.1
+100000,4x4 - 3x3,97,100,0.597938,0.43,0.167938,0.026392,0.308866,-0.048763,-0.119381,0.021856

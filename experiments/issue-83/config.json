@@ -1,0 +1,87 @@
+{
+  "analysis": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 830083,
+    "confidence_level": 0.95,
+    "draws_in_primary_denominator": true,
+    "primary_contrast_direction": "4x4 - 3x3",
+    "primary_measure": "unconditional P1 wins divided by all validated games",
+    "practical_equivalence_margin": 0.05
+  },
+  "boards": {
+    "3x3": {
+      "objectives": 9,
+      "source_issue": 82,
+      "supply_points": 16,
+      "total_turns": 18
+    },
+    "4x4": {
+      "objectives": 16,
+      "source_issue": 47,
+      "supply_points": 25,
+      "total_turns": 24
+    }
+  },
+  "classification": {
+    "internal_precedence": [
+      "unresolved-invalid",
+      "non-monotonic",
+      "consistent",
+      "search-dependent",
+      "unresolved"
+    ],
+    "manual_override_allowed": false,
+    "report_labels": {
+      "consistent": "一貫",
+      "non-monotonic": "非単調",
+      "search-dependent": "探索依存",
+      "unresolved": "未解決",
+      "unresolved-invalid": "未解決"
+    },
+    "rules": {
+      "consistent": "at least two material contrasts have the same sign and none has the opposite material sign, or all three contrasts are within the practical-equivalence margin",
+      "non-monotonic": "at least one contrast is greater than +margin and at least one is less than -margin",
+      "search-dependent": "three valid estimates exist and neither non-monotonic nor consistent applies",
+      "unresolved": "defensive fallback after all other rules",
+      "unresolved-invalid": "required input, validation, or estimate is missing or invalid"
+    }
+  },
+  "difference_in_differences": {
+    "formula": "(4x4_100k - 4x4_10k) - (3x3_100k - 3x3_10k)",
+    "resampling": "independently resample all four board-budget game samples in every replicate"
+  },
+  "experiment_version": "issue-83-v1",
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "scope": {
+    "modify_existing_trials": false,
+    "modify_game": false,
+    "modify_rules": false,
+    "new_self_play": false,
+    "replacement_seeds": false
+  },
+  "secondary": {
+    "checkpoint_rounding": "ceil(total_turns * progress)",
+    "checkpoints": [
+      0.75,
+      0.9
+    ],
+    "late_reversal_denominator": "games with a non-tied checkpoint leader and a non-draw final result",
+    "turn_state_timing": "end of checkpoint turn"
+  },
+  "source_samples": {
+    "3x3": {
+      "10000": 100,
+      "30000": 100,
+      "100000": 100
+    },
+    "4x4": {
+      "10000": 100,
+      "30000": 100,
+      "100000": 97
+    }
+  }
+}

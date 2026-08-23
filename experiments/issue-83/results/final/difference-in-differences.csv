@@ -1,0 +1,2 @@
+contrast,estimate,bootstrap_95_low,bootstrap_95_high,bootstrap_method
+(4x4_100k - 4x4_10k) - (3x3_100k - 3x3_10k),0.387938,0.195773,0.580103,direct four-sample independent resampling
