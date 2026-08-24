@@ -1,5 +1,6 @@
-[CmdletBinding()]param([string]$LudiiJar='C:\Users\verti\Ludii-1.3.14.jar',[switch]$Smoke)
+[CmdletBinding()]param([string]$LudiiJar=$env:LUDII_JAR,[switch]$Smoke)
 $ErrorActionPreference='Stop';$scriptDir=Split-Path -Parent $MyInvocation.MyCommand.Path;$issue=[IO.Path]::GetFullPath((Join-Path $scriptDir '..'));$repo=[IO.Path]::GetFullPath((Join-Path $issue '..\..'));$config=Get-Content -Raw (Join-Path $issue 'config.json')|ConvertFrom-Json;$results=Join-Path $issue $(if($Smoke){'results-smoke'}else{'results'});$raw=Join-Path $results 'raw';New-Item -ItemType Directory -Force -Path $raw|Out-Null
+if([string]::IsNullOrWhiteSpace($LudiiJar)){throw 'Pass -LudiiJar or set the LUDII_JAR environment variable.'};$LudiiJar=[IO.Path]::GetFullPath($LudiiJar);if(-not(Test-Path -LiteralPath $LudiiJar -PathType Leaf)){throw "Ludii JAR not found: $LudiiJar"}
 & (Join-Path $scriptDir 'New-TrialSources.ps1') -Smoke:$Smoke;if($LASTEXITCODE){throw 'Manifest failed'}
 $sources=if($Smoke){@($config.analysis_sources|Where-Object source_issue -eq 62|ForEach-Object{[pscustomobject]@{source_issue=62;board=$_.board;id=$_.id;iteration_limit=$_.iteration_limit;trial_root=("experiments/issue-62/results-smoke/trials/{0}"-f$_.id)}})}else{@($config.analysis_sources)}
 $games=Join-Path $raw 'games.csv';$placements=Join-Path $raw 'placements.csv';$states=Join-Path $raw 'turn-states.csv';$replay=Join-Path $scriptDir 'HeitanScaleReplay.java';$game=Join-Path $repo $config.game;$started=[DateTime]::UtcNow

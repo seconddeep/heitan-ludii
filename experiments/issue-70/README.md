@@ -113,8 +113,9 @@ Intervals use 2,000 game-bootstrap replicates with seed 700070. Contradictory
 or non-monotonic results are reported directly.
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 ./experiments/issue-70/scripts/run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 Requirements: Ludii Player 1.3.14, Java 21, Node.js 24, and PowerShell.

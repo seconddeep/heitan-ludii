@@ -27,11 +27,12 @@ ambiguous.
 Requirements: Java 21, Python 3.9+, and Ludii Player 1.3.14.
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 ./experiments/issue-56/scripts/run-experiments.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar -Parallelism 6
+  -LudiiJar $env:LUDII_JAR -Parallelism 6
 
 ./experiments/issue-56/scripts/run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 Use `-GamesPerExperiment 2` on the first command for a smoke run. A reduced

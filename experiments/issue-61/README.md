@@ -82,7 +82,8 @@ The resulting Ludii score is:
 Use Ludii Player 1.3.14:
 
 ```powershell
-java -cp C:\Users\verti\Ludii-1.3.14.jar `
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
+java -cp $env:LUDII_JAR `
     experiments\issue-61\Heitan3x3Validation.java `
     games\Heitan.lud `
     20
@@ -112,12 +113,12 @@ Automated validation was run on 2026-08-14 with Ludii Player 1.3.14.
 Commands used for regression validation:
 
 ```powershell
-java -cp C:\Users\verti\Ludii-1.3.14.jar `
+java -cp $env:LUDII_JAR `
     experiments\issue-51\Heitan6x6Validation.java `
     games\Heitan.lud `
     20
 
-java -cp C:\Users\verti\Ludii-1.3.14.jar `
+java -cp $env:LUDII_JAR `
     experiments\issue-50\HeitanRegression.java `
     C:\path\to\f0502d5\games\Heitan.lud `
     games\Heitan.lud `
