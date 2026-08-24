@@ -49,7 +49,7 @@ Important core concepts:
 - Exactly three Pieces are placed per turn
 - Supply Points and Objectives are different types of points
 - Controlled Supply Points determine available placements on Objectives
-- Unsecured points may become Secured at the end of a turn
+- Points with 3 Pieces from either player become Secured at the end of a turn
 - State updates occur after all three placements of a turn
 
 ---
