@@ -23,30 +23,21 @@ Both players have the same number of Pieces.
 
 ## 3. Board
 
-The board consists of a 4×4 square grid.
+The board consists of a square grid.
 
-There are two types of points on the board:
+Detailed board structure is defined in `board.md`.
 
-- Supply Points
-- Objectives
+There are two types of points on the board.
 
 ### Supply Points
 
 Supply Points are located at the intersections of the grid.
 
-- 5×5 layout
-- 25 Supply Points in total
-
 ### Objectives
 
 Objectives are located at the center of each square.
 
-- 4×4 layout
-- 16 Objectives in total
-
 Each Objective is connected to the four Supply Points at the corners of its square.
-
-Detailed coordinates and connections are defined in `board.md`.
 
 ### Initial State
 
@@ -54,15 +45,7 @@ At the start of the game, no Pieces are placed on any point.
 
 ---
 
-## 4. Pieces
-
-Each player has 36 Pieces.
-
-All Pieces have identical properties.
-
----
-
-## 5. Turns
+## 4. Turns
 
 On each turn, a player must place exactly 3 Pieces.
 
@@ -80,7 +63,7 @@ Each player may have a maximum of 3 Pieces on a single point.
 
 ---
 
-## 6. Supply Points
+## 5. Supply Points
 
 ### Placement Conditions
 
@@ -95,7 +78,7 @@ The state of a Supply Point is determined by the number of Pieces placed on it.
 
 ---
 
-## 7. Objectives
+## 6. Objectives
 
 ### Placement Conditions
 
@@ -120,7 +103,7 @@ The state of an Objective is determined by the number of Pieces placed on it.
 
 ---
 
-## 8. Securing Points
+## 7. Securing Points
 
 At the end of a turn, if either player has 3 Pieces placed on a point, that point becomes Secured.
 
@@ -128,13 +111,13 @@ A Secured point has its state fixed and cannot receive any additional Pieces.
 
 ---
 
-## 9. Game End
+## 8. Game End
 
 The game ends when both players have placed all of their Pieces and the final turn has ended.
 
 ---
 
-## 10. Victory Conditions
+## 9. Victory Conditions
 
 Only Objectives are used to determine victory.
 
@@ -158,7 +141,7 @@ If all of the above are equal, the game is a draw.
 
 ---
 
-## 11. Game Characteristics
+## 10. Game Characteristics
 
 Heitan is an abstract strategy game in which players build supply networks while competing for Objectives.
 
