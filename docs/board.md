@@ -1,8 +1,10 @@
 # Heitan Board Definition
 
-## 1. Board Overview
+## 1. Board Structure
 
-Heitan uses a 4×4 square grid board.
+Heitan uses a square grid structure.
+
+The diagrams and tables below use a 4×4 grid as an example.
 
 The board consists of two types of points:
 
@@ -12,6 +14,8 @@ The board consists of two types of points:
 ### Supply Points
 
 Supply Points are located at the intersections of the grid.
+
+In the 4×4 example:
 
 - 5×5 layout
 - 25 Supply Points in total
@@ -34,6 +38,8 @@ Coordinates:
 
 Objectives are located at the center of each square.
 
+In the 4×4 example:
+
 - 4×4 layout
 - 16 Objectives in total
 
@@ -53,7 +59,7 @@ Coordinates:
 
 Each Objective is connected to the four Supply Points at the corners of its square.
 
-### Connection Table
+The following table shows the connections for the 4×4 example.
 
 | Objective | Connected Supply Points |
 | --------- | ----------------------- |
@@ -73,12 +79,3 @@ Each Objective is connected to the four Supply Points at the corners of its squa
 | O31       | S31, S32, S41, S42      |
 | O32       | S32, S33, S42, S43      |
 | O33       | S33, S34, S43, S44      |
-
----
-
-## 3. Point Types
-
-| Type         | Count | Description                             |
-| ------------ | ----: | --------------------------------------- |
-| Supply Point |    25 | Used to provide supply to Objectives    |
-| Objective    |    16 | Points that determine the winner        |
