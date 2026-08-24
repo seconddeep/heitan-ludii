@@ -116,8 +116,9 @@ or opportunity-adjusted value establishes strategic independence.
 ## Run
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 ./experiments/issue-65/scripts/run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 Requirements: Ludii Player 1.3.14, Java 21, and Node.js 24 or later.

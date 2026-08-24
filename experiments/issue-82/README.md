@@ -50,7 +50,7 @@ Long production jobs must run in `tmux` under `caffeinate -i`. From the repo
 root, set the Ludii path and run the tests and excluded pilot:
 
 ```sh
-export LUDII_JAR=/Users/yasumasa/Ludii-1.3.14.jar
+export LUDII_JAR=/path/to/Ludii-1.3.14.jar
 python3 -m unittest discover -s experiments/issue-82/scripts -p 'test_*.py'
 python3 experiments/issue-82/scripts/run_experiments.py pilot --ludii-jar "$LUDII_JAR"
 python3 experiments/issue-82/scripts/status.py --namespace pilot --operational-only

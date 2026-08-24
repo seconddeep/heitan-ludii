@@ -203,9 +203,10 @@ To regenerate the Issue 65 state outputs by legally replaying every saved
 trial before running this analysis:
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   .\experiments\issue-68\scripts\run-analysis.ps1 `
-  -RefreshReplay -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -RefreshReplay -LudiiJar $env:LUDII_JAR
 ```
 
 The workflow checks pinned artifacts and trial hashes, runs the analysis

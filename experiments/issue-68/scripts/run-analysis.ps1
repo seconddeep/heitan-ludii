@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [switch]$RefreshReplay,
-    [string]$LudiiJar = 'C:\Users\verti\Ludii-1.3.14.jar'
+    [string]$LudiiJar = $env:LUDII_JAR
 )
 
 $ErrorActionPreference = 'Stop'
@@ -15,6 +15,9 @@ $started = [DateTime]::UtcNow
 New-Item -ItemType Directory -Force -Path $results | Out-Null
 
 if ($RefreshReplay) {
+    if ([string]::IsNullOrWhiteSpace($LudiiJar)) { throw 'Pass -LudiiJar or set the LUDII_JAR environment variable when using -RefreshReplay.' }
+    $LudiiJar = [IO.Path]::GetFullPath($LudiiJar)
+    if (-not (Test-Path -LiteralPath $LudiiJar -PathType Leaf)) { throw "Ludii JAR not found: $LudiiJar" }
     & (Join-Path $repo 'experiments\issue-65\scripts\run-analysis.ps1') -LudiiJar $LudiiJar
     if ($LASTEXITCODE) { throw 'Issue 65 replay refresh failed' }
 }

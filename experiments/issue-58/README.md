@@ -54,8 +54,9 @@ The full 30-game UCT 500 continuation and 20-game UCT 1000 run completed in
 First time one UCT 1000 game without mixing it into the analyzed results:
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 ./experiments/issue-58/scripts/run-experiments.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar `
+  -LudiiJar $env:LUDII_JAR `
   -ExperimentId 6x6-uct-1000 -GamesPerExperiment 1
 ```
 
@@ -63,7 +64,7 @@ Run the configured UCT 500 continuation and UCT 1000 samples:
 
 ```powershell
 ./experiments/issue-58/scripts/run-experiments.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar -Parallelism 6
+  -LudiiJar $env:LUDII_JAR -Parallelism 6
 ```
 
 Replay every new and comparison trial, run the frozen analysis, and record the
@@ -71,7 +72,7 @@ environment:
 
 ```powershell
 ./experiments/issue-58/scripts/run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 All analyzed trials must replay as legal Ludii moves. An invalid or incomplete

@@ -53,7 +53,7 @@ production command never deletes valid completed games.
 All commands run from the repository root. Set the Ludii path once:
 
 ```sh
-export LUDII_JAR=/Users/yasumasa/Ludii-1.3.14.jar
+export LUDII_JAR=/path/to/Ludii-1.3.14.jar
 ```
 
 Run tests, then the excluded pilot:

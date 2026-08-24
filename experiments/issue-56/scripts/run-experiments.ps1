@@ -1,11 +1,14 @@
 [CmdletBinding()]
 param(
-    [string]$LudiiJar = 'C:\Users\verti\Ludii-1.3.14.jar',
+    [string]$LudiiJar = $env:LUDII_JAR,
     [ValidateRange(1, 16)][int]$Parallelism = 1,
     [ValidateRange(1, 50)][int]$BatchSize = 5,
     [ValidateRange(0, 100)][int]$GamesPerExperiment = 0
 )
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($LudiiJar)) { throw 'Pass -LudiiJar or set the LUDII_JAR environment variable.' }
+$LudiiJar = [IO.Path]::GetFullPath($LudiiJar)
+if (-not (Test-Path -LiteralPath $LudiiJar -PathType Leaf)) { throw "Ludii JAR not found: $LudiiJar" }
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $issue = [IO.Path]::GetFullPath((Join-Path $scriptDir '..'))
 $repo = [IO.Path]::GetFullPath((Join-Path $issue '..\..'))

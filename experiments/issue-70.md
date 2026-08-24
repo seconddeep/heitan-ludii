@@ -183,9 +183,10 @@ Objective endgame.
 From the repository root:
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   .\experiments\issue-70\scripts\run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 The command verifies pinned inputs and trial hashes, legally replays all saved

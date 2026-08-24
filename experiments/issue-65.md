@@ -202,9 +202,10 @@ increases monotonically at every board size.
 From the repository root:
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   .\experiments\issue-65\scripts\run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 The command regenerates the trial manifest, legally replays all sources,

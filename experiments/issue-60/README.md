@@ -44,8 +44,9 @@ runner rows, unique analysis keys, and unique trial contents before replay.
 Generate the 30 new games:
 
 ```powershell
+$env:LUDII_JAR = '<path-to-Ludii-1.3.14.jar>'
 ./experiments/issue-60/scripts/run-experiments.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar -Parallelism 6
+  -LudiiJar $env:LUDII_JAR -Parallelism 6
 ```
 
 If execution is interrupted, preserve completed trials and continue missing
@@ -53,14 +54,14 @@ indices with individually addressed runner tasks:
 
 ```powershell
 ./experiments/issue-60/scripts/run-experiments.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar -Parallelism 12 -Resume
+  -LudiiJar $env:LUDII_JAR -Parallelism 12 -Resume
 ```
 
 Replay all 150 games, validate provenance, and run the frozen analysis:
 
 ```powershell
 ./experiments/issue-60/scripts/run-analysis.ps1 `
-  -LudiiJar C:\Users\verti\Ludii-1.3.14.jar
+  -LudiiJar $env:LUDII_JAR
 ```
 
 ## Interpretation
