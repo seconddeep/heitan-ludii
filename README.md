@@ -45,6 +45,7 @@ AGENTS.md
 │   ├── rules.md
 │   ├── rules-ja.md
 │   └── board.md
+├── experiments/
 ├── AGENTS.md
 └── README.md
 ```
