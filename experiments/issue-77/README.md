@@ -11,6 +11,11 @@ change `docs/rules-ja.md` or `docs/rules.md`.
 The 7x7 topology remains 64 Supply Points, 49 Objectives, and 113 total
 points. Exactly three placements form every turn.
 
+The `7x7-84` and `7x7-96` game options were temporary experiment conditions
+and were removed from the current game definition after this experiment was
+completed. Use commit `3d22faa` when reproducing trial generation or replay
+that requires those historical options.
+
 | Pieces/player | Total placements | Turns | Advantage weight | Secured weight |
 | ---: | ---: | ---: | ---: | ---: |
 | 72 | 144 | 48 | 73 | 3650 |

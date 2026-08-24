@@ -1,6 +1,5 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
 import {addContrast,bootstrapDifference,budgetOf,expectedRegionCounts,regionForSite,turnsOf} from './analyze-7x7-scale.mjs';
 import {isActive as issue65IsActive} from '../../issue-65/scripts/analyze-regional-independence.mjs';
 import {extractDepartureCycles,prepareTimeline} from '../../issue-68/scripts/analyze-dormant-fronts.mjs';
@@ -36,14 +35,6 @@ test('all three contrasts preserve their preregistered direction',()=>{
 test('budget-derived game lengths are 48, 56, and 64 turns',()=>{
   assert.equal(budgetOf({board:'7x7-p84'}),84);
   assert.deepEqual([72,84,96].map(piece_budget=>turnsOf({piece_budget})),[48,56,64]);
-});
-
-test('all piece budgets use byte-identical 7x7 topology and regions',()=>{
-  const source=fs.readFileSync(new URL('../../../games/Heitan.lud',import.meta.url),'utf8');
-  const block=name=>{const start=source.indexOf(`(item "${name}"`);let depth=0;for(let i=start;i<source.length;i++){if(source[i]==='(')depth++;else if(source[i]===')'&&--depth===0)return source.slice(start,i+1);}throw new Error(`missing ${name}`);};
-  const normalize=text=>text.replaceAll('\r','').replace(/item "7x7(?:-84|-96)?"/,'item "7x7"').replace(/\n        <(?:72|84|96)>\n        <(?:144|168|192)>\n        <(?:73|85|97)>\n        <(?:3650|4250|4850)>\n        "[^"]+"\n    \)$/,'\n        <CONFIG>\n    )');
-  assert.equal(normalize(block('7x7-84')),normalize(block('7x7')));
-  assert.equal(normalize(block('7x7-96')),normalize(block('7x7')));
 });
 
 test('Issue 65 active rule remains unchanged for 7x7 rows',()=>{
