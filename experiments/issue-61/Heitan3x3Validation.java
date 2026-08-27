@@ -429,6 +429,7 @@ public final class Heitan3x3Validation
         final Metrics result = new Metrics();
         for (int site = 0; site < SITE_COUNT; ++site)
         {
+            final int state = site >= SUPPLY_COUNT ? pointState(context, site) : 0;
             final int size = board.sizeStackVertex(site);
             for (int level = 0; level < size; ++level)
             {
@@ -439,16 +440,15 @@ public final class Heitan3x3Validation
                     ++result.p2Total;
                 if (site >= SUPPLY_COUNT)
                 {
-                    if (owner == 1)
+                    if (owner == 1 && state == 1)
                         ++result.p1Objective;
-                    else if (owner == 2)
+                    else if (owner == 2 && state == 2)
                         ++result.p2Objective;
                 }
             }
 
             if (site >= SUPPLY_COUNT)
             {
-                final int state = pointState(context, site);
                 if (state == 1)
                     ++result.p1Advantage;
                 else if (state == 2)
