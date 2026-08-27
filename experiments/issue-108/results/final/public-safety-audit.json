@@ -1,0 +1,11 @@
+{
+  "commit_metadata_findings": [],
+  "content_findings": [],
+  "files_scanned": 16,
+  "limitations": [
+    "pattern-based scanning cannot prove absence of every secret",
+    "raw trials are intentionally excluded from publication and third-party replay depends on normalized trials"
+  ],
+  "passed": true,
+  "schema_version": 1
+}

@@ -1,0 +1,334 @@
+{
+  "config_sha256_at_creation": "990b8341bdef995392dec322c848a571504c6114b0d5fd60172ee04bf7ade2e9",
+  "created_at_utc": "2026-08-27T22:27:51Z",
+  "namespace": "pilot",
+  "production_started_at_utc": null,
+  "schema_version": 1,
+  "tasks": {
+    "issue-108-v1-pilot-uct-010000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "f7d01321921c49c85ca838d9e2e47dab0d83a429ad86e6cb05cfc1694ae40b5f",
+        "result": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-010000-g0001/result.csv",
+        "result_sha256": "95ba918013ac8dfebedc8bbe377a3b8e45747156fffe8f7227babb358f026523",
+        "trial": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-010000-g0001/pilot-3x3-corrected-uct-10000-0001.trl",
+        "trial_sha256": "e4f9e707f3cc06c9e135c07908671bf7eda8a3e714d16d668d9186b45d4967d4",
+        "validation": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-010000-g0001/validation.json",
+        "validation_sha256": "060e541f7a6c449c566fca49765319725133d0350a22226482d42b22d89445da"
+      },
+      "attempts": 2,
+      "completed_at_utc": "2026-08-27T22:29:44Z",
+      "elapsed_seconds": 98.13,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": "[Errno 1] Operation not permitted: 'ps'",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-27T22:28:06Z",
+          "attempt": 2,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:28:06Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:29:42Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-27T22:29:44Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-corrected-uct-10000",
+      "experiment_version": "issue-108-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 10000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1080010000,
+      "state": "completed",
+      "task_id": "issue-108-v1-pilot-uct-010000-g0001",
+      "updated_at_utc": "2026-08-27T22:29:44Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "deciding_criterion": "advantage_objectives",
+          "p1_advantage_objectives": 2,
+          "p1_corrected_objective_pieces": 3,
+          "p1_excluded_neutral": 0,
+          "p1_excluded_opponent_advantage": 0,
+          "p1_excluded_opponent_secured": 0,
+          "p1_excluded_own_secured": 9,
+          "p1_score": 899,
+          "p1_secured_objectives": 3,
+          "p1_total_objective_pieces": 12,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 0,
+          "p2_corrected_objective_pieces": 0,
+          "p2_excluded_neutral": 0,
+          "p2_excluded_opponent_advantage": 1,
+          "p2_excluded_opponent_secured": 0,
+          "p2_excluded_own_secured": 9,
+          "p2_score": 840,
+          "p2_secured_objectives": 3,
+          "p2_total_objective_pieces": 10,
+          "p2_total_pieces": 27,
+          "winner": 1
+        },
+        "moves": 54,
+        "natural_end": true,
+        "normalized_trial_sha256": "e4f9e707f3cc06c9e135c07908671bf7eda8a3e714d16d668d9186b45d4967d4",
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "f7d01321921c49c85ca838d9e2e47dab0d83a429ad86e6cb05cfc1694ae40b5f",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "turns": 18,
+        "validated": true,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-108-v1-pilot-uct-030000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "a2fc0711482d4389e8b6bde599d33f0db1c657f122c4a43c5c735d7729c83552",
+        "result": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-030000-g0001/result.csv",
+        "result_sha256": "41932b638b9292b743e82b9d60d401ad11a90cbf9831faa82f78eb3678e2f6d5",
+        "trial": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-030000-g0001/pilot-3x3-corrected-uct-30000-0001.trl",
+        "trial_sha256": "d1898479bd37dcd952daf8686377ae8e1f52513771ecc76230b7ac8025d3d40a",
+        "validation": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-030000-g0001/validation.json",
+        "validation_sha256": "48af6595893dc51020100274107a260cd44ec5926ca9d122ecdf260a4d509af7"
+      },
+      "attempts": 2,
+      "completed_at_utc": "2026-08-27T22:34:14Z",
+      "elapsed_seconds": 367.94,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": "[Errno 1] Operation not permitted: 'ps'",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-27T22:28:06Z",
+          "attempt": 2,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:28:06Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:34:12Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-27T22:34:14Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-corrected-uct-30000",
+      "experiment_version": "issue-108-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 30000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1080030000,
+      "state": "completed",
+      "task_id": "issue-108-v1-pilot-uct-030000-g0001",
+      "updated_at_utc": "2026-08-27T22:34:14Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "deciding_criterion": "advantage_objectives",
+          "p1_advantage_objectives": 1,
+          "p1_corrected_objective_pieces": 2,
+          "p1_excluded_neutral": 0,
+          "p1_excluded_opponent_advantage": 0,
+          "p1_excluded_opponent_secured": 0,
+          "p1_excluded_own_secured": 9,
+          "p1_score": 870,
+          "p1_secured_objectives": 3,
+          "p1_total_objective_pieces": 11,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 0,
+          "p2_corrected_objective_pieces": 0,
+          "p2_excluded_neutral": 0,
+          "p2_excluded_opponent_advantage": 0,
+          "p2_excluded_opponent_secured": 0,
+          "p2_excluded_own_secured": 9,
+          "p2_score": 840,
+          "p2_secured_objectives": 3,
+          "p2_total_objective_pieces": 9,
+          "p2_total_pieces": 27,
+          "winner": 1
+        },
+        "moves": 54,
+        "natural_end": true,
+        "normalized_trial_sha256": "d1898479bd37dcd952daf8686377ae8e1f52513771ecc76230b7ac8025d3d40a",
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "a2fc0711482d4389e8b6bde599d33f0db1c657f122c4a43c5c735d7729c83552",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "turns": 18,
+        "validated": true,
+        "winner_reconstructed": true
+      }
+    },
+    "issue-108-v1-pilot-uct-100000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "4cbb7e89c07027abdcde6bb22865ee584a112f0fff6200e41b5fc7279a970c74",
+        "result": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-100000-g0001/result.csv",
+        "result_sha256": "49eef7faa7bce6564c934581745dd834ec421627fd12009358b30cf26315c9f7",
+        "trial": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-100000-g0001/pilot-3x3-corrected-uct-100000-0001.trl",
+        "trial_sha256": "c9c1e4f53494945a50b42f110e01e25f07a531f6c8d9b687d740d8837793fe91",
+        "validation": "experiments/issue-108/results/pilot/tasks/issue-108-v1-pilot-uct-100000-g0001/validation.json",
+        "validation_sha256": "9889e6c35c9d7e4368fbf3803d786d224acc7a045c1631e3e7c7e5edebef8be2"
+      },
+      "attempts": 2,
+      "completed_at_utc": "2026-08-27T22:50:46Z",
+      "elapsed_seconds": 1261.861,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:27:51Z",
+          "error": "[Errno 1] Operation not permitted: 'ps'",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-27T22:29:44Z",
+          "attempt": 2,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:29:44Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-27T22:50:44Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-27T22:50:46Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-3x3-corrected-uct-100000",
+      "experiment_version": "issue-108-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 100000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1080100000,
+      "state": "completed",
+      "task_id": "issue-108-v1-pilot-uct-100000-g0001",
+      "updated_at_utc": "2026-08-27T22:50:46Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "metrics": {
+          "deciding_criterion": "advantage_objectives",
+          "p1_advantage_objectives": 1,
+          "p1_corrected_objective_pieces": 2,
+          "p1_excluded_neutral": 0,
+          "p1_excluded_opponent_advantage": 0,
+          "p1_excluded_opponent_secured": 0,
+          "p1_excluded_own_secured": 9,
+          "p1_score": 870,
+          "p1_secured_objectives": 3,
+          "p1_total_objective_pieces": 11,
+          "p1_total_pieces": 27,
+          "p2_advantage_objectives": 2,
+          "p2_corrected_objective_pieces": 2,
+          "p2_excluded_neutral": 0,
+          "p2_excluded_opponent_advantage": 0,
+          "p2_excluded_opponent_secured": 0,
+          "p2_excluded_own_secured": 9,
+          "p2_score": 898,
+          "p2_secured_objectives": 3,
+          "p2_total_objective_pieces": 11,
+          "p2_total_pieces": 27,
+          "winner": 2
+        },
+        "moves": 54,
+        "natural_end": true,
+        "normalized_trial_sha256": "c9c1e4f53494945a50b42f110e01e25f07a531f6c8d9b687d740d8837793fe91",
+        "p1_placements": 27,
+        "p2_placements": 27,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "4cbb7e89c07027abdcde6bb22865ee584a112f0fff6200e41b5fc7279a970c74",
+        "schema_version": 1,
+        "score_reconstructed": true,
+        "turns": 18,
+        "validated": true,
+        "winner_reconstructed": true
+      }
+    }
+  },
+  "updated_at_utc": "2026-08-27T22:50:46Z"
+}

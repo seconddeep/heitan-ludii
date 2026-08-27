@@ -1,0 +1,213 @@
+{
+  "analysis": {
+    "bootstrap_method": "independent game-level nonparametric bootstrap with replacement",
+    "bootstrap_percentile_method": "linear interpolation at (n-1)*p after sorting",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1080108,
+    "decisive_game_share_secondary": true,
+    "difference_in_differences_resampling": "independently resample corrected 10k, corrected 100k, original 10k, and original 100k in every replicate",
+    "draws_in_primary_denominator": true,
+    "drop_label_policy": {
+      "manual_override_allowed": false,
+      "minimum_games_per_required_sample": 25,
+      "rules_in_precedence_order": [
+        "unresolved if a required sample has fewer than 25 games or a required interval is unavailable",
+        "weakens if the 100k-minus-30k corrected-versus-original difference-in-differences 95% interval is entirely above zero",
+        "persists if the corrected 100k-minus-30k 95% interval is entirely below zero",
+        "disappears if the corrected 100k-minus-30k 95% interval is entirely at or above zero",
+        "unresolved otherwise"
+      ]
+    },
+    "late_reversal_checkpoints": [
+      0.75,
+      0.9
+    ],
+    "material_change_label_enabled": false,
+    "primary_100k_drop_contrast": "corrected 100k - corrected 30k",
+    "secondary_100k_drop_contrast": "corrected 100k - corrected 10k",
+    "wilson_confidence_level": 0.95
+  },
+  "central_supply_diagnostics": {
+    "central_supply_points": [
+      "S11",
+      "S12",
+      "S21",
+      "S22"
+    ],
+    "contest_definition": "at a Heitan-turn end, the same central Supply contains at least one Piece from each player",
+    "early_global_turns": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "first_commitment_search_turns": [
+      1,
+      18
+    ],
+    "never_committed_value": null,
+    "observation_unit": "Heitan-turn end only",
+    "occupation_definition": "at a Heitan-turn end, at least one P1 Piece exists anywhere in the central Supply group",
+    "p1_early_turns": [
+      1,
+      3,
+      5
+    ],
+    "placement_definition": "a recorded P1 placement whose target is a central Supply point"
+  },
+  "config": "experiments/issue-108/config.json",
+  "config_sha256": "afcfe55f3af86528415f1294fc8d998e4a51e8c4f155b8a73fd60ec5b4964bea",
+  "environment": {
+    "architecture": "arm64",
+    "caffeinate_available": true,
+    "java": "openjdk 21.0.12 2026-07-21 LTS",
+    "os": "Darwin",
+    "python": "3.9.6",
+    "tmux_available": true
+  },
+  "experiment_version": "issue-108-v1",
+  "fixed_tasks_per_budget": 100,
+  "game": "games/Heitan.lud",
+  "game_definition_commit": "b2952dad43c4ef4c0ad5429221d341c58268f16a",
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "hashed_executable_sources": [
+    {
+      "bytes": 4708,
+      "path": "experiments/issue-108/README.md",
+      "sha256": "17c17728b43fecdb1ab348d3d3a7effc9971571c0dfa885de454b66541142976"
+    },
+    {
+      "bytes": 6288,
+      "path": "experiments/issue-108/config.json",
+      "sha256": "afcfe55f3af86528415f1294fc8d998e4a51e8c4f155b8a73fd60ec5b4964bea"
+    },
+    {
+      "bytes": 14072,
+      "path": "experiments/issue-108/scripts/protocol.py",
+      "sha256": "8c727d34eab733bb5268dd2f128618a9f0c9cc27b285f513d165a60140db0452"
+    },
+    {
+      "bytes": 8013,
+      "path": "experiments/issue-108/scripts/freeze_protocol.py",
+      "sha256": "a6cbdb3b78f3764ca08ff7104b54599a50d9c17d37cfdcc8dda52d49fc5ad177"
+    },
+    {
+      "bytes": 19563,
+      "path": "experiments/issue-108/scripts/run_experiments.py",
+      "sha256": "ab0a8ce282a3b43f50b10931368f8a0b9c5bb82ae121b4f1d2cc97fe5a29f3c6"
+    },
+    {
+      "bytes": 1938,
+      "path": "experiments/issue-108/scripts/validate_trials.py",
+      "sha256": "899da0e669335fe9301bfd60c2ab201f640bc63604511c8919271ddba513f13a"
+    },
+    {
+      "bytes": 2232,
+      "path": "experiments/issue-108/scripts/finalize_production.py",
+      "sha256": "f393809febe42eb2c8c4670fb18a3568a912af51ac4119aba0dc5c6aefe50819"
+    },
+    {
+      "bytes": 24741,
+      "path": "experiments/issue-108/scripts/run_analysis.py",
+      "sha256": "db61067974e904fb7344e4a7d483103897202bd9868b1662869f8a843a338f6f"
+    },
+    {
+      "bytes": 1119,
+      "path": "experiments/issue-108/scripts/status.py",
+      "sha256": "019633441bb3812cdd2f258d86f7247ae1fd5acfe1be93dd7222b4a70b556d3c"
+    },
+    {
+      "bytes": 3125,
+      "path": "experiments/issue-108/scripts/public_safety_audit.py",
+      "sha256": "78a2938809d0a0e41d3a8824cd85019f0684378ad56d7dbea74ca00e27b330cd"
+    },
+    {
+      "bytes": 7549,
+      "path": "experiments/issue-108/scripts/Heitan3x3CorrectedExperiment.java",
+      "sha256": "db52df50d2962818319b0393db38920c00710038bcff4fb27625a25a0d6ed572"
+    },
+    {
+      "bytes": 6116,
+      "path": "experiments/issue-108/scripts/Heitan3x3CorrectedReplay.java",
+      "sha256": "7648c2a4b3e7628770ab1e7c601956d61fc80afd33d08fb596ba7fa0e50181bc"
+    }
+  ],
+  "ludii_jar_sha256": "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+  "ludii_version": "1.3.14",
+  "operational_parameters": {
+    "jvm_max_heap_by_budget": {
+      "10000": "4g",
+      "100000": "8g",
+      "30000": "4g"
+    },
+    "max_attempts": 3,
+    "retry_states": [
+      "pending",
+      "interrupted",
+      "failed",
+      "corrupt"
+    ],
+    "status": "frozen",
+    "timeout_seconds_per_game": 0,
+    "worker_count_by_budget": {
+      "10000": 2,
+      "100000": 1,
+      "30000": 2
+    }
+  },
+  "pilot_operational_evidence": {
+    "games": 3,
+    "manifest_sha256": "d1125d6fc6386bf76dbc1c62167a41bde7798c8f29da6b74267e82706f7913dd",
+    "maximum_elapsed_seconds": 1261.861,
+    "maximum_peak_rss_bytes": null,
+    "outcomes_inspected": false,
+    "peak_memory_observed": false
+  },
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "production_head_lock_policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "protocol_locked_at_utc": "2026-08-27T22:53:51Z",
+  "rerun_command_templates": [
+    "tmux new-session -d -s heitan-108-10k \"cd '$REPO_ROOT' && caffeinate -i env HEITAN108_CAFFEINATE=1 HEITAN108_RUNNER_ID='$HEITAN108_RUNNER_ID' LUDII_JAR='$LUDII_JAR' python3 experiments/issue-108/scripts/run_experiments.py production --budget 10000\"",
+    "python3 experiments/issue-108/scripts/finalize_production.py",
+    "python3 experiments/issue-108/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "schema_version": 1,
+  "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index",
+  "source_lock": "experiments/issue-108/source-lock.json",
+  "source_lock_sha256": "ce13de25ab71e7cf1ef25f4282d19084c65db2ad35780b7698bf734d2c52398b",
+  "stability_classification": {
+    "directionally_stabilizing_latest_delta_max": 0.07,
+    "labels": [
+      "directionally stabilizing",
+      "stable / converged-looking",
+      "non-monotonic",
+      "unresolved"
+    ],
+    "manual_override_allowed": false,
+    "minimum_games_per_primary_budget": 25,
+    "non_monotonic_material_delta_min": 0.03,
+    "rules_in_precedence_order": [
+      "unresolved if any primary budget has fewer than 25 validated games or a required estimate is unavailable",
+      "non-monotonic if adjacent deltas have opposite signs and both absolute deltas exceed 0.03",
+      "stable / converged-looking if both adjacent absolute deltas are at most 0.03",
+      "directionally stabilizing if adjacent deltas have the same sign, the later absolute delta is smaller, and it is at most 0.07",
+      "unresolved otherwise"
+    ],
+    "source": "unchanged Issue #47 thresholds reused by Issue #82",
+    "stable_absolute_delta_max": 0.03
+  },
+  "trial_normalization": {
+    "encoding": "UTF-8",
+    "game_path": "games/Heitan.lud",
+    "line_endings": "LF",
+    "raw_publication": false,
+    "relative_path_base": "repository root",
+    "third_party_revalidation_limitation": "raw SHA-256 is generation-time evidence only; third-party replay depends on the published normalized trial"
+  }
+}
