@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "issue": 105,
+  "scope": {
+    "modify_existing_trials": false,
+    "modify_game_or_rules": false,
+    "new_self_play": false,
+    "minimum_audit_games": 597,
+    "minimum_source": "experiments/issue-83/source-lock.json"
+  },
+  "scoring": {
+    "order": [
+      "secured_objectives",
+      "advantage_objectives",
+      "objective_pieces"
+    ],
+    "previous_objective_pieces": "all of the player's pieces on all Objectives",
+    "corrected_objective_pieces": "the player's own pieces only on Objectives where that player has Advantage",
+    "excluded_categories": [
+      "own_secured",
+      "opponent_secured",
+      "opponent_advantage",
+      "neutral"
+    ],
+    "own_secured_reason": "At the third tiebreak, Secured counts are tied and each own-Secured Objective contributes exactly three pieces, so both players add the same 3 × Secured count."
+  },
+  "gate": {
+    "name": "minimum-597-old-winner-reproduction",
+    "required_games": 597,
+    "required_reproduced_winners": 597,
+    "failure_disposition": "unresolved",
+    "corrected_comparison_requires_gate": true
+  },
+  "datasets": [
+    {"board": "3x3", "iteration_limit": 10000, "expected_games": 100},
+    {"board": "3x3", "iteration_limit": 30000, "expected_games": 100},
+    {"board": "3x3", "iteration_limit": 100000, "expected_games": 100},
+    {"board": "4x4", "iteration_limit": 10000, "expected_games": 100},
+    {"board": "4x4", "iteration_limit": 30000, "expected_games": 100},
+    {"board": "4x4", "iteration_limit": 100000, "expected_games": 97}
+  ],
+  "extension_sources": [
+    {"issue": 11, "board": "4x4", "results_root": "experiments/issue-11/results/raw", "expected_games": 140},
+    {"issue": 30, "board": "4x4", "results_root": "experiments/issue-30/results/raw", "expected_games": 300},
+    {"issue": 32, "board": "4x4", "results_root": "experiments/issue-32/results/raw", "include_experiments": ["uct-3000-self-play"], "expected_games": 100},
+    {"issue": 56, "board": "6x6", "results_root": "experiments/issue-56/results/raw", "expected_games": 170},
+    {"issue": 58, "board": "6x6", "results_root": "experiments/issue-58/results/raw", "expected_games": 50},
+    {"issue": 60, "board": "6x6", "results_root": "experiments/issue-60/results/raw", "expected_games": 30},
+    {"issue": 62, "board": "3x3", "results_root": "experiments/issue-62/results/raw", "expected_games": 400},
+    {"issue": 73, "board": "7x7", "results_root": "experiments/issue-73/results/raw-runner", "expected_games": 250},
+    {"issue": 77, "board": "7x7", "results_root": "experiments/issue-77/results/raw-runner", "expected_games": 500}
+  ]
+}

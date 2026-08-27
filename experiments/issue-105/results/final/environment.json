@@ -1,0 +1,8 @@
+{
+  "config_sha256": "bc5e4303123f9a3194fc37ae39f7a865ff92eae6f0054ba9f716835b68f5f31a",
+  "new_self_play_generated": false,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "protocol_lock_sha256": "49ddd25a86245e97780b45eecea7301835208dc4852ae22cf2799e83c30c1784",
+  "python": "3.9.6",
+  "source_lock_sha256": "7f89b2988fcbef6356a5169f6029a45cfb139511a7fe98c5aa8960975b9993a1"
+}
