@@ -55,7 +55,7 @@ The resulting Ludii score is:
 ```text
 280 * SecuredObjectives
  + 28 * AdvantageObjectives
-      + PiecesOnObjectives
+      + ScoringPiecesOnObjectives
 ```
 
 ## Validation coverage

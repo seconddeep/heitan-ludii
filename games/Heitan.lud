@@ -753,9 +753,12 @@
     ))
 )
 
-(define "PiecesOnObjectives"
+(define "ScoringPiecesOnObjectives"
     (count Stack Vertex to:(sites "Objectives")
-        if:(= #1 (who Vertex at:(to) level:(level)))
+        if:(and
+            (= #1 (who Vertex at:(to) level:(level)))
+            (= ("PointState" (to)) #1)
+        )
     )
 )
 
@@ -765,7 +768,7 @@
     (+ {
         (* ("SecuredScoreWeight") ("ObjectivesInState" (+ #1 2)))
         (* ("AdvantageScoreWeight") ("ObjectivesInState" #1))
-        ("PiecesOnObjectives" #1)
+        ("ScoringPiecesOnObjectives" #1)
     })
 )
 

@@ -131,9 +131,9 @@ The player with more Secured Objectives wins.
 
 If both players have the same number of Secured Objectives, the player with more Objectives in Advantage wins.
 
-### 3. Pieces on Objectives
+### 3. Pieces on Objectives with Advantage
 
-If both players have the same number of Secured Objectives and Objectives in Advantage, the player with more Pieces on Objectives wins.
+If both players have the same number of Secured Objectives and Objectives in Advantage, the player with more Pieces on Objectives where they have Advantage wins.
 
 ### Draw
 
