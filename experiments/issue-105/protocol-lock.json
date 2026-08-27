@@ -1,0 +1,15 @@
+{
+  "analysis_script_hashes": {
+    "common.py": "29a2e82e2a0cd661be2537230aa91095a1d2337c5eef402e8c0eb747589a76c7",
+    "freeze_inputs.py": "42c61d367c588deeb61cbdc5bd78af0b75711462f517acdfadfbfa9cd48b2567",
+    "run_analysis.py": "1255c2ccdaa7765358e1cd5802e9889ea79eb4ea733458dbeef15768eb3ba22f",
+    "scoring.py": "c74688674f8853ec4c72a47eed6471e473a7860297847674a93f1ff229256b28",
+    "test_analysis.py": "f7395040024b31c6bf142d41f25d4cfe33793d39ca3f2ba895fa3d4b33e93bc4"
+  },
+  "config_sha256": "bc5e4303123f9a3194fc37ae39f7a865ff92eae6f0054ba9f716835b68f5f31a",
+  "frozen_at_utc": "2026-08-27T10:20:50Z",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6",
+  "schema_version": 1,
+  "source_lock_sha256": "7f89b2988fcbef6356a5169f6029a45cfb139511a7fe98c5aa8960975b9993a1"
+}

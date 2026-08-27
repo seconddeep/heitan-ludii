@@ -1,0 +1,5 @@
+priority,experiment_families,action,reason
+1,"Issues 82, 83, and 47 deep UCT",new self-play in follow-up issues,Primary balance conclusions and shared deep-UCT sources
+2,"Issues 30, 32, and 62",new self-play after priority 1,Earlier 3x3/4x4 balance and convergence baselines
+3,"Issues 56, 58, 60, 73, and 77",new self-play by board family,Scaling and piece-count conclusions
+4,"Issues 35, 37, 39, 41, 43, 44, 65, 68, and 70",recompute after source-family reruns,Trajectory-derived analyses inherit source search-generation risk

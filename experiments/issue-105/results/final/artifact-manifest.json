@@ -1,0 +1,70 @@
+{
+  "artifacts": [
+    {
+      "bytes": 7260,
+      "path": "experiments/issue-105/results/final/affected-analysis-inventory.csv",
+      "sha256": "d745dcece968525f201c14777a0a34a0206a7955d5d0d9143ea857fd4e481148"
+    },
+    {
+      "bytes": 891222,
+      "path": "experiments/issue-105/results/final/affected-games.csv",
+      "sha256": "5932bafff1273f8c7a68a02e687d26623ad26969674e15df81b1272c804fc9fa"
+    },
+    {
+      "bytes": 41791,
+      "path": "experiments/issue-105/results/final/analysis.json",
+      "sha256": "3f23859f9decf0043bdb3629eb2eb58ce9ba79f2bdb38a40cb13a0d70af23b3e"
+    },
+    {
+      "bytes": 4624,
+      "path": "experiments/issue-105/results/final/dataset-impact-summary.csv",
+      "sha256": "f364db2f5e32f70825cc8e0d3a97065b5af9fb34f68eb3260893c174bddf7837"
+    },
+    {
+      "bytes": 4926,
+      "path": "experiments/issue-105/results/final/deciding-layer-summary.csv",
+      "sha256": "04072796e72f47914e002db11e74ea6f1d97ff1ca684dd45f8275c92717d53bb"
+    },
+    {
+      "bytes": 379,
+      "path": "experiments/issue-105/results/final/environment.json",
+      "sha256": "ff8a6e06323c82ee4f991d44378d737b95d5bf91467992fc0b569e5c4c4c7c4f"
+    },
+    {
+      "bytes": 5528,
+      "path": "experiments/issue-105/results/final/excluded-material-summary.csv",
+      "sha256": "4598577679402bfdec485da0435a2d49eae926d03c08ffed99ed499444206687"
+    },
+    {
+      "bytes": 177,
+      "path": "experiments/issue-105/results/final/gate-status.json",
+      "sha256": "73a06bb7b4209fa73dea2f35fa07366f88b0f8bd6a9239536f19b2ad606ab993"
+    },
+    {
+      "bytes": 1076297,
+      "path": "experiments/issue-105/results/final/per-game-scoring.csv",
+      "sha256": "261de6ac01768ac26b579469fe554d4d1e6811e62618a98a5f9475596ae25f5a"
+    },
+    {
+      "bytes": 528,
+      "path": "experiments/issue-105/results/final/rerun-recommendations.csv",
+      "sha256": "054fb7af1fe1df544dc38dd1ddef09137f095aa91317c65a83c29cafcf183c44"
+    },
+    {
+      "bytes": 7746,
+      "path": "experiments/issue-105/results/final/source-dataset-inventory.csv",
+      "sha256": "be7b04b6c06224fef3b3e5102e0641040fa188509546f7a6b1d03fa1412d2501"
+    },
+    {
+      "bytes": 2309,
+      "path": "experiments/issue-105/results/final/winner-transition-summary.csv",
+      "sha256": "b1b768dade3123ca3dd0b645d45039af89441bd7e4a38b72c18854e172f141cf"
+    },
+    {
+      "bytes": 3023,
+      "path": "experiments/issue-105.md",
+      "sha256": "aae18345ccb0cb819672f03d3aceb903e700e96baea261018094291b860d6b9b"
+    }
+  ],
+  "schema_version": 1
+}
