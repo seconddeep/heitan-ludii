@@ -1,0 +1,485 @@
+{
+  "balance": [
+    {
+      "decisive_games": 89,
+      "decisive_p1_share": 0.707865,
+      "draws": 11,
+      "iteration_limit": 10000,
+      "p1_bootstrap_95_high": 0.73,
+      "p1_bootstrap_95_low": 0.53,
+      "p1_wilson_95_high": 0.718176,
+      "p1_wilson_95_low": 0.532205,
+      "p1_win_rate": 0.63,
+      "p1_wins": 63,
+      "p2_wins": 26,
+      "planned_games": 100,
+      "validated_games": 100
+    },
+    {
+      "decisive_games": 87,
+      "decisive_p1_share": 0.62069,
+      "draws": 13,
+      "iteration_limit": 30000,
+      "p1_bootstrap_95_high": 0.64,
+      "p1_bootstrap_95_low": 0.44,
+      "p1_wilson_95_high": 0.634392,
+      "p1_wilson_95_low": 0.442649,
+      "p1_win_rate": 0.54,
+      "p1_wins": 54,
+      "p2_wins": 33,
+      "planned_games": 100,
+      "validated_games": 100
+    },
+    {
+      "decisive_games": 87,
+      "decisive_p1_share": 0.45977,
+      "draws": 13,
+      "iteration_limit": 100000,
+      "p1_bootstrap_95_high": 0.5,
+      "p1_bootstrap_95_low": 0.31,
+      "p1_wilson_95_high": 0.497997,
+      "p1_wilson_95_low": 0.309401,
+      "p1_win_rate": 0.4,
+      "p1_wins": 40,
+      "p2_wins": 47,
+      "planned_games": 100,
+      "validated_games": 100
+    }
+  ],
+  "classification": {
+    "delta_100k_minus_30k": -0.14,
+    "delta_30k_minus_10k": -0.08999999999999997,
+    "depth_classification": "unresolved",
+    "drop_classification": "unresolved",
+    "manual_override": false
+  },
+  "completed_games_by_budget": {
+    "10000": 100,
+    "100000": 100,
+    "30000": 100
+  },
+  "corrected_depth_contrasts": [
+    {
+      "bootstrap_95_high": 0.05,
+      "bootstrap_95_low": -0.22,
+      "contrast": "corrected 30k - corrected 10k",
+      "difference": -0.09,
+      "higher_budget": 30000,
+      "lower_budget": 10000,
+      "measure": "p1",
+      "primary_100k_drop": false,
+      "secondary_100k_drop": false
+    },
+    {
+      "bootstrap_95_high": 0.11,
+      "bootstrap_95_low": -0.07,
+      "contrast": "corrected 30k - corrected 10k",
+      "difference": 0.02,
+      "higher_budget": 30000,
+      "lower_budget": 10000,
+      "measure": "draw",
+      "primary_100k_drop": false,
+      "secondary_100k_drop": false
+    },
+    {
+      "bootstrap_95_high": 0.0,
+      "bootstrap_95_low": -0.28,
+      "contrast": "corrected 100k - corrected 30k",
+      "difference": -0.14,
+      "higher_budget": 100000,
+      "lower_budget": 30000,
+      "measure": "p1",
+      "primary_100k_drop": true,
+      "secondary_100k_drop": false
+    },
+    {
+      "bootstrap_95_high": 0.09,
+      "bootstrap_95_low": -0.09,
+      "contrast": "corrected 100k - corrected 30k",
+      "difference": 0.0,
+      "higher_budget": 100000,
+      "lower_budget": 30000,
+      "measure": "draw",
+      "primary_100k_drop": true,
+      "secondary_100k_drop": false
+    },
+    {
+      "bootstrap_95_high": -0.09,
+      "bootstrap_95_low": -0.36,
+      "contrast": "corrected 100k - corrected 10k",
+      "difference": -0.23,
+      "higher_budget": 100000,
+      "lower_budget": 10000,
+      "measure": "p1",
+      "primary_100k_drop": false,
+      "secondary_100k_drop": true
+    },
+    {
+      "bootstrap_95_high": 0.11,
+      "bootstrap_95_low": -0.07,
+      "contrast": "corrected 100k - corrected 10k",
+      "difference": 0.02,
+      "higher_budget": 100000,
+      "lower_budget": 10000,
+      "measure": "draw",
+      "primary_100k_drop": false,
+      "secondary_100k_drop": true
+    }
+  ],
+  "difference_in_differences": [
+    {
+      "bootstrap_95_high": 0.32,
+      "bootstrap_95_low": -0.06,
+      "corrected_depth_change": -0.14,
+      "depth_contrast": "100k - 30k",
+      "difference_in_differences": 0.13,
+      "measure": "p1",
+      "original_depth_change": -0.27
+    },
+    {
+      "bootstrap_95_high": 0.04,
+      "bootstrap_95_low": -0.18,
+      "corrected_depth_change": 0.0,
+      "depth_contrast": "100k - 30k",
+      "difference_in_differences": -0.07,
+      "measure": "draw",
+      "original_depth_change": 0.07
+    },
+    {
+      "bootstrap_95_high": 0.24,
+      "bootstrap_95_low": -0.14,
+      "corrected_depth_change": -0.23,
+      "depth_contrast": "100k - 10k",
+      "difference_in_differences": 0.05,
+      "measure": "p1",
+      "original_depth_change": -0.28
+    },
+    {
+      "bootstrap_95_high": 0.07,
+      "bootstrap_95_low": -0.15,
+      "corrected_depth_change": 0.02,
+      "depth_contrast": "100k - 10k",
+      "difference_in_differences": -0.04,
+      "measure": "draw",
+      "original_depth_change": 0.06
+    }
+  ],
+  "failures": [],
+  "matched_budget_comparisons": [
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.71,
+      "bootstrap_95_high": 0.05,
+      "bootstrap_95_low": -0.21,
+      "corrected_minus_baseline": -0.08,
+      "corrected_regenerated_rate": 0.63,
+      "iteration_limit": 10000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.03,
+      "bootstrap_95_high": 0.15,
+      "bootstrap_95_low": 0.01,
+      "corrected_minus_baseline": 0.08,
+      "corrected_regenerated_rate": 0.11,
+      "iteration_limit": 10000,
+      "measure": "draw"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.71,
+      "bootstrap_95_high": 0.05,
+      "bootstrap_95_low": -0.21,
+      "corrected_minus_baseline": -0.08,
+      "corrected_regenerated_rate": 0.63,
+      "iteration_limit": 10000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.04,
+      "bootstrap_95_high": 0.14,
+      "bootstrap_95_low": 0.0,
+      "corrected_minus_baseline": 0.07,
+      "corrected_regenerated_rate": 0.11,
+      "iteration_limit": 10000,
+      "measure": "draw"
+    },
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.7,
+      "bootstrap_95_high": -0.03,
+      "bootstrap_95_low": -0.29,
+      "corrected_minus_baseline": -0.16,
+      "corrected_regenerated_rate": 0.54,
+      "iteration_limit": 30000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.02,
+      "bootstrap_95_high": 0.18,
+      "bootstrap_95_low": 0.04,
+      "corrected_minus_baseline": 0.11,
+      "corrected_regenerated_rate": 0.13,
+      "iteration_limit": 30000,
+      "measure": "draw"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.68,
+      "bootstrap_95_high": -0.01,
+      "bootstrap_95_low": -0.27,
+      "corrected_minus_baseline": -0.14,
+      "corrected_regenerated_rate": 0.54,
+      "iteration_limit": 30000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.03,
+      "bootstrap_95_high": 0.18,
+      "bootstrap_95_low": 0.03,
+      "corrected_minus_baseline": 0.1,
+      "corrected_regenerated_rate": 0.13,
+      "iteration_limit": 30000,
+      "measure": "draw"
+    },
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.43,
+      "bootstrap_95_high": 0.1,
+      "bootstrap_95_low": -0.16025,
+      "corrected_minus_baseline": -0.03,
+      "corrected_regenerated_rate": 0.4,
+      "iteration_limit": 100000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-82-original",
+      "baseline_rate": 0.09,
+      "bootstrap_95_high": 0.13,
+      "bootstrap_95_low": -0.05,
+      "corrected_minus_baseline": 0.04,
+      "corrected_regenerated_rate": 0.13,
+      "iteration_limit": 100000,
+      "measure": "draw"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.42,
+      "bootstrap_95_high": 0.12,
+      "bootstrap_95_low": -0.16,
+      "corrected_minus_baseline": -0.02,
+      "corrected_regenerated_rate": 0.4,
+      "iteration_limit": 100000,
+      "measure": "p1"
+    },
+    {
+      "baseline": "issue-105-terminal-rescore",
+      "baseline_rate": 0.1,
+      "bootstrap_95_high": 0.12,
+      "bootstrap_95_low": -0.06,
+      "corrected_minus_baseline": 0.03,
+      "corrected_regenerated_rate": 0.13,
+      "iteration_limit": 100000,
+      "measure": "draw"
+    }
+  ],
+  "material_change_label_used": false,
+  "pilot_excluded": true,
+  "planned_games_by_budget": {
+    "10000": 100,
+    "100000": 100,
+    "30000": 100
+  },
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "schema_version": 1,
+  "secondary": {
+    "central_comparison_rows": 600,
+    "central_supply_summary": [
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 10000,
+        "mean_early_central_placement_count": 7.17,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-108-corrected"
+      },
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 30000,
+        "mean_early_central_placement_count": 7.37,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-108-corrected"
+      },
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 100000,
+        "mean_early_central_placement_count": 7.64,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-108-corrected"
+      },
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 10000,
+        "mean_early_central_placement_count": 7.38,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-82-original"
+      },
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 30000,
+        "mean_early_central_placement_count": 7.29,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-82-original"
+      },
+      {
+        "commitment_games": 100,
+        "early_central_placement_frequency": 1.0,
+        "early_contest_frequency": 1.0,
+        "games": 100,
+        "iteration_limit": 100000,
+        "mean_early_central_placement_count": 7.67,
+        "mean_first_commitment_turn_conditional": 1.0,
+        "occupation_after_p1_turn_1_frequency": 1.0,
+        "occupation_after_p1_turn_2_frequency": 1.0,
+        "occupation_after_p1_turn_3_frequency": 1.0,
+        "sample": "issue-82-original"
+      }
+    ],
+    "game_diagnostics": 300,
+    "late_reversal_rows": 600,
+    "late_reversal_summary": [
+      {
+        "checkpoint": 0.75,
+        "eligible_games": 77,
+        "games": 100,
+        "iteration_limit": 10000,
+        "late_reversal_rate": 0.246753,
+        "late_reversals": 19,
+        "turn_number": 14
+      },
+      {
+        "checkpoint": 0.9,
+        "eligible_games": 84,
+        "games": 100,
+        "iteration_limit": 10000,
+        "late_reversal_rate": 0.119048,
+        "late_reversals": 10,
+        "turn_number": 17
+      },
+      {
+        "checkpoint": 0.75,
+        "eligible_games": 77,
+        "games": 100,
+        "iteration_limit": 30000,
+        "late_reversal_rate": 0.246753,
+        "late_reversals": 19,
+        "turn_number": 14
+      },
+      {
+        "checkpoint": 0.9,
+        "eligible_games": 83,
+        "games": 100,
+        "iteration_limit": 30000,
+        "late_reversal_rate": 0.240964,
+        "late_reversals": 20,
+        "turn_number": 17
+      },
+      {
+        "checkpoint": 0.75,
+        "eligible_games": 59,
+        "games": 100,
+        "iteration_limit": 100000,
+        "late_reversal_rate": 0.288136,
+        "late_reversals": 17,
+        "turn_number": 14
+      },
+      {
+        "checkpoint": 0.9,
+        "eligible_games": 79,
+        "games": 100,
+        "iteration_limit": 100000,
+        "late_reversal_rate": 0.379747,
+        "late_reversals": 30,
+        "turn_number": 17
+      }
+    ],
+    "structural_summary": [
+      {
+        "advantage_decisions": 33,
+        "draws": 11,
+        "games": 100,
+        "iteration_limit": 10000,
+        "mean_advantage_margin_p1_minus_p2": 0.01,
+        "mean_corrected_piece_margin_p1_minus_p2": 0.01,
+        "mean_first_persistent_lead_turn_conditional": 10.932584269662922,
+        "mean_secured_margin_p1_minus_p2": 0.39,
+        "objective_piece_decisions": 2,
+        "persistent_lead_games": 89,
+        "secured_decisions": 54
+      },
+      {
+        "advantage_decisions": 26,
+        "draws": 13,
+        "games": 100,
+        "iteration_limit": 30000,
+        "mean_advantage_margin_p1_minus_p2": -0.07,
+        "mean_corrected_piece_margin_p1_minus_p2": -0.24,
+        "mean_first_persistent_lead_turn_conditional": 10.344827586206897,
+        "mean_secured_margin_p1_minus_p2": 0.36,
+        "objective_piece_decisions": 2,
+        "persistent_lead_games": 87,
+        "secured_decisions": 59
+      },
+      {
+        "advantage_decisions": 43,
+        "draws": 13,
+        "games": 100,
+        "iteration_limit": 100000,
+        "mean_advantage_margin_p1_minus_p2": -0.01,
+        "mean_corrected_piece_margin_p1_minus_p2": -0.08,
+        "mean_first_persistent_lead_turn_conditional": 15.586206896551724,
+        "mean_secured_margin_p1_minus_p2": 0.13,
+        "objective_piece_decisions": 3,
+        "persistent_lead_games": 87,
+        "secured_decisions": 41
+      }
+    ]
+  }
+}

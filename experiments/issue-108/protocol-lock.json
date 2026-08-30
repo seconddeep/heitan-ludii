@@ -109,9 +109,9 @@
       "sha256": "f393809febe42eb2c8c4670fb18a3568a912af51ac4119aba0dc5c6aefe50819"
     },
     {
-      "bytes": 24741,
+      "bytes": 29777,
       "path": "experiments/issue-108/scripts/run_analysis.py",
-      "sha256": "db61067974e904fb7344e4a7d483103897202bd9868b1662869f8a843a338f6f"
+      "sha256": "1f08a5af51895c5134eb5a715a645e6441c19b87a9b79b3175eb18400569a5f9"
     },
     {
       "bytes": 1119,
@@ -171,6 +171,20 @@
     100000
   ],
   "production_head_lock_policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "post_production_compatibility_amendments": [
+    {
+      "file": "experiments/issue-108/scripts/run_analysis.py",
+      "new_sha256": "ee928b89dd8d85abdbc026029ffa362c2811140605aac047cd21f329188d24e9",
+      "old_sha256": "db61067974e904fb7344e4a7d483103897202bd9868b1662869f8a843a338f6f",
+      "reason": "Remove the unsupported pathlib.Path.write_text(newline=...) argument on Python 3.9; no data loading, statistical calculation, classification, or report content changed."
+    },
+    {
+      "file": "experiments/issue-108/scripts/run_analysis.py",
+      "new_sha256": "1f08a5af51895c5134eb5a715a645e6441c19b87a9b79b3175eb18400569a5f9",
+      "old_sha256": "ee928b89dd8d85abdbc026029ffa362c2811140605aac047cd21f329188d24e9",
+      "reason": "Expand the deterministic Markdown report and structural-summary CSV to include already-preregistered comparisons and diagnostics; bootstrap calculations, classification rules, and source data are unchanged."
+    }
+  ],
   "protocol_locked_at_utc": "2026-08-27T22:53:51Z",
   "rerun_command_templates": [
     "tmux new-session -d -s heitan-108-10k \"cd '$REPO_ROOT' && caffeinate -i env HEITAN108_CAFFEINATE=1 HEITAN108_RUNNER_ID='$HEITAN108_RUNNER_ID' LUDII_JAR='$LUDII_JAR' python3 experiments/issue-108/scripts/run_experiments.py production --budget 10000\"",

@@ -1,0 +1,7 @@
+measure,contrast,higher_budget,lower_budget,difference,bootstrap_95_low,bootstrap_95_high,primary_100k_drop,secondary_100k_drop
+p1,corrected 30k - corrected 10k,30000,10000,-0.09,-0.22,0.05,False,False
+draw,corrected 30k - corrected 10k,30000,10000,0.02,-0.07,0.11,False,False
+p1,corrected 100k - corrected 30k,100000,30000,-0.14,-0.28,0.0,True,False
+draw,corrected 100k - corrected 30k,100000,30000,0.0,-0.09,0.09,True,False
+p1,corrected 100k - corrected 10k,100000,10000,-0.23,-0.36,-0.09,False,True
+draw,corrected 100k - corrected 10k,100000,10000,0.02,-0.07,0.11,False,True
