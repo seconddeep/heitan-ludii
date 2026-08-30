@@ -5,6 +5,10 @@ three independent, fixed 100-task self-play samples under the corrected
 Objective-piece tiebreak. It does not modify the game, rules, board, or prior
 experiment artifacts.
 
+The repository-wide [safety and experiment integrity principles](../../docs/repository-principles.md)
+apply to this work. This README records the issue-specific protocol, evidence,
+provenance, and resume requirements used to apply those principles.
+
 ## Frozen scientific scope
 
 The primary budgets are UCT 10,000, 30,000, and 100,000. Each budget has 100

@@ -17,6 +17,10 @@ This repository contains the Ludii implementation of Heitan, along with its rule
 
 - [Board Definition](docs/board.md)
 
+### Repository Principles
+
+- [Repository Safety and Experiment Integrity Principles](docs/repository-principles.md)
+
 ## Implementation
 
 The game definition is located at:
@@ -44,7 +48,8 @@ AGENTS.md
 ├── docs/
 │   ├── rules.md
 │   ├── rules-ja.md
-│   └── board.md
+│   ├── board.md
+│   └── repository-principles.md
 ├── experiments/
 ├── AGENTS.md
 └── README.md
