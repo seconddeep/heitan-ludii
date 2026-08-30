@@ -1,0 +1,205 @@
+{
+  "analysis": {
+    "bootstrap_method": "independent game-level nonparametric bootstrap with replacement",
+    "bootstrap_percentile_method": "linear interpolation at (n-1)*p after sorting",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1120112,
+    "decisive_game_share_secondary": true,
+    "difference_in_differences_resampling": "independently resample every game-level sample entering each corrected-versus-original or corrected-4x4-versus-corrected-3x3 contrast",
+    "draws_in_primary_denominator": true,
+    "historical_pattern_label_policy": {
+      "manual_override_allowed": false,
+      "minimum_games_per_required_sample": 25,
+      "rules_in_precedence_order": [
+        "unresolved if a required sample has fewer than 25 games or a required interval is unavailable",
+        "persists if corrected 100k-minus-30k is positive and its 95% interval is entirely at or above zero",
+        "reverses if corrected 100k-minus-30k is negative and its 95% interval is entirely at or below zero",
+        "stabilizes if the corrected primary point difference is within 0.03 in absolute value",
+        "unresolved otherwise"
+      ]
+    },
+    "late_reversal_checkpoints": [
+      0.75,
+      0.9
+    ],
+    "material_change_label_enabled": false,
+    "primary_depth_contrast": "corrected 100k - corrected 30k",
+    "regenerated_magnitude_comparison": "absolute regenerated-minus-original effect minus absolute terminal-rescore-minus-original effect; independently resample regenerated games and paired historical outcomes",
+    "secondary_depth_contrast": "corrected 100k - corrected 10k",
+    "terminal_rescore_direct_effect_bootstrap": "paired game-level resampling of each historical trajectory's original and terminal-rescored outcome",
+    "wilson_confidence_level": 0.95
+  },
+  "config": "experiments/issue-112/config.json",
+  "config_sha256": "3daf7376b093744afd2e4b4489bb3246e3bd607e2c49e9a2b5c3e54f19d2f289",
+  "environment": {
+    "architecture": "arm64",
+    "caffeinate_available": true,
+    "java": "openjdk 21.0.12 2026-07-21 LTS",
+    "os": "Darwin",
+    "python": "3.9.6",
+    "tmux_available": true
+  },
+  "experiment_version": "issue-112-v1",
+  "fixed_tasks_per_budget": 100,
+  "game": "games/Heitan.lud",
+  "game_definition_commit": "b2952dad43c4ef4c0ad5429221d341c58268f16a",
+  "game_definition_gate": {
+    "advantage_weight": 37,
+    "board_option": "Board/4x4",
+    "pieces_per_player": 36,
+    "secured_weight": 629,
+    "source": "games/Heitan.lud",
+    "source_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+    "status": "passed",
+    "total_placements": 72
+  },
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "hashed_executable_sources": [
+    {
+      "bytes": 4468,
+      "path": "experiments/issue-112/README.md",
+      "sha256": "a5be725e028f4a2df4183a88225566468b5844dd48dddfa228cc3f33c971271b"
+    },
+    {
+      "bytes": 6873,
+      "path": "experiments/issue-112/config.json",
+      "sha256": "3daf7376b093744afd2e4b4489bb3246e3bd607e2c49e9a2b5c3e54f19d2f289"
+    },
+    {
+      "bytes": 16655,
+      "path": "experiments/issue-112/scripts/protocol.py",
+      "sha256": "6b8dba1ac12ce4de776966f0b302abcb1101cdc3ffc56c62d2f55167821b8bcf"
+    },
+    {
+      "bytes": 10522,
+      "path": "experiments/issue-112/scripts/freeze_protocol.py",
+      "sha256": "bf047de68d695b68489451f91db110e7f97fd6e47310e3334d5eec306f0d4755"
+    },
+    {
+      "bytes": 20732,
+      "path": "experiments/issue-112/scripts/run_experiments.py",
+      "sha256": "eaf397dbb9f35e3d1e8c5455bac0cc160a6a04c31bffab34482d7082098fc5cd"
+    },
+    {
+      "bytes": 5273,
+      "path": "experiments/issue-112/scripts/validate_trials.py",
+      "sha256": "111f6641cc80c4f15f6e4b1ab3f5235b4b453c8b949488e1bff5cca45fb254dd"
+    },
+    {
+      "bytes": 3809,
+      "path": "experiments/issue-112/scripts/finalize_production.py",
+      "sha256": "da9611fcc5b0933b5d4ac970a78c068632cda8a12a80eaddb4a88d137404f856"
+    },
+    {
+      "bytes": 35078,
+      "path": "experiments/issue-112/scripts/run_analysis.py",
+      "sha256": "21dceb98a3290115c92322fffe3adaed5b1f821e30002de64a7571315d5e04ff"
+    },
+    {
+      "bytes": 1119,
+      "path": "experiments/issue-112/scripts/status.py",
+      "sha256": "2ba54b55c65a7b7199897e8c3228453fe04202df3c588620411eca8849b59bc0"
+    },
+    {
+      "bytes": 3855,
+      "path": "experiments/issue-112/scripts/public_safety_audit.py",
+      "sha256": "802e9c5a4dacd40c3c63e767da979e60bea4daca3008528fca9ceb224d255d37"
+    },
+    {
+      "bytes": 6803,
+      "path": "experiments/issue-112/scripts/Heitan4x4CorrectedExperiment.java",
+      "sha256": "f092305ebe25b097ddccb49415f7b83c520aeec4cd71301d36a5beb1d7a2b30f"
+    },
+    {
+      "bytes": 6324,
+      "path": "experiments/issue-112/scripts/Heitan4x4CorrectedReplay.java",
+      "sha256": "b22331cde6e07a13e6571363bc09a5d3e79c0ed91776474a75caea834483b1e3"
+    }
+  ],
+  "ludii_jar_sha256": "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+  "ludii_version": "1.3.14",
+  "operational_parameters": {
+    "jvm_max_heap_by_budget": {
+      "10000": "4g",
+      "100000": "8g",
+      "30000": "4g"
+    },
+    "max_attempts": 3,
+    "retry_states": [
+      "pending",
+      "interrupted",
+      "failed",
+      "corrupt"
+    ],
+    "status": "frozen",
+    "timeout_seconds_per_game": 0,
+    "worker_count_by_budget": {
+      "10000": 2,
+      "100000": 1,
+      "30000": 2
+    }
+  },
+  "pilot_operational_evidence": {
+    "games": 3,
+    "manifest_sha256": "43e78953c0685689f47ae90dda2716656c5588cc68c8d98e91e550619ff5d33b",
+    "maximum_elapsed_seconds": 3342.056,
+    "maximum_peak_rss_bytes": null,
+    "outcomes_inspected": false,
+    "peak_memory_observed": false
+  },
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "production_head_lock_policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "protocol_locked_at_utc": "2026-08-30T13:39:55Z",
+  "rerun_command_templates": [
+    "tmux new-session -d -s heitan-112-10k \"cd '$REPO_ROOT' && caffeinate -i env HEITAN112_CAFFEINATE=1 HEITAN112_RUNNER_ID='$HEITAN112_RUNNER_ID' LUDII_JAR='$LUDII_JAR' python3 experiments/issue-112/scripts/run_experiments.py production --budget 10000\"",
+    "python3 experiments/issue-112/scripts/validate_trials.py --namespace production --budget 10000",
+    "python3 experiments/issue-112/scripts/validate_trials.py --namespace production --full-scoring",
+    "python3 experiments/issue-112/scripts/finalize_production.py",
+    "python3 experiments/issue-112/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "schema_version": 1,
+  "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index",
+  "source_lock": "experiments/issue-112/source-lock.json",
+  "source_lock_sha256": "66b49a63fad9f2b99d3b14bb8714b10f24d28b5f3fa10a3d7012f4e0fefc3bcf",
+  "stability_classification": {
+    "directionally_stabilizing_latest_delta_max": 0.07,
+    "labels": [
+      "directionally stabilizing",
+      "stable / converged-looking",
+      "monotonic but unresolved",
+      "non-monotonic",
+      "unresolved"
+    ],
+    "manual_override_allowed": false,
+    "minimum_games_per_primary_budget": 25,
+    "non_monotonic_material_delta_min": 0.03,
+    "rules_in_precedence_order": [
+      "unresolved if any primary budget has fewer than 25 validated games or a required estimate is unavailable",
+      "non-monotonic if adjacent deltas have opposite signs and both absolute deltas exceed 0.03",
+      "stable / converged-looking if both adjacent absolute deltas are at most 0.03",
+      "directionally stabilizing if adjacent deltas have the same sign, the later absolute delta is smaller, and it is at most 0.07",
+      "monotonic but unresolved if adjacent deltas have the same non-zero sign and no earlier rule applies",
+      "unresolved otherwise"
+    ],
+    "source": "Issue #108 thresholds, with the Issue #112-requested monotonic-but-unresolved category added before production",
+    "stable_absolute_delta_max": 0.03
+  },
+  "supply_diagnostics": {
+    "final_secured_supply_count_definition": "number of Supply points in state 3 or 4 at natural game end",
+    "first_supply_securing_definition": "first Heitan-turn end at which any Supply has state 3 or 4",
+    "observation_unit": "Heitan-turn end only",
+    "placement_share_definition": "Supply or Objective placements divided by all 72 placements"
+  },
+  "trial_normalization": {
+    "encoding": "UTF-8",
+    "game_path": "games/Heitan.lud",
+    "line_endings": "LF",
+    "raw_publication": false,
+    "relative_path_base": "repository root",
+    "third_party_revalidation_limitation": "raw SHA-256 is generation-time evidence only; third-party replay depends on the published normalized trial"
+  }
+}
