@@ -1,0 +1,7 @@
+sample,iteration_limit,games,early_central_placement_frequency,mean_early_central_placement_count,commitment_games,mean_first_commitment_turn_conditional,occupation_after_p1_turn_1_frequency,occupation_after_p1_turn_2_frequency,occupation_after_p1_turn_3_frequency,early_contest_frequency
+issue-108-corrected,10000,100,1.0,7.17,100,1.0,1.0,1.0,1.0,1.0
+issue-108-corrected,30000,100,1.0,7.37,100,1.0,1.0,1.0,1.0,1.0
+issue-108-corrected,100000,100,1.0,7.64,100,1.0,1.0,1.0,1.0,1.0
+issue-82-original,10000,100,1.0,7.38,100,1.0,1.0,1.0,1.0,1.0
+issue-82-original,30000,100,1.0,7.29,100,1.0,1.0,1.0,1.0,1.0
+issue-82-original,100000,100,1.0,7.67,100,1.0,1.0,1.0,1.0,1.0

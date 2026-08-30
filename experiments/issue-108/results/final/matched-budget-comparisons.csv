@@ -1,0 +1,13 @@
+iteration_limit,measure,baseline,baseline_rate,corrected_regenerated_rate,corrected_minus_baseline,bootstrap_95_low,bootstrap_95_high
+10000,p1,issue-82-original,0.71,0.63,-0.08,-0.21,0.05
+10000,draw,issue-82-original,0.03,0.11,0.08,0.01,0.15
+10000,p1,issue-105-terminal-rescore,0.71,0.63,-0.08,-0.21,0.05
+10000,draw,issue-105-terminal-rescore,0.04,0.11,0.07,0.0,0.14
+30000,p1,issue-82-original,0.7,0.54,-0.16,-0.29,-0.03
+30000,draw,issue-82-original,0.02,0.13,0.11,0.04,0.18
+30000,p1,issue-105-terminal-rescore,0.68,0.54,-0.14,-0.27,-0.01
+30000,draw,issue-105-terminal-rescore,0.03,0.13,0.1,0.03,0.18
+100000,p1,issue-82-original,0.43,0.4,-0.03,-0.16025,0.1
+100000,draw,issue-82-original,0.09,0.13,0.04,-0.05,0.13
+100000,p1,issue-105-terminal-rescore,0.42,0.4,-0.02,-0.16,0.12
+100000,draw,issue-105-terminal-rescore,0.1,0.13,0.03,-0.06,0.12

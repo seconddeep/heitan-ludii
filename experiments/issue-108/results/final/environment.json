@@ -1,0 +1,34 @@
+{
+  "architecture": "arm64",
+  "config_sha256": "afcfe55f3af86528415f1294fc8d998e4a51e8c4f155b8a73fd60ec5b4964bea",
+  "deterministic_regeneration_verified": true,
+  "finalization_sha256": "1bb58f6b7e38dad56955ac11331392006b29446a9c0970aed41566e3f3ffbf47",
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "generated_at_utc": "2026-08-30T01:54:05Z",
+  "manifest_sha256": "b90d502d3e9f37dacc85c422914135aa1dca95ee9009f7aad8cb702894e1ab8e",
+  "os": "Darwin",
+  "output_hashes": {
+    "experiments/issue-108/results/final/analysis.json": "135032ddfeb35f87b4330b2c80bea7d2709cc41964bc884834117748be85682c",
+    "experiments/issue-108/results/final/balance-by-depth.csv": "5f192a41a7e05b6275ba8febb24b63005b7fce11f05783f3d07861bab2f66713",
+    "experiments/issue-108/results/final/central-supply-by-game.csv": "b226a967f2a5756dc5dae8e73442bbca42716a0ce4d0ccac7f6f2c5422cddfb8",
+    "experiments/issue-108/results/final/central-supply-summary.csv": "604543cf4d27a2013274dc6c86c9b32fee4d7ca8b759b97385ec351bdc4d6ac6",
+    "experiments/issue-108/results/final/classification.csv": "b43c1d8b5f5c51f2bc97e7ce737f27140b4e0a00e41a8c8fee4c4e16c17ea976",
+    "experiments/issue-108/results/final/corrected-depth-contrasts.csv": "90399e457aaa10035216452a0656cb0e6704b2c2afcde946c42edbe6c9ab4ebb",
+    "experiments/issue-108/results/final/difference-in-differences.csv": "f0ae22945ee7d735b392158df6a19eaefdae6850685fc06a32bc93b6da5a2aec",
+    "experiments/issue-108/results/final/failures.csv": "7019e0407283c38502c011045b78306a7f360ff318165c0a2bb852b2f691eedc",
+    "experiments/issue-108/results/final/game-diagnostics.csv": "dd42eaacb5c2ee74636b9c5eadd6b92ceaac54a4e09afb59e538c4e09f54fc0c",
+    "experiments/issue-108/results/final/late-reversal-summary.csv": "63d60dda736aac93c786f5fd9d9ed6d9594f641c8199422a343bcdb9be126476",
+    "experiments/issue-108/results/final/late-reversals.csv": "f61d4dc1d2d482b1622f5b8964a899dc349df224b22271c971e5a5e908af18be",
+    "experiments/issue-108/results/final/matched-budget-comparisons.csv": "98ebc62e07debe614460c48933a614db14bca2b411abbc825a3181ca7eb86a05",
+    "experiments/issue-108/results/final/public-safety-audit.json": "d2e2505f0e0dbcea96f552572ad84bf83f85628c175fd76fb7b0fda0dd60e3a5",
+    "experiments/issue-108/results/final/structural-summary.csv": "d2e6e3579798a22c47a33b2b694e9e5db9a7d2c44b067dae2cc547bde1c1651f"
+  },
+  "protocol_lock_sha256": "0b0e1510269cadcfe8619be4b56c232a7fb7f4d1412278ec232b36f41f7ad746",
+  "python": "3.9.6",
+  "rerun_commands": [
+    "python3 experiments/issue-108/scripts/finalize_production.py",
+    "python3 experiments/issue-108/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "schema_version": 1,
+  "source_lock_sha256": "ce13de25ab71e7cf1ef25f4282d19084c65db2ad35780b7698bf734d2c52398b"
+}

@@ -1,0 +1,194 @@
+{
+  "analysis": {
+    "bootstrap_method": "independent game-level nonparametric bootstrap with replacement",
+    "bootstrap_percentile_method": "linear interpolation at (n-1)*p after sorting",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1080108,
+    "decisive_game_share_secondary": true,
+    "difference_in_differences_resampling": "independently resample corrected 10k, corrected 100k, original 10k, and original 100k in every replicate",
+    "draws_in_primary_denominator": true,
+    "drop_label_policy": {
+      "manual_override_allowed": false,
+      "minimum_games_per_required_sample": 25,
+      "rules_in_precedence_order": [
+        "unresolved if a required sample has fewer than 25 games or a required interval is unavailable",
+        "weakens if the 100k-minus-30k corrected-versus-original difference-in-differences 95% interval is entirely above zero",
+        "persists if the corrected 100k-minus-30k 95% interval is entirely below zero",
+        "disappears if the corrected 100k-minus-30k 95% interval is entirely at or above zero",
+        "unresolved otherwise"
+      ]
+    },
+    "late_reversal_checkpoints": [
+      0.75,
+      0.9
+    ],
+    "material_change_label_enabled": false,
+    "primary_100k_drop_contrast": "corrected 100k - corrected 30k",
+    "secondary_100k_drop_contrast": "corrected 100k - corrected 10k",
+    "wilson_confidence_level": 0.95
+  },
+  "board": {
+    "advantage_weight": 28,
+    "heitan_turns": 18,
+    "objectives": 9,
+    "pieces_per_player": 27,
+    "placements": 54,
+    "secured_weight": 280,
+    "sites": 25,
+    "supply_points": 16
+  },
+  "board_option": "Board/3x3",
+  "central_supply_diagnostics": {
+    "central_supply_points": [
+      "S11",
+      "S12",
+      "S21",
+      "S22"
+    ],
+    "contest_definition": "at a Heitan-turn end, the same central Supply contains at least one Piece from each player",
+    "early_global_turns": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "first_commitment_search_turns": [
+      1,
+      18
+    ],
+    "never_committed_value": null,
+    "observation_unit": "Heitan-turn end only",
+    "occupation_definition": "at a Heitan-turn end, at least one P1 Piece exists anywhere in the central Supply group",
+    "p1_early_turns": [
+      1,
+      3,
+      5
+    ],
+    "placement_definition": "a recorded P1 placement whose target is a central Supply point"
+  },
+  "constraints": {
+    "modify_game": false,
+    "modify_rules": false,
+    "production_requires_caffeinate": true,
+    "production_requires_tmux": true,
+    "replacement_seeds_allowed": false,
+    "task_count_is_fixed_before_production": true
+  },
+  "experiment_version": "issue-108-v1",
+  "game": "games/Heitan.lud",
+  "historical_sources": {
+    "issue_105_dataset_summary": "experiments/issue-105/results/final/dataset-impact-summary.csv",
+    "issue_105_per_game": "experiments/issue-105/results/final/per-game-scoring.csv",
+    "issue_82_balance": "experiments/issue-82/results/final/balance-by-depth.csv",
+    "issue_82_manifest": "experiments/issue-82/results/production/manifest.json"
+  },
+  "ludii_version": "1.3.14",
+  "operational_parameters": {
+    "jvm_max_heap_by_budget": {
+      "10000": "4g",
+      "100000": "8g",
+      "30000": "4g"
+    },
+    "max_attempts": 3,
+    "retry_states": [
+      "pending",
+      "interrupted",
+      "failed",
+      "corrupt"
+    ],
+    "status": "frozen",
+    "timeout_seconds_per_game": 0,
+    "worker_count_by_budget": {
+      "10000": 2,
+      "100000": 1,
+      "30000": 2
+    }
+  },
+  "pilot": {
+    "excluded_from_analysis": true,
+    "tasks": [
+      {
+        "games": 1,
+        "id": "pilot-3x3-corrected-uct-10000",
+        "iteration_limit": 10000,
+        "seed_first": 1080010000
+      },
+      {
+        "games": 1,
+        "id": "pilot-3x3-corrected-uct-30000",
+        "iteration_limit": 30000,
+        "seed_first": 1080030000
+      },
+      {
+        "games": 1,
+        "id": "pilot-3x3-corrected-uct-100000",
+        "iteration_limit": 100000,
+        "seed_first": 1080100000
+      }
+    ]
+  },
+  "primary_budgets": [
+    10000,
+    30000,
+    100000
+  ],
+  "production": {
+    "base_seed": 1081000000,
+    "game_index_generation_rule": "one-based consecutive integers 1 through 100 within each budget",
+    "primary_tasks": [
+      {
+        "budget_seed_offset": 10000000,
+        "id": "3x3-corrected-uct-10000",
+        "iteration_limit": 10000,
+        "target_games": 100
+      },
+      {
+        "budget_seed_offset": 30000000,
+        "id": "3x3-corrected-uct-30000",
+        "iteration_limit": 30000,
+        "target_games": 100
+      },
+      {
+        "budget_seed_offset": 100000000,
+        "id": "3x3-corrected-uct-100000",
+        "iteration_limit": 100000,
+        "target_games": 100
+      }
+    ],
+    "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index"
+  },
+  "protocol_locked_at_utc": "2026-08-27T22:53:51Z",
+  "protocol_status": "locked",
+  "schema_version": 1,
+  "stability_classification": {
+    "directionally_stabilizing_latest_delta_max": 0.07,
+    "labels": [
+      "directionally stabilizing",
+      "stable / converged-looking",
+      "non-monotonic",
+      "unresolved"
+    ],
+    "manual_override_allowed": false,
+    "minimum_games_per_primary_budget": 25,
+    "non_monotonic_material_delta_min": 0.03,
+    "rules_in_precedence_order": [
+      "unresolved if any primary budget has fewer than 25 validated games or a required estimate is unavailable",
+      "non-monotonic if adjacent deltas have opposite signs and both absolute deltas exceed 0.03",
+      "stable / converged-looking if both adjacent absolute deltas are at most 0.03",
+      "directionally stabilizing if adjacent deltas have the same sign, the later absolute delta is smaller, and it is at most 0.07",
+      "unresolved otherwise"
+    ],
+    "source": "unchanged Issue #47 thresholds reused by Issue #82",
+    "stable_absolute_delta_max": 0.03
+  },
+  "trial_normalization": {
+    "encoding": "UTF-8",
+    "game_path": "games/Heitan.lud",
+    "line_endings": "LF",
+    "raw_publication": false,
+    "relative_path_base": "repository root",
+    "third_party_revalidation_limitation": "raw SHA-256 is generation-time evidence only; third-party replay depends on the published normalized trial"
+  }
+}

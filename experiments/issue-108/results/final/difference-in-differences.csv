@@ -1,0 +1,5 @@
+measure,depth_contrast,corrected_depth_change,original_depth_change,difference_in_differences,bootstrap_95_low,bootstrap_95_high
+p1,100k - 30k,-0.14,-0.27,0.13,-0.06,0.32
+draw,100k - 30k,0.0,0.07,-0.07,-0.18,0.04
+p1,100k - 10k,-0.23,-0.28,0.05,-0.14,0.24
+draw,100k - 10k,0.02,0.06,-0.04,-0.15,0.07
