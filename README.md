@@ -2,9 +2,11 @@
 
 Heitan is a two-player abstract strategy game about building supply networks and competing over Objectives.
 
+[Play Heitan in your browser](https://play.seconddeep.com/)
+
 Each turn, players place three Pieces, deciding whether to concentrate them or spread them across the board.
 
-This repository contains the Ludii implementation of Heitan, along with its rules and analysis materials.
+This repository contains the Ludii implementation of Heitan, its canonical rules, and analysis materials. The browser-playable implementation is maintained in [seconddeep/heitan-web](https://github.com/seconddeep/heitan-web).
 
 ## Documentation
 
@@ -71,6 +73,6 @@ Commercial use, including selling or productizing Heitan or commercial derivativ
 
 ## Status
 
-Heitan is currently under development and analysis.
+Heitan is publicly playable in the browser and remains under active development and analysis.
 
 The 4x4 version has undergone Ludii UCT self-play analysis at search budgets up to 100,000 iterations.
