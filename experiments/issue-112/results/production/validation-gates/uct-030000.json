@@ -1,0 +1,24 @@
+{
+  "aggregate_outcomes_inspected": false,
+  "budget": 30000,
+  "budget_rows_sha256": "0d97110651a93560f355a7567a0fd5bd03886cf59b1e3d48110f35521d37b297",
+  "checked_at_utc": "2026-08-31T18:13:33Z",
+  "checks": [
+    "legal_replay",
+    "natural_completeness",
+    "artifact_hashes",
+    "manifest_identity",
+    "failure_visibility",
+    "resume_integrity"
+  ],
+  "failures": [],
+  "manifest_sha256": "ade628525e1f49ebaeb692551b50724e0351243389ecd2d6752c9c7bffbe1c75",
+  "namespace": "production",
+  "schema_version": 1,
+  "selected_tasks": 100,
+  "states": {
+    "completed": 100
+  },
+  "validated_completed_tasks": 100,
+  "validation_scope": "operational-only-outcome-blind"
+}

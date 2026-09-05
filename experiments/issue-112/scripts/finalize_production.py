@@ -13,7 +13,11 @@ def main() -> None:
     config=protocol.load_config();tasks=protocol.tasks_from_config(config,"production")
     if protocol.PRODUCTION_BLOCK_PATH.exists():raise ValueError("production remains globally blocked")
     if protocol.FINALIZATION_PATH.exists():raise ValueError("production is already finalized")
-    manifest=protocol.reconcile_manifest("production",tasks,protocol.sha256(protocol.CONFIG_PATH))
+    # Validation has already reconciled the terminal manifest.  Loading it here
+    # must be read-only: reconcile_manifest() refreshes the manifest's root
+    # updated_at_utc even when no task changes, which invalidates the hash
+    # recorded by the immediately preceding full-scoring validation.
+    manifest=protocol.load_json(protocol.manifest_path("production"))
     transient=[row["task_id"] for row in manifest["tasks"].values() if row["state"] in protocol.TRANSIENT_STATES]
     if transient:raise ValueError(f"transient tasks remain: {transient[:3]}")
     retryable=[row["task_id"] for row in manifest["tasks"].values() if row["state"] in {"pending","interrupted"} or (row["state"] in {"failed","corrupt"} and int(row["attempts"])<int(config["operational_parameters"]["max_attempts"]))]

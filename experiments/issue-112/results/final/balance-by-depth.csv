@@ -1,0 +1,4 @@
+iteration_limit,planned_games,validated_games,p1_wins,p2_wins,draws,p1_win_rate,p1_wilson_95_low,p1_wilson_95_high,p1_bootstrap_95_low,p1_bootstrap_95_high,decisive_games,decisive_p1_share
+10000,100,100,47,40,13,0.47,0.375108,0.567111,0.37,0.57,87,0.54023
+30000,100,100,48,38,14,0.48,0.384646,0.576834,0.38,0.58,86,0.55814
+100000,100,100,55,31,14,0.55,0.452446,0.643855,0.45,0.65,86,0.639535

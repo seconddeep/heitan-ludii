@@ -1,0 +1,4 @@
+iteration_limit,games,games_with_supply_securing,mean_first_supply_securing_turn_conditional,mean_final_secured_supply_count,mean_supply_placement_share,mean_objective_placement_share
+10000,100,100,7.24,3.85,0.5118055555555554,0.4881944444444445
+30000,100,100,5.92,4.26,0.5177777777777779,0.4822222222222222
+100000,100,100,4.99,4.51,0.5309722222222222,0.46902777777777777
