@@ -1,0 +1,17 @@
+{
+  "all_turns_have_three_placements": true,
+  "legal_move_replay": true,
+  "moves": 72,
+  "natural_end": true,
+  "normalized_trial_sha256": "d6902e74194aff20ce959e6996de25d9ca47088837a3ee074a23b2305d3d6e6e",
+  "p1_placements": 36,
+  "p2_placements": 36,
+  "raw_to_normalized": true,
+  "raw_trial_sha256": "206d9b190ad4982058390d2576f395e359c8e7ead091b360ea9e73dab1cea8b8",
+  "schema_version": 1,
+  "score_reconstructed": false,
+  "turns": 24,
+  "validated": true,
+  "validation_scope": "operational-only",
+  "winner_reconstructed": false
+}

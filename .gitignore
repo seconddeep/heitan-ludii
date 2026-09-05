@@ -13,3 +13,10 @@ experiments/issue-108/results/**/.tmp/
 experiments/issue-108/results/**/manifest.lock
 experiments/issue-108/results/**/raw/
 experiments/issue-108/results/**/replay-input/
+
+# Issue #112 runtime-only locks, raw evidence, and validation staging.
+experiments/issue-112/results/**/.tmp/
+experiments/issue-112/results/**/manifest.lock
+experiments/issue-112/results/**/raw/
+experiments/issue-112/results/**/replay-input/
+experiments/issue-112/results/**/quarantine/

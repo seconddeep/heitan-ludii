@@ -1,0 +1,7 @@
+{
+  "locked_at_utc": "2026-08-30T13:42:54Z",
+  "policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "production_head_commit": "9909f900db85ccfb8633cc8ad2d36d3e0d0ac3ac",
+  "protocol_lock_sha256": "b0e83b91c89bf05418d8c3517cdd85d58b8b1907b1a318a7ac6dba6b647f5f6c",
+  "schema_version": 1
+}

@@ -1,0 +1,4 @@
+iteration_limit,games,secured_decisions,advantage_decisions,objective_piece_decisions,draws,mean_secured_margin_p1_minus_p2,mean_advantage_margin_p1_minus_p2,mean_corrected_piece_margin_p1_minus_p2,persistent_lead_games,mean_first_persistent_lead_turn_conditional
+10000,100,55,25,7,13,0.13,0.37,0.44,87,20.2183908045977
+30000,100,61,21,4,14,0.08,0.6,0.7,86,19.069767441860463
+100000,100,61,18,7,14,0.34,0.06,-0.1,86,19.011627906976745

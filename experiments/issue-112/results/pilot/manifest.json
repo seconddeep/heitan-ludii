@@ -1,0 +1,235 @@
+{
+  "config_sha256_at_creation": "36c0d012740990f9caa1d8d0cf729d4e49c852f2ddd11deac7c04e6c47aceed0",
+  "created_at_utc": "2026-08-30T11:42:58Z",
+  "namespace": "pilot",
+  "production_started_at_utc": null,
+  "schema_version": 1,
+  "tasks": {
+    "issue-112-v1-pilot-uct-010000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "bfb1ae1d6b7df58e74353960013f37d75cea53157243c9b6e8ef48db399847bd",
+        "result": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-010000-g0001/result.csv",
+        "result_sha256": "2781ec79359fb0eaf614481164ad2950a69ae705509111fc7afddb1b541b5b15",
+        "trial": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-010000-g0001/pilot-4x4-corrected-uct-10000-0001.trl",
+        "trial_sha256": "4b33008deaef159234572cb9ec2faaf8f746e233c867fa2607b3ceb49414e4a0",
+        "validation": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-010000-g0001/validation.json",
+        "validation_sha256": "fce3540c8a4748da2469181ac9f15ad0fb34b0a4383901eef6ae28f150cb40e4"
+      },
+      "attempts": 2,
+      "completed_at_utc": "2026-08-30T11:52:07Z",
+      "elapsed_seconds": 267.215,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-30T11:42:58Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-30T11:42:58Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T11:42:58Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T11:47:15Z",
+          "error": "Java exit 1: 256.89 real       319.10 user         1.69 sys\ntime: sysctl kern.clockrate: Operation not permitted",
+          "state": "failed"
+        },
+        {
+          "at_utc": "2026-08-30T11:47:40Z",
+          "attempt": 2,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T11:47:40Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T11:52:05Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-30T11:52:07Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-4x4-corrected-uct-10000",
+      "experiment_version": "issue-112-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 10000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1120010000,
+      "state": "completed",
+      "task_id": "issue-112-v1-pilot-uct-010000-g0001",
+      "updated_at_utc": "2026-08-30T11:52:07Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "moves": 72,
+        "natural_end": true,
+        "normalized_trial_sha256": "4b33008deaef159234572cb9ec2faaf8f746e233c867fa2607b3ceb49414e4a0",
+        "p1_placements": 36,
+        "p2_placements": 36,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "bfb1ae1d6b7df58e74353960013f37d75cea53157243c9b6e8ef48db399847bd",
+        "schema_version": 1,
+        "score_reconstructed": false,
+        "turns": 24,
+        "validated": true,
+        "validation_scope": "operational-only",
+        "winner_reconstructed": false
+      }
+    },
+    "issue-112-v1-pilot-uct-030000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "5add690d9eb79dc8479021003955e5ad8fb61a66515ff98cc76a0492501eb057",
+        "result": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-030000-g0001/result.csv",
+        "result_sha256": "6fee98a50c606a16f112a77484adb666fa53f27367fcfd5c32095bece4894d4e",
+        "trial": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-030000-g0001/pilot-4x4-corrected-uct-30000-0001.trl",
+        "trial_sha256": "bebd8a494da04d0a739cf5f66634a9f28c974cd6bb23d7a934a138197a8aeced",
+        "validation": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-030000-g0001/validation.json",
+        "validation_sha256": "809c5216647fb59dc40a8d0aeaabc35615f38546728c729f010bc0cb3de8ed42"
+      },
+      "attempts": 1,
+      "completed_at_utc": "2026-08-30T12:06:18Z",
+      "elapsed_seconds": 835.932,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-30T11:42:58Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-30T11:52:23Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T11:52:23Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T12:06:17Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-30T12:06:18Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-4x4-corrected-uct-30000",
+      "experiment_version": "issue-112-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 30000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1120030000,
+      "state": "completed",
+      "task_id": "issue-112-v1-pilot-uct-030000-g0001",
+      "updated_at_utc": "2026-08-30T12:06:18Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "moves": 72,
+        "natural_end": true,
+        "normalized_trial_sha256": "bebd8a494da04d0a739cf5f66634a9f28c974cd6bb23d7a934a138197a8aeced",
+        "p1_placements": 36,
+        "p2_placements": 36,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "5add690d9eb79dc8479021003955e5ad8fb61a66515ff98cc76a0492501eb057",
+        "schema_version": 1,
+        "score_reconstructed": false,
+        "turns": 24,
+        "validated": true,
+        "validation_scope": "operational-only",
+        "winner_reconstructed": false
+      }
+    },
+    "issue-112-v1-pilot-uct-100000-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "900f44eb3b601437edd44063bba2dbc37dd3c1eda89c887014a36dfd01c6f081",
+        "result": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-100000-g0001/result.csv",
+        "result_sha256": "da25cb7e9f62269321b16b7cf5947649af8b0e9b72e8b5cd6c080262cd25f34f",
+        "trial": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-100000-g0001/pilot-4x4-corrected-uct-100000-0001.trl",
+        "trial_sha256": "482642ec660515f3025f37705a6ecc2f82c1a6269b46c23cf9f0c8bec5c2bcb1",
+        "validation": "experiments/issue-112/results/pilot/tasks/issue-112-v1-pilot-uct-100000-g0001/validation.json",
+        "validation_sha256": "afe38b54d553515d1971bc83ba86c8adbfb1529f519cd5826c160eb2d218aef3"
+      },
+      "attempts": 1,
+      "completed_at_utc": "2026-08-30T13:02:12Z",
+      "elapsed_seconds": 3342.056,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-08-30T11:42:58Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-08-30T12:06:30Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T12:06:30Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-08-30T13:02:10Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-08-30T13:02:12Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-4x4-corrected-uct-100000",
+      "experiment_version": "issue-112-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 100000,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1120100000,
+      "state": "completed",
+      "task_id": "issue-112-v1-pilot-uct-100000-g0001",
+      "updated_at_utc": "2026-08-30T13:02:12Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "moves": 72,
+        "natural_end": true,
+        "normalized_trial_sha256": "482642ec660515f3025f37705a6ecc2f82c1a6269b46c23cf9f0c8bec5c2bcb1",
+        "p1_placements": 36,
+        "p2_placements": 36,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "900f44eb3b601437edd44063bba2dbc37dd3c1eda89c887014a36dfd01c6f081",
+        "schema_version": 1,
+        "score_reconstructed": false,
+        "turns": 24,
+        "validated": true,
+        "validation_scope": "operational-only",
+        "winner_reconstructed": false
+      }
+    }
+  },
+  "updated_at_utc": "2026-08-30T13:39:36Z"
+}

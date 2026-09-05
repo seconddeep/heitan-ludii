@@ -1,0 +1,39 @@
+{
+  "architecture": "arm64",
+  "artifact_manifest_sha256": "f46986c5903e2d3480a04f8fecd4e613f02c041d9b3d388cfd12a632f1fc444c",
+  "config_sha256": "3daf7376b093744afd2e4b4489bb3246e3bd607e2c49e9a2b5c3e54f19d2f289",
+  "deterministic_regeneration_verified": true,
+  "finalization_sha256": "8f0000088282619ecbc5e95be2bf85868401253dd47b216360deb26aca138b55",
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "generated_at_utc": "2026-09-05T05:56:41Z",
+  "manifest_sha256": "58698e307beb4ca8d1a41de9b356d8191612559a1f7c311914f6a60e48bf2975",
+  "os": "Darwin",
+  "output_hashes": {
+    "experiments/issue-112/results/final/analysis.json": "b295282c0073c334df9f5a9791d908ca028a9f28afbe86b7be50dbd5d2d5eea4",
+    "experiments/issue-112/results/final/balance-by-depth.csv": "f3e35187d68e8829bc41bef2c4d14767a81c91e96069e8512a96f93fa31ccc59",
+    "experiments/issue-112/results/final/classification.csv": "5a56103cbc1d3a31fc67170c703d831e12a09bd4106554813d095acadaccf7ca",
+    "experiments/issue-112/results/final/corrected-cross-board-contrasts.csv": "30cbe6c4c7136baddabcb301619b2a07a2d5a0f1f09d75a47da7cd8bf88b4454",
+    "experiments/issue-112/results/final/corrected-cross-board-difference-in-differences.csv": "82b91fe6aff86d69bb2c464d6c7eceb8f059e0083930501a82ef8bc32e111b8d",
+    "experiments/issue-112/results/final/corrected-depth-contrasts.csv": "5c284742a7c3b28dc7b27e3786d93bc0746d33d50f98b2311873377924df031c",
+    "experiments/issue-112/results/final/corrected-versus-original-difference-in-differences.csv": "a78cc67626755bcfe0265dea1f8441296d4c2a9de3acd9a0620c6c09973c3447",
+    "experiments/issue-112/results/final/failures.csv": "7019e0407283c38502c011045b78306a7f360ff318165c0a2bb852b2f691eedc",
+    "experiments/issue-112/results/final/game-diagnostics.csv": "f5a9953396f9743c6b53eea99ed3daa14382d7fd6fc4d8d1fece2e4725e5d8d1",
+    "experiments/issue-112/results/final/late-reversal-summary.csv": "a4f02e91679e647df9950c30a4432c77ca92a9116f87147b8cb5b21192860c95",
+    "experiments/issue-112/results/final/late-reversals.csv": "6e89cdcc521b11af4dc680605eecf429b3e4140b19df24550557aba2331ebb20",
+    "experiments/issue-112/results/final/matched-budget-comparisons.csv": "3da18c68545b5888156663a77b3eda0186a4fec8b2d1f2ed0db66563bda61bea",
+    "experiments/issue-112/results/final/public-safety-audit.json": "f83c0c14623dae04db632943181978058bd2b2c1ca75937da3fbe1d93e0c9f6a",
+    "experiments/issue-112/results/final/regeneration-vs-terminal-rescore.csv": "b679f8514c6cbbfdb0f5f3a87c9539f83b3adb419a02551ed9e01eb0299b988e",
+    "experiments/issue-112/results/final/structural-summary.csv": "7b28bb33fdb4e09148cf5150773607748fde5b69cd77f597ce9cbf817850e0aa",
+    "experiments/issue-112/results/final/supply-diagnostics-by-game.csv": "ebb336148dacc5282e6c4518d690ac2d136c3a5b498efd03d151fe4f4e6d8ff9",
+    "experiments/issue-112/results/final/supply-diagnostics-summary.csv": "19226f9928bbdea59ba1c4b5055be982cae0eec78d7c5f9dd3608f8b1f9dbdf5"
+  },
+  "protocol_lock_sha256": "b0e83b91c89bf05418d8c3517cdd85d58b8b1907b1a318a7ac6dba6b647f5f6c",
+  "python": "3.9.6",
+  "rerun_commands": [
+    "python3 experiments/issue-112/scripts/validate_trials.py --namespace production --full-scoring",
+    "python3 experiments/issue-112/scripts/finalize_production.py",
+    "python3 experiments/issue-112/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "schema_version": 1,
+  "source_lock_sha256": "66b49a63fad9f2b99d3b14bb8714b10f24d28b5f3fa10a3d7012f4e0fefc3bcf"
+}

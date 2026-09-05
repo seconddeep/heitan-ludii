@@ -1,0 +1,7 @@
+iteration_limit,measure,contrast,games_4x4,games_3x3,rate_4x4,rate_3x3,difference,bootstrap_95_low,bootstrap_95_high
+10000,p1,corrected 4x4 - corrected 3x3,100,100,0.47,0.63,-0.16,-0.3,-0.03
+10000,draw,corrected 4x4 - corrected 3x3,100,100,0.13,0.11,0.02,-0.07,0.11
+30000,p1,corrected 4x4 - corrected 3x3,100,100,0.48,0.54,-0.06,-0.2,0.08
+30000,draw,corrected 4x4 - corrected 3x3,100,100,0.14,0.13,0.01,-0.09,0.1
+100000,p1,corrected 4x4 - corrected 3x3,100,100,0.55,0.4,0.15,0.01,0.28
+100000,draw,corrected 4x4 - corrected 3x3,100,100,0.14,0.13,0.01,-0.09,0.1
