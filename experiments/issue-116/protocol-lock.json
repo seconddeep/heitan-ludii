@@ -1,0 +1,81 @@
+{
+  "config_sha256": "fe9c2d9b59b17a275c10c4deec73cb053d6520b4628cd675999fd3a51f63256c",
+  "environment": {
+    "architecture": "arm64",
+    "cpu": "Apple M4",
+    "java": "openjdk 21.0.12 2026-07-21 LTS",
+    "os": "Darwin",
+    "os_version": "26.6.2",
+    "physical_ram_bytes": 17179869184,
+    "python": "3.9.6",
+    "worker_count": 1
+  },
+  "experiment_version": "issue-116-v1",
+  "game_definition_commit": "b2952dad43c4ef4c0ad5429221d341c58268f16a",
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "ludii_jar_sha256": "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+  "ludii_version": "1.3.14",
+  "memory_roles": {
+    "gc_evidence": "diagnostic heap-pressure evidence",
+    "jvm_xmx": "configured Java heap ceiling; not compared as an RSS ratio",
+    "peak_rss": "whole-process machine-safety measurement",
+    "physical_ram": "machine-safety denominator"
+  },
+  "operational_parameters": {
+    "gc_logging": {
+      "java_argument": "-Xlog:gc*,safepoint:file={gc_log}:time,uptime,level,tags",
+      "role": "diagnostic heap-pressure evidence; not a machine-memory ratio"
+    },
+    "hard_rss_fraction_of_physical_ram": 0.75,
+    "hard_timeout_seconds_per_game": 28800,
+    "jvm_xmx": "8g",
+    "soft_rss_fraction_of_physical_ram": 0.6,
+    "soft_runtime_seconds_per_game": 7200,
+    "status": "postpilot-frozen"
+  },
+  "pilot_operational_evidence": {
+    "all_replays_validated": true,
+    "incidents_sha256": "daeef63cd45b064ec8969e3b769973fe2d08a924e8ff9c710c7a2f38ecbd3af5",
+    "manifest_sha256": "e8591e3ed6a908d4dc2e974fe8f0070e23a8b2a103ff9149ae32ba7a2cbada18",
+    "maximum_elapsed_seconds": 59.895,
+    "maximum_peak_rss_bytes": 720748544,
+    "outcomes_inspected": false,
+    "tasks": 3
+  },
+  "postpilot_locked_at_utc": "2026-09-07T01:45:42Z",
+  "rerun_command": "caffeinate -i env HEITAN116_CAFFEINATE=1 HEITAN116_RUNNER_ID=opaque LUDII_JAR=$LUDII_JAR python3 experiments/issue-116/scripts/run_benchmark.py measured --board BOARD --budget UCT",
+  "schema_version": 1,
+  "source_derived_board_values": {
+    "6x6": {
+      "advantage_weight": 73,
+      "objectives": 36,
+      "pieces_per_player": 72,
+      "secured_weight": 2701,
+      "sites": 85,
+      "supply_points": 49,
+      "total_placements": 144,
+      "turns": 48
+    },
+    "7x7": {
+      "advantage_weight": 73,
+      "objectives": 49,
+      "pieces_per_player": 72,
+      "secured_weight": 3650,
+      "sites": 113,
+      "supply_points": 64,
+      "total_placements": 144,
+      "turns": 48
+    },
+    "8x8": {
+      "advantage_weight": 85,
+      "objectives": 64,
+      "pieces_per_player": 84,
+      "secured_weight": 5525,
+      "sites": 145,
+      "supply_points": 81,
+      "total_placements": 168,
+      "turns": 56
+    }
+  },
+  "source_lock_sha256": "ffc13477413b24220bcbbdfa68e7d306393b1f6dc21e3346f45e0a9e6be67673"
+}

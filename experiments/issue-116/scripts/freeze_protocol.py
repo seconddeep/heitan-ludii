@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 from pathlib import Path
 import platform
@@ -15,7 +17,7 @@ from run_benchmark import physical_ram_bytes
 
 
 def sources() -> list[Path]:
-    names = ["README.md", "config.json", "prepilot-lock.json", "scripts/protocol.py", "scripts/run_benchmark.py", "scripts/freeze_protocol.py",
+    names = ["README.md", "config.json", "prepilot-lock.json", "pilot-incidents.json", "scripts/protocol.py", "scripts/run_benchmark.py", "scripts/freeze_protocol.py",
              "scripts/summarize.py", "scripts/status.py", "scripts/public_safety_audit.py",
              "scripts/HeitanBenchmark.java", "scripts/HeitanBenchmarkReplay.java", "scripts/test_protocol.py"]
     return [protocol.ISSUE_ROOT / name for name in names] + [protocol.REPO_ROOT / "games/Heitan.lud"]
@@ -25,6 +27,11 @@ def safe_cpu() -> str:
     completed=subprocess.run(["system_profiler","SPHardwareDataType"],text=True,capture_output=True,check=True)
     match=re.search(r"^\s*Chip:\s*(.+?)\s*$",completed.stdout,re.MULTILINE)
     return match.group(1) if match else "unavailable"
+
+
+def canonical_task_hash(rows: list[protocol.Task]) -> str:
+    encoded=json.dumps([row.__dict__ for row in rows],sort_keys=True,separators=(",",":")).encode()
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def main() -> None:
@@ -43,6 +50,10 @@ def main() -> None:
     config=protocol.load_config();protocol.validate_prepilot_config(config)
     if config["protocol_status"]!="prepilot-frozen" or protocol.LOCK_PATH.exists() or protocol.SOURCE_LOCK_PATH.exists():
         raise ValueError("post-pilot freeze may run exactly once from the prepilot-frozen state")
+    prepilot=protocol.load_json(protocol.ISSUE_ROOT/"prepilot-lock.json")
+    if prepilot["config_sha256"]!=protocol.sha256(protocol.CONFIG_PATH):raise ValueError("config differs from prepilot lock")
+    if prepilot["measured_task_identity_sha256"]!=canonical_task_hash(protocol.tasks(config,"measured")):raise ValueError("measured identities differ from prepilot lock")
+    if prepilot["pilot_task_identity_sha256"]!=canonical_task_hash(protocol.tasks(config,"pilot")):raise ValueError("pilot identities differ from prepilot lock")
     pilot_path=protocol.manifest_path("pilot")
     if not pilot_path.is_file():raise ValueError("pilot manifest is missing")
     manifest=protocol.load_json(pilot_path);pilot_tasks=protocol.tasks(config,"pilot")
@@ -66,7 +77,7 @@ def main() -> None:
     protocol.atomic_json(protocol.SOURCE_LOCK_PATH,source_lock)
     java=subprocess.run(["java","--version"],text=True,capture_output=True,check=True);java_version=(java.stdout or java.stderr).splitlines()[0]
     game_commit=subprocess.run(["git","log","-1","--format=%H","--",config["game"]],cwd=protocol.REPO_ROOT,text=True,capture_output=True,check=True).stdout.strip()
-    pilot_evidence={"tasks":len(rows),"manifest_sha256":protocol.sha256(pilot_path),"outcomes_inspected":False,
+    pilot_evidence={"tasks":len(rows),"manifest_sha256":protocol.sha256(pilot_path),"incidents_sha256":protocol.sha256(protocol.ISSUE_ROOT/"pilot-incidents.json"),"outcomes_inspected":False,
                     "maximum_elapsed_seconds":max(float(row["elapsed_seconds"]) for row in rows),
                     "maximum_peak_rss_bytes":max(int(row["peak_rss_bytes"]) for row in rows if row["peak_rss_bytes"] is not None),
                     "all_replays_validated":True}

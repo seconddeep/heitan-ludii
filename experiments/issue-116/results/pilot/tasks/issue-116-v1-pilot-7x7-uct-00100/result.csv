@@ -1,0 +1,2 @@
+experiment_id,board,seed,iteration_limit,completed,end_type,moves,turns,elapsed_seconds
+issue-116-v1-pilot-7x7-uct-00100,7x7,1160070100,100,true,NaturalEnd,144,48,33.274

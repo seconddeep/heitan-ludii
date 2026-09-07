@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "game_outcomes_inspected": false,
+  "incidents": [
+    {
+      "attempt": 1,
+      "scope": "all three fixed pilot identities",
+      "classification": "measurement-wrapper environment failure",
+      "detail": "sandbox denied process-table access before Java launch",
+      "seed_replaced": false
+    },
+    {
+      "attempt": 2,
+      "scope": "all three fixed pilot identities",
+      "classification": "measurement-wrapper environment failure",
+      "detail": "sandbox denied the platform time utility's clock sysctl after Java completed",
+      "seed_replaced": false
+    },
+    {
+      "attempt": 3,
+      "scope": "all three fixed pilot identities",
+      "classification": "validated completion with unrestricted platform metrics",
+      "seed_replaced": false
+    }
+  ]
+}
