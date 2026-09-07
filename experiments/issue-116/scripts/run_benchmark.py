@@ -64,7 +64,10 @@ def update(namespace: str, all_tasks: list[protocol.Task], config_hash: str, tas
 
 
 def process_group_rss_bytes(group: int) -> int | None:
-    completed=subprocess.run(["ps","-o","rss=","-g",str(group)],text=True,capture_output=True,check=False)
+    try:
+        completed=subprocess.run(["ps","-o","rss=","-g",str(group)],text=True,capture_output=True,check=False)
+    except OSError:
+        return None
     if completed.returncode:return None
     values=[int(value.strip())*1024 for value in completed.stdout.splitlines() if value.strip().isdigit()]
     return sum(values) if values else None
@@ -119,7 +122,7 @@ def run_task(task: protocol.Task, namespace: str, all_tasks: list[protocol.Task]
     manifest = protocol.load_json(protocol.manifest_path(namespace)) if protocol.manifest_path(namespace).exists() else protocol.empty_manifest(namespace, all_tasks, config_hash)
     current = manifest["tasks"][task.task_id]
     if current["state"] == "completed": return "completed"
-    if current["state"] == "failed": return "failed"
+    if current["state"] == "failed" and namespace == "measured": return "failed"
     output_root = protocol.RESULTS_ROOT / namespace / "tasks" / task.task_id
     temp_root = protocol.RESULTS_ROOT / namespace / ".tmp";temp_root.mkdir(parents=True, exist_ok=True)
     task_dir = Path(tempfile.mkdtemp(prefix=f"{task.task_id}-", dir=temp_root))

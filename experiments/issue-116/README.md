@@ -41,6 +41,11 @@ heap ceiling. GC logs are separate diagnostic evidence for heap pressure and
 are not treated as a substitute for RSS. RSS and `-Xmx` are never divided by
 each other to create a feasibility threshold.
 
+Live process-group RSS sampling is used when the execution environment permits
+process-table access. If it does not, the limitation is recorded and the
+platform `time` utility supplies post-process peak RSS; OOM/fatal-JVM handling,
+the fixed heap ceiling, and board-local stopping remain active.
+
 ## Mechanical classification
 
 - **feasible**: 3/3 validated completions and all soft limits satisfied;
