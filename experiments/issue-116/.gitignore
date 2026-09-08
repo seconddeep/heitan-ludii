@@ -1,0 +1,5 @@
+results/**/.tmp/
+results/**/raw/
+results/**/quarantine/
+results/**/*.lock
+scripts/__pycache__/

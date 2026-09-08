@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_version": "issue-116-v1",
+  "locked_at_utc": "2026-09-07T01:35:00Z",
+  "config_sha256": "eae657cffed142033739902328ecbeabda08b7358a4ad7a143bafc3435c3b56d",
+  "measured_task_identity_sha256": "cbfc8ae5002e464e545281b4d52e8a163de9055cec988da6bc789c8f972eb1b3",
+  "pilot_task_identity_sha256": "67bc087c03dad89a208706a6b01f2b1eee217ba2ad35f1a5af7d64870fe48bb5",
+  "board_uct_matrix": {
+    "boards": ["6x6", "7x7", "8x8"],
+    "uct_budgets": [1000, 3000, 10000, 30000]
+  },
+  "measured_games_per_condition": 3,
+  "primary_worker_count": 1,
+  "failed_seed_replacement_allowed": false,
+  "game_outcomes_in_scope": false,
+  "status": "frozen-before-outcome-blind-pilot"
+}

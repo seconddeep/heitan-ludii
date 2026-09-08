@@ -1,0 +1,15 @@
+{
+  "board": "8x8",
+  "classification": "borderline",
+  "failed_tasks": 0,
+  "manual_override": false,
+  "maximum_elapsed_seconds": 17540.406,
+  "maximum_peak_rss_bytes": 7151763456,
+  "median_elapsed_seconds": 16791.247,
+  "median_peak_rss_bytes": 7150780416,
+  "not_attempted_tasks": 0,
+  "planned_games": 3,
+  "schema_version": 1,
+  "uct_iterations": 30000,
+  "validated_completions": 3
+}

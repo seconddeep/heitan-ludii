@@ -1,0 +1,78 @@
+{
+  "files": [
+    {
+      "bytes": 3676,
+      "path": "experiments/issue-116/README.md",
+      "sha256": "3f36fc79ff15650a870fba579b66259297ea18d7547e827ba63d858f1a0e319d"
+    },
+    {
+      "bytes": 3976,
+      "path": "experiments/issue-116/config.json",
+      "sha256": "fe9c2d9b59b17a275c10c4deec73cb053d6520b4628cd675999fd3a51f63256c"
+    },
+    {
+      "bytes": 705,
+      "path": "experiments/issue-116/prepilot-lock.json",
+      "sha256": "dfb90e28e21ede166b6a7f531e4604a1d313c272869c3ef5fe8045ab4e5b83f9"
+    },
+    {
+      "bytes": 809,
+      "path": "experiments/issue-116/pilot-incidents.json",
+      "sha256": "daeef63cd45b064ec8969e3b769973fe2d08a924e8ff9c710c7a2f38ecbd3af5"
+    },
+    {
+      "bytes": 10204,
+      "path": "experiments/issue-116/scripts/protocol.py",
+      "sha256": "5b79d21666f529406e3a31e8298456efff7961bb308c5084cf310eb94e1ea9c1"
+    },
+    {
+      "bytes": 15153,
+      "path": "experiments/issue-116/scripts/run_benchmark.py",
+      "sha256": "0d7c46689d6bd866be97820a01695560800dc08a5cc02ef79e915ec21b0114d5"
+    },
+    {
+      "bytes": 6941,
+      "path": "experiments/issue-116/scripts/freeze_protocol.py",
+      "sha256": "d258cf61e043c6931b8c10a869f36bd785febd9def64ebacea1d3c597ed2190e"
+    },
+    {
+      "bytes": 9019,
+      "path": "experiments/issue-116/scripts/summarize.py",
+      "sha256": "c2dcaf69cdf338a6e6cfb6ee2b39a3b676ff335a2ddec6131c3864ab53bbc752"
+    },
+    {
+      "bytes": 388,
+      "path": "experiments/issue-116/scripts/status.py",
+      "sha256": "5c423f238af176a024f4f7caa46c9ac12655c5a87b2a8903f2d7e9060371842c"
+    },
+    {
+      "bytes": 1450,
+      "path": "experiments/issue-116/scripts/public_safety_audit.py",
+      "sha256": "2715dfd524594ba929adca6bb45b95f09618cd01742d55eb5f0113a69dfa67d6"
+    },
+    {
+      "bytes": 3616,
+      "path": "experiments/issue-116/scripts/HeitanBenchmark.java",
+      "sha256": "2fcf75b9571bf3c79508edce0bf1aaefb915beedccdf08652d6c947bda482c3e"
+    },
+    {
+      "bytes": 3050,
+      "path": "experiments/issue-116/scripts/HeitanBenchmarkReplay.java",
+      "sha256": "be881ce17f5236b39c90448196e8a5de47e8ed777313b02af87eb115fa94cfac"
+    },
+    {
+      "bytes": 1304,
+      "path": "experiments/issue-116/scripts/test_protocol.py",
+      "sha256": "33abb16c4ef8c97bae387179374f619d8051abed5757b18635fa029976f59b01"
+    },
+    {
+      "bytes": 39028,
+      "path": "games/Heitan.lud",
+      "sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de"
+    }
+  ],
+  "game_outcomes_in_scope": false,
+  "locked_before_measured_benchmark": true,
+  "outcomes_inspected_during_lock": false,
+  "schema_version": 1
+}

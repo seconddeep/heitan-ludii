@@ -1,0 +1,10 @@
+{
+  "aggregate_outcomes_inspected": false,
+  "legal_replay": true,
+  "natural_completion": true,
+  "piece_totals_match_source_derived_values": true,
+  "schema_version": 1,
+  "three_placements_per_turn": true,
+  "validated": true,
+  "validation_scope": "operational-only-outcome-blind"
+}
