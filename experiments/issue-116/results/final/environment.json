@@ -1,0 +1,17 @@
+{
+  "architecture": "arm64",
+  "cpu": "Apple M4",
+  "game_outcomes_inspected": false,
+  "gc_logging": {
+    "java_argument": "-Xlog:gc*,safepoint:file={gc_log}:time,uptime,level,tags",
+    "role": "diagnostic heap-pressure evidence; not a machine-memory ratio"
+  },
+  "java": "openjdk 21.0.12 2026-07-21 LTS",
+  "jvm_xmx": "8g",
+  "os": "Darwin",
+  "os_version": "26.6.2",
+  "physical_ram_bytes": 17179869184,
+  "python": "3.9.6",
+  "schema_version": 1,
+  "worker_count": 1
+}

@@ -1,0 +1,4 @@
+board,technically_completable_max_uct,recommended_repeated_production_max_uct
+6x6,30000,10000
+7x7,30000,10000
+8x8,30000,10000

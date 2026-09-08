@@ -1,0 +1,15 @@
+{
+  "board": "6x6",
+  "classification": "feasible",
+  "failed_tasks": 0,
+  "manual_override": false,
+  "maximum_elapsed_seconds": 750.397,
+  "maximum_peak_rss_bytes": 2820030464,
+  "median_elapsed_seconds": 695.776,
+  "median_peak_rss_bytes": 2697723904,
+  "not_attempted_tasks": 0,
+  "planned_games": 3,
+  "schema_version": 1,
+  "uct_iterations": 3000,
+  "validated_completions": 3
+}

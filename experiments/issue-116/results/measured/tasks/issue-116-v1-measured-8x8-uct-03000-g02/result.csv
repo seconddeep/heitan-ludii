@@ -1,0 +1,2 @@
+experiment_id,board,seed,iteration_limit,completed,end_type,moves,turns,elapsed_seconds
+issue-116-v1-measured-8x8-uct-03000-g02,8x8,1168030001,3000,true,NaturalEnd,168,56,1665.229

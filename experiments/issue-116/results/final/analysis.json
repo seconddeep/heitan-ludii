@@ -1,0 +1,343 @@
+{
+  "conditions": [
+    {
+      "board": "6x6",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 261.059,
+      "maximum_peak_rss_bytes": 1722433536,
+      "median_elapsed_seconds": 243.171,
+      "median_peak_rss_bytes": 1595703296,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 1000,
+      "validated_completions": 3
+    },
+    {
+      "board": "6x6",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 750.397,
+      "maximum_peak_rss_bytes": 2820030464,
+      "median_elapsed_seconds": 695.776,
+      "median_peak_rss_bytes": 2697723904,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 3000,
+      "validated_completions": 3
+    },
+    {
+      "board": "6x6",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 2560.509,
+      "maximum_peak_rss_bytes": 5980979200,
+      "median_elapsed_seconds": 2325.126,
+      "median_peak_rss_bytes": 5657427968,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 10000,
+      "validated_completions": 3
+    },
+    {
+      "board": "6x6",
+      "classification": "borderline",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 7505.913,
+      "maximum_peak_rss_bytes": 6853509120,
+      "median_elapsed_seconds": 7327.109,
+      "median_peak_rss_bytes": 6796066816,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 30000,
+      "validated_completions": 3
+    },
+    {
+      "board": "7x7",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 358.401,
+      "maximum_peak_rss_bytes": 2233466880,
+      "median_elapsed_seconds": 325.62,
+      "median_peak_rss_bytes": 2093973504,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 1000,
+      "validated_completions": 3
+    },
+    {
+      "board": "7x7",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 1011.709,
+      "maximum_peak_rss_bytes": 3154657280,
+      "median_elapsed_seconds": 935.515,
+      "median_peak_rss_bytes": 3026550784,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 3000,
+      "validated_completions": 3
+    },
+    {
+      "board": "7x7",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 3013.361,
+      "maximum_peak_rss_bytes": 6868402176,
+      "median_elapsed_seconds": 2969.733,
+      "median_peak_rss_bytes": 6028656640,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 10000,
+      "validated_completions": 3
+    },
+    {
+      "board": "7x7",
+      "classification": "borderline",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 9633.692,
+      "maximum_peak_rss_bytes": 7597080576,
+      "median_elapsed_seconds": 9183.867,
+      "median_peak_rss_bytes": 7160348672,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 30000,
+      "validated_completions": 3
+    },
+    {
+      "board": "8x8",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 589.824,
+      "maximum_peak_rss_bytes": 2363949056,
+      "median_elapsed_seconds": 587.734,
+      "median_peak_rss_bytes": 2189377536,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 1000,
+      "validated_completions": 3
+    },
+    {
+      "board": "8x8",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 1872.703,
+      "maximum_peak_rss_bytes": 3263627264,
+      "median_elapsed_seconds": 1706.728,
+      "median_peak_rss_bytes": 3226419200,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 3000,
+      "validated_completions": 3
+    },
+    {
+      "board": "8x8",
+      "classification": "feasible",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 5505.846,
+      "maximum_peak_rss_bytes": 5385060352,
+      "median_elapsed_seconds": 5455.789,
+      "median_peak_rss_bytes": 5314150400,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 10000,
+      "validated_completions": 3
+    },
+    {
+      "board": "8x8",
+      "classification": "borderline",
+      "failed_tasks": 0,
+      "manual_override": false,
+      "maximum_elapsed_seconds": 17540.406,
+      "maximum_peak_rss_bytes": 7151763456,
+      "median_elapsed_seconds": 16791.247,
+      "median_peak_rss_bytes": 7150780416,
+      "not_attempted_tasks": 0,
+      "planned_games": 3,
+      "schema_version": 1,
+      "uct_iterations": 30000,
+      "validated_completions": 3
+    }
+  ],
+  "game_outcomes_inspected": false,
+  "memory_scaling_note": "Use adjacent median peak-RSS ratios separately from JVM heap configuration.",
+  "recommended_ceilings": [
+    {
+      "board": "6x6",
+      "recommended_repeated_production_max_uct": 10000,
+      "technically_completable_max_uct": 30000
+    },
+    {
+      "board": "7x7",
+      "recommended_repeated_production_max_uct": 10000,
+      "technically_completable_max_uct": 30000
+    },
+    {
+      "board": "8x8",
+      "recommended_repeated_production_max_uct": 10000,
+      "technically_completable_max_uct": 30000
+    }
+  ],
+  "runtime_scaling_note": "Use adjacent median elapsed-time ratios; no linearity is assumed.",
+  "scaling": [
+    {
+      "board_or_uct": "6x6",
+      "dimension": "uct_at_fixed_board",
+      "from": 1000,
+      "median_elapsed_ratio": 2.861262239329525,
+      "median_peak_rss_ratio": 1.6906174918372796,
+      "to": 3000
+    },
+    {
+      "board_or_uct": "6x6",
+      "dimension": "uct_at_fixed_board",
+      "from": 3000,
+      "median_elapsed_ratio": 3.341773789265511,
+      "median_peak_rss_ratio": 2.0971115537848606,
+      "to": 10000
+    },
+    {
+      "board_or_uct": "6x6",
+      "dimension": "uct_at_fixed_board",
+      "from": 10000,
+      "median_elapsed_ratio": 3.1512739524653717,
+      "median_peak_rss_ratio": 1.2012644004378776,
+      "to": 30000
+    },
+    {
+      "board_or_uct": "7x7",
+      "dimension": "uct_at_fixed_board",
+      "from": 1000,
+      "median_elapsed_ratio": 2.873026841103126,
+      "median_peak_rss_ratio": 1.4453625025429166,
+      "to": 3000
+    },
+    {
+      "board_or_uct": "7x7",
+      "dimension": "uct_at_fixed_board",
+      "from": 3000,
+      "median_elapsed_ratio": 3.1744365403013317,
+      "median_peak_rss_ratio": 1.9919231726990245,
+      "to": 10000
+    },
+    {
+      "board_or_uct": "7x7",
+      "dimension": "uct_at_fixed_board",
+      "from": 10000,
+      "median_elapsed_ratio": 3.092489122759521,
+      "median_peak_rss_ratio": 1.1877187737797588,
+      "to": 30000
+    },
+    {
+      "board_or_uct": "8x8",
+      "dimension": "uct_at_fixed_board",
+      "from": 1000,
+      "median_elapsed_ratio": 2.903912314074054,
+      "median_peak_rss_ratio": 1.4736696375786693,
+      "to": 3000
+    },
+    {
+      "board_or_uct": "8x8",
+      "dimension": "uct_at_fixed_board",
+      "from": 3000,
+      "median_elapsed_ratio": 3.19663648806371,
+      "median_peak_rss_ratio": 1.6470737590453217,
+      "to": 10000
+    },
+    {
+      "board_or_uct": "8x8",
+      "dimension": "uct_at_fixed_board",
+      "from": 10000,
+      "median_elapsed_ratio": 3.0776936204827567,
+      "median_peak_rss_ratio": 1.3456112224448897,
+      "to": 30000
+    },
+    {
+      "board_or_uct": 1000,
+      "dimension": "board_at_fixed_uct",
+      "from": "6x6",
+      "median_elapsed_ratio": 1.3390577001369408,
+      "median_peak_rss_ratio": 1.31225742858903,
+      "to": "7x7"
+    },
+    {
+      "board_or_uct": 1000,
+      "dimension": "board_at_fixed_uct",
+      "from": "7x7",
+      "median_elapsed_ratio": 1.8049689822492476,
+      "median_peak_rss_ratio": 1.0455612412562791,
+      "to": "8x8"
+    },
+    {
+      "board_or_uct": 3000,
+      "dimension": "board_at_fixed_uct",
+      "from": "6x6",
+      "median_elapsed_ratio": 1.3445634802005244,
+      "median_peak_rss_ratio": 1.1218904868331552,
+      "to": "7x7"
+    },
+    {
+      "board_or_uct": 3000,
+      "dimension": "board_at_fixed_uct",
+      "from": "7x7",
+      "median_elapsed_ratio": 1.8243726717369577,
+      "median_peak_rss_ratio": 1.0660383486894103,
+      "to": "8x8"
+    },
+    {
+      "board_or_uct": 10000,
+      "dimension": "board_at_fixed_uct",
+      "from": "6x6",
+      "median_elapsed_ratio": 1.2772352982160966,
+      "median_peak_rss_ratio": 1.0656179228617269,
+      "to": "7x7"
+    },
+    {
+      "board_or_uct": 10000,
+      "dimension": "board_at_fixed_uct",
+      "from": "7x7",
+      "median_elapsed_ratio": 1.8371311495006453,
+      "median_peak_rss_ratio": 0.8814816827916078,
+      "to": "8x8"
+    },
+    {
+      "board_or_uct": 30000,
+      "dimension": "board_at_fixed_uct",
+      "from": "6x6",
+      "median_elapsed_ratio": 1.2534093596806053,
+      "median_peak_rss_ratio": 1.0536018649996746,
+      "to": "7x7"
+    },
+    {
+      "board_or_uct": 30000,
+      "dimension": "board_at_fixed_uct",
+      "from": "7x7",
+      "median_elapsed_ratio": 1.8283416996348052,
+      "median_peak_rss_ratio": 0.9986637164699234,
+      "to": "8x8"
+    }
+  ],
+  "schema_version": 1
+}

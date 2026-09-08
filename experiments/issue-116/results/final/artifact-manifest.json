@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "config": "fe9c2d9b59b17a275c10c4deec73cb053d6520b4628cd675999fd3a51f63256c",
+    "measured_manifest": "f8652535943d68d871aaf4d5252a5a691c4bb420fe9f646df96a600b37ca155f",
+    "protocol_lock": "f128dc0b7c974b0565c028abdfae170555d8ec9bb4e5edb8cf7d05113877eddc",
+    "source_lock": "ffc13477413b24220bcbbdfa68e7d306393b1f6dc21e3346f45e0a9e6be67673"
+  },
+  "outputs": {
+    "experiments/issue-116.md": "c6e39ca53aa97c3ff7abbdb4d3c218e4df1c2e48f23f497146cbf8490c9273fc",
+    "experiments/issue-116/results/final/analysis.json": "ccb00db56caf70f9443763b32c0f7190e1e2d5276f9b1ca6e0a7acc3548a962f",
+    "experiments/issue-116/results/final/environment.json": "8f30ccbc67b7e6563532a59342938856684aeeddf3d63cb9c893a32e7666f38b",
+    "experiments/issue-116/results/final/feasibility.csv": "5b747b40f567b6a412f989f1ec9d1292d93905703585b7f56d952ad10b2c3857",
+    "experiments/issue-116/results/final/public-safety-audit.json": "af81b13413252d12a24cbb450047175bc7b6a1410219fdf931e6f4880531bcc0",
+    "experiments/issue-116/results/final/recommended-ceilings.csv": "63853d7d5de8dc7a43c8f6cd75c6026af6a969c3d07aec82e088f7a67d81cc85",
+    "experiments/issue-116/results/final/scaling.csv": "698a08adef25335e05b23db99360057d25475f8e2feb7e246c126bf9ed2789e4"
+  },
+  "schema_version": 1
+}
