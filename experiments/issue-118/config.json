@@ -1,0 +1,93 @@
+{
+  "analysis": {
+    "bootstrap_method": "independent game-level nonparametric bootstrap with replacement",
+    "bootstrap_percentile_method": "linear interpolation at (n-1)*p after sorting",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1180118,
+    "confidence_level": 0.95,
+    "primary_denominator": "validated completed games",
+    "rate_interval": "Wilson score interval",
+    "report_counts": ["planned", "validated", "failed"],
+    "result_labels_enabled": false
+  },
+  "board": {
+    "advantage_weight": 73,
+    "heitan_turns": 48,
+    "objectives": 49,
+    "pieces_per_player": 72,
+    "placements": 144,
+    "secured_weight": 3650,
+    "sites": 113,
+    "supply_points": 64
+  },
+  "board_option": "Board/7x7",
+  "constraints": {
+    "aggregate_outcomes_before_finalization_allowed": false,
+    "failed_seed_replacement_allowed": false,
+    "modify_game": false,
+    "modify_rules": false,
+    "production_requires_caffeinate": true,
+    "production_requires_tmux": true,
+    "worker_count": 1
+  },
+  "corrected_objective_piece_semantics": {
+    "excluded_sites": ["opponent-Advantage Objectives", "Secured Objectives", "neutral Objectives"],
+    "p1": "P1 Pieces on P1-Advantage Objectives only",
+    "p2": "P2 Pieces on P2-Advantage Objectives only",
+    "scoring_order": ["Secured Objectives", "Advantage Objectives", "corrected Objective Pieces"]
+  },
+  "experiment_version": "issue-118-v1",
+  "game": "games/Heitan.lud",
+  "historical_sources": {
+    "issue_108_balance": "experiments/issue-108/results/final/balance-by-depth.csv",
+    "issue_108_finalization": "experiments/issue-108/results/production/finalization.json",
+    "issue_108_manifest": "experiments/issue-108/results/production/manifest.json",
+    "issue_112_balance": "experiments/issue-112/results/final/balance-by-depth.csv",
+    "issue_112_finalization": "experiments/issue-112/results/production/finalization.json",
+    "issue_112_manifest": "experiments/issue-112/results/production/manifest.json"
+  },
+  "ludii_version": "1.3.14",
+  "operational_parameters": {
+    "jvm_max_heap": "8g",
+    "max_attempts": 3,
+    "retry_states": ["pending", "interrupted", "failed", "corrupt"],
+    "timeout_seconds_per_game": 28800,
+    "worker_count": 1
+  },
+  "pilot": {
+    "excluded_from_analysis": true,
+    "game_outcomes_must_not_be_inspected": true,
+    "tasks": [{
+      "games": 1,
+      "id": "pilot-7x7-corrected-uct-100",
+      "iteration_limit": 100,
+      "seed_first": 1180000100
+    }]
+  },
+  "primary_budgets": [10000],
+  "production": {
+    "base_seed": 1181000000,
+    "game_index_generation_rule": "one-based consecutive integers 1 through 30",
+    "primary_tasks": [{
+      "budget_seed_offset": 10000000,
+      "id": "7x7-corrected-uct-10000",
+      "iteration_limit": 10000,
+      "target_games": 30
+    }],
+    "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index"
+  },
+  "protocol_status": "draft",
+  "schema_version": 1,
+  "terminal_diagnostics": [
+    "deciding scoring layer",
+    "final Secured Objective margin",
+    "final Advantage Objective margin",
+    "final corrected Objective-piece margin",
+    "draw lexicographic tie structure"
+  ],
+  "trial_normalization": {
+    "encoding": "UTF-8",
+    "game_path": "games/Heitan.lud",
+    "line_endings": "LF"
+  }
+}
