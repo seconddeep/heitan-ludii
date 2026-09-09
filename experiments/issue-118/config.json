@@ -7,7 +7,11 @@
     "confidence_level": 0.95,
     "primary_denominator": "validated completed games",
     "rate_interval": "Wilson score interval",
-    "report_counts": ["planned", "validated", "failed"],
+    "report_counts": [
+      "planned",
+      "validated",
+      "failed"
+    ],
     "result_labels_enabled": false
   },
   "board": {
@@ -31,10 +35,18 @@
     "worker_count": 1
   },
   "corrected_objective_piece_semantics": {
-    "excluded_sites": ["opponent-Advantage Objectives", "Secured Objectives", "neutral Objectives"],
+    "excluded_sites": [
+      "opponent-Advantage Objectives",
+      "Secured Objectives",
+      "neutral Objectives"
+    ],
     "p1": "P1 Pieces on P1-Advantage Objectives only",
     "p2": "P2 Pieces on P2-Advantage Objectives only",
-    "scoring_order": ["Secured Objectives", "Advantage Objectives", "corrected Objective Pieces"]
+    "scoring_order": [
+      "Secured Objectives",
+      "Advantage Objectives",
+      "corrected Objective Pieces"
+    ]
   },
   "experiment_version": "issue-118-v1",
   "game": "games/Heitan.lud",
@@ -50,33 +62,46 @@
   "operational_parameters": {
     "jvm_max_heap": "8g",
     "max_attempts": 3,
-    "retry_states": ["pending", "interrupted", "failed", "corrupt"],
+    "retry_states": [
+      "pending",
+      "interrupted",
+      "failed",
+      "corrupt"
+    ],
+    "status": "frozen",
     "timeout_seconds_per_game": 28800,
     "worker_count": 1
   },
   "pilot": {
     "excluded_from_analysis": true,
     "game_outcomes_must_not_be_inspected": true,
-    "tasks": [{
-      "games": 1,
-      "id": "pilot-7x7-corrected-uct-100",
-      "iteration_limit": 100,
-      "seed_first": 1180000100
-    }]
+    "tasks": [
+      {
+        "games": 1,
+        "id": "pilot-7x7-corrected-uct-100",
+        "iteration_limit": 100,
+        "seed_first": 1180000100
+      }
+    ]
   },
-  "primary_budgets": [10000],
+  "primary_budgets": [
+    10000
+  ],
   "production": {
     "base_seed": 1181000000,
     "game_index_generation_rule": "one-based consecutive integers 1 through 30",
-    "primary_tasks": [{
-      "budget_seed_offset": 10000000,
-      "id": "7x7-corrected-uct-10000",
-      "iteration_limit": 10000,
-      "target_games": 30
-    }],
+    "primary_tasks": [
+      {
+        "budget_seed_offset": 10000000,
+        "id": "7x7-corrected-uct-10000",
+        "iteration_limit": 10000,
+        "target_games": 30
+      }
+    ],
     "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index"
   },
-  "protocol_status": "draft",
+  "protocol_locked_at_utc": "2026-09-09T00:40:47Z",
+  "protocol_status": "locked",
   "schema_version": 1,
   "terminal_diagnostics": [
     "deciding scoring layer",
