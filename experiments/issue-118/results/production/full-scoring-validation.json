@@ -1,0 +1,22 @@
+{
+  "aggregate_outcomes_inspected": true,
+  "budget": null,
+  "budget_rows_sha256": null,
+  "checked_at_utc": "2026-09-10T07:17:16Z",
+  "checks": [
+    "independent_corrected_score",
+    "winner",
+    "final_board",
+    "runner_metrics"
+  ],
+  "failures": [],
+  "manifest_sha256": "d13c5546a88528654173611652cbbc3b86ef43df1b09947adcd3799cc94dc45a",
+  "namespace": "production",
+  "schema_version": 1,
+  "selected_tasks": 30,
+  "states": {
+    "completed": 30
+  },
+  "validated_completed_tasks": 30,
+  "validation_scope": "full-score-and-winner"
+}

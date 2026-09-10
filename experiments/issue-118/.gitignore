@@ -1,0 +1,6 @@
+results/pilot/tasks/
+results/production/tasks/*/raw/
+results/production/tasks/*/tmp/
+results/production/tasks/*/gc.log
+*.class
+__pycache__/

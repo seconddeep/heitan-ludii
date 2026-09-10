@@ -1,0 +1,5 @@
+contrast,measure,games_7x7,games_historical,rate_7x7,rate_historical,difference,bootstrap_95_low,bootstrap_95_high
+7x7 - 4x4,p1,30,100,0.366667,0.47,-0.103333,-0.296667,0.1
+7x7 - 4x4,draw,30,100,0.033333,0.13,-0.096667,-0.18,0.0
+7x7 - 3x3,p1,30,100,0.366667,0.63,-0.263333,-0.456667,-0.06
+7x7 - 3x3,draw,30,100,0.033333,0.11,-0.076667,-0.16,0.02

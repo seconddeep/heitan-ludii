@@ -1,0 +1,189 @@
+{
+  "analysis": {
+    "bootstrap_method": "independent game-level nonparametric bootstrap with replacement",
+    "bootstrap_percentile_method": "linear interpolation at (n-1)*p after sorting",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1180118,
+    "confidence_level": 0.95,
+    "primary_denominator": "validated completed games",
+    "rate_interval": "Wilson score interval",
+    "report_counts": [
+      "planned",
+      "validated",
+      "failed"
+    ],
+    "result_labels_enabled": false
+  },
+  "config": "experiments/issue-118/config.json",
+  "config_sha256": "6c18a816a94c2bf147fdd04416b98bc1bf27921fc860da678984f5528ed6e4ec",
+  "corrected_objective_piece_semantics": {
+    "excluded_sites": [
+      "opponent-Advantage Objectives",
+      "Secured Objectives",
+      "neutral Objectives"
+    ],
+    "p1": "P1 Pieces on P1-Advantage Objectives only",
+    "p2": "P2 Pieces on P2-Advantage Objectives only",
+    "scoring_order": [
+      "Secured Objectives",
+      "Advantage Objectives",
+      "corrected Objective Pieces"
+    ]
+  },
+  "environment": {
+    "architecture": "arm64",
+    "caffeinate_available": true,
+    "java": "openjdk 21.0.12 2026-07-21 LTS",
+    "os": "Darwin",
+    "python": "3.9.6",
+    "tmux_available": true
+  },
+  "experiment_version": "issue-118-v1",
+  "fixed_tasks": 30,
+  "game": "games/Heitan.lud",
+  "game_definition_commit": "b2952dad43c4ef4c0ad5429221d341c58268f16a",
+  "game_definition_gate": {
+    "advantage_weight": 73,
+    "board_option": "Board/7x7",
+    "corrected_objective_piece_semantics": "own Pieces on own-Advantage Objectives only",
+    "heitan_turns": 48,
+    "objectives": 49,
+    "pieces_per_player": 72,
+    "scoring_source_sha256": "4ffee369b71093bc958d011df7d34c5fa8182b8c49fbeab9d5206f8043a31886",
+    "secured_weight": 3650,
+    "sites": 113,
+    "source": "games/Heitan.lud",
+    "source_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+    "status": "passed",
+    "supply_points": 64,
+    "total_placements": 144
+  },
+  "game_sha256": "df0502886e26060cb55ac77bc5d1d980f629faff1fbed2ca28e16c3a4b3249de",
+  "hashed_executable_sources": [
+    {
+      "bytes": 3443,
+      "path": "experiments/issue-118/README.md",
+      "sha256": "8ee9e1c71376d1f134d42e8c1e1fa03d3d87d667f8566ea3d7e108cf5d58fbda"
+    },
+    {
+      "bytes": 3532,
+      "path": "experiments/issue-118/config.json",
+      "sha256": "6c18a816a94c2bf147fdd04416b98bc1bf27921fc860da678984f5528ed6e4ec"
+    },
+    {
+      "bytes": 16927,
+      "path": "experiments/issue-118/scripts/protocol.py",
+      "sha256": "607df62166f3f67a65800a392576c0b8a5f240c0a9009c21d055845f26154b93"
+    },
+    {
+      "bytes": 10882,
+      "path": "experiments/issue-118/scripts/freeze_protocol.py",
+      "sha256": "19b77b9c2a5fe9e36b8cb61a3c4697b586a9a3df07de576001ad62bc4dcf42f1"
+    },
+    {
+      "bytes": 20739,
+      "path": "experiments/issue-118/scripts/run_experiments.py",
+      "sha256": "cc0f11bc01c755a1ab28d23a5e3212c6f62f17dc86681cf0026a44a2028b65f3"
+    },
+    {
+      "bytes": 5259,
+      "path": "experiments/issue-118/scripts/validate_trials.py",
+      "sha256": "1d1092d5c7dc9af18bc0cce50f4ddf6903256d5acd46f39dc33c4452974f989b"
+    },
+    {
+      "bytes": 4289,
+      "path": "experiments/issue-118/scripts/finalize_production.py",
+      "sha256": "21b43f925db32da00c5f7e79e3e9efbc9a0a74b9883b74473452226211e31e46"
+    },
+    {
+      "bytes": 11800,
+      "path": "experiments/issue-118/scripts/run_analysis.py",
+      "sha256": "68ef8c12c886fc496f4a8085d9a83345675c66226bb98eb7012a2ac48ef57c5b"
+    },
+    {
+      "bytes": 1118,
+      "path": "experiments/issue-118/scripts/status.py",
+      "sha256": "7277230ec3597fb3da5541f8b82d4861039908349462b8b7e5d59576af7761b2"
+    },
+    {
+      "bytes": 3854,
+      "path": "experiments/issue-118/scripts/public_safety_audit.py",
+      "sha256": "34054b5f635c12ef41150dd93281d448593d40fbd6684d9b7ada00accd456580"
+    },
+    {
+      "bytes": 6805,
+      "path": "experiments/issue-118/scripts/Heitan7x7CorrectedExperiment.java",
+      "sha256": "89c9697ff4f874c1a01d827f16333ae7349cf1150e7600450f29df4df9de344c"
+    },
+    {
+      "bytes": 6327,
+      "path": "experiments/issue-118/scripts/Heitan7x7CorrectedReplay.java",
+      "sha256": "0584da9a39819b364204c44680d91defc444d160dbd2f97c63346e8f834a1950"
+    }
+  ],
+  "ludii_jar_sha256": "248a8bde801f347bc380a4957fdb48012b4bdf234a5591c9bf7479913d73068e",
+  "ludii_version": "1.3.14",
+  "operational_parameters": {
+    "jvm_max_heap": "8g",
+    "max_attempts": 3,
+    "retry_states": [
+      "pending",
+      "interrupted",
+      "failed",
+      "corrupt"
+    ],
+    "status": "frozen",
+    "timeout_seconds_per_game": 28800,
+    "worker_count": 1
+  },
+  "pilot_operational_evidence": {
+    "games": 1,
+    "manifest_sha256": "faa1b1cfff0397554188e5ce8c6bc05ed4663328f73b9e19afef9c0fe6a56fc1",
+    "maximum_elapsed_seconds": 35.294,
+    "maximum_peak_rss_bytes": null,
+    "outcomes_inspected": false,
+    "peak_memory_observed": false
+  },
+  "primary_budgets": [
+    10000
+  ],
+  "production_head_lock_policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "post_production_compatibility_amendments": [
+    {
+      "file": "experiments/issue-118/scripts/run_analysis.py",
+      "new_sha256": "65ff53cbfaab4d405e1e2bf1fb82ce59a17c912b237229229e4e5efdf577d132",
+      "old_sha256": "68ef8c12c886fc496f4a8085d9a83345675c66226bb98eb7012a2ac48ef57c5b",
+      "reason": "Remove the unsupported pathlib.Path.write_text(newline=...) argument on Python 3.9; no data loading, statistical calculation, interval, bootstrap, diagnostic, or report content changed."
+    },
+    {
+      "file": "experiments/issue-118/scripts/run_analysis.py",
+      "new_sha256": "052839cedbcfedd7c8e22692f052c45584916f1e0a972f4b5ec474895ca4a152",
+      "old_sha256": "65ff53cbfaab4d405e1e2bf1fb82ce59a17c912b237229229e4e5efdf577d132",
+      "reason": "Add the already-preregistered limited terminal diagnostics and explicit causal/scoring limitation to deterministic CSV and Markdown reporting; production data, rate denominators, interval and bootstrap calculations, contrasts, and diagnostic definitions are unchanged."
+    }
+  ],
+  "protocol_locked_at_utc": "2026-09-09T00:40:47Z",
+  "rerun_command_templates": [
+    "tmux new-session -d -s heitan-118-10k \"cd '$REPO_ROOT' && caffeinate -i env HEITAN118_CAFFEINATE=1 HEITAN118_RUNNER_ID='$HEITAN118_RUNNER_ID' LUDII_JAR='$LUDII_JAR' python3 experiments/issue-118/scripts/run_experiments.py production\"",
+    "python3 experiments/issue-118/scripts/validate_trials.py --namespace production --budget 10000",
+    "python3 experiments/issue-118/scripts/validate_trials.py --namespace production --full-scoring",
+    "python3 experiments/issue-118/scripts/finalize_production.py",
+    "python3 experiments/issue-118/scripts/run_analysis.py --verify-deterministic"
+  ],
+  "schema_version": 1,
+  "seed_generation_rule": "base_seed + budget_seed_offset + zero_based_game_index",
+  "source_lock": "experiments/issue-118/source-lock.json",
+  "source_lock_sha256": "486192d0fb3e6af0f024c294593d41ee4a3e4f08c160b0040786371a0348f9ea",
+  "terminal_diagnostics": [
+    "deciding scoring layer",
+    "final Secured Objective margin",
+    "final Advantage Objective margin",
+    "final corrected Objective-piece margin",
+    "draw lexicographic tie structure"
+  ],
+  "trial_normalization": {
+    "encoding": "UTF-8",
+    "game_path": "games/Heitan.lud",
+    "line_endings": "LF"
+  }
+}
