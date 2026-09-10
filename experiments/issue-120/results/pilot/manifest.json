@@ -1,0 +1,80 @@
+{
+  "config_sha256_at_creation": "f12805851e9e1793a4e0283252e274d61d2f6d1dfd02d51e8c7582d5c2bff0d9",
+  "created_at_utc": "2026-09-10T10:30:34Z",
+  "namespace": "pilot",
+  "production_started_at_utc": null,
+  "schema_version": 1,
+  "tasks": {
+    "issue-120-v1-pilot-uct-000100-g0001": {
+      "artifacts": {
+        "raw_trial_sha256": "94dec04d3b163867ec758afd5ef2b21ab1d885148f7863adf42b2c1ac283d248",
+        "result": "experiments/issue-120/results/pilot/tasks/issue-120-v1-pilot-uct-000100-g0001/result.csv",
+        "result_sha256": "b008c2a5cf49ca4166db7f1a9ea16dda60addd672d6de69453248c10710d0009",
+        "trial": "experiments/issue-120/results/pilot/tasks/issue-120-v1-pilot-uct-000100-g0001/pilot-7x7-corrected-uct-100-0001.trl",
+        "trial_sha256": "02bfa7d05ae4a18358d4f6a4b930a495feb115e0cc231e9068f3ccf5d4ddbc8a",
+        "validation": "experiments/issue-120/results/pilot/tasks/issue-120-v1-pilot-uct-000100-g0001/validation.json",
+        "validation_sha256": "a59064f70d34a9aa0c772113ea7c1b88656d98ad90401f2aaae97044f8eba275"
+      },
+      "attempts": 1,
+      "completed_at_utc": "2026-09-10T10:31:10Z",
+      "elapsed_seconds": 35.844,
+      "error": null,
+      "events": [
+        {
+          "at_utc": "2026-09-10T10:30:34Z",
+          "state": "pending"
+        },
+        {
+          "at_utc": "2026-09-10T10:30:34Z",
+          "attempt": 1,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-09-10T10:30:34Z",
+          "error": null,
+          "state": "running"
+        },
+        {
+          "at_utc": "2026-09-10T10:31:08Z",
+          "error": null,
+          "state": "generated"
+        },
+        {
+          "at_utc": "2026-09-10T10:31:10Z",
+          "error": null,
+          "state": "completed"
+        }
+      ],
+      "experiment_id": "pilot-7x7-corrected-uct-100",
+      "experiment_version": "issue-120-v1",
+      "failure_kind": null,
+      "game_index": 1,
+      "iteration_limit": 100,
+      "namespace": "pilot",
+      "peak_rss_bytes": null,
+      "run_owner": null,
+      "seed": 1200000100,
+      "state": "completed",
+      "task_id": "issue-120-v1-pilot-uct-000100-g0001",
+      "updated_at_utc": "2026-09-10T10:31:10Z",
+      "validation": {
+        "all_turns_have_three_placements": true,
+        "legal_move_replay": true,
+        "moves": 144,
+        "natural_end": true,
+        "normalized_trial_sha256": "02bfa7d05ae4a18358d4f6a4b930a495feb115e0cc231e9068f3ccf5d4ddbc8a",
+        "p1_placements": 72,
+        "p2_placements": 72,
+        "raw_to_normalized": true,
+        "raw_trial_sha256": "94dec04d3b163867ec758afd5ef2b21ab1d885148f7863adf42b2c1ac283d248",
+        "schema_version": 1,
+        "score_reconstructed": false,
+        "turns": 48,
+        "validated": true,
+        "validation_scope": "operational-only",
+        "winner_reconstructed": false
+      }
+    }
+  },
+  "updated_at_utc": "2026-09-10T10:31:20Z"
+}
