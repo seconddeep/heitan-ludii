@@ -1,0 +1,2 @@
+uct,planned,validated,failed,p1_wins,p2_wins,draws,p1_rate,p1_wilson_95_low,p1_wilson_95_high,draw_rate,draw_wilson_95_low,draw_wilson_95_high,denominator
+10000,30,30,0,11,18,1,0.366667,0.218739,0.544864,0.033333,0.005909,0.166704,validated completed games

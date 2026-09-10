@@ -1,0 +1,8 @@
+diagnostic,name,count,minimum,median,maximum
+deciding_layer,secured_objectives,14,,,
+deciding_layer,advantage_objectives,13,,,
+deciding_layer,objective_pieces,2,,,
+deciding_layer,draw,1,,,
+final_margin_p1_minus_p2,secured_margin_p1_minus_p2,30,-2,0.0,2
+final_margin_p1_minus_p2,advantage_margin_p1_minus_p2,30,-5,0.5,5
+final_margin_p1_minus_p2,corrected_objective_piece_margin_p1_minus_p2,30,-9,0.0,7

@@ -148,6 +148,20 @@
     10000
   ],
   "production_head_lock_policy": "on first production start after the locked implementation is committed, record exact clean HEAD in results/production/production-head-lock.json; every start/resume must match it",
+  "post_production_compatibility_amendments": [
+    {
+      "file": "experiments/issue-118/scripts/run_analysis.py",
+      "new_sha256": "65ff53cbfaab4d405e1e2bf1fb82ce59a17c912b237229229e4e5efdf577d132",
+      "old_sha256": "68ef8c12c886fc496f4a8085d9a83345675c66226bb98eb7012a2ac48ef57c5b",
+      "reason": "Remove the unsupported pathlib.Path.write_text(newline=...) argument on Python 3.9; no data loading, statistical calculation, interval, bootstrap, diagnostic, or report content changed."
+    },
+    {
+      "file": "experiments/issue-118/scripts/run_analysis.py",
+      "new_sha256": "052839cedbcfedd7c8e22692f052c45584916f1e0a972f4b5ec474895ca4a152",
+      "old_sha256": "65ff53cbfaab4d405e1e2bf1fb82ce59a17c912b237229229e4e5efdf577d132",
+      "reason": "Add the already-preregistered limited terminal diagnostics and explicit causal/scoring limitation to deterministic CSV and Markdown reporting; production data, rate denominators, interval and bootstrap calculations, contrasts, and diagnostic definitions are unchanged."
+    }
+  ],
   "protocol_locked_at_utc": "2026-09-09T00:40:47Z",
   "rerun_command_templates": [
     "tmux new-session -d -s heitan-118-10k \"cd '$REPO_ROOT' && caffeinate -i env HEITAN118_CAFFEINATE=1 HEITAN118_RUNNER_ID='$HEITAN118_RUNNER_ID' LUDII_JAR='$LUDII_JAR' python3 experiments/issue-118/scripts/run_experiments.py production\"",

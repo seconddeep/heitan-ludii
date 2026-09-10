@@ -1,0 +1,131 @@
+{
+  "comparison": [
+    {
+      "board": "3x3",
+      "draw_rate": 0.11,
+      "games": 100,
+      "p1_rate": 0.63
+    },
+    {
+      "board": "4x4",
+      "draw_rate": 0.13,
+      "games": 100,
+      "p1_rate": 0.47
+    },
+    {
+      "board": "7x7",
+      "draw_rate": 0.033333,
+      "games": 30,
+      "p1_rate": 0.366667
+    }
+  ],
+  "contrasts": [
+    {
+      "bootstrap_95_high": 0.1,
+      "bootstrap_95_low": -0.296667,
+      "contrast": "7x7 - 4x4",
+      "difference": -0.103333,
+      "games_7x7": 30,
+      "games_historical": 100,
+      "measure": "p1",
+      "rate_7x7": 0.366667,
+      "rate_historical": 0.47
+    },
+    {
+      "bootstrap_95_high": 0.0,
+      "bootstrap_95_low": -0.18,
+      "contrast": "7x7 - 4x4",
+      "difference": -0.096667,
+      "games_7x7": 30,
+      "games_historical": 100,
+      "measure": "draw",
+      "rate_7x7": 0.033333,
+      "rate_historical": 0.13
+    },
+    {
+      "bootstrap_95_high": -0.06,
+      "bootstrap_95_low": -0.456667,
+      "contrast": "7x7 - 3x3",
+      "difference": -0.263333,
+      "games_7x7": 30,
+      "games_historical": 100,
+      "measure": "p1",
+      "rate_7x7": 0.366667,
+      "rate_historical": 0.63
+    },
+    {
+      "bootstrap_95_high": 0.02,
+      "bootstrap_95_low": -0.16,
+      "contrast": "7x7 - 3x3",
+      "difference": -0.076667,
+      "games_7x7": 30,
+      "games_historical": 100,
+      "measure": "draw",
+      "rate_7x7": 0.033333,
+      "rate_historical": 0.11
+    }
+  ],
+  "failed": 0,
+  "failed_seed_replacement_allowed": false,
+  "limitations": [
+    "30 planned games provide a screening estimate with wide uncertainty",
+    "UCT 10k is not a convergence claim and is not equal effective depth across board sizes",
+    "self-play does not establish optimal play or solved balance",
+    "board-size contrasts are descriptive and not pure causal effects",
+    "a lower draw rate does not by itself prove that board size causes fewer draws, and a high draw rate would not by itself establish a scoring defect"
+  ],
+  "planned": 30,
+  "primary": {
+    "denominator": "validated completed games",
+    "draw_rate": 0.033333,
+    "draw_wilson_95_high": 0.166704,
+    "draw_wilson_95_low": 0.005909,
+    "draws": 1,
+    "failed": 0,
+    "p1_rate": 0.366667,
+    "p1_wilson_95_high": 0.544864,
+    "p1_wilson_95_low": 0.218739,
+    "p1_wins": 11,
+    "p2_wins": 18,
+    "planned": 30,
+    "uct": 10000,
+    "validated": 30
+  },
+  "primary_denominator": "validated completed games",
+  "schema_version": 1,
+  "terminal_diagnostic_scope": [
+    "deciding scoring layer",
+    "final Secured Objective margin",
+    "final Advantage Objective margin",
+    "final corrected Objective-piece margin",
+    "draw lexicographic tie structure"
+  ],
+  "terminal_summary": {
+    "all_draw_layers_tied": true,
+    "deciding_layer_counts": {
+      "advantage_objectives": 13,
+      "draw": 1,
+      "objective_pieces": 2,
+      "secured_objectives": 14
+    },
+    "draw_games": 1,
+    "margin_p1_minus_p2": {
+      "advantage_margin_p1_minus_p2": {
+        "maximum": 5,
+        "median": 0.5,
+        "minimum": -5
+      },
+      "corrected_objective_piece_margin_p1_minus_p2": {
+        "maximum": 7,
+        "median": 0.0,
+        "minimum": -9
+      },
+      "secured_margin_p1_minus_p2": {
+        "maximum": 2,
+        "median": 0.0,
+        "minimum": -2
+      }
+    }
+  },
+  "validated": 30
+}

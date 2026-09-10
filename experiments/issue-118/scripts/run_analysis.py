@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-import argparse, csv, math, platform, random, tempfile
+import argparse, csv, math, platform, random, statistics, tempfile
 from pathlib import Path
 import protocol
 import run_experiments
@@ -89,24 +89,37 @@ def build_outputs(output:Path)->dict:
     diagnostics.sort(key=lambda row:row["game_index"]);draw_ties.sort(key=lambda row:row["game_index"])
     fields=["game_index","seed","winner","deciding_layer","secured_margin_p1_minus_p2","advantage_margin_p1_minus_p2","corrected_objective_piece_margin_p1_minus_p2"]
     write_csv(output/"terminal-diagnostics.csv",diagnostics,fields);write_csv(output/"draw-terminal-ties.csv",draw_ties,fields)
+    layer_counts={layer:sum(row["deciding_layer"]==layer for row in diagnostics) for layer in ("secured_objectives","advantage_objectives","objective_pieces","draw")}
+    margin_fields=("secured_margin_p1_minus_p2","advantage_margin_p1_minus_p2","corrected_objective_piece_margin_p1_minus_p2")
+    margin_summary={name:{"minimum":min(row[name] for row in diagnostics),"median":statistics.median(row[name] for row in diagnostics),"maximum":max(row[name] for row in diagnostics)} for name in margin_fields}
+    terminal_summary=[{"diagnostic":"deciding_layer","name":name,"count":count,"minimum":"","median":"","maximum":""} for name,count in layer_counts.items()]
+    terminal_summary += [{"diagnostic":"final_margin_p1_minus_p2","name":name,"count":validated,**values} for name,values in margin_summary.items()]
+    write_csv(output/"terminal-summary.csv",terminal_summary,["diagnostic","name","count","minimum","median","maximum"])
     failures=[{"task_id":row["task_id"],"seed":row["seed"],"state":row["state"],"attempts":row["attempts"],"failure_kind":row.get("failure_kind") or "","error":row.get("error") or ""} for row in failed_rows]
     write_csv(output/"failures.csv",failures,["task_id","seed","state","attempts","failure_kind","error"])
-    analysis={"schema_version":1,"planned":planned,"validated":validated,"failed":failed,"primary_denominator":"validated completed games","failed_seed_replacement_allowed":False,"primary":primary[0],"comparison":comparison,"contrasts":contrasts,"terminal_diagnostic_scope":config["terminal_diagnostics"],"limitations":["30 planned games provide a screening estimate with wide uncertainty","UCT 10k is not a convergence claim and is not equal effective depth across board sizes","self-play does not establish optimal play or solved balance","board-size contrasts are descriptive and not pure causal effects"]}
+    analysis={"schema_version":1,"planned":planned,"validated":validated,"failed":failed,"primary_denominator":"validated completed games","failed_seed_replacement_allowed":False,"primary":primary[0],"comparison":comparison,"contrasts":contrasts,"terminal_diagnostic_scope":config["terminal_diagnostics"],"terminal_summary":{"deciding_layer_counts":layer_counts,"margin_p1_minus_p2":margin_summary,"draw_games":len(draw_ties),"all_draw_layers_tied":all(all(row[name]==0 for name in margin_fields) for row in draw_ties)},"limitations":["30 planned games provide a screening estimate with wide uncertainty","UCT 10k is not a convergence claim and is not equal effective depth across board sizes","self-play does not establish optimal play or solved balance","board-size contrasts are descriptive and not pure causal effects","a lower draw rate does not by itself prove that board size causes fewer draws, and a high draw rate would not by itself establish a scoring defect"]}
     protocol.atomic_write_json(output/"analysis.json",analysis);return analysis
 
 def report(analysis:dict)->str:
-    p=analysis["primary"];pct=lambda value:f"{100*float(value):.1f}%"
-    lines=["# Issue 118: corrected-rule 7x7 UCT 10k screen","",f"Production accounting: planned={p['planned']} / validated={p['validated']} / failed={p['failed']}.","","Rates use validated completed games as the denominator. Failed seeds were not replaced.","","## Primary 7x7 result","","| UCT | Planned | Validated | Failed | P1 | P2 | Draw | P1 rate | 95% CI | Draw rate | 95% CI |","|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",f"| 10k | {p['planned']} | {p['validated']} | {p['failed']} | {p['p1_wins']} | {p['p2_wins']} | {p['draws']} | {pct(p['p1_rate'])} | {pct(p['p1_wilson_95_low'])}–{pct(p['p1_wilson_95_high'])} | {pct(p['draw_rate'])} | {pct(p['draw_wilson_95_low'])}–{pct(p['draw_wilson_95_high'])} |","","## Corrected UCT 10k board-size comparison","","| Board | Games | P1 rate | Draw rate |","|---|---:|---:|---:|"]
+    p=analysis["primary"];pct=lambda value:f"{100*float(value):.1f}%";comparison={row["board"]:row for row in analysis["comparison"]};contrasts={(row["contrast"],row["measure"]):row for row in analysis["contrasts"]}
+    lines=["# Issue 118: corrected-rule 7x7 UCT 10k screen","",f"Production accounting: planned={p['planned']} / validated={p['validated']} / failed={p['failed']}.","","Rates use validated completed games as the denominator. Failed seeds were not replaced.","","## Primary 7x7 result","","| UCT | Planned | Validated | Failed | P1 | P2 | Draw | P1 rate | 95% CI | Draw rate | 95% CI |","|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",f"| 10k | {p['planned']} | {p['validated']} | {p['failed']} | {p['p1_wins']} | {p['p2_wins']} | {p['draws']} | {pct(p['p1_rate'])} | {pct(p['p1_wilson_95_low'])}–{pct(p['p1_wilson_95_high'])} | {pct(p['draw_rate'])} | {pct(p['draw_wilson_95_low'])}–{pct(p['draw_wilson_95_high'])} |"]
+    lines += ["","## Screening interpretation","",f"1. Draw rate: 7x7 estimated {pct(p['draw_rate'])} (Wilson 95% CI {pct(p['draw_wilson_95_low'])}–{pct(p['draw_wilson_95_high'])}), compared with {pct(comparison['4x4']['draw_rate'])} on 4x4 and {pct(comparison['3x3']['draw_rate'])} on 3x3. The point estimate is lower, while the wide interval still includes the small-board range.",f"2. P1 balance: 7x7 estimated {pct(p['p1_rate'])} (Wilson 95% CI {pct(p['p1_wilson_95_low'])}–{pct(p['p1_wilson_95_high'])}); the interval includes parity.",f"3. Versus corrected 4x4: the P1-rate difference was {pct(contrasts[('7x7 - 4x4','p1')]['difference'])} and the draw-rate difference was {pct(contrasts[('7x7 - 4x4','draw')]['difference'])}.",f"4. Versus corrected 3x3: the P1-rate difference was {pct(contrasts[('7x7 - 3x3','p1')]['difference'])} and the draw-rate difference was {pct(contrasts[('7x7 - 3x3','draw')]['difference'])}.","5. Limited terminal scoring diagnostics are reported below; no spatial or strategic analysis was added.","","## Corrected UCT 10k board-size comparison","","| Board | Games | P1 rate | Draw rate |","|---|---:|---:|---:|"]
     for row in analysis["comparison"]:lines.append(f"| {row['board']} | {row['games']} | {pct(row['p1_rate'])} | {pct(row['draw_rate'])} |")
     lines += ["","## Preregistered contrasts","","| Contrast | Measure | Difference | Bootstrap 95% CI |","|---|---|---:|---:|"]
     for row in analysis["contrasts"]:lines.append(f"| {row['contrast']} | {row['measure']} | {pct(row['difference'])} | {pct(row['bootstrap_95_low'])}–{pct(row['bootstrap_95_high'])} |")
+    terminal=analysis["terminal_summary"]
+    lines += ["","## Limited terminal diagnostics","","| Deciding layer | Games |","|---|---:|"]
+    for name,count in terminal["deciding_layer_counts"].items():lines.append(f"| {name} | {count} |")
+    lines += ["","| Final margin (P1 - P2) | Minimum | Median | Maximum |","|---|---:|---:|---:|"]
+    for name,values in terminal["margin_p1_minus_p2"].items():lines.append(f"| {name} | {values['minimum']} | {values['median']} | {values['maximum']} |")
+    lines += ["",f"Draw games: {terminal['draw_games']}. All draw games tied at every lexicographic layer: {str(terminal['all_draw_layers_tied']).lower()}."]
     lines += ["","## Limitations",""]+[f"- {item}" for item in analysis["limitations"]]
     return "\n".join(lines)+"\n"
 
 def main()->None:
     parser=argparse.ArgumentParser();parser.add_argument("--verify-deterministic",action="store_true");args=parser.parse_args()
     if not protocol.FINALIZATION_PATH.is_file():raise ValueError("analysis is forbidden before production finalization")
-    FINAL.mkdir(parents=True,exist_ok=True);analysis=build_outputs(FINAL);REPORT.write_text(report(analysis),encoding="utf-8",newline="\n")
+    FINAL.mkdir(parents=True,exist_ok=True);analysis=build_outputs(FINAL);REPORT.write_text(report(analysis),encoding="utf-8")
     if args.verify_deterministic:
         with tempfile.TemporaryDirectory(prefix="heitan-118-analysis-") as directory:
             other=Path(directory);second=build_outputs(other)

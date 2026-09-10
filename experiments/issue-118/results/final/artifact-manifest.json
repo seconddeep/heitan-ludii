@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "config": "6c18a816a94c2bf147fdd04416b98bc1bf27921fc860da678984f5528ed6e4ec",
+    "finalization": "36a7e16cf7b39ce77a7e9bd32915d1c2772efa3a95912a03ded733d717be5214",
+    "production_manifest": "d13c5546a88528654173611652cbbc3b86ef43df1b09947adcd3799cc94dc45a",
+    "protocol_lock": "7ea752cb058989583e0a5c4d060c897c79988862d98e4a9bede9c80571a244de",
+    "source_lock": "486192d0fb3e6af0f024c294593d41ee4a3e4f08c160b0040786371a0348f9ea"
+  },
+  "outputs": {
+    "analysis.json": "fd1afed68bdd12778f3e05762a6dca0503d7282adadda52b6c0233aaa2cd655e",
+    "board-size-comparison.csv": "f23ac4fbf9a6f4ecba611b039a3094dc3f1699a90cd124e536cc4e572d76a8e7",
+    "board-size-contrasts.csv": "a5e818cb3ab052d0b52ce3cea07fc8e4cb27500fe5bbd583fbab84098512f0f7",
+    "draw-terminal-ties.csv": "9280ed61a8873a9f16f150622090a990a44c22416511496bad27aa842d46ede3",
+    "experiments/issue-118/results/final/public-safety-audit.json": "7766d2cb431323248c44418a62009517657d96ad92d91827290876e3483adf27",
+    "failures.csv": "3655a003663b1c1d648bbd8dfee7628921ce76e5bdf47557037055ee7d921425",
+    "primary-7x7.csv": "38064a0c1ac779fc6abb7eada4292e96c74ba931a2d6624b5bf8bb836179a48c",
+    "public-safety-audit.json": "7766d2cb431323248c44418a62009517657d96ad92d91827290876e3483adf27",
+    "terminal-diagnostics.csv": "c71ed7a8182c7e142f3c9b7450af3b6907a7ab9dd68c31d067bb41da42364550",
+    "terminal-summary.csv": "b26bde5ac9430df6e97b5c26cad2d6854d639a4ac412306c22f56ec4ff17e635"
+  },
+  "report": {
+    "path": "experiments/issue-118.md",
+    "sha256": "713415801f88505ecd530e47e6cdef0228226b17d9fa5171ee1bf55739fefa9d"
+  },
+  "schema_version": 1
+}
