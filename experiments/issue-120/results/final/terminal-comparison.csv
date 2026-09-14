@@ -1,0 +1,15 @@
+uct,diagnostic,name,count,minimum,median,maximum
+10000,deciding_layer,secured_objectives,14,,,
+10000,deciding_layer,advantage_objectives,13,,,
+10000,deciding_layer,objective_pieces,2,,,
+10000,deciding_layer,draw,1,,,
+10000,final_margin_p1_minus_p2,secured_margin_p1_minus_p2,30,-2,0.0,2
+10000,final_margin_p1_minus_p2,advantage_margin_p1_minus_p2,30,-5,0.5,5
+10000,final_margin_p1_minus_p2,corrected_objective_piece_margin_p1_minus_p2,30,-9,0.0,7
+30000,deciding_layer,secured_objectives,12,,,
+30000,deciding_layer,advantage_objectives,11,,,
+30000,deciding_layer,objective_pieces,3,,,
+30000,deciding_layer,draw,4,,,
+30000,final_margin_p1_minus_p2,secured_margin_p1_minus_p2,30,-2,0.0,2
+30000,final_margin_p1_minus_p2,advantage_margin_p1_minus_p2,30,-3,0.0,5
+30000,final_margin_p1_minus_p2,corrected_objective_piece_margin_p1_minus_p2,30,-6,0.0,9

@@ -1,0 +1,7 @@
+{
+  "locked_at_utc": "2026-09-10T10:33:41Z",
+  "policy": "after committing the frozen implementation, verify a clean worktree and explicitly record that existing commit with lock_production_head.py before production; every start/resume must match it",
+  "production_head_commit": "ae457057a14b5828c29060e4d626438d85dc21e4",
+  "protocol_lock_sha256": "7d4604f2fd7d0c64b024df4eebe3f5d6e9a87c51ece36f2c9e29b9086132f9f9",
+  "schema_version": 1
+}

@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "config": "b34650657c7b513745314821441764b1335954eba2e631d09ebe4b21284e6bf2",
+    "finalization": "3481c2b9478dd6d147a46b71f37651751612d368c8b127cf85357d5f3a7d4863",
+    "production_manifest": "218b64b0b2af8af2d67480ad60244af91be7c0a7efa434578e732b82926bf176",
+    "protocol_lock": "7d4604f2fd7d0c64b024df4eebe3f5d6e9a87c51ece36f2c9e29b9086132f9f9",
+    "source_lock": "ac3dad108915532b1fd189da16e929bc930703d3f6e400403a19778c05b38ccf"
+  },
+  "outputs": {
+    "analysis.json": "583b34332b9327f3908d00f29e843f835e61ccb0d4b68c4aae4b8a65eae55c5c",
+    "board-size-comparison.csv": "c0e5e5cc9b7ae0e9597fceaf57c099f33ff291bbcc123bea640b805caaf80705",
+    "board-size-contrasts.csv": "0883e000529c3aeb9247acc83bf863f158ffcaf346ac54fe3e3173df9dae5944",
+    "depth-comparison.csv": "18533e6a31963b7274135c789a84ed68d9fce79dfb7735c3eb9917b07398bb92",
+    "depth-contrasts.csv": "0357057d0b565adf1ba65b18c7632a91337e36caed290e98f670f1919c5d5ab8",
+    "draw-terminal-ties.csv": "5e561ba4a42aa309efe407a9f5503f81e9bf36b798b8d6435acb32cd2d5dbe02",
+    "experiments/issue-120/results/final/public-safety-audit.json": "52da9e84554b436518447904fde2f77c381c1adc08a4b5b1e8a9553f801c4812",
+    "failures.csv": "3655a003663b1c1d648bbd8dfee7628921ce76e5bdf47557037055ee7d921425",
+    "primary-7x7.csv": "b5981526d5de526d9c52933a0f5238a8ff8530dd0d009096bbe9102c1b2c04e2",
+    "terminal-comparison.csv": "794ea3bb3713b407242196f9594d0e062024663a0bbe75a08d1be0816c853916",
+    "terminal-diagnostics.csv": "6fb6c6de3157882201616652a3cb20fc89f20c617a666e873d2f1e5f3d72519c",
+    "terminal-summary.csv": "acce1e271e2273e5d55ae93ce3d562340efce236e0dec72c23778fde51171fd6"
+  },
+  "report": {
+    "path": "experiments/issue-120.md",
+    "sha256": "30e6452a30b43c11c90cb3b7103fa485cda734267a877eea77a29e12b10985c8"
+  },
+  "schema_version": 1
+}
